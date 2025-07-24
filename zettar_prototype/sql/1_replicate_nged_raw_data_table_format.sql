@@ -1,5 +1,6 @@
 CREATE TABLE substations (
-    substationID INTEGER,
+    -- Adjust so it's ngedSubstationID - bc its unique to that DB, not our primary key data
+    substationID INTEGER, 
     "type" TEXT,
     area TEXT,
     "name" TEXT,

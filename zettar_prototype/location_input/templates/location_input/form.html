@@ -5,7 +5,7 @@
 </head>
 <body>
     <h1>Enter Location Coordinates</h1>
-    <form method="post">
+    <form method="post" action="{% url 'process_location' %}">
         {% csrf_token %}
         <label for="latitude">Latitude:</label>
         <input type="text" id="latitude" name="latitude" required><br><br>
