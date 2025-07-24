@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #project apps
+    'location_input',
 ]
 
 MIDDLEWARE = [
@@ -74,8 +77,12 @@ WSGI_APPLICATION = 'zettar_prototype.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd1e5nhk75kqfd',
+        'USER': 'u1eo529bi27mes',
+        'PASSWORD': 'p45958d9ecd0de40cbd12811686c3d2ce22f0833f04b0395f7acb57a614508de3',
+        'HOST': 'ec2-63-33-140-57.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
