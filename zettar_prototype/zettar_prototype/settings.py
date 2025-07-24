@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'zettar_prototype.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'd1e5nhk75kqfd',
         'USER': 'u1eo529bi27mes',
         'PASSWORD': 'p45958d9ecd0de40cbd12811686c3d2ce22f0833f04b0395f7acb57a614508de3',

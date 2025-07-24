@@ -8,6 +8,14 @@
     <p>Latitude: {{ latitude }}</p>
     <p>Longitude: {{ longitude }}</p>
 
+    {% if nearest_name and nearest_location %}
+        <h2>Nearest Substation</h2>
+        <p><strong>Name:</strong> {{ nearest_name }}</p>
+        <p><strong>Geolocation:</strong> {{ nearest_location }}</p>
+    {% else %}
+        <p>No nearby substation found.</p>
+    {% endif %}
+
     <form action="/" method="get">
         <button type="submit">Go Back</button>
     </form>
