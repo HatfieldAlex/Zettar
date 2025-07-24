@@ -12,6 +12,13 @@
         <h2>Nearest Substation</h2>
         <p><strong>Name:</strong> {{ nearest_name }}</p>
         <p><strong>Geolocation:</strong> {{ nearest_location }}</p>
+
+        {% if osrm_distance %}
+            <h3>Driving Distance</h3>
+            <p><strong>Distance (via road):</strong> {{ osrm_distance|floatformat:0 }} meters</p>
+        {% else %}
+            <p><em>Could not calculate driving distance.</em></p>
+        {% endif %}
     {% else %}
         <p>No nearby substation found.</p>
     {% endif %}
