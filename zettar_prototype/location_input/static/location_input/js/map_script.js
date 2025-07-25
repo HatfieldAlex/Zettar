@@ -7,6 +7,9 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 6,
         center: defaultLocation,
+        streetViewControl: false, 
+        zoomControl: true,  
+        rotateControl: false,
         styles: [
             { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
             { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
