@@ -1,63 +1,43 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Select a Location</title>
-    <style>
-        #map {
-            height: 500px;
-            width: 100%;
-        }
-    </style>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap"
-      async defer>
-    </script>
+    <meta charset="UTF-8">
+    <title>Find out connection costs before applying for grid</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'location_input/css/map_styles.css' %}">
+    <script src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
 </head>
 <body>
-    <h2>Click on the map to select a location</h2>
+    <div class="sidebar">
+        <h2>Zettar</h2>
+        <nav>
+            <a href="#">🗺️ Map</a>
+            <a href="#">📁 Portfolio</a>
+        </nav>
+    </div>
 
-    <div id="map"></div>
+    <div class="main">
+        <div class="card">
+            <h1>Find out connection costs before applying for grid</h1>
+            <p>
+                Zettar helps you understand connection costs to viable grid connections – without having to wait for a grid offer.
+            </p>
+        </div>
 
-    <form method="POST" action="{% url 'save_location' %}">
-        {% csrf_token %}
-        <input type="hidden" id="latitude" name="latitude">
-        <input type="hidden" id="longitude" name="longitude">
-        <button type="submit">Save Location</button>
-    </form>
+        <div id="map" class="card"></div>
 
-    <script>
-        let map;
-        let marker;
+        <div class="card">
+            <form method="POST" action="{% url 'save_location' %}">
+                {% csrf_token %}
+                <input type="hidden" id="latitude" name="latitude">
+                <input type="hidden" id="longitude" name="longitude">
+                <button type="submit">Save Location</button>
+            </form>
+        </div>
+    </div>
 
-        function initMap() {
-            const defaultLocation = { lat: 0, lng: 0 }; // Default location (center of map)
-
-            map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 2,
-                center: defaultLocation,
-            });
-
-            map.addListener("click", function (event) {
-                const lat = event.latLng.lat();
-                const lng = event.latLng.lng();
-
-                // Update form fields
-                document.getElementById("latitude").value = lat;
-                document.getElementById("longitude").value = lng;
-
-                // Add marker
-                if (marker) {
-                    marker.setMap(null);
-                }
-
-                marker = new google.maps.Marker({
-                    position: { lat, lng },
-                    map: map
-                });
-            });
-        }
-
-        window.initMap = initMap;
-    </script>
+    <script src="{% static 'location_input/js/map_script.js' %}"></script>
 </body>
 </html>
