@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <title>Zetar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="{% static 'location_input/css/map_styles.css' %}"> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
     <script src="{% static 'location_input/js/map_script.js' %}"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-[Inter] bg-gray-50 min-h-screen">
 
-    <!-- Header -->
+
     <header class="w-full bg-white shadow p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div class="text-xl font-semibold">⚡ Zettar</div>
@@ -25,19 +24,18 @@
         </div>
     </header>
 
-    <!-- Main Content -->
+
     <main class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
 
-        <!-- Top 2/3: Map Section -->
         <div class="flex flex-1 gap-6">
-            <!-- Map -->
+
             <div class="w-2/3 h-full">
                 <div class="bg-white rounded-2xl shadow h-full">
                     <div id="map" class="w-full h-full rounded-2xl"></div>
                 </div>
             </div>
 
-            <!-- Content -->
+  
             <div class="w-1/3 h-full">
                 <div class="bg-white rounded-2xl shadow p-4 h-full overflow-auto">
                     <h2 class="text-xl font-semibold mb-2">Connection Costs</h2>
@@ -46,7 +44,7 @@
             </div>
         </div>
 
-        <!-- Bottom Section: Save Button -->
+
         <div class="bg-white rounded-2xl shadow p-4">
             <form method="POST" action="{% url 'save_location' %}" class="flex flex-col md:flex-row items-start md:items-center gap-4">
                 {% csrf_token %}
