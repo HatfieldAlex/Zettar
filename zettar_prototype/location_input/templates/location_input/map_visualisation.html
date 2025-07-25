@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select a Location</title>
+    <style>
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap"
+      async defer>
+    </script>
+</head>
+<body>
+    <h2>Click on the map to select a location</h2>
+
+    <div id="map"></div>
+
+    <form method="POST" action="{% url 'save_location' %}">
+        {% csrf_token %}
+        <input type="hidden" id="latitude" name="latitude">
+        <input type="hidden" id="longitude" name="longitude">
+        <button type="submit">Save Location</button>
+    </form>
+
+    <script>
+        let map;
+        let marker;
+
+        function initMap() {
+            const defaultLocation = { lat: 0, lng: 0 }; // Default location (center of map)
+
+            map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 2,
+                center: defaultLocation,
+            });
+
+            map.addListener("click", function (event) {
+                const lat = event.latLng.lat();
+                const lng = event.latLng.lng();
+
+                // Update form fields
+                document.getElementById("latitude").value = lat;
+                document.getElementById("longitude").value = lng;
+
+                // Add marker
+                if (marker) {
+                    marker.setMap(null);
+                }
+
+                marker = new google.maps.Marker({
+                    position: { lat, lng },
+                    map: map
+                });
+            });
+        }
+
+        window.initMap = initMap;
+    </script>
+</body>
+</html>
