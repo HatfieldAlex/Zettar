@@ -1,11 +1,11 @@
 <header class="w-full bg-white shadow p-4">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-xl font-semibold">⚡ Zettar</div>
-        <nav class="space-x-6 text-gray-700 font-medium">
-            <a href="#" class="hover:text-blue-600">Home</a>
-            <a href="#" class="hover:text-blue-600">About</a>
-            <a href="#" class="hover:text-blue-600">Methodology</a>
-            <a href="#" class="hover:text-blue-600">Data</a>
-        </nav>
-    </div>
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div class="text-xl font-semibold">⚡ Zettar</div>
+    <nav class="space-x-6 text-gray-700 font-medium">
+      <a href="{% url 'home' %}" class="hover:text-blue-600">Home</a>
+      <a href="{% url 'about' %}" class="hover:text-blue-600">About</a>
+      <a href="{% url 'methodology' %}" class="hover:text-blue-600">Methodology</a>
+      <a href="{% url 'data' %}" class="hover:text-blue-600">Data</a>
+    </nav>
+  </div>
 </header>

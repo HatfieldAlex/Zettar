@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #project apps
     'location_input',
+    'pages',
 ]
 
 MIDDLEWARE = [
