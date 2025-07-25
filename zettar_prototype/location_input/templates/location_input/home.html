@@ -5,50 +5,57 @@
     <meta charset="UTF-8">
     <title>Zetar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'location_input/css/map_styles.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'location_input/css/map_styles.css' %}"> -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
+    <script src="{% static 'location_input/js/map_script.js' %}"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    {% include "partials/header.html" %}
+<body class="font-[Inter] bg-gray-50 min-h-screen">
 
-    <div class="main">
+    <!-- Header -->
+    <header class="w-full bg-white shadow p-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-xl font-semibold">⚡ Zettar</div>
+            <nav class="space-x-6 text-gray-700 font-medium">
+                <a href="#" class="hover:text-blue-600">Home</a>
+                <a href="#" class="hover:text-blue-600">About</a>
+                <a href="#" class="hover:text-blue-600">Methodology</a>
+                <a href="#" class="hover:text-blue-600">Data</a>
+            </nav>
+        </div>
+    </header>
 
-        <div class="content-split">
-            <!-- Left: Map -->
-            <div class="left-pane">
-                <div class="card" style="height: 100%;">
-                    <div id="map" style="height: 100%; width: 100%; border-radius: 12px;"></div>
+    <!-- Main Content -->
+    <main class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
+
+        <!-- Top 2/3: Map Section -->
+        <div class="flex flex-1 gap-6">
+            <!-- Map -->
+            <div class="w-2/3 h-full">
+                <div class="bg-white rounded-2xl shadow h-full">
+                    <div id="map" class="w-full h-full rounded-2xl"></div>
                 </div>
             </div>
 
-            <!-- Right: Info Cards -->
-            <div class="right-pane">
-                <div class="card">
-                    <h2>Location Info</h2>
-                    <p id="info-content">Click on the map to see location details here.</p>
-                </div>
-                <div class="card">
-                    <h2>Connection Costs</h2>
-                    <p>Cost breakdown will go here.</p>
-                </div>
-                <div class="card">
-                    <h2>Substation Data</h2>
-                    <p>Nearby substation details will go here.</p>
+            <!-- Content -->
+            <div class="w-1/3 h-full">
+                <div class="bg-white rounded-2xl shadow p-4 h-full overflow-auto">
+                    <h2 class="text-xl font-semibold mb-2">Connection Costs</h2>
+                    <p class="text-gray-700">Cost breakdown will go here.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Save Button (Separate Card Below) -->
-        <div class="card" style="margin-top: 24px;">
-            <form method="POST" action="{% url 'save_location' %}">
+        <!-- Bottom Section: Save Button -->
+        <div class="bg-white rounded-2xl shadow p-4">
+            <form method="POST" action="{% url 'save_location' %}" class="flex flex-col md:flex-row items-start md:items-center gap-4">
                 {% csrf_token %}
                 <input type="hidden" id="latitude" name="latitude">
                 <input type="hidden" id="longitude" name="longitude">
-                <button type="submit">Save Location</button>
+                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save Location</button>
             </form>
         </div>
-    </div>
+    </main>
 
-    <script src="{% static 'location_input/js/map_script.js' %}"></script>
 </body>
 </html>
