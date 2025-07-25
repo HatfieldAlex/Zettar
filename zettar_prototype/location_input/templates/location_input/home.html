@@ -42,11 +42,13 @@
                     <p class="text-gray-700">With Zettar, there's no need to wait for a formal grid offer to understand your connection costs. Just choose your site location, select your energy supply type, and submit—Zettar handles the rest, providing fast, accurate estimates in seconds.</p>
                 </div>
 
-
+                <div class="bg-white rounded-2xl shadow p-4 flex items-center justify-start">
+                    <h2 class="text-xl font-semibold">1. Select a Location</h2>
+                </div>
 
                 <!-- Which type of connection do you need? -->
                 <div class="bg-white rounded-2xl shadow p-4">
-                    <h2 class="text-xl font-semibold mb-2">Which type of connection do you need?</h2>
+                    <h2 class="text-xl font-semibold mb-2">2. Select which type of connection do you need?</h2>
                     <fieldset class="space-y-3">
                         <legend class="sr-only">Connection Type</legend>
 
@@ -73,22 +75,16 @@
 
 
                 <div class="bg-white rounded-2xl shadow p-4 flex-1 overflow-auto">
-                    <h2 class="text-xl font-semibold mb-2">Connection Costs</h2>
-                    <p class="text-gray-700">Cost breakdown will go here.</p>
+                    <h2 class="text-xl font-semibold mb-2">3. Generate Estimate</h2>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mx-auto block">
+                        Calculate Estimate
+                    </button>
                 </div>
+
 
             </div>
         </div>
 
-
-        <div class="bg-white rounded-2xl shadow p-4">
-            <form method="POST" action="{% url 'save_location' %}" class="flex flex-col md:flex-row items-start md:items-center gap-4">
-                {% csrf_token %}
-                <input type="hidden" id="latitude" name="latitude">
-                <input type="hidden" id="longitude" name="longitude">
-                <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Save Location</button>
-            </form>
-        </div>
     </main>
 
 </body>
