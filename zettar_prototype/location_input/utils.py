@@ -51,4 +51,4 @@ def get_osrm_driving_distance(coord1, coord2):
 
 
 def length_to_cost(l):
-    return l #dummy atm
+    return 10000 + 500 * l

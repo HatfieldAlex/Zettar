@@ -36,6 +36,7 @@ def save_location(request):
         osrm_distance = get_osrm_driving_distance(
             (lon, lat), (sub_lon, sub_lat)
         )
+        cost = length_to_cost(osrm_distance)
 
     return render(request, 'location_input/confirmation.html', {
         'latitude': latitude,
@@ -43,9 +44,10 @@ def save_location(request):
         'nearest_name': nearest_substation.name if nearest_substation else None,
         'nearest_location': nearest_substation.geolocation if nearest_substation else None,
         'osrm_distance': osrm_distance,
+        'cost': cost
     })
 
-    
+
 def location_form(request):
     return render(request, 'location_input/form.html')
 
