@@ -3,25 +3,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Find out connection costs before applying for grid</title>
+    <title>Zetar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'location_input/css/map_styles.css' %}">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
 </head>
 <body>
-    {% include "partials/sidebar.html" %}
+    {% include "partials/header.html" %}
 
     <div class="main">
-        <div class="card">
-            <h1>Find out connection costs before applying for grid</h1>
-            <p>
-                Zettar helps you understand connection costs to viable grid connections – without having to wait for a grid offer.
-            </p>
+
+        <div class="content-split">
+            <!-- Left: Map -->
+            <div class="left-pane">
+                <div class="card" style="height: 100%;">
+                    <div id="map" style="height: 100%; width: 100%; border-radius: 12px;"></div>
+                </div>
+            </div>
+
+            <!-- Right: Info Cards -->
+            <div class="right-pane">
+                <div class="card">
+                    <h2>Location Info</h2>
+                    <p id="info-content">Click on the map to see location details here.</p>
+                </div>
+                <div class="card">
+                    <h2>Connection Costs</h2>
+                    <p>Cost breakdown will go here.</p>
+                </div>
+                <div class="card">
+                    <h2>Substation Data</h2>
+                    <p>Nearby substation details will go here.</p>
+                </div>
+            </div>
         </div>
 
-        <div id="map" class="card"></div>
-
-        <div class="card">
+        <!-- Save Button (Separate Card Below) -->
+        <div class="card" style="margin-top: 24px;">
             <form method="POST" action="{% url 'save_location' %}">
                 {% csrf_token %}
                 <input type="hidden" id="latitude" name="latitude">
@@ -32,8 +50,5 @@
     </div>
 
     <script src="{% static 'location_input/js/map_script.js' %}"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap">
-        
-    </script>
 </body>
 </html>
