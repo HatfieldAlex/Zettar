@@ -1,5 +1,23 @@
 import requests
 
+def find_nearest_substation(latitude, longnitue):
+    try:
+        lat = float(latitude)
+        lon = float(longitude)
+        user_location = Point(lon, lat, srid=4326)
+    except (TypeError, ValueError):
+        return render(request, 'location_input/confirmation.html', {
+            'error': 'Invalid coordinates.',
+        })
+
+    # Find nearest substation
+    nearest_substation = Substations.objects.annotate(
+        distance=Distance('geolocation', user_location)
+    ).order_by('distance').first()
+
+    return nearest_substation.geolocation
+
+
 def get_osrm_driving_distance(coord1, coord2):
     """
     Returns the driving distance in meters between two (longitude, latitude) tuples
@@ -30,3 +48,7 @@ def get_osrm_driving_distance(coord1, coord2):
     except Exception as e:
         print("Request failed:", e)
         return None
+
+
+def length_to_cost(l):
+    return l #dummy atm
