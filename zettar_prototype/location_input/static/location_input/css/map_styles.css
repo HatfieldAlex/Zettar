@@ -1,9 +1,89 @@
+#map {
+    height: 500px; /* or any height you want */
+    width: 100%;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    height: 100vh;#map {
+    height: 500px; /* or any height you want */
+    width: 100%;
+}
+
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: #f9f9f9;
     display: flex;
     height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.main {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #2563eb;
+}
+
 }
 
 .sidebar {

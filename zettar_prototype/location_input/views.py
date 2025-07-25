@@ -38,7 +38,7 @@ def save_location(request):
         )
         cost = length_to_cost(osrm_distance)
 
-    return render(request, 'location_input/confirmation.html', {
+    return render(request, 'location_input/location_received.html', {
         'latitude': latitude,
         'longitude': longitude,
         'nearest_name': nearest_substation.name if nearest_substation else None,
@@ -51,8 +51,8 @@ def save_location(request):
 def location_form(request):
     return render(request, 'location_input/form.html')
 
-def map_visualisation(request):
-    return render(request, 'location_input/map_visualisation.html')
+def home(request):
+    return render(request, 'location_input/home.html')
 
 def process_location(request):
     latitude = request.POST.get('latitude')
