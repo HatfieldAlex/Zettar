@@ -9,35 +9,25 @@ document.addEventListener('alpine:init', () => {
         submitEstimate() {
             console.log('🚀 submitEstimate() called');
             console.log('📦 Sending to Django:', {
-            connection_type: this.connectionType,
-            location: this.location
-        });
-
-        fetch('/estimate/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
-            },
-            body: JSON.stringify({
                 connection_type: this.connectionType,
                 location: this.location
-            })
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('✅ Response from server:', data);
-            this.result = data.estimate ?? 'No estimate returned';
-            this.showEstimate = true;
-        })
-        .catch(error => {
-            console.error('❌ Server error:', error);
-            this.result = 'Error generating estimate';
-            this.showEstimate = true;
-        });
-    }
+            });
+
+            fetch('/get-estimate/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    connection_type: this.connectionType,
+                    location: this.location
+                })
+            });
+
+            // Optional: set a UI flag if needed
+            this.showEstimate = false; // or true, depending on your design
+        }
 
     });
 
-    console.log('🔍 [Alpine Store: app]', Alpine.store('app'));
 });

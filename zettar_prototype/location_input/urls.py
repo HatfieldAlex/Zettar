@@ -6,5 +6,6 @@ urlpatterns = [
     path('process-location/', views.process_location, name='process_location'),
     path('', views.home, name='home'),
     path('save-location/', views.save_location, name='save_location'),
+    path('get-estimate/', views.get_estimate, name='get_estimate'),
 ]
 
