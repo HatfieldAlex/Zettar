@@ -34,6 +34,16 @@ document.addEventListener('alpine:init', () => {
                 this.result = data.cost_estimate;
                 this.connectionCost = data.cost_estimate;  // ✅ Set connectionCost here
                 this.showEstimate = true;
+
+                Alpine.nextTick(() => {
+                    setTimeout(() => {
+                        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                    }, 200); // wait for transition + rendering
+                });
+                            
+
+
+
             })
             .catch(error => {
                 console.error('❌ Error fetching estimate:', error);
