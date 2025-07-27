@@ -105,43 +105,28 @@
             >
                 <h2 class="text-xl font-semibold mb-4">Connection Cost Estimate</h2>
 
-                    <p class="text-gray-700 font-semibold text-lg mb-4">
-                        You selected: <span class="capitalize" x-text="$store.app.connectionType"></span> connection
+                    <p class="text-3xl font-extrabold text-green-600 mb-4">
+
+                    £<span x-text="$store.app.connectionCost"></span>
                     </p>
 
-                    <p class="text-gray-700 mb-4" x-show="$store.app.location">
-                        Location selected:
-                        <span x-text="$store.app.location?.lat.toFixed(5)"></span>,
-                        <span x-text="$store.app.location?.lng.toFixed(5)"></span>
+                    <div class="text-gray-700 space-y-3 text-base leading-relaxed">
+                    <p>
+                    This estimate includes:
+                    </p>
+                    <ul class="list-disc list-inside ml-2">
+                    <li><strong>Upfront cost:</strong> Approximately <span class="font-semibold text-gray-800">[£X]</span> for a <span class="font-semibold text-gray-800">[substation type]</span>.</li>
+                    <li><strong>Per metre cost:</strong> <span class="font-semibold text-gray-800">[£Y/m]</span> along the public road network.</li>
+                    <li><strong>Distance:</strong> Your closest <span class="font-semibold text-gray-800">[substation_type]</span> is <span class="font-semibold text-gray-800">[name of substation]</span>, about <span class="font-semibold text-gray-800">[Y]m</span> away by public road.</li>
+                    <li><strong>Additional buffer:</strong> We've added <span class="font-semibold text-gray-800">[X]m</span> for typical diversions (e.g. under a bridge, avoiding infrastructure).</li>
+                    </ul>
+
+                    <p>
+                    👉 This gives a total estimated route length of <span class="font-semibold text-gray-800">[Z]m</span>, and a combined estimated cost of <span class="font-bold text-green-700">£[Total]</span>.
                     </p>
 
-                    <p class="text-gray-700 mb-4" x-show="$store.app.connectionCost !== null">
-                        Estimated connection cost:
-                        <span x-text="`£${$store.app.connectionCost}`"></span>
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    Based on the selected location and connection type, Zettar has generated an initial indicative cost range for your point of connection (PoC). This estimate includes assumptions for standard distribution network configurations and average reinforcement charges across UK DNOs.
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    Please note: the cost presented here does not constitute a formal quotation. Actual grid connection costs may vary depending on site-specific constraints, capacity headroom at the nearest substation, and engineering requirements such as switchgear, trenching, or protection upgrades. You may also incur additional charges for land rights, legal consents, and surveys.
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    For Primary and Secondary connections, typical costs range between £50k and £250k. Bulk Supply Point (BSP) connections tend to exceed £500k due to the voltage level and bespoke infrastructure required. Costs also scale with distance to the nearest connection point and available capacity margins in your area.
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    This tool assumes a demand profile equivalent to a 1–5 MVA industrial or data services load. If you require export capability (e.g., solar or battery), reinforcement thresholds may apply under G99, and you should consult the DNO directly for Statement of Works or specific constraints.
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    Next steps: You may download this estimate or begin a formal connection request through your DNO’s online application portal. We recommend discussing your project with a grid consultant to align technical requirements, land rights, and timescales with your development program.
-                    </p>
-
-                    <p class="text-gray-700 mb-4">
-                    ⚠️ This is a non-binding estimate. Zettar makes no guarantees as to network availability or cost caps. For formal quotation and terms, refer to your DNO’s terms under the Electricity (Connections) Regulations 2017.
+                    <p class="italic text-sm text-gray-500">
+                    Note: This is a high-level estimate based on typical conditions and public road routing. Actual costs may vary.
                     </p>
 
             </div>
