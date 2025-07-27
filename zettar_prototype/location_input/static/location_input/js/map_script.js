@@ -1,18 +1,14 @@
 let map;
 let marker;
 
+import { mapOptions } from './map_config.js';
+
+
 function initMap() {
 
   console.log('DOES IT GET HERE??')
 
-  map = new google.maps.Map(document.getElementById("map"), {
-  zoom: 6,
-  center: { lat: 51.5, lng: -0.12 },
-  streetViewControl: false,
-  zoomControl: true,
-  rotateControl: false,
-  styles: [/* your existing styles */],
-});
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   map.addListener("click", function (event) {
     const lat = event.latLng.lat();
