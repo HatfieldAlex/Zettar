@@ -18,6 +18,7 @@ function initMap() {
     const lng = event.latLng.lng();
 
     console.log("🗺️ Map clicked at:", lat, lng);
+    
 
     // ✅ Remove old marker
     if (marker) marker.setMap(null);
@@ -29,10 +30,15 @@ function initMap() {
       title: "Selected Location"
     });
 
+    
     // ✅ Update Alpine global store
-    Alpine.store('app').location = { lat: position.lat, lng: position.lng };
+    Alpine.store('app').location = { lat: lat, lng: lng };
 
+    console.log('?????!!!');
+
+    console.log('####');
     console.log(Alpine.store('app'));
+    console.log('####');
 
   });
 }

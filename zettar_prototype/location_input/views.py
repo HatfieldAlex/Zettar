@@ -10,6 +10,26 @@ def map_view(request):
     return render(request, 'map.html')
 
 @csrf_exempt
+def get_estimate(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        connection_type = data.get('connection_type')
+        location = data.get('location')
+        
+        print(f'location: {location}')
+
+        estimate_text = {
+            'primary': "Estimated Cost: £75,000 – £150,000",
+            'secondary': "Estimated Cost: £50,000 – £100,000",
+            'bsp': "Estimated Cost: £500,000+",
+        }.get(connection_type, "Unknown connection type.")
+
+        return JsonResponse({'estimate': estimate_text})
+
+    return JsonResponse({'error': 'Invalid request'}, status=400)
+
+
+@csrf_exempt
 def save_location(request):
     if request.method == 'POST':
         latitude = request.POST.get('latitude')
