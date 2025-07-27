@@ -2,16 +2,17 @@ let map;
 let marker;
 
 function initMap() {
-  const defaultLocation = { lat: 51.5, lng: -0.12 };
+
+  console.log('DOES IT GET HERE??')
 
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 6,
-    center: defaultLocation,
-    streetViewControl: false,
-    zoomControl: true,
-    rotateControl: false,
-    styles: [/* your existing styles */]
-  });
+  zoom: 6,
+  center: { lat: 51.5, lng: -0.12 },
+  streetViewControl: false,
+  zoomControl: true,
+  rotateControl: false,
+  styles: [/* your existing styles */],
+});
 
   map.addListener("click", function (event) {
     const lat = event.latLng.lat();

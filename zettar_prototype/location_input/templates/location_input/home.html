@@ -19,9 +19,10 @@
     <!-- Load custom Alpine-driven form behavior (e.g. submission logic) -->
     <script src="{% static 'location_input/js/estimate_form.js' %}" defer></script>
     <!-- Load map logic for handling Google Maps integration and marker interaction -->
-    <script src="{% static 'location_input/js/map_script.js' %}" defer></script>
+    <!-- <script type="module" src="{% static 'location_input/js/map_script.js' %}"></script> -->
+    <script src="{% static 'location_input/js/map_script.js' %}" async defer></script>
     <!-- Load Google Maps JavaScript API and call `initMap` when loaded -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap" async defer></script>
 </head>
 <body class="font-[Inter] bg-gray-50 min-h-screen">
 
