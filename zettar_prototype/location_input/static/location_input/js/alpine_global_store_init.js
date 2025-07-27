@@ -4,7 +4,15 @@ document.addEventListener('alpine:init', () => {
         connectionType: 'hello there!',
         location: { lat: 0.1, lng: 0.1 },
         result: 2,
-        connectionCost: null,  // ✅ New variable, initially null
+        unformattedCost: null,
+        GBPFormatCost: '',
+
+        formatGBP(value) {
+            return new Intl.NumberFormat('en-UK', {
+                style: 'currency',
+                currency: 'GBP'
+            }).format(value);
+        },
 
         submitEstimate() {
             console.log('🚀 submitEstimate() called');
@@ -31,8 +39,8 @@ document.addEventListener('alpine:init', () => {
             })
             .then(data => {
                 console.log('💰 Cost estimate received from Django:', data.cost_estimate);
-                this.result = data.cost_estimate;
-                this.connectionCost = data.cost_estimate;  // ✅ Set connectionCost here
+                this.unformattedCost = data.cost_estimate;
+                this.GBPFormatCost = this.formatGBP(data.cost_estimate);
                 this.showEstimate = true;
 
                 Alpine.nextTick(() => {
