@@ -20,7 +20,7 @@ def get_estimate(request):
     location = data.get('location')
     print(f"Connection Type: {connection_type}")
     print(f"Location: {location}")
-    cost_estimate = 5000
+    cost_estimate = 7000
     print(f'cost_estimate: {cost_estimate}')
     print('----------------------------------------------')
     return JsonResponse({'cost_estimate': cost_estimate})

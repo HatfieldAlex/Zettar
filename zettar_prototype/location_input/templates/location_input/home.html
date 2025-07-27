@@ -113,6 +113,11 @@
                         <span x-text="$store.app.location?.lng.toFixed(5)"></span>
                     </p>
 
+                    <p class="text-gray-700 mb-4" x-show="$store.app.connectionCost !== null">
+                        Estimated connection cost:
+                        <span x-text="`£${$store.app.connectionCost}`"></span>
+                    </p>
+
                     <p class="text-gray-700 mb-4">
                     Based on the selected location and connection type, Zettar has generated an initial indicative cost range for your point of connection (PoC). This estimate includes assumptions for standard distribution network configurations and average reinforcement charges across UK DNOs.
                     </p>

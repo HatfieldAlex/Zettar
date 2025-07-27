@@ -4,6 +4,7 @@ document.addEventListener('alpine:init', () => {
         connectionType: 'hello there!',
         location: { lat: 0.1, lng: 0.1 },
         result: 2,
+        connectionCost: null,  // ✅ New variable, initially null
 
         submitEstimate() {
             console.log('🚀 submitEstimate() called');
@@ -31,6 +32,7 @@ document.addEventListener('alpine:init', () => {
             .then(data => {
                 console.log('💰 Cost estimate received from Django:', data.cost_estimate);
                 this.result = data.cost_estimate;
+                this.connectionCost = data.cost_estimate;  // ✅ Set connectionCost here
                 this.showEstimate = true;
             })
             .catch(error => {
