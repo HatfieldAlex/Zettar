@@ -5,6 +5,8 @@ from .models import Substations
 from .utils import get_osrm_driving_distance, length_to_cost
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
+from django.http import JsonResponse
+
 import json
 
 def map_view(request):
@@ -18,8 +20,11 @@ def get_estimate(request):
     location = data.get('location')
     print(f"Connection Type: {connection_type}")
     print(f"Location: {location}")
-
+    cost_estimate = 5000
+    print(f'cost_estimate: {cost_estimate}')
     print('----------------------------------------------')
+    return JsonResponse({'cost_estimate': cost_estimate})
+
     # if request.method == 'POST':
     #     data = json.loads(request.body)
     #     connection_type = data.get('connection_type')

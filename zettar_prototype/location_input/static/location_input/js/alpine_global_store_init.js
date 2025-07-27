@@ -5,7 +5,6 @@ document.addEventListener('alpine:init', () => {
         location: { lat: 0.1, lng: 0.1 },
         result: 2,
 
-        // 🧪 Dummy method for now
         submitEstimate() {
             console.log('🚀 submitEstimate() called');
             console.log('📦 Sending to Django:', {
@@ -22,12 +21,21 @@ document.addEventListener('alpine:init', () => {
                     connection_type: this.connectionType,
                     location: this.location
                 })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('💰 Cost estimate received from Django:', data.cost_estimate);
+                this.result = data.cost_estimate;
+                this.showEstimate = true;
+            })
+            .catch(error => {
+                console.error('❌ Error fetching estimate:', error);
             });
-
-            // Optional: set a UI flag if needed
-            this.showEstimate = false; // or true, depending on your design
         }
-
     });
-
 });
