@@ -45,10 +45,10 @@ def find_nearest_substation(location, substation_type):
     return nearest_substation
 
 
-def get_osrm_driving_distance(coord1, coord2):
+def public_path_network_distance(geolocation1, geolocation2):
 
-    lon1, lat1 = coord1
-    lon2, lat2 = coord2
+    lon1, lat1 = geolocation1.x, geolocation1.y
+    lon2, lat2 = geolocation2.x, geolocation2.y
 
     url = f"http://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?overview=false"
 

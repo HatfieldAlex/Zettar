@@ -76,16 +76,30 @@ WSGI_APPLICATION = 'zettar_prototype.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# #Production DB
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': 'd1e5nhk75kqfd',
+#         'USER': 'u1eo529bi27mes',
+#         'PASSWORD': 'p45958d9ecd0de40cbd12811686c3d2ce22f0833f04b0395f7acb57a614508de3',
+#         'HOST': 'ec2-63-33-140-57.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
+#Desktop DB for testing
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'd1e5nhk75kqfd',
-        'USER': 'u1eo529bi27mes',
-        'PASSWORD': 'p45958d9ecd0de40cbd12811686c3d2ce22f0833f04b0395f7acb57a614508de3',
-        'HOST': 'ec2-63-33-140-57.eu-west-1.compute.amazonaws.com',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'safer_world',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
 
 
 # Password validation
