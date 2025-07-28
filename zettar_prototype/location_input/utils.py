@@ -3,27 +3,43 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from django.shortcuts import render
 from .models import Substations
+import logging
 
+def find_nearest_substation(location, substation_type):
+    """
+    Returns the nearest substation of a specified type.
 
-def find_nearest_substation(latitude, longitude, substation_type):
-    try:
-        lat = float(latitude)
-        lon = float(longitude)
-        user_location = Point(lon, lat, srid=4326)
-    except (TypeError, ValueError):
-        return render(request, 'location_input/confirmation.html', {
-            'error': 'Invalid coordinates.',
-        })
+    This function uses a geospatial query to filter substations by type,
+    calculates the distance from the given location using PostGIS functions,
+    and returns the closest matching substation. If no substation is found,
+    a warning is logged and None is returned.
 
-    # Find nearest substation of the specified type
+    Args:
+        location (Point) - the geographical location to search nearby
+        substation_type (str) - One of 'Primary', 'Secondary', or 'BSP'
+
+    Returns:
+        The Substations model instance of nearest substation matching the type if found, else None
+    
+    Raises:
+        TypeError: If location is not a Point object.
+        ValueError: If substation_type is not valid.
+        Logs a warning if no substation is found.
+    """
+    if not isinstance(location, Point):
+        raise TypeError("location must be a Point object.")
+
+    if substation_type not in {'Primary', 'Secondary', 'BSP'}:
+        raise ValueError(f"Invalid substation_type: {substation_type}")
+
     nearest_substation = Substations.objects.filter(
         type=substation_type
     ).annotate(
-        distance=Distance('geolocation', user_location)
+        distance=Distance('geolocation', location)
     ).order_by('distance').first()
 
-    # Return None if no matching substation is found
     if nearest_substation is None:
+        logging.warning(f"Unexpected error - no substation found for type '{substation_type}' near location {location}")
         return None
 
     return nearest_substation
