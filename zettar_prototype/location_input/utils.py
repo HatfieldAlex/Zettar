@@ -46,24 +46,54 @@ def find_nearest_substation(location, substation_type):
 
 
 def public_path_network_distance(geolocation1, geolocation2):
+    """
+    Calculate the public path network distance between two geolocations.
+
+    This function sends a request to the OSRM API to compute the driving 
+    distance between two geographic points. It parses the JSON response 
+    and extracts the distance in meters. If the request fails or no valid 
+    route is found, it returns None and logs the appropriate message.
+
+
+    Args:
+        geolocation1 (Point)
+        geolocation2 (Point)
+
+    Returns:
+        float or None: The driving distance in meters if a route is found, else None.
+    
+    Raises:
+        Logs a warning or error if:
+            - The network request fails.
+            - The response is invalid or missing expected fields.
+    """
 
     lon1, lat1 = geolocation1.x, geolocation1.y
     lon2, lat2 = geolocation2.x, geolocation2.y
-
-    url = f"http://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?overview=false"
+    url = (
+        f"http://router.project-osrm.org/route/v1/driving/"
+        f"{lon1},{lat1};{lon2},{lat2}?overview=false"
+    )  
 
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=5)
+        response.raise_for_status()
         data = response.json()
 
-        if response.status_code == 200 and data.get("code") == "Ok":
-            # Distance is in meters
+        if (
+            isinstance(data, dict)
+            and "routes" in data
+            and isinstance(data["routes"], list)
+            and len(data["routes"]) > 0
+            and "distance" in data["routes"][0]
+        ):
             return data["routes"][0]["distance"]
         else:
-            print("Error from OSRM:", data.get("message", "Unknown error"))
+            logger.error("Error from OSRM: %s", data.get("message", "Unknown error"))
             return None
+
     except Exception as e:
-        print("Request failed:", e)
+        logger.error("Error decoding JSON response: %s", e)
         return None
 
 
