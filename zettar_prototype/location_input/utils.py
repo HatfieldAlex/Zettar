@@ -2,7 +2,7 @@ import requests
 from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from django.shortcuts import render
-from .models import Substations
+# from .models import Substations
 import logging
 
 def find_nearest_substation(location, substation_type):
