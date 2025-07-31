@@ -18,8 +18,6 @@ class DNOGroup(models.Model):
 
 class DNOLicenceArea(models.Model):
 
-    dno_group = models.ForeignKey(DNOGroup, on_delete=models.CASCADE, related_name='licence_areas')
-
     DNO_LICENCE_CHOICES = [
         ('north_west_england', 'North West England'),
         ('north_east_england', 'North East England'),
@@ -33,14 +31,17 @@ class DNOLicenceArea(models.Model):
         ('south_east_england', 'South East England'),
         ('east_midlands', 'East Midlands'),
         ('west_midlands', 'West Midlands'),
-        ('south_west_england', 'South West England'),
+        ('south_west', 'South West'),
         ('south_wales', 'South Wales'),
     ]
 
     licence_area = models.CharField(max_length=50, choices=DNO_LICENCE_CHOICES)
 
-class DataPublicationDate(models.Model):
-    date = models.DateField(auto_now_add=True)
+    dno_group = models.ForeignKey(
+        DNOGroup, 
+        on_delete=models.CASCADE, 
+        related_name='licence_areas'
+    )
 
 class GSPSubstation(models.Model):
     name = models.CharField(max_length=255)
@@ -59,8 +60,6 @@ class BSPSubstation(models.Model):
     gsp_substation = models.ForeignKey(
         GSPSubstation,
         on_delete=models.CASCADE,
-        null=True,
-        blank=True,
         related_name='bsp_substations'
     )
 
@@ -71,7 +70,5 @@ class PrimarySubstation(models.Model):
     bsp_substation = models.ForeignKey(
         BSPSubstation,
         on_delete=models.CASCADE,
-        null=True,
-        blank=True,
         related_name='primary_substations'
     )
