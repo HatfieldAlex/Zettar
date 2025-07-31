@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
+from .substations import PrimarySubstation, BSPSubstation, GSPSubstation
 
 class ProposedConnectionVoltageLevel(models.Model):
     VOLTAGE_CHOICES = [
@@ -29,6 +30,12 @@ class ConnectionStatus(models.Model):
         choices=STATUS_CHOICES,
     )
 
+class ReportingPeriod(models.Model):
+    start_date = models.DateField()
+    end_date = models.DateField()
+
+    class Meta:
+        unique_together = ('start_date', 'end_date')
 
 class NewConnection(models.Model):
 
@@ -48,6 +55,38 @@ class NewConnection(models.Model):
         related_name='new_connections'
     )
 
+    reporting_period = models.ForeignKey(
+        ReportingPeriod,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='new_connections'
+    )
+
+    primary_substation = models.ForeignKey(
+        PrimarySubstation,
+        on_delete=models.SET_NULL, 
+        null=True,
+        blank=True,
+        related_name='new_connections'
+    )
+
+    bsp_substation = models.ForeignKey(
+        BSPSubstation,
+        on_delete=models.SET_NULL, 
+        null=True,
+        blank=True,
+        related_name='new_connections'
+    )
+
+    gsp_substation = models.ForeignKey(
+        GSPSubstation,
+        on_delete=models.SET_NULL, 
+        null=True,
+        blank=True,
+        related_name='new_connections'
+    )
+
     demand_count = models.PositiveIntegerField(blank=True, null=True)
     total_demand_capacity_mw =  models.DecimalField(
         max_digits=10, decimal_places=3,
@@ -59,3 +98,13 @@ class NewConnection(models.Model):
         max_digits=10, decimal_places=3,
          help_text="Total generation capacity in megawatts (MW)"
         )
+
+    def clean(self):
+        substation_fields = [
+            self.primary_substation,
+            self.bsp_substation,
+            self.gsp_substation,
+        ]
+        filled_substation_fields = sum(s is not None for s in substation_fields)
+        if filled_substation_fields != 1:
+            raise ValidationError("Exactly one of primary, BSP, or GSP substation must be set.")
