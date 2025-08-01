@@ -6,6 +6,7 @@ from django.shortcuts import render
 import logging
 
 def find_nearest_substation(location, substation_type):
+    return
     """
     Returns the nearest substation of a specified type.
 
@@ -46,6 +47,7 @@ def find_nearest_substation(location, substation_type):
 
 
 def public_path_network_distance(geolocation1, geolocation2):
+    return
     """
     Calculate the public path network distance between two geolocations.
 
@@ -98,6 +100,7 @@ def public_path_network_distance(geolocation1, geolocation2):
 
 
 def length_to_cost(length, substation_type):
+    return
     if substation_type == 'Primary':
         # Upfront Cost: £19,263 is taken from Table 2.2, which lists the primary 33kV connection capitalised reinforcement cost.
         # Per metre cost: £112/m is from Table 3.1, which provides the unit cost of 33kV underground cables laid in public highway.

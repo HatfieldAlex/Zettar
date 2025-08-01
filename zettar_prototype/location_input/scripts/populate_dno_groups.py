@@ -10,4 +10,4 @@ groups = [
 ]
 
 for abbr, name in groups:
-    DNOGroup.objects.get_or_create(abbreviation=abbr, defaults={})
+    DNOGroup.objects.get_or_create(abbr=abbr, defaults={})
