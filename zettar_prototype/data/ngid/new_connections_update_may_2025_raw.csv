@@ -1,0 +1,1081 @@
+﻿Licence,Grid Supply Point,Bulk Supply Point,Primary Substation,Proposed Connection Voltage (kV),Connection Status,Total Demand Number,Total Demand Capacity (MW),Total Generation Number,Total Generation Capacity (MW)
+EMIDS,Berkswell 132 kV S Stn,-,-,132,Budget Estimates Provided,5,257.9,7,345.9
+EMIDS,Berkswell 132 kV S Stn,Coventry Central 33 kV S Stn,Sandy Lane 33 6 6 kV S Stn,6.6,Budget Estimates Provided,1,1.972,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry South 33 kV S Stn,University Of Warwick 33 11 kV S Stn,11,Budget Estimates Provided,1,1.17,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry West 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,60
+EMIDS,Berkswell 132 kV S Stn,Coventry West 33 kV S Stn,Jaguar Cars Browns Lane 33 11 kV S Stn,11,Budget Estimates Provided,1,2.8,0,0
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,Gaydon 33 11 kV S Stn,11,Budget Estimates Provided,2,22.5,0,0
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,Harbury 11 kV S Stn,11,Budget Estimates Provided,1,1,1,1
+EMIDS,Berkswell 132 kV S Stn,Warwick 33 kV S Stn,Banbury Road 33 11 kV S Stn,11,Budget Estimates Provided,2,2.125,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 33 kV S Stn,Clifton 33 11 kV S Stn,11,Budget Estimates Provided,1,9.428,0,0
+EMIDS,Bicker Fen 132 kV S Stn,-,-,132,Budget Estimates Provided,1,50,14,909.3
+EMIDS,Bicker Fen 132 kV S Stn,Grantham 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,60
+EMIDS,Bicker Fen 132 kV S Stn,Grantham 33 kV S Stn,New Beacon Road Grantham 33 11 kV S Stn,11,Budget Estimates Provided,1,4,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Skegness 33 kV S Stn,-,33,Budget Estimates Provided,1,30,3,90
+EMIDS,Bicker Fen 132 kV S Stn,Skegness 33 kV S Stn,Alford 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Sleaford 33 kV S Stn,-,33,Budget Estimates Provided,0,0,8,214.9
+EMIDS,Chesterfield 132 kV S Stn,-,-,132,Budget Estimates Provided,1,49.9,9,435.8
+EMIDS,Chesterfield 132 kV S Stn,Alfreton 33 kV S Stn,-,33,Budget Estimates Provided,0,0,6,155
+EMIDS,Chesterfield 132 kV S Stn,Alfreton 33 kV S Stn,Blackwell 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,-,33,Budget Estimates Provided,3,50,7,160
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Annesley (Kirkby) 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Sherwood Park 33 11 kV S Stn,11,Budget Estimates Provided,3,15,0,0
+EMIDS,Chesterfield 132 kV S Stn,Chesterfield 33 kV S Stn,-,33,Budget Estimates Provided,1,21,8,186.02
+EMIDS,Chesterfield 132 kV S Stn,Clipstone 33 kV S Stn,-,33,Budget Estimates Provided,1,30,5,140
+EMIDS,Chesterfield 132 kV S Stn,Goitside 33 kV S Stn,-,33,Budget Estimates Provided,0,0,6,135
+EMIDS,Chesterfield 132 kV S Stn,Mansfield 33 kV S Stn,-,33,Budget Estimates Provided,1,20,1,20
+EMIDS,Chesterfield 132 kV S Stn,Pinxton 132 kV S Stn,Pinxton 11 kV S Stn,11,Budget Estimates Provided,2,2.25,0,0
+EMIDS,Chesterfield 132 kV S Stn,Staveley 33 kV S Stn,-,33,Budget Estimates Provided,1,30,2,60
+EMIDS,Chesterfield 132 kV S Stn,Staveley 33 kV S Stn,Staveley 11 kV S Stn,11,Budget Estimates Provided,1,1.3,0,0
+EMIDS,Chesterfield 132 kV S Stn,Whitwell 33 kV S Stn,-,33,Budget Estimates Provided,0,0,3,75
+EMIDS,Chesterfield 132 kV S Stn,Whitwell 33 kV S Stn,Westhorpe 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,5
+EMIDS,Coventry 132 kV S Stn,-,-,132,Budget Estimates Provided,1,80,10,459.8
+EMIDS,Coventry 132 kV S Stn,Coventry North 33 kV S Stn,Walsgrave 33 11 kV S Stn,11,Budget Estimates Provided,1,5,0,0
+EMIDS,Coventry 132 kV S Stn,Daventry 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,50
+EMIDS,Coventry 132 kV S Stn,Daventry 33 kV S Stn,Crick 33 11 kV S Stn,11,Budget Estimates Provided,2,6,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,-,33,Budget Estimates Provided,1,10,3,60
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Hinckley 11 kV S Stn,11,Budget Estimates Provided,1,2.5,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Sapcote 33 11 kV S Stn,11,Budget Estimates Provided,1,1.28,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Wood Lane 33 11 kV S Stn,11,Budget Estimates Provided,2,21.7,0,0
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,Langdale Drive 33 11 kV S Stn,11,Budget Estimates Provided,2,9.995,0,0
+EMIDS,Coventry 132 kV S Stn,Pailton 33 kV S Stn,-,33,Budget Estimates Provided,0,0,3,70
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,Lawford 33 11 kV S Stn,11,Budget Estimates Provided,1,1.25,0,0
+EMIDS,Coventry 132 kV S Stn,Whitley 132 kV S Stn,Coventry South 11 kV S Stn,11,Budget Estimates Provided,2,4.5,0,0
+EMIDS,Coventry 132 kV S Stn,Whitley 33 kV S Stn,London Road 33 6 6 kV S Stn,6.6,Budget Estimates Provided,1,1.4,0,0
+EMIDS,Drakelow 132 kV,-,-,132,Budget Estimates Provided,2,113,3,163
+EMIDS,Drakelow 132 kV,Burton 132 kV S Stn,Burton 11 kV,11,Budget Estimates Provided,1,1.3,0,0
+EMIDS,Drakelow 132 kV,Burton 33 kV,-,33,Budget Estimates Provided,0,0,1,16
+EMIDS,Drakelow 132 kV,Burton 33 kV,Hatton 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,5
+EMIDS,Drakelow 132 kV,Burton 33 kV,Trent Alloys 33 11 kV S Stn,11,Budget Estimates Provided,1,1.25,0,0
+EMIDS,Drakelow 132 kV,Burton South 33 kV S Stn,Barton Under Needwood 33 11 kV S Stn,11,Budget Estimates Provided,1,1.7,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,-,33,Budget Estimates Provided,1,17,2,45
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Ashby 33 11 kV S Stn,11,Budget Estimates Provided,1,1.22,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Gresley 11 kV S Stn,11,Budget Estimates Provided,0,0,1,5
+EMIDS,East Claydon 132 kV S Stn,-,-,132,Budget Estimates Provided,2,119.9,7,369.9
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Victoria Road 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,-,132,Budget Estimates Provided,2,60,1,30
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,Towcester 33 11 kV S Stn,11,Budget Estimates Provided,3,11,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Marlborough Street 33 11 kV S Stn,11,Budget Estimates Provided,1,1.275,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Newport Pagnell 33 11 kV S Stn,11,Budget Estimates Provided,1,9.5,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Wolverton 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,-,33,Budget Estimates Provided,0,0,3,66
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Buckingham 33 11 kV S Stn,11,Budget Estimates Provided,1,1.5,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Kiln Farm 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,Enderby 132 kV S Stn,-,-,132,Budget Estimates Provided,4,340,5,400
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,-,33,Budget Estimates Provided,1,30,3,90
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Interlink Park 33 11 kV S Stn,11,Budget Estimates Provided,1,1.4,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Osbaston 33 11 kV S Stn,11,Budget Estimates Provided,1,5,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester 33 kV S Stn,Leicester 11 kV S Stn,11,Budget Estimates Provided,1,1.5,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester East 33 kV S Stn,-,33,Budget Estimates Provided,1,21.012,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester East 33 kV S Stn,Stoneygate 33 6 6 kV S Stn,6.6,Budget Estimates Provided,2,31.154,1,5
+EMIDS,Enderby 132 kV S Stn,Leicester East 33 kV S Stn,Thurnby 33 11 kV S Stn,11,Budget Estimates Provided,1,1.622,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Beaumont Leys 33 11 kV S Stn,11,Budget Estimates Provided,6,7.4,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Hockley Farm Road 33 11 kV S Stn,11,Budget Estimates Provided,1,1.6,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,-,33,Budget Estimates Provided,4,69,1,30
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Alliance And Leicester 33 11 kV S Stn,11,Budget Estimates Provided,2,21,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Whetstone 33 11 kV S Stn,11,Budget Estimates Provided,3,8.052,2,8
+EMIDS,Grendon 132 kV S Stn,-,-,132,Budget Estimates Provided,8,810,13,664.9
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,-,33,Budget Estimates Provided,1,20,4,85
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Corby No2 11 kV S Stn,11,Budget Estimates Provided,4,10.2,1,5
+EMIDS,Grendon 132 kV S Stn,Corby North 132 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,Grendon 132 kV S Stn,Irthlingborough 33 kV S Stn,-,33,Budget Estimates Provided,1,80,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,-,33,Budget Estimates Provided,1,24,1,24
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Burton Latimer 33 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Desborough 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,-,33,Budget Estimates Provided,1,15,4,90
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,Farndon Road 33 11 kV S Stn,11,Budget Estimates Provided,1,1.3,0,0
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,Kibworth 11 kV S Stn,11,Budget Estimates Provided,1,1.44,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,-,33,Budget Estimates Provided,3,69.4,3,90
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Holwell 33 11 kV S Stn,11,Budget Estimates Provided,3,12.19,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Melton Mowbray 11 kV S Stn,11,Budget Estimates Provided,1,1.225,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Old Dalby 33 11 kV S Stn,11,Budget Estimates Provided,1,1.5,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,Campbell Street 33 11 kV S Stn,11,Budget Estimates Provided,1,4.1,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton East 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,38.2
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,60
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,Oakham 11 kV S Stn,11,Budget Estimates Provided,1,1.32,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 33 kV S Stn,-,33,Budget Estimates Provided,3,82,5,150
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,-,33,Budget Estimates Provided,1,10,1,10
+EMIDS,Lea Marston 132 kV S Stn,Tamworth Town 132 kV S Stn,Tamworth Town 11 kV S Stn,11,Budget Estimates Provided,1,1.125,1,1
+EMIDS,Ratcliffe On Soar 132 kV S Stn,-,-,132,Budget Estimates Provided,2,125,5,274.9
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 33 kV S Stn,Shepshed 33 11 kV S Stn,11,Budget Estimates Provided,2,2,1,4.94
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Castle Road 33 11 kV S Stn,11,Budget Estimates Provided,1,2,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Clifton 33 11 kV S Stn,11,Budget Estimates Provided,2,3,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Cotgrave 33 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,North Wilford 33 11 kV S Stn,11,Budget Estimates Provided,2,3,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Toton 3 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Toton 3 33 kV S Stn,Ratcliffe On Soar 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,7
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,55
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Syston 33 11 kV S Stn,11,Budget Estimates Provided,2,7.6,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,-,-,132,Budget Estimates Provided,2,149,12,678.8
+EMIDS,Staythorpe  C  132 kV S Stn,Checkerhouse 33 kV S Stn,-,33,Budget Estimates Provided,0,0,12,260
+EMIDS,Staythorpe  C  132 kV S Stn,Checkerhouse 33 kV S Stn,Tuxford 33 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Grantham South 132 kV S Stn,-,132,Budget Estimates Provided,0,0,1,25
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,-,33,Budget Estimates Provided,1,3.542,5,140
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Newark Junction 33 11 kV S Stn,11,Budget Estimates Provided,1,5.5,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Swinderby 33 11 kV S Stn,11,Budget Estimates Provided,2,9.1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Staythorpe  B  132 kV S Stn,-,132,Budget Estimates Provided,1,30,2,60
+EMIDS,Stoke Bardolph 132 kV,-,-,132,Budget Estimates Provided,1,150,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham East 33 kV S Stn,-,33,Budget Estimates Provided,1,18,1,10
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,-,33,Budget Estimates Provided,2,43,0,0
+EMIDS,Walpole 132 kV S Stn,-,-,132,Budget Estimates Provided,0,0,6,340
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,-,33,Budget Estimates Provided,0,0,4,100
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Marsh Lane 33 11 kV S Stn,11,Budget Estimates Provided,1,5,1,5
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Mount Bridge Boston 33 11 kV S Stn,11,Budget Estimates Provided,1,1.2,0,0
+EMIDS,Walpole 132 kV S Stn,South Holland 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,30
+EMIDS,Walpole 132 kV S Stn,Spalding 132 kV S Stn,-,132,Budget Estimates Provided,1,20,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,-,33,Budget Estimates Provided,0,0,3,75
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Crown Fm 33 11 kV S Stn,11,Budget Estimates Provided,1,5,1,5
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Spalding Clay Lake 11 kV S Stn,11,Budget Estimates Provided,2,8.5,1,1.5
+EMIDS,Walpole 132 kV S Stn,Stamford 33 kV S Stn,-,33,Budget Estimates Provided,0,0,1,20
+EMIDS,Walpole 132 kV S Stn,Stamford 33 kV S Stn,Stamford 11 kV S Stn,11,Budget Estimates Provided,1,1.2,0,0
+EMIDS,West Burton 132 kV S Stn,-,-,132,Budget Estimates Provided,1,300,8,369.9
+EMIDS,West Burton 132 kV S Stn,Lincoln Local 132 kV S Stn,Lincoln No 2 11 kV S Stn,11,Budget Estimates Provided,4,13.5,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,-,33,Budget Estimates Provided,1,20,3,90
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Doddington Park 33 11 kV S Stn,11,Budget Estimates Provided,2,7,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,North Hykeham 33 11 kV S Stn,11,Budget Estimates Provided,1,1.2,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Rookery Lane Lincoln 33 11 kV S Stn,11,Budget Estimates Provided,1,2.911,0,0
+EMIDS,West Burton 132 kV S Stn,Worksop 33 kV S Stn,-,33,Budget Estimates Provided,2,17.9,1,30
+EMIDS,West Burton 132 kV S Stn,Worksop 33 kV S Stn,Kilton Rd 33 11 kV S Stn,11,Budget Estimates Provided,1,5,0,0
+EMIDS,Willington 132 kV S Stn,-,-,132,Budget Estimates Provided,4,214,15,768.9
+EMIDS,Willington 132 kV S Stn,Derby 132 kV S Stn,Derby 11 kV S Stn,11,Budget Estimates Provided,4,4.5,0,0
+EMIDS,Willington 132 kV S Stn,Derby 33 kV S Stn,Chaddesden 33 11 kV S Stn,11,Budget Estimates Provided,1,3,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,75
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Allenton 33 11 kV S Stn,11,Budget Estimates Provided,1,3,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Infinity Park 33 11 kV S Stn,11,Budget Estimates Provided,2,3.115,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Silverstone 33 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+EMIDS,Willington 132 kV S Stn,Heanor 33 kV S Stn,-,33,Budget Estimates Provided,0,0,5,120
+EMIDS,Willington 132 kV S Stn,Spondon B 33 kV S Stn,Spondon 11 kV S Stn,11,Budget Estimates Provided,2,3.5,0,0
+EMIDS,Willington 132 kV S Stn,Stanton 33 kV S Stn,-,33,Budget Estimates Provided,2,33,1,30
+EMIDS,Willington 132 kV S Stn,Uttoxeter 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,55
+EMIDS,Willington 132 kV S Stn,Winster 33 kV S Stn,-,33,Budget Estimates Provided,0,0,2,60
+EMIDS,Willington 132 kV S Stn,Winster 33 kV S Stn,Matlock 33 11 kV S Stn,11,Budget Estimates Provided,1,2.5,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry Central 33 kV S Stn,Holbrook Lane 33 6 6 kV S Stn,6.6,Connection offers accepted,1,2.999,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry Central 33 kV S Stn,Sandy Lane 33 6 6 kV S Stn,6.6,Connection offers accepted,1,1.5,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry West 33 kV S Stn,Hawkesmill Lane 33 6 6 kV S Stn,6.6,Connection offers accepted,1,1.164,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 132 kV S Stn,Warwick 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Grantham North 132 kV S Stn,Grantham North 11 kV S Stn,11,Connection offers accepted,1,6,1,1.7
+EMIDS,Bicker Fen 132 kV S Stn,Skegness 33 kV S Stn,-,33,Connection offers accepted,0,0,1,9.6
+EMIDS,Bicker Fen 132 kV S Stn,Skegness 33 kV S Stn,Spilsby 33 11 kV S Stn,11,Connection offers accepted,1,3,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Sleaford 33 kV S Stn,Woodhall Spa 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Chesterfield 132 kV S Stn,-,-,132,Connection offers accepted,0,0,1,20
+EMIDS,Chesterfield 132 kV S Stn,Alfreton 33 kV S Stn,Meadow Lane 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,-,33,Connection offers accepted,1,8,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Annesley (Kirkby) 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Hucknall,11,Connection offers accepted,1,4,0,0
+EMIDS,Chesterfield 132 kV S Stn,Chesterfield 33 kV S Stn,-,33,Connection offers accepted,0,0,1,9.029
+EMIDS,Chesterfield 132 kV S Stn,Chesterfield 33 kV S Stn,Sheepbridge 6 6 kV S Stn,11,Connection offers accepted,1,2.2,0,0
+EMIDS,Chesterfield 132 kV S Stn,Clipstone 33 kV S Stn,Crown Fm 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Clipstone 33 kV S Stn,Rufford 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Chesterfield 132 kV S Stn,Goitside 33 kV S Stn,Goitside 6 6 kV S Stn,6.6,Connection offers accepted,1,1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Goitside 33 kV S Stn,Queens Park 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Chesterfield 132 kV S Stn,Mansfield 33 kV S Stn,Skegby Lane 33 11 kV S Stn,11,Connection offers accepted,1,1.1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Mansfield 33 kV S Stn,Teversal 33 11 kV S Stn,11,Connection offers accepted,1,1.415,0,0
+EMIDS,Chesterfield 132 kV S Stn,Pinxton 132 kV S Stn,Pinxton 11 kV S Stn,11,Connection offers accepted,1,13.3,0,0
+EMIDS,Coventry 132 kV S Stn,-,-,132,Connection offers accepted,1,10,1,50
+EMIDS,Coventry 132 kV S Stn,Coventry North 33 kV S Stn,-,33,Connection offers accepted,0,0,1,35
+EMIDS,Coventry 132 kV S Stn,Coventry North 33 kV S Stn,Walsgrave 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Coventry 132 kV S Stn,Daventry 33 kV S Stn,Weedon 33 11 kV S Stn,11,Connection offers accepted,1,3,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,-,33,Connection offers accepted,0,0,1,20
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Barwell 33 11 kV S Stn,11,Connection offers accepted,1,6.758,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Hinckley 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Sapcote 33 11 kV S Stn,11,Connection offers accepted,1,1.35,0,0
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,Nuneaton 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 132 kV S Stn,Rugby 11 kV S Stn,11,Connection offers accepted,2,2.886,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,-,33,Connection offers accepted,1,5,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,Lawford 33 11 kV S Stn,11,Connection offers accepted,1,6,0,0
+EMIDS,Coventry 132 kV S Stn,Whitley 33 kV S Stn,Ryton 33 11 kV S Stn,11,Connection offers accepted,1,3,0,0
+EMIDS,Drakelow 132 kV,-,-,132,Connection offers accepted,1,35,1,35
+EMIDS,Drakelow 132 kV,Burton 132 kV S Stn,Burton 11 kV,11,Connection offers accepted,2,3.9,0,0
+EMIDS,Drakelow 132 kV,Burton 33 kV,Hatton 33 11 kV S Stn,11,Connection offers accepted,1,3,0,0
+EMIDS,Drakelow 132 kV,Burton 33 kV,Trent Alloys 33 11 kV S Stn,11,Connection offers accepted,1,1.25,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Ashby 33 11 kV S Stn,11,Connection offers accepted,1,4.4,0,0
+EMIDS,East Claydon 132 kV S Stn,-,-,132,Connection offers accepted,3,159.8,3,189.8
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Fox Milne 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Kingston 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Secklow Gate 33 11 kV S Stn,11,Connection offers accepted,2,3.6,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Tattenhoe Primary,11,Connection offers accepted,1,1.192,0,0
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,Towcester 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,-,33,Connection offers accepted,0,0,1,21.875
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Kiln Farm 33 11 kV S Stn,11,Connection offers accepted,1,5,0,0
+EMIDS,Enderby 132 kV S Stn,-,-,132,Connection offers accepted,1,49.9,2,99.8
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,-,33,Connection offers accepted,1,10.4,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Desford 33 11 kV S Stn,11,Connection offers accepted,1,8.262,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Interlink Park 33 11 kV S Stn,11,Connection offers accepted,1,4,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Osbaston 33 11 kV,11,Connection offers accepted,1,1.9,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Groby Road 33 11 kV S Stn,11,Connection offers accepted,1,5,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Wigston Magna 33 11 kV S Stn,11,Connection offers accepted,1,1.407,1,1.0595
+EMIDS,Grendon 132 kV S Stn,-,-,132,Connection offers accepted,5,409.8,4,259.8
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Corby Central 33 11 kV S Stn,11,Connection offers accepted,1,10,0,0
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Earlstrees 33 11 kV S Stn,11,Connection offers accepted,2,2.5,0,0
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Hazelwood 33 11 kV S Stn,11,Connection offers accepted,3,4.95,0,0
+EMIDS,Grendon 132 kV S Stn,Irthlingborough 33 kV S Stn,-,33,Connection offers accepted,1,17.5,1,35
+EMIDS,Grendon 132 kV S Stn,Irthlingborough 33 kV S Stn,Pytchley Road 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,-,33,Connection offers accepted,1,1.5,1,10
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Field Street 33 11 kV S Stn,11,Connection offers accepted,1,1.25,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Kettering North 33 11 kV S Stn,11,Connection offers accepted,1,8,0,0
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,Farndon Road 33 11 kV S Stn,11,Connection offers accepted,1,1.734,0,0
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,Kibworth 11 kV S Stn,11,Connection offers accepted,2,2.25,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Holwell 33 11 kV S Stn,11,Connection offers accepted,1,1.554,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Melton Mowbray 11 kV S Stn,11,Connection offers accepted,1,2.25,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,-,33,Connection offers accepted,1,40,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,Campbell Street 33 11 kV S Stn,11,Connection offers accepted,1,1.1,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,Wootton 33 11 kV S Stn,11,Connection offers accepted,1,1.14,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton East 33 kV S Stn,-,33,Connection offers accepted,1,10,1,34
+EMIDS,Grendon 132 kV S Stn,Northampton West 33 kV S Stn,Banbury Lane 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton West 33 kV S Stn,Ellesmere Avenue 33 11 kV S Stn,11,Connection offers accepted,3,8.65,0,0
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,-,33,Connection offers accepted,1,40,1,40
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,Empingham 33 11 kV S Stn,11,Connection offers accepted,1,9,0,0
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,Market Overton 33 11 kV S Stn,11,Connection offers accepted,1,1.2,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 132 kV S Stn,Wellingborough 132/11 kV (Reserve),11,Connection offers accepted,1,1.287,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 33 kV S Stn,Cannon Street 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 33 kV S Stn,Park Farm 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 33 kV S Stn,Sharnbrook 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Lea Marston 132 kV S Stn,-,-,132,Connection offers accepted,0,0,1,44
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,-,33,Connection offers accepted,1,1,1,18.5
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,Tamworth Grid 11 kV S Stn,11,Connection offers accepted,1,5.15,0,0
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,Wood End 33 11 kV S Stn,11,Connection offers accepted,1,3,0,0
+EMIDS,Lea Marston 132 kV S Stn,Tamworth Town 33 kV S Stn,-,33,Connection offers accepted,1,20,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,-,-,132,Connection offers accepted,1,150,2,199.9
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 132 kV S Stn (M32),Loughborough 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 33 kV S Stn,-,33,Connection offers accepted,1,10,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,North Wilford 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Sneinton 33 11 kV S Stn,11,Connection offers accepted,2,8,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,West Bridgford 33 11 kV S Stn,11,Connection offers accepted,1,2.25,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,East Leake 33 11 kV S Stn,11,Connection offers accepted,1,1.183,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Mountsorrel 33 11 kV S Stn,11,Connection offers accepted,1,9,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Syston 33 11 kV S Stn,11,Connection offers accepted,2,7.7,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,-,-,132,Connection offers accepted,1,100,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Checkerhouse 33 kV S Stn,Bevercotes 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Checkerhouse 33 kV S Stn,Hallcroft Rd 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Carlton On Trent 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Fernwood 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Southwell 33 11 kV S Stn,11,Connection offers accepted,1,2.331,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Westborough 33 11 kV S Stn,11,Connection offers accepted,1,3.699,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,Bulwell 33 11 kV S Stn,11,Connection offers accepted,1,4.1,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Donnington 33 11 kV S Stn,11,Connection offers accepted,1,1.8,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Marsh Lane 33 11 kV S Stn,11,Connection offers accepted,1,1.5,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Mount Bridge Boston 33 11 kV S Stn,11,Connection offers accepted,1,3.6,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Stickney 33 11 kV S Stn,11,Connection offers accepted,1,2.3,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Wrangle 33 11 kV S Stn,11,Connection offers accepted,1,2.8,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Holbeach 33 11 kV S Stn,11,Connection offers accepted,1,1.79,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Spalding Clay Lake 11 kV S Stn,11,Connection offers accepted,1,6,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Spalding Park Road 33 11 kV S Stn,11,Connection offers accepted,1,2.1,0,0
+EMIDS,Walpole 132 kV S Stn,Stamford 33 kV S Stn,Tinwell Road Ketton 33 11 kV S Stn,11,Connection offers accepted,1,2.099,0,0
+EMIDS,West Burton 132 kV S Stn,-,-,132,Connection offers accepted,2,149.8,4,252.753
+EMIDS,West Burton 132 kV S Stn,Lincoln Local 132 kV S Stn,Lincoln No 2 11 kV S Stn,11,Connection offers accepted,1,7.5,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Doddington Park 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,West Burton 132 kV S Stn,Worksop 33 kV S Stn,Manton 33 11 kV S Stn,11,Connection offers accepted,1,2.5,0,0
+EMIDS,Willington 132 kV S Stn,Derby 33 kV S Stn,Mackworth 33 11 kV S Stn,11,Connection offers accepted,1,1.721,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,-,33,Connection offers accepted,1,25,0,0
+EMIDS,Willington 132 kV S Stn,Heanor 33 kV S Stn,Denby 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+EMIDS,Willington 132 kV S Stn,Heanor 33 kV S Stn,Moorgreen 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Willington 132 kV S Stn,Spondon B 33 kV S Stn,-,33,Connection offers accepted,0,0,1,20
+EMIDS,Willington 132 kV S Stn,Winster 33 kV S Stn,Bakewell 33 11 kV S Stn,11,Connection offers accepted,1,2,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry Central 33 kV S Stn,Courthouse Green 33/11 kV S Stn,11,Connection offers not yet accepted,1,1.7,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry Central 33 kV S Stn,Courthouse Green 33/6 6 kV S Stn,6.6,Connection offers not yet accepted,1,1,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry West 33 kV S Stn,Coventry West 6 6 kV S Stn,6.6,Connection offers not yet accepted,1,2.56,0,0
+EMIDS,Berkswell 132 kV S Stn,Coventry West 33 kV S Stn,Hawkesmill Lane 33 6 6 kV S Stn,6.6,Connection offers not yet accepted,1,1.164,0,0
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,-,33,Connection offers not yet accepted,1,20.16,1,20.16
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,Gaydon 33 11 kV S Stn,11,Connection offers not yet accepted,1,8.774,0,0
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,Harbury 11 kV S Stn,11,Connection offers not yet accepted,1,1.1,0,0
+EMIDS,Berkswell 132 kV S Stn,Harbury 33 kV S Stn,Southam 33 11 kV S Stn,11,Connection offers not yet accepted,1,3.73,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 132 kV S Stn,Warwick 11 kV S Stn,11,Connection offers not yet accepted,1,2.4,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 33 kV S Stn,Banbury Road 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.4,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 33 kV S Stn,Kenilworth 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.755,0,0
+EMIDS,Berkswell 132 kV S Stn,Warwick 33 kV S Stn,Wise Street 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Bicker Fen 132 kV S Stn,-,-,132,Connection offers not yet accepted,2,149.8,2,149.8
+EMIDS,Bicker Fen 132 kV S Stn,Grantham 33 kV S Stn,New Beacon Road Grantham 33 11 kV S Stn,11,Connection offers not yet accepted,1,4,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Skegness 33 kV S Stn,Ingoldmells 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.3,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Sleaford 33 kV S Stn,Ruskington 33 11 kV S Stn,11,Connection offers not yet accepted,2,5,0,0
+EMIDS,Bicker Fen 132 kV S Stn,Sleaford 33 kV S Stn,Tattershall 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Alfreton 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,14.78
+EMIDS,Chesterfield 132 kV S Stn,Alfreton 33 kV S Stn,Meadow Lane 33 11 kV S Stn,11,Connection offers not yet accepted,1,10,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,-,33,Connection offers not yet accepted,1,30,1,22.5
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Annesley (Kirkby) 11 kV S Stn,11,Connection offers not yet accepted,3,4.1,1,4.26
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Calverton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,2,5.1
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Hucknall,11,Connection offers not yet accepted,1,4,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Sherwood Park 33 11 kV S Stn,11,Connection offers not yet accepted,3,9.817,0,0
+EMIDS,Chesterfield 132 kV S Stn,Annesley 33 kV S Stn,Sutton Junction 33 11 kV S Stn,11,Connection offers not yet accepted,1,4.4,0,0
+EMIDS,Chesterfield 132 kV S Stn,Chesterfield 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,21.12
+EMIDS,Chesterfield 132 kV S Stn,Clipstone 33 kV S Stn,-,33,Connection offers not yet accepted,1,20,0,0
+EMIDS,Chesterfield 132 kV S Stn,Goitside 33 kV S Stn,Sheffield Road 33 11 6 6 kV S Stn,6.6,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Chesterfield 132 kV S Stn,Mansfield 33 kV S Stn,Lime Tree Place 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.3,0,0
+EMIDS,Chesterfield 132 kV S Stn,Mansfield 33 kV S Stn,Skegby Lane 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.1,0,0
+EMIDS,Chesterfield 132 kV S Stn,Staveley 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,9.2
+EMIDS,Chesterfield 132 kV S Stn,Staveley 33 kV S Stn,Erin Road,11,Connection offers not yet accepted,1,5,0,0
+EMIDS,Chesterfield 132 kV S Stn,Whitwell 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,10
+EMIDS,Coventry 132 kV S Stn,-,-,132,Connection offers not yet accepted,2,59,2,148.99
+EMIDS,Coventry 132 kV S Stn,Coventry North 33 kV S Stn,Coventry Arena 33 11 kV S Stn,11,Connection offers not yet accepted,1,3,0,0
+EMIDS,Coventry 132 kV S Stn,Coventry North 33 kV S Stn,Coventry North 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Coventry 132 kV S Stn,Daventry 33 kV S Stn,Crick 33 11 kV S Stn,11,Connection offers not yet accepted,2,2.5,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Hinckley 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Middlefield 33 11 kV S Stn,11,Connection offers not yet accepted,3,4.65,1,1.215
+EMIDS,Coventry 132 kV S Stn,Hinckley 33 kV S Stn,Sapcote 33 11 kV S Stn,11,Connection offers not yet accepted,3,12.618,0,0
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,Gipsy Lane 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,Newdigate 33 11 kV S Stn,11,Connection offers not yet accepted,3,3.487,0,0
+EMIDS,Coventry 132 kV S Stn,Nuneaton 33 kV S Stn,Nuneaton 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Coventry 132 kV S Stn,Pailton 33 kV S Stn,-,33,Connection offers not yet accepted,1,10,1,10
+EMIDS,Coventry 132 kV S Stn,Pailton 33 kV S Stn,Magna Park 33 11 kV S Stn,11,Connection offers not yet accepted,3,14.3,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 132 kV S Stn,Rugby 11 kV S Stn,11,Connection offers not yet accepted,1,1.25,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,-,33,Connection offers not yet accepted,1,15,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,Rugby Gateway,11,Connection offers not yet accepted,1,6,0,0
+EMIDS,Coventry 132 kV S Stn,Rugby 33 kV S Stn,Union Street 33 11 kV S Stn,11,Connection offers not yet accepted,3,5.545,0,0
+EMIDS,Coventry 132 kV S Stn,Whitley 33 kV S Stn,Dillotford Ave 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.6,0,0
+EMIDS,Drakelow 132 kV,Burton 132 kV S Stn,Burton 11 kV,11,Connection offers not yet accepted,1,3.661,0,0
+EMIDS,Drakelow 132 kV,Burton 33 kV,Hatton 33 11 kV S Stn,11,Connection offers not yet accepted,3,5.61,0,0
+EMIDS,Drakelow 132 kV,Burton 33 kV,Trent Alloys 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.25,0,0
+EMIDS,Drakelow 132 kV,Burton South 33 kV S Stn,Barton Under Needwood 33 11 kV S Stn,11,Connection offers not yet accepted,2,7.65,0,0
+EMIDS,Drakelow 132 kV,Burton South 33 kV S Stn,Wellington St 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.29,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Ashby 33 11 kV S Stn,11,Connection offers not yet accepted,2,5.694,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Gresley 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Drakelow 132 kV,Gresley 33 kV S Stn,Willesley 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,-,-,132,Connection offers not yet accepted,2,220,4,286
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Bletchley 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Kingston 33 11 kV S Stn,11,Connection offers not yet accepted,2,3,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Secklow Gate 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.6,0,0
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Tattenhoe Primary,11,Connection offers not yet accepted,1,9.199,1,2.925
+EMIDS,East Claydon 132 kV S Stn,Bletchley 33 kV S Stn,Wavendon Gate 33 11 kV S Stn,11,Connection offers not yet accepted,4,10.086,0,0
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,Brackley 11 kV,11,Connection offers not yet accepted,3,6.921,2,4.2
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,Silverstone 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,Brackley 132 kV S Stn,Towcester 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Childs Way 33 11 kV S Stn,11,Connection offers not yet accepted,2,8.881,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Marlborough Street 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.15,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Newport Pagnell 33 11 kV S Stn,11,Connection offers not yet accepted,3,7.229,0,0
+EMIDS,East Claydon 132 kV S Stn,Bradwell Abbey 33 kV S Stn,Wolverton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,21.875
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Buckingham 33 11 kV S Stn,11,Connection offers not yet accepted,3,4,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Eldergate 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.322,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Shenley Wood 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.3,0,0
+EMIDS,East Claydon 132 kV S Stn,Stony Stratford 33 kV S Stn,Steeple Claydon 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Enderby 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,20,1,1.56
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Bardon 33 11 kV S Stn,11,Connection offers not yet accepted,2,5.65,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Mantle Lane Coalville 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.437,0,0
+EMIDS,Enderby 132 kV S Stn,Coalville 33 kV S Stn,Osbaston 33 11 kV,11,Connection offers not yet accepted,1,1.57,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester 33 kV S Stn,Braunstone 33 11 kV S Stn,11,Connection offers not yet accepted,1,2.168,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester East 33 kV S Stn,Thurnby 33 11 kV S Stn,11,Connection offers not yet accepted,1,3.378,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Beaumont Leys 33 11 kV S Stn,11,Connection offers not yet accepted,4,12.469,1,1.898
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Birstall 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.569,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Groby Road 33 11 kV S Stn,11,Connection offers not yet accepted,2,11.3,0,0
+EMIDS,Enderby 132 kV S Stn,Leicester North 33 kV S Stn,Lero 33 6 6 kV S Stn,6.6,Connection offers not yet accepted,1,2.3,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Alliance And Leicester 33 11 kV S Stn,11,Connection offers not yet accepted,1,6,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Whetstone 33 11 kV S Stn,11,Connection offers not yet accepted,1,6,0,0
+EMIDS,Enderby 132 kV S Stn,Wigston 33 kV S Stn,Wigston Magna 33 11 kV S Stn,11,Connection offers not yet accepted,4,6.587,1,1.06
+EMIDS,Grendon 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,500,1,500
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Corby Central 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Corby No2 11 kV S Stn,11,Connection offers not yet accepted,2,4.34,1,1.7
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Earlstrees 33 11 kV S Stn,11,Connection offers not yet accepted,1,5,0,0
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Hazelwood 33 11 kV S Stn,11,Connection offers not yet accepted,2,5.25,1,6.65
+EMIDS,Grendon 132 kV S Stn,Corby 33 kV S Stn,Oakley 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.708,0,0
+EMIDS,Grendon 132 kV S Stn,Irthlingborough 33 kV S Stn,-,33,Connection offers not yet accepted,1,31,1,31
+EMIDS,Grendon 132 kV S Stn,Irthlingborough 33 kV S Stn,Pytchley Road 33 11 kV S Stn,11,Connection offers not yet accepted,3,3.5,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,-,33,Connection offers not yet accepted,1,5,1,5
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Burton Latimer 33 11 kV S Stn,11,Connection offers not yet accepted,0,0,1,4.2
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Desborough 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.218,0,0
+EMIDS,Grendon 132 kV S Stn,Kettering 33 kV S Stn,Field Street 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,0,0
+EMIDS,Grendon 132 kV S Stn,Kibworth 33 kV S Stn,Kibworth 11 kV S Stn,11,Connection offers not yet accepted,1,1.25,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,40
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Holwell 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.554,0,0
+EMIDS,Grendon 132 kV S Stn,Melton Mowbray 33 kV S Stn,Melton Mowbray 11 kV S Stn,11,Connection offers not yet accepted,5,8.428,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,1,40
+EMIDS,Grendon 132 kV S Stn,Northampton 33 kV S Stn,Wootton 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.286,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton East 33 kV S Stn,-,33,Connection offers not yet accepted,2,45.1,1,39.6
+EMIDS,Grendon 132 kV S Stn,Northampton West 33 kV S Stn,Banbury Lane 33 11 kV S Stn,11,Connection offers not yet accepted,2,5.38,0,0
+EMIDS,Grendon 132 kV S Stn,Northampton West 33 kV S Stn,Ellesmere Avenue 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,Empingham 33 11 kV S Stn,11,Connection offers not yet accepted,1,5.32,0,0
+EMIDS,Grendon 132 kV S Stn,Oakham 33 kV S Stn,Oakham 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Grendon 132 kV S Stn,Wellingborough 33 kV S Stn,Sharnbrook 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.88,0,0
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,Atherstone 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.461,0,0
+EMIDS,Lea Marston 132 kV S Stn,Tamworth 33 kV S Stn,Wood End 33 11 kV S Stn,11,Connection offers not yet accepted,1,3,0,0
+EMIDS,Lea Marston 132 kV S Stn,Tamworth Town 132 kV S Stn,Tamworth Town 11 kV S Stn,11,Connection offers not yet accepted,2,5.075,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,70,1,70
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 132 kV S Stn (M32),Loughborough 11 kV S Stn,11,Connection offers not yet accepted,3,5.7,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 33 kV S Stn,-,33,Connection offers not yet accepted,0,0,2,31.99
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 33 kV S Stn,Brush 33 11 kV S Stn,11,Connection offers not yet accepted,2,2,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Loughborough 33 kV S Stn,Shepshed 33 11 kV S Stn,11,Connection offers not yet accepted,3,5.3,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Clifton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,North Wilford 33 11 kV S Stn,11,Connection offers not yet accepted,1,4.188,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Sneinton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Talbot St 33 11 kV S Stn,11,Connection offers not yet accepted,1,2.499,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,West Bridgford 33 11 kV S Stn,11,Connection offers not yet accepted,2,6.853,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Nottingham 33 kV S Stn,Wollaton Road 33 11 kV S Stn,11,Connection offers not yet accepted,2,6.5,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Toton 3 33 kV S Stn,Toton 11 kV S Stn,11,Connection offers not yet accepted,1,1.421,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Mountsorrel 33 11 kV S Stn,11,Connection offers not yet accepted,1,9,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Syston 33 11 kV S Stn,11,Connection offers not yet accepted,2,2.828,0,0
+EMIDS,Ratcliffe On Soar 132 kV S Stn,Willoughby 33 kV S Stn,Willoughby 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Grantham South 132 kV S Stn,Grantham South 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,-,33,Connection offers not yet accepted,1,8,0,0
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Fernwood 33 11 kV S Stn,11,Connection offers not yet accepted,1,3.351,1,1.37
+EMIDS,Staythorpe  C  132 kV S Stn,Hawton 33 kV S Stn,Newark Junction 33 11 kV S Stn,11,Connection offers not yet accepted,2,4.542,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham East 33 kV S Stn,-,33,Connection offers not yet accepted,1,21.57,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham East 33 kV S Stn,Colwick 33 11 kV S Stn,11,Connection offers not yet accepted,1,6,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,-,33,Connection offers not yet accepted,2,27.514,1,2.119
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,Bulwell 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,Church St 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Stoke Bardolph 132 kV,Nottingham North 33 kV S Stn,Marlborough Rd 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Marsh Lane 33 11 kV S Stn,11,Connection offers not yet accepted,2,5,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Sleaford Road Boston 33 11 kV S Stn,11,Connection offers not yet accepted,1,4.183,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Stickney 33 11 kV S Stn,11,Connection offers not yet accepted,1,2.3,0,0
+EMIDS,Walpole 132 kV S Stn,Boston 33 kV S Stn,Wrangle 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.25,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Holbeach 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.24,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Spalding Clay Lake 11 kV S Stn,11,Connection offers not yet accepted,1,1.55,0,0
+EMIDS,Walpole 132 kV S Stn,Spalding Clay Lake 33 kV S Stn,Spalding Park Road 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,Walpole 132 kV S Stn,Stamford 33 kV S Stn,Wittering 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+EMIDS,West Burton 132 kV S Stn,-,-,132,Connection offers not yet accepted,4,397.39,5,466.29
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Doddington Park 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,North Hykeham 33 11 kV S Stn,11,Connection offers not yet accepted,3,9,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Rookery Lane Lincoln 33 11 kV S Stn,11,Connection offers not yet accepted,1,18.1,0,0
+EMIDS,West Burton 132 kV S Stn,Lincoln Main No 1 33 kV S Stn,Wragby 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,West Burton 132 kV S Stn,Worksop 33 kV S Stn,-,33,Connection offers not yet accepted,1,8.642,0,0
+EMIDS,West Burton 132 kV S Stn,Worksop 33 kV S Stn,Kilton Rd 33 11 kV S Stn,11,Connection offers not yet accepted,2,8.372,0,0
+EMIDS,Willington 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,99.9,1,99.9
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,-,33,Connection offers not yet accepted,2,39,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Allenton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.25,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Infinity Park 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.799,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Normanton 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.447,0,0
+EMIDS,Willington 132 kV S Stn,Derby South 33 kV S Stn,Silverstone 33 11 kV S Stn,11,Connection offers not yet accepted,2,3.75,0,0
+EMIDS,Willington 132 kV S Stn,Heanor 33 kV S Stn,Denby 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+EMIDS,Willington 132 kV S Stn,Heanor 33 kV S Stn,Heanor 11 kV S Stn,11,Connection offers not yet accepted,1,1.3,0,0
+EMIDS,Willington 132 kV S Stn,Spondon B 33 kV S Stn,Trent Lane 33 11 kV S Stn,11,Connection offers not yet accepted,2,2,0,0
+EMIDS,Willington 132 kV S Stn,Stanton 33 kV S Stn,Sandiacre 33 11 kV S Stn,11,Connection offers not yet accepted,1,3.105,0,0
+EMIDS,Willington 132 kV S Stn,Uttoxeter 33 kV S Stn,Church St 33 11 kV S Stn,11,Connection offers not yet accepted,2,5.438,0,0
+EMIDS,Willington 132 kV S Stn,Winster 33 kV S Stn,Ashbourne 33 11 kV S Stn,11,Connection offers not yet accepted,1,2.5,0,0
+EMIDS,Willington 132 kV S Stn,Winster 33 kV S Stn,Bakewell 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,0,0
+SWALES,Aberthaw Power Station,-,-,132,Budget Estimates Provided,1,80,0,0
+SWALES,Aberthaw Power Station,Cardiff West Grid,-,33,Budget Estimates Provided,0,0,4,130
+SWALES,Aberthaw Power Station,East Aberthaw,-,33,Budget Estimates Provided,0,0,2,80
+SWALES,Aberthaw Power Station,Sully Grid,-,11,Budget Estimates Provided,1,15,2,80
+SWALES,Cardiff East Grid,-,-,132,Budget Estimates Provided,2,250,0,0
+SWALES,Cardiff East Grid,Cardiff Central Grid,Sandon St.,11,Budget Estimates Provided,1,1.622,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,-,33,Budget Estimates Provided,1,20,1,20
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,Heath,11,Budget Estimates Provided,1,5,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,St Mellons,11,Budget Estimates Provided,1,1.4,1,7.6
+SWALES,Cardiff East Grid,Rover Way Grid,Rover Way Primary,11,Budget Estimates Provided,1,10,0,0
+SWALES,Pembroke Power Station,-,-,132,Budget Estimates Provided,2,290,2,290
+SWALES,Pembroke Power Station,Golden Hill Grid,-,33,Budget Estimates Provided,0,0,2,17
+SWALES,Pembroke Power Station,Golden Hill Grid,Golden Hill Primary,11,Budget Estimates Provided,1,12,2,3
+SWALES,Pembroke Power Station,Golden Hill Grid,Neyland,11,Budget Estimates Provided,1,2.7,1,1
+SWALES,Pembroke Power Station,Golden Hill Grid,St Florence,11,Budget Estimates Provided,0,0,1,5
+SWALES,Pembroke Power Station,Haverfordwest Grid,-,33,Budget Estimates Provided,1,25,5,120
+SWALES,Pyle Grid,-,-,132,Budget Estimates Provided,2,162.9,6,322.9
+SWALES,Pyle Grid,Bridgend Grid,-,33,Budget Estimates Provided,2,37,0,0
+SWALES,Pyle Grid,Bridgend Grid,Bridgend Trading Estate,11,Budget Estimates Provided,5,28.045,0,0
+SWALES,Pyle Grid,Bridgend Grid,Llangewydd,11,Budget Estimates Provided,1,3.352,0,0
+SWALES,Pyle Grid,Pyle Bsp,Pyle Primary,11,Budget Estimates Provided,2,3.5,0,0
+SWALES,Rassau G.S.P.,Abergavenny,-,11,Budget Estimates Provided,1,30,3,110
+SWALES,Rassau G.S.P.,Abergavenny,Abergavenny Primary,11,Budget Estimates Provided,1,10,2,9.6
+SWALES,Rassau G.S.P.,Abergavenny,Brecon,11,Budget Estimates Provided,1,1.36,1,19.36
+SWALES,Rassau G.S.P.,Crumlin,-,33,Budget Estimates Provided,0,0,2,80
+SWALES,Swansea North Grid 132/33 kV S Stn,-,-,132,Budget Estimates Provided,4,350,7,274.8
+SWALES,Swansea North Grid 132/33 kV S Stn,Ammanford Grid,-,33,Budget Estimates Provided,2,45,8,137.6
+SWALES,Swansea North Grid 132/33 kV S Stn,Ammanford Grid,Meinciau,11,Budget Estimates Provided,0,0,1,7.6
+SWALES,Swansea North Grid 132/33 kV S Stn,Ammanford Grid,Pantyffynon,11,Budget Estimates Provided,0,0,1,7
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,-,33,Budget Estimates Provided,1,150,4,279.9
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Victoria Road,11,Budget Estimates Provided,1,1.6,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Wern,11,Budget Estimates Provided,1,8,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Ynys Street,11,Budget Estimates Provided,1,1.25,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Carmarthen Grid,Trevaughan,11,Budget Estimates Provided,1,1,1,6
+SWALES,Swansea North Grid 132/33 kV S Stn,Hirwaun Grid,-,33,Budget Estimates Provided,2,162.9,6,260.4
+SWALES,Swansea North Grid 132/33 kV S Stn,Hirwaun Grid,Hirwaun Primary,11,Budget Estimates Provided,1,6.23,1,7.6
+SWALES,Swansea North Grid 132/33 kV S Stn,Lampeter Grid,-,33,Budget Estimates Provided,0,0,1,15
+SWALES,Swansea North Grid 132/33 kV S Stn,Lampeter Grid,Llanfihangel Ystrad,11,Budget Estimates Provided,0,0,1,7.6
+SWALES,Swansea North Grid 132/33 kV S Stn,Llanarth Grid,Aberaeron,11,Budget Estimates Provided,0,0,1,2.5
+SWALES,Swansea North Grid 132/33 kV S Stn,Llanarth Grid,Llanarth Primary,11,Budget Estimates Provided,0,0,1,7.6
+SWALES,Swansea North Grid 132/33 kV S Stn,Llanelli Grid,-,11,Budget Estimates Provided,0,0,2,30
+SWALES,Swansea North Grid 132/33 kV S Stn,Rhos Grid,Cardigan,11,Budget Estimates Provided,2,2.75,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Rhos Grid,Rhos Primary,11,Budget Estimates Provided,0,0,1,2.25
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea North Bsp,-,33,Budget Estimates Provided,1,75,1,20
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea North Bsp,Garngoch,11,Budget Estimates Provided,4,4,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea West Grid,Ravenhill,11,Budget Estimates Provided,2,8.48,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Tir John Power Station,Upper Bank,11,Budget Estimates Provided,2,2,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Ystradgynlais Grid,-,33,Budget Estimates Provided,0,0,3,55.2
+SWALES,Upper Boat,-,-,132,Budget Estimates Provided,2,90,5,210
+SWALES,Upper Boat,Dowlais Grid,-,33,Budget Estimates Provided,1,20,3,100
+SWALES,Upper Boat,Merthyr East Grid,Merthyr East Primary,11,Budget Estimates Provided,0,0,1,10
+SWALES,Upper Boat,Mountain Ash Grid,-,33,Budget Estimates Provided,0,0,2,80
+SWALES,Upper Boat,Mountain Ash Grid,Mountain Ash,11,Budget Estimates Provided,0,0,1,1.4
+SWALES,Upper Boat,Pencoed Grid,-,11,Budget Estimates Provided,0,0,4,155
+SWALES,Upper Boat,Pontyclun Primary,Pontyclun 132/11 kV,11,Budget Estimates Provided,0,0,1,7.5
+SWALES,Upper Boat,Talbot Green Grid,Talbot Green Primary,11,Budget Estimates Provided,1,3.3,0,0
+SWALES,Upper Boat,Upper Boat Bsp,-,33,Budget Estimates Provided,0,0,1,15
+SWALES,Uskmouth,-,-,132,Budget Estimates Provided,3,95,4,160
+SWALES,Uskmouth,Llantarnam,-,66,Budget Estimates Provided,1,15,3,55
+SWALES,Uskmouth,Llantarnam,Llantarnam Primary,11,Budget Estimates Provided,1,1.252,0,0
+SWALES,Uskmouth,Llantarnam,Rogerstone Primary,11,Budget Estimates Provided,0,0,1,10
+SWALES,Uskmouth,Magor Grid,-,11,Budget Estimates Provided,0,0,2,80
+SWALES,Uskmouth,Newport East,-,11,Budget Estimates Provided,1,1.6,0,0
+SWALES,Uskmouth,Newport South,-,33,Budget Estimates Provided,1,15,3,104.9
+SWALES,Uskmouth,Newport West,Newport West Primary,11,Budget Estimates Provided,1,1,0,0
+SWALES,Uskmouth,Panteg 132/11 kV,-,11,Budget Estimates Provided,0,0,2,80
+SWALES,Aberthaw Power Station,Cardiff South Bsp,Cardiff South Grid,11,Connection offers accepted,1,5.3,0,0
+SWALES,Aberthaw Power Station,Cardiff West Grid,Fairwater,11,Connection offers accepted,1,1,1,1.0307
+SWALES,Aberthaw Power Station,Grangetown Grid,Grangetown Grid Primary,11,Connection offers accepted,1,1,0,0
+SWALES,Aberthaw Power Station,Sully Grid,Sully Grid Primary,11,Connection offers accepted,1,1,0,0
+SWALES,Cardiff East Grid,Cardiff Central Grid,Sandon St.,11,Connection offers accepted,1,1.216,0,0
+SWALES,Cardiff East Grid,Cardiff Central Grid,Wood Street,11,Connection offers accepted,2,3.5,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,St Mellons,11,Connection offers accepted,1,1.5,0,0
+SWALES,Cardiff East Grid,Rover Way Grid,Rover Way Primary,11,Connection offers accepted,1,5.9,0,0
+SWALES,Grange,Grange Bsp,-,66,Connection offers accepted,1,3,1,22
+SWALES,Pembroke Power Station,-,-,132,Connection offers accepted,1,50,1,49.9
+SWALES,Pembroke Power Station,Haverfordwest Grid,Steynton,11,Connection offers accepted,1,3,0,0
+SWALES,Pyle Grid,-,-,132,Connection offers accepted,1,50,2,130
+SWALES,Pyle Grid,Bridgend Grid,Bridgend Trading Estate,11,Connection offers accepted,1,1.6,0,0
+SWALES,Pyle Grid,Waterton Industrial Grid,Waterton Industrial Primary,11,Connection offers accepted,1,3.8,0,0
+SWALES,Rassau G.S.P.,Abergavenny,Abergavenny Primary,11,Connection offers accepted,1,1.5,0,0
+SWALES,Rassau G.S.P.,Crumlin,-,11,Connection offers accepted,1,28,1,28
+SWALES,Rassau G.S.P.,Crumlin,Cwmfelinfach,11,Connection offers accepted,1,2,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,-,-,132,Connection offers accepted,1,87.8,3,161.8
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Ynys Street,11,Connection offers accepted,1,2.65,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Hirwaun Grid,Aberpergwm,11,Connection offers accepted,1,1.5,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Tir John Power Station,Swansea Waterfront,11,Connection offers accepted,1,3.5,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Tir John Power Station,Tir John Primary,6.6,Connection offers accepted,0,0,1,2.5
+SWALES,Swansea North Grid 132/33 kV S Stn,Trostre Grid,-,33,Connection offers accepted,1,25,2,43
+SWALES,Swansea North Grid 132/33 kV S Stn,Trostre Grid,Maesarddafen,11,Connection offers accepted,1,1,0,0
+SWALES,Upper Boat,-,-,132,Connection offers accepted,1,49.9,1,49.9
+SWALES,Upper Boat,Pontyclun Primary,Pontyclun 132/11 kV,11,Connection offers accepted,1,1.685,0,0
+SWALES,Upper Boat,Talbot Green Grid,Talbot Green Primary,11,Connection offers accepted,1,1,0,0
+SWALES,Upper Boat,Upper Boat Bsp,-,11,Connection offers accepted,0,0,1,7.5
+SWALES,Uskmouth,-,-,132,Connection offers accepted,0,0,1,48
+SWALES,Uskmouth,Llantarnam,-,11,Connection offers accepted,0,0,1,19.2
+SWALES,Uskmouth,Magor Grid,Magor Primary,11,Connection offers accepted,2,3.207,0,0
+SWALES,Uskmouth,Newport South,Ringland Newport,11,Connection offers accepted,1,1.35,0,0
+SWALES,Uskmouth,Sudbrook,-,11,Connection offers accepted,0,0,1,20
+SWALES,Aberthaw Power Station,Cardiff South Bsp,Cardiff South Grid,11,Connection offers not yet accepted,1,4,0,0
+SWALES,Aberthaw Power Station,Cardiff West Grid,Fairwater,11,Connection offers not yet accepted,0,0,1,1.0304
+SWALES,Aberthaw Power Station,East Aberthaw,East Aberthaw Primary,11,Connection offers not yet accepted,1,1.1,0,0
+SWALES,Aberthaw Power Station,Grangetown Grid,Grangetown Grid Primary,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Cardiff East Grid,-,-,132,Connection offers not yet accepted,1,135,0,0
+SWALES,Cardiff East Grid,Cardiff Central Grid,Wood Street,11,Connection offers not yet accepted,1,2.957,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,Cardiff East Grid Primary,11,Connection offers not yet accepted,2,4,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,Cyncoed,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Cardiff East Grid,Cardiff East Grid Bsp,St Mellons,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Grange,Grange Bsp,-,11,Connection offers not yet accepted,1,10,0,0
+SWALES,Pembroke Power Station,-,-,132,Connection offers not yet accepted,2,446,2,145.9
+SWALES,Pembroke Power Station,Haverfordwest Grid,Haverfordwest Power Stn,11,Connection offers not yet accepted,1,2.589,0,0
+SWALES,Pembroke Power Station,Milford Haven Grid,-,132,Connection offers not yet accepted,0,0,1,110
+SWALES,Pyle Grid,-,-,132,Connection offers not yet accepted,2,149.9,2,189.9
+SWALES,Pyle Grid,Bridgend Grid,Bridgend Trading Estate,11,Connection offers not yet accepted,3,8.157,0,0
+SWALES,Pyle Grid,Bridgend Grid,Llangewydd,11,Connection offers not yet accepted,2,6.15,0,0
+SWALES,Pyle Grid,Bridgend Grid,Schwyll,11,Connection offers not yet accepted,1,3.542,0,0
+SWALES,Rassau G.S.P.,Abergavenny,-,66,Connection offers not yet accepted,0,0,1,10
+SWALES,Rassau G.S.P.,Abergavenny,Abergavenny Primary,11,Connection offers not yet accepted,2,2.5,0,0
+SWALES,Rassau G.S.P.,Abergavenny,Brecon,11,Connection offers not yet accepted,1,1.3,0,0
+SWALES,Rassau G.S.P.,Ebbw Vale,Ebbw Vale Primary,11,Connection offers not yet accepted,0,0,1,2.1
+SWALES,Swansea North Grid 132/33 kV S Stn,-,-,132,Connection offers not yet accepted,2,250,3,124
+SWALES,Swansea North Grid 132/33 kV S Stn,Ammanford Grid,Hendy,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Ammanford Grid,Pantyffynon,11,Connection offers not yet accepted,1,2,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Britton Ferry Primary,11,Connection offers not yet accepted,1,4.2,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Briton Ferry Grid,Ynys Street,11,Connection offers not yet accepted,1,1.6,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Carmarthen Grid,-,33,Connection offers not yet accepted,1,8.5,1,10
+SWALES,Swansea North Grid 132/33 kV S Stn,Carmarthen Grid,Cwmffrwd,11,Connection offers not yet accepted,1,1.643,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Carmarthen Grid,St Clears,11,Connection offers not yet accepted,0,0,1,9.9
+SWALES,Swansea North Grid 132/33 kV S Stn,Carmarthen Grid,Trevaughan,11,Connection offers not yet accepted,2,2.4,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Hirwaun Grid,-,33,Connection offers not yet accepted,0,0,1,14.1
+SWALES,Swansea North Grid 132/33 kV S Stn,Morriston Grid,Morriston Primary,11,Connection offers not yet accepted,6,11.95,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Rhos Grid,-,11,Connection offers not yet accepted,0,0,1,15.3
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea North Bsp,-,33,Connection offers not yet accepted,0,0,1,15
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea North Bsp,Garngoch,11,Connection offers not yet accepted,2,8.3,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Swansea North Bsp,Lime Street Gorseinon,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Tir John Power Station,Llandarcy,11,Connection offers not yet accepted,1,1.6,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Tir John Power Station,Upper Bank,11,Connection offers not yet accepted,1,1.177,0,0
+SWALES,Swansea North Grid 132/33 kV S Stn,Ystradgynlais Grid,-,33,Connection offers not yet accepted,1,30,1,60
+SWALES,Swansea North Grid 132/33 kV S Stn,Ystradgynlais Grid,Travellers Rest Primary,11,Connection offers not yet accepted,1,1,0,0
+SWALES,Upper Boat,-,-,132,Connection offers not yet accepted,1,49.9,1,49.9
+SWALES,Upper Boat,Dowlais Grid,-,33,Connection offers not yet accepted,0,0,1,15
+SWALES,Upper Boat,Pencoed Grid,Pencoed Primary,11,Connection offers not yet accepted,1,8.16,0,0
+SWALES,Upper Boat,Upper Boat Bsp,Caerphilly,11,Connection offers not yet accepted,2,2.2,0,0
+SWALES,Upper Boat,Upper Boat Bsp,Creigiau,11,Connection offers not yet accepted,2,3.029,0,0
+SWALES,Uskmouth,-,-,132,Connection offers not yet accepted,3,138,2,260
+SWALES,Uskmouth,Magor Grid,Magor Primary,11,Connection offers not yet accepted,2,2.207,0,0
+SWALES,Uskmouth,Newport South,-,33,Connection offers not yet accepted,1,8,0,0
+SWALES,Uskmouth,Newport West,-,11,Connection offers not yet accepted,1,2,0,0
+SWEST,Abham  S.G.P.,-,-,132,Budget Estimates Provided,0,0,1,25
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Dawlish,11,Budget Estimates Provided,2,4.31,1,2.5
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Newton Abbot Main,11,Budget Estimates Provided,0,0,1,2.97
+SWEST,Abham  S.G.P.,Paignton Bsp,-,33,Budget Estimates Provided,0,0,2,120
+SWEST,Abham  S.G.P.,Paignton Bsp,Colley End,11,Budget Estimates Provided,1,1,1,25
+SWEST,Abham  S.G.P.,Plymouth Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Abham  S.G.P.,Plymouth Bsp,Adelaide Road,11,Budget Estimates Provided,2,3.6,0,0
+SWEST,Abham  S.G.P.,Plymouth Bsp,Buckwell Street,11,Budget Estimates Provided,1,1,0,0
+SWEST,Abham  S.G.P.,Plympton Bsp,Langage,11,Budget Estimates Provided,1,1.6,0,0
+SWEST,Abham  S.G.P.,Torquay Bsp,-,33,Budget Estimates Provided,1,6,0,0
+SWEST,Abham  S.G.P.,Torquay Bsp,Barton,11,Budget Estimates Provided,1,6,0,0
+SWEST,Abham  S.G.P.,Torquay Bsp,Upton Valley,11,Budget Estimates Provided,1,1.884,0,0
+SWEST,Abham  S.G.P.,Totnes Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Abham  S.G.P.,Totnes Bsp,Kingsbridge,11,Budget Estimates Provided,1,1,0,0
+SWEST,Alverdiscott  S.G.P.,-,-,132,Budget Estimates Provided,3,82.5,3,82.485
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,-,33,Budget Estimates Provided,3,19.528,6,175
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,Rock Park,11,Budget Estimates Provided,1,3,0,0
+SWEST,Alverdiscott  S.G.P.,East Yelland Bsp,-,33,Budget Estimates Provided,2,25,4,149.99
+SWEST,Alverdiscott  S.G.P.,East Yelland Bsp,Braunton,11,Budget Estimates Provided,1,5.88,0,0
+SWEST,Alverdiscott  S.G.P.,East Yelland Bsp,Fremington,11,Budget Estimates Provided,0,0,1,4.898
+SWEST,Alverdiscott  S.G.P.,North Tawton Bsp,-,33,Budget Estimates Provided,0,0,9,252.9
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,-,33,Budget Estimates Provided,2,25,8,299.89
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Clovelly,11,Budget Estimates Provided,1,1.6,0,0
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Lifton,11,Budget Estimates Provided,0,0,1,3
+SWEST,Axminster  S.G.P.,Woodcote Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Bridgwater  S.G.P.,-,-,132,Budget Estimates Provided,0,0,1,30
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,-,33,Budget Estimates Provided,0,0,1,50
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Bath Road Primary,11,Budget Estimates Provided,1,2,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Colley Lane,11,Budget Estimates Provided,1,4,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Somerton,11,Budget Estimates Provided,1,1.15,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Watchfield,11,Budget Estimates Provided,2,2.75,0,0
+SWEST,Bridgwater  S.G.P.,Churchill 33 kV,-,33,Budget Estimates Provided,0,0,1,30
+SWEST,Bridgwater  S.G.P.,Street Bsp,-,33,Budget Estimates Provided,1,5,3,105
+SWEST,Bridgwater  S.G.P.,Street Bsp,Millfield,11,Budget Estimates Provided,1,1,0,0
+SWEST,Exeter Main S.G.P.,-,-,132,Budget Estimates Provided,4,47.04,1,49.9
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,-,33,Budget Estimates Provided,1,75,3,149.9
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,Exminster,11,Budget Estimates Provided,1,6.75,0,0
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,Folly Bridge,11,Budget Estimates Provided,0,0,1,3.96
+SWEST,Exeter Main S.G.P.,Exeter Main Bsp,-,33,Budget Estimates Provided,1,10,14,497
+SWEST,Exeter Main S.G.P.,Exmouth Bsp,Withycombe Raleigh,11,Budget Estimates Provided,1,3.493,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Exeter Science Park,11,Budget Estimates Provided,1,4,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Marsh Green,11,Budget Estimates Provided,2,2.563,0,0
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,-,33,Budget Estimates Provided,2,25,3,119.99
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Bridge Mills,11,Budget Estimates Provided,0,0,1,3
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Cullompton,11,Budget Estimates Provided,3,11,0,0
+SWEST,Indian Queens  S.G.P.,-,-,132,Budget Estimates Provided,1,49.9,2,49.9
+SWEST,Indian Queens  S.G.P.,Camborne Bsp,-,33,Budget Estimates Provided,2,25,4,149.99
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,St Mawgan,11,Budget Estimates Provided,0,0,1,2
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,-,33,Budget Estimates Provided,2,25,2,69.99
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,Newlyn,11,Budget Estimates Provided,1,1.315,0,0
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,Penzance Heamoor,11,Budget Estimates Provided,1,3,0,0
+SWEST,Indian Queens  S.G.P.,Rame Bsp,-,33,Budget Estimates Provided,3,31,6,161.99
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Falmouth Bickland Hl,11,Budget Estimates Provided,1,1.5,0,0
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Helston,11,Budget Estimates Provided,1,4,0,0
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Penryn,11,Budget Estimates Provided,0,0,1,6
+SWEST,Indian Queens  S.G.P.,St Austell Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Indian Queens  S.G.P.,St Austell Bsp,Par Harbour,11,Budget Estimates Provided,1,1,0,0
+SWEST,Indian Queens  S.G.P.,St Austell Bsp,Sawles Road,11,Budget Estimates Provided,1,1.5,0,0
+SWEST,Indian Queens  S.G.P.,St Austell Bsp,St Austell,11,Budget Estimates Provided,1,1.6,0,0
+SWEST,Indian Queens  S.G.P.,St Tudy Bsp,-,11,Budget Estimates Provided,2,25,4,149.99
+SWEST,Indian Queens  S.G.P.,St Tudy Bsp,Wadebridge,11,Budget Estimates Provided,2,3.732,0,0
+SWEST,Indian Queens  S.G.P.,Truro Bsp,-,33,Budget Estimates Provided,2,25,4,149.99
+SWEST,Indian Queens  S.G.P.,Truro Bsp,Truro Shortlanesend,11,Budget Estimates Provided,1,6,0,0
+SWEST,Iron Acton 132 kV S Stn,-,-,132,Budget Estimates Provided,3,190,2,90
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Almondsbury,11,Budget Estimates Provided,3,5.9,0,0
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Bradley Stoke,11,Budget Estimates Provided,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,-,33,Budget Estimates Provided,1,70,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bedminster,11,Budget Estimates Provided,1,3.7,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Feeder Rd 11 kV,11,Budget Estimates Provided,2,2.808,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Whitchurch,11,Budget Estimates Provided,1,9.124,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Eastville,11,Budget Estimates Provided,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Filton Dc,11,Budget Estimates Provided,1,1.2,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Lockleaze,11,Budget Estimates Provided,1,1.285,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Patchway Primary,11,Budget Estimates Provided,2,8,0,0
+SWEST,Iron Acton 132 kV S Stn,Seabank Bsp,-,33,Budget Estimates Provided,0,0,3,71.27
+SWEST,Iron Acton 132 kV S Stn,Seabank Bsp,Western Approach,11,Budget Estimates Provided,1,6,0,0
+SWEST,Iron Acton 132 kV S Stn,St Pauls Bsp 132 kV,St Pauls Bsp 11 kV,11,Budget Estimates Provided,3,5.32,0,0
+SWEST,Landulph  S.G.P.,-,-,132,Budget Estimates Provided,0,0,2,60
+SWEST,Landulph  S.G.P.,Ernesettle Bsp,Southway,11,Budget Estimates Provided,1,1.118,0,0
+SWEST,Landulph  S.G.P.,Landulph BSP,-,33,Budget Estimates Provided,2,10,6,130
+SWEST,Landulph  S.G.P.,St Germans Bsp,-,33,Budget Estimates Provided,4,125,6,299.99
+SWEST,Sandford 132 kV S.G.P.,Churchill Bsp 132 kV,-,132,Budget Estimates Provided,1,200,1,50
+SWEST,Sandford 132 kV S.G.P.,Churchill Bsp 132 kV,Westwick,11,Budget Estimates Provided,1,1.5,0,0
+SWEST,Sandford 132 kV S.G.P.,Weston Bsp 132 kV,Weston Central,11,Budget Estimates Provided,1,1,0,0
+SWEST,Seabank S.G.P.,-,-,132,Budget Estimates Provided,0,0,2,80
+SWEST,Seabank S.G.P.,Avonmouth Bsp,-,33,Budget Estimates Provided,0,0,3,100.8
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Avonmouth,11,Budget Estimates Provided,2,3,0,0
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Cairns Road,11,Budget Estimates Provided,1,1.25,0,0
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Kingsweston,11,Budget Estimates Provided,1,1,0,0
+SWEST,Seabank S.G.P.,Radstock 33 kV,-,33,Budget Estimates Provided,0,0,1,5
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,-,132,Budget Estimates Provided,0,0,2,80
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,Evercreech,11,Budget Estimates Provided,1,2,0,0
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,Keynsham East,11,Budget Estimates Provided,1,2,0,0
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,Newbury,11,Budget Estimates Provided,0,0,1,5
+SWEST,Taunton S.G.P.,-,-,132,Budget Estimates Provided,2,25.1,2,94.9
+SWEST,Taunton S.G.P.,Bowhays Cross BSP,-,33,Budget Estimates Provided,2,25,6,184.9
+SWEST,Taunton S.G.P.,Taunton Main Bsp,-,33,Budget Estimates Provided,0,0,2,80
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Bradley Lane,11,Connection offers accepted,1,8.25,0,0
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Dawlish,11,Connection offers accepted,1,2,0,0
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Newton Abbot Main,11,Connection offers accepted,1,2,0,0
+SWEST,Abham  S.G.P.,Plympton Bsp,Newton Ferrers,11,Connection offers accepted,1,1.045,0,0
+SWEST,Abham  S.G.P.,Plympton Bsp,Torycombe,11,Connection offers accepted,1,2,0,0
+SWEST,Abham  S.G.P.,Torquay Bsp,Lawes Bridge,11,Connection offers accepted,1,1.5,0,0
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,-,33,Connection offers accepted,1,17,1,17
+SWEST,Alverdiscott  S.G.P.,East Yelland Bsp,Barnstaple Quay,11,Connection offers accepted,1,1.2,0,0
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Lifton,11,Connection offers accepted,1,1,0,0
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Shebbear,11,Connection offers accepted,1,49.99,1,49.99
+SWEST,Axminster  S.G.P.,Woodcote Bsp,Bridport,11,Connection offers accepted,1,1.5,0,0
+SWEST,Bridgwater  S.G.P.,-,-,132,Connection offers accepted,1,10,1,10
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Bath Road Primary,11,Connection offers accepted,1,1.2,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Colley Lane,11,Connection offers accepted,2,5.95,0,0
+SWEST,Bridgwater  S.G.P.,Street Bsp,-,33,Connection offers accepted,1,5,1,10
+SWEST,Bridgwater  S.G.P.,Street Bsp,Millfield,11,Connection offers accepted,1,1.5,0,0
+SWEST,Exeter Main S.G.P.,-,-,132,Connection offers accepted,0,0,1,49.9
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,-,33,Connection offers accepted,1,1.612,2,30
+SWEST,Exeter Main S.G.P.,Exeter Main Bsp,-,33,Connection offers accepted,0,0,1,27
+SWEST,Exeter Main S.G.P.,Sowton Bsp,-,33,Connection offers accepted,2,50,2,50
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Clyst Honiton,11,Connection offers accepted,1,1.5,0,0
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Burlescombe,11,Connection offers accepted,1,40,1,40
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Tiverton South,11,Connection offers accepted,1,1,0,0
+SWEST,Indian Queens  S.G.P.,-,-,132,Connection offers accepted,0,0,1,50
+SWEST,Indian Queens  S.G.P.,Camborne BSP,-,33,Connection offers accepted,0,0,1,10
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,-,33,Connection offers accepted,1,1.25,0,0
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,Mevagissey,11,Connection offers accepted,1,1,0,0
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,-,33,Connection offers accepted,1,8,1,14
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Falmouth Bickland Hl,11,Connection offers accepted,1,1.5,0,0
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Falmouth Docks,11,Connection offers accepted,1,2.5,0,0
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Bradley Stoke,11,Connection offers accepted,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bedminster,11,Connection offers accepted,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bower Ashton,11,Connection offers accepted,1,6,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Feeder Rd 11 kV,11,Connection offers accepted,1,1.5,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Feeder Road B,11,Connection offers accepted,1,1.2,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Emersons Green,11,Connection offers accepted,0,0,1,9.212
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Filton Dc,11,Connection offers accepted,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Patchway Primary,11,Connection offers accepted,1,4,0,0
+SWEST,Iron Acton 132 kV S Stn,St Pauls Bsp 132 kV,St Pauls Bsp 11 kV,11,Connection offers accepted,4,12.6,0,0
+SWEST,Landulph  S.G.P.,Ernesettle Bsp,Alexandra Road,11,Connection offers accepted,2,2.7,0,0
+SWEST,Melksham  S.G.P.,Bath (Dolemeads) 132 kV,Oldfield Park,6.6,Connection offers accepted,2,4.1,0,0
+SWEST,Melksham  S.G.P.,Bath (Dolemeads) 132 kV,Twerton,6.6,Connection offers accepted,1,4.5,0,0
+SWEST,Sandford 132 kV S.G.P.,Weston Bsp 132 kV,Weston Locking Rd,11,Connection offers accepted,1,1.5,0,0
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Avonmouth,11,Connection offers accepted,2,2.25,0,0
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Kingsweston,11,Connection offers accepted,3,3.895,0,0
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,High Littleton,11,Connection offers accepted,1,1,0,0
+SWEST,Taunton S.G.P.,Bowhays Cross BSP,-,11,Connection offers accepted,1,9,1,9
+SWEST,Taunton S.G.P.,Taunton Main Bsp,-,33,Connection offers accepted,0,0,1,20
+SWEST,Abham  S.G.P.,-,-,132,Connection offers not yet accepted,1,50,1,50
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Bovey Tracey,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Abham  S.G.P.,Newton Abbot Bsp (Forde Road),Dawlish,11,Connection offers not yet accepted,1,2,0,0
+SWEST,Abham  S.G.P.,Plymouth Bsp,Elim Terrace,11,Connection offers not yet accepted,1,2.5,0,0
+SWEST,Abham  S.G.P.,Plymouth Bsp,Longbridge,11,Connection offers not yet accepted,2,2.148,0,0
+SWEST,Abham  S.G.P.,Plymouth Bsp,Plymstock South,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Abham  S.G.P.,Plymouth Bsp,Prince Rock,11,Connection offers not yet accepted,1,5,1,5
+SWEST,Abham  S.G.P.,Plympton Bsp,-,33,Connection offers not yet accepted,1,25,0,0
+SWEST,Abham  S.G.P.,Plympton Bsp,Langage,11,Connection offers not yet accepted,1,6,0,0
+SWEST,Abham  S.G.P.,Plympton Bsp,Newton Ferrers,11,Connection offers not yet accepted,1,1.045,0,0
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,Great Torrington,11,Connection offers not yet accepted,1,2.168,0,0
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,Rock Park,11,Connection offers not yet accepted,3,8.146,0,0
+SWEST,Alverdiscott  S.G.P.,Barnstaple Bsp,Roundswell,11,Connection offers not yet accepted,2,2.9,0,0
+SWEST,Alverdiscott  S.G.P.,East Yelland Bsp,-,33,Connection offers not yet accepted,0,0,1,7.5
+SWEST,Alverdiscott  S.G.P.,North Tawton Bsp,Whiddon Down,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,-,33,Connection offers not yet accepted,1,15,2,64.5
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Lifton,11,Connection offers not yet accepted,1,1.8,0,0
+SWEST,Alverdiscott  S.G.P.,Pyworthy Bsp,Stratton,11,Connection offers not yet accepted,2,16.5,1,15
+SWEST,Axminster  S.G.P.,-,-,132,Connection offers not yet accepted,0,0,1,5.87
+SWEST,Axminster  S.G.P.,Woodcote Bsp,Axminster,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Axminster  S.G.P.,Yeovil Bsp,East Chinnock Primary,11,Connection offers not yet accepted,1,1.974,0,0
+SWEST,Axminster  S.G.P.,Yeovil Bsp,Montacute,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Bridgwater  S.G.P.,-,-,132,Connection offers not yet accepted,1,10,1,10
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Bridgwater Local,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Burnham,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Bridgwater  S.G.P.,Bridgwater Grid Bsp,Colley Lane,11,Connection offers not yet accepted,6,17.004,0,0
+SWEST,Bridgwater  S.G.P.,Street Bsp,Millfield,11,Connection offers not yet accepted,4,8.35,0,0
+SWEST,Exeter Main S.G.P.,-,-,132,Connection offers not yet accepted,2,185,3,269.9
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,Crediton,11,Connection offers not yet accepted,1,2.5,0,0
+SWEST,Exeter Main S.G.P.,Exeter City Bsp,St Thomas,11,Connection offers not yet accepted,1,1.8,0,0
+SWEST,Exeter Main S.G.P.,Exeter Main Bsp,-,33,Connection offers not yet accepted,0,0,1,27
+SWEST,Exeter Main S.G.P.,Exeter Main Bsp,Sidmouth Town,11,Connection offers not yet accepted,0,0,1,1
+SWEST,Exeter Main S.G.P.,Exmouth Bsp,Withycombe Raleigh,11,Connection offers not yet accepted,1,3.493,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,-,33,Connection offers not yet accepted,0,0,1,20
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Clyst Honiton,11,Connection offers not yet accepted,1,2.476,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Countess Wear,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Heavitree,11,Connection offers not yet accepted,1,2.305,0,0
+SWEST,Exeter Main S.G.P.,Sowton Bsp,Marsh Green,11,Connection offers not yet accepted,4,10.434,0,0
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,-,33,Connection offers not yet accepted,1,10,0,0
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Cullompton,11,Connection offers not yet accepted,1,1.25,0,0
+SWEST,Exeter Main S.G.P.,Tiverton Bsp,Tiverton Junction,11,Connection offers not yet accepted,2,2.5,0,0
+SWEST,Indian Queens  S.G.P.,-,-,132,Connection offers not yet accepted,1,60,1,25.3
+SWEST,Indian Queens  S.G.P.,Camborne BSP,Redruth,11,Connection offers not yet accepted,1,1.2,0,0
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,-,33,Connection offers not yet accepted,0,0,1,17
+SWEST,Indian Queens  S.G.P.,Fraddon Bsp,Newquay Trevemper,11,Connection offers not yet accepted,1,2,0,0
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,Marazion,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Indian Queens  S.G.P.,Hayle Bsp,Penzance Heamoor,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Indian Queens  S.G.P.,Rame Bsp,Penryn,11,Connection offers not yet accepted,1,4.5,0,0
+SWEST,Indian Queens  S.G.P.,St Tudy Bsp,Wadebridge,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Indian Queens  S.G.P.,Truro Bsp,-,33,Connection offers not yet accepted,1,6.266,0,0
+SWEST,Indian Queens  S.G.P.,Truro Bsp,Truro Shortlanesend,11,Connection offers not yet accepted,1,5.3,0,0
+SWEST,Indian Queens  S.G.P.,Truro Bsp,Truro Treyew Road,11,Connection offers not yet accepted,1,1.8,0,0
+SWEST,Indian Queens  S.G.P.,Truro Bsp,Twelveheads.,11,Connection offers not yet accepted,1,4,0,0
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Abbeywood Primary,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Almondsbury,11,Connection offers not yet accepted,2,3.06,0,0
+SWEST,Iron Acton 132 kV S Stn,Bradley Stoke Bsp,Bradley Stoke,11,Connection offers not yet accepted,1,5.859,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bedminster,11,Connection offers not yet accepted,1,3.7,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bishopsworth,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Bower Ashton,11,Connection offers not yet accepted,4,10.082,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Broadweir Primary,11,Connection offers not yet accepted,1,2.47,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Feeder Rd 11 kV,11,Connection offers not yet accepted,2,3.9,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Whitchurch,11,Connection offers not yet accepted,1,3.351,0,0
+SWEST,Iron Acton 132 kV S Stn,Feeder Road 33 kV,Woodland Way,11,Connection offers not yet accepted,0,0,1,9.212
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Eastville,11,Connection offers not yet accepted,1,1.4,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Patchway Primary,11,Connection offers not yet accepted,1,8.831,0,0
+SWEST,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Winterbourne,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Iron Acton 132 kV S Stn,Seabank Bsp,-,33,Connection offers not yet accepted,1,13,0,0
+SWEST,Iron Acton 132 kV S Stn,Seabank Bsp,Western Approach,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Landulph  S.G.P.,Ernesettle Bsp,Alexandra Road,11,Connection offers not yet accepted,3,3.7,0,0
+SWEST,Landulph  S.G.P.,Milehouse Bsp,-,33,Connection offers not yet accepted,1,3.481,0,0
+SWEST,Landulph  S.G.P.,Milehouse Bsp,Alma Road,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Landulph  S.G.P.,St Germans Bsp,-,33,Connection offers not yet accepted,0,0,1,15
+SWEST,Landulph  S.G.P.,St Germans Bsp,Liskeard,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Landulph  S.G.P.,St Germans Bsp,St Neot,11,Connection offers not yet accepted,1,1.25,0,0
+SWEST,Melksham  S.G.P.,Bath (Dolemeads) 132 kV,Combe Park,6.6,Connection offers not yet accepted,1,4,0,0
+SWEST,Melksham  S.G.P.,Bath (Dolemeads) 132 kV,Dorchester St - New,6.6,Connection offers not yet accepted,1,4,0,0
+SWEST,Melksham  S.G.P.,Bath (Dolemeads) 132 kV,Oldfield Park,6.6,Connection offers not yet accepted,1,2.9,0,0
+SWEST,Sandford 132 kV S.G.P.,Churchill Bsp 132 kV,Bristol International Airport,11,Connection offers not yet accepted,1,2,0,0
+SWEST,Sandford 132 kV S.G.P.,Churchill Bsp 132 kV,Westwick,11,Connection offers not yet accepted,3,10,0,0
+SWEST,Sandford 132 kV S.G.P.,Weston Bsp 132 kV,East Brent,11,Connection offers not yet accepted,1,1.8,0,0
+SWEST,Sandford 132 kV S.G.P.,Weston Bsp 132 kV,Weston Central,11,Connection offers not yet accepted,1,1.8,0,0
+SWEST,Seabank S.G.P.,Avonmouth Bsp,-,33,Connection offers not yet accepted,2,15.5,1,5
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Avonmouth,11,Connection offers not yet accepted,2,2.8,1,5.258
+SWEST,Seabank S.G.P.,Avonmouth Bsp,Kingsweston,11,Connection offers not yet accepted,3,5.945,0,0
+SWEST,Seabank S.G.P.,Portishead New BSP,Easton-In-Gordano,11,Connection offers not yet accepted,1,8,0,0
+SWEST,Seabank S.G.P.,Portishead New BSP,Portishead Ashlands,11,Connection offers not yet accepted,1,1,0,0
+SWEST,Seabank S.G.P.,Portishead New BSP,Royal Portbury Dock,11,Connection offers not yet accepted,1,7.5,0,0
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,Chewton Mendip,11,Connection offers not yet accepted,2,2.8,0,0
+SWEST,Seabank S.G.P.,Radstock Bsp 132 kV,Keynsham East,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Taunton S.G.P.,-,-,132,Connection offers not yet accepted,2,129.9,2,99.9
+SWEST,Taunton S.G.P.,Bowhays Cross BSP,Bowhays Cross,11,Connection offers not yet accepted,1,1.19,0,0
+SWEST,Taunton S.G.P.,Taunton Main Bsp,Staplegrove,11,Connection offers not yet accepted,2,3.413,0,0
+SWEST,Taunton S.G.P.,Taunton Main Bsp,Taunton Local,11,Connection offers not yet accepted,1,1.5,0,0
+SWEST,Taunton S.G.P.,Taunton Main Bsp,Wellington Town,11,Connection offers not yet accepted,4,6.139,0,0
+WMIDS,Bishops Wood 132 kV S Stn,-,-,132,Budget Estimates Provided,4,240,17,763.9
+WMIDS,Bishops Wood 132 kV S Stn,Hereford 66 kV S Stn,Bromyard 66/11 kV,11,Budget Estimates Provided,1,2.5,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Hereford 66 kV S Stn,Ledbury 66/11 kV,11,Budget Estimates Provided,1,1.647,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Hereford 66 kV S Stn,Newent 66 11 kV S Stn,11,Budget Estimates Provided,2,6,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Stourport 132 66 33 kV S Stn,Stourport 132/66/33/11 kV,11,Budget Estimates Provided,0,0,2,8
+WMIDS,Bishops Wood 132 kV S Stn,Upton Warren 132 kV S Stn,-,66,Budget Estimates Provided,1,35,1,35
+WMIDS,Bishops Wood 132 kV S Stn,Warndon 132 kV S Stn,Warndon 132/11 kV,11,Budget Estimates Provided,1,1.3,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Worcester 132 kV S Stn,Worcester 132/11 kV,11,Budget Estimates Provided,2,5.8,0,0
+WMIDS,Bushbury D 132 kV,-,-,132,Budget Estimates Provided,1,30,5,170
+WMIDS,Bushbury D 132 kV,Bushbury C 132 kV S Stn,Bushbury B-C 132/33/11 kV,11,Budget Estimates Provided,2,2.6,0,0
+WMIDS,Bustleholm 132 kV S Stn,-,-,132,Budget Estimates Provided,2,36,2,80
+WMIDS,Bustleholm 132 kV S Stn,Bustleholm 132/11 kV,Bustleholm 11 kV S Stn,11,Budget Estimates Provided,2,6.074,2,2.067
+WMIDS,Bustleholm 132 kV S Stn,Rushall 132 kV S Stn,Rushall 132/11 kV,11,Budget Estimates Provided,0,0,2,10
+WMIDS,Bustleholm 132 kV S Stn,Smethwick 132 25 kV S Stn,Smethwick 132/11 kV,11,Budget Estimates Provided,1,3.5,0,0
+WMIDS,Bustleholm 132 kV S Stn,Winson Green 132 25 11 kV S Stn,Winson Green 132/11 kV,11,Budget Estimates Provided,4,10.45,0,0
+WMIDS,Cellarhead 132 kV,-,-,132,Budget Estimates Provided,2,70,18,625
+WMIDS,Cellarhead 132 kV,Boothen 132 kV S Stn,Boothen 132/33/11 kV,11,Budget Estimates Provided,1,2,0,0
+WMIDS,Cellarhead 132 kV,Meaford C 132 kV S Stn,Hill Chorlton 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,7.6
+WMIDS,Cellarhead 132 kV,Meaford C 132 kV S Stn,Meaford C 132/33/11 kV,11,Budget Estimates Provided,1,1.875,0,0
+WMIDS,Cellarhead 132 kV,Stagefields 132 kV S Stn,Stagefields 132/33/11 kV,11,Budget Estimates Provided,1,2,0,0
+WMIDS,Cellarhead 132 kV,Whitfield 132 33 kV S Stn,Congleton 33 11 kV S Stn,11,Budget Estimates Provided,1,1.25,0,0
+WMIDS,East Claydon 132 kV S Stn,Banbury 132 kV S Stn,Banbury 132/11 kV,11,Budget Estimates Provided,3,10,0,0
+WMIDS,Feckenham 66 11 kV S Stn,-,-,66,Budget Estimates Provided,3,140,9,289
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Broadway 66 11 kV S Stn,11,Budget Estimates Provided,0,0,1,1.96
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Epwell 66 11 kV S Stn,11,Budget Estimates Provided,1,5,1,5
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Evesham 66 11 kV S Stn,11,Budget Estimates Provided,2,2.655,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Long Marston 66 11 kV S Stn,11,Budget Estimates Provided,0,0,2,5
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Pershore 66 11 kV S Stn,11,Budget Estimates Provided,2,2.665,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Stratford 66 11 kV S Stn,11,Budget Estimates Provided,1,3,0,0
+WMIDS,Iron Acton 132 kV S Stn,-,-,132,Budget Estimates Provided,3,145,9,320
+WMIDS,Iron Acton 132 kV S Stn,Chipping Sodbury 132 kV S Stn,Alveston 33 11 kV S Stn,11,Budget Estimates Provided,1,5,2,5.51
+WMIDS,Iron Acton 132 kV S Stn,Chipping Sodbury 132 kV S Stn,Oxbridge 33 11 kV S Stn,11,Budget Estimates Provided,1,2.818,0,0
+WMIDS,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Clifton 33 11 kV S Stn,11,Budget Estimates Provided,8,20.412,0,0
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Hammerley Down 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,4.26
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Ryeford 132/33/11 kV,11,Budget Estimates Provided,0,0,1,5
+WMIDS,Ironbridge 132 kV S Stn,-,-,132,Budget Estimates Provided,1,3,6,157
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 132 33 kV S Stn,Halesfield 33 11 kV S Stn,11,Budget Estimates Provided,1,2.5,1,1.1
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 132 33 kV S Stn,Madeley 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,5
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 400/132 kV,Hortonwood 132 11 kV S Stn,11,Budget Estimates Provided,1,2.08,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,Donnington 33 11 kV S Stn,11,Budget Estimates Provided,1,1.8,1,5
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,Ketley 132/33/11 kV,11,Budget Estimates Provided,0,0,2,10
+WMIDS,Kitwell 132 kV S Stn,-,-,132,Budget Estimates Provided,1,25,5,170
+WMIDS,Kitwell 132 kV S Stn,Bartley Green 132/11 kV,Bartley Green 132 11 kV S Stn,11,Budget Estimates Provided,1,10,0,0
+WMIDS,Kitwell 132 kV S Stn,Halesowen 132 kV S Stn,Halesowen 132/11 kV,11,Budget Estimates Provided,1,1.2,0,0
+WMIDS,Kitwell 132 kV S Stn,Rednal 132 kV S Stn,Rednal 132/11 kV,11,Budget Estimates Provided,1,2,0,0
+WMIDS,Lea Marston 132 kV S Stn,-,-,132,Budget Estimates Provided,2,220,4,160
+WMIDS,Lea Marston 132 kV S Stn,Chelmsley Wood 132/11 kV,Chelmsley Wood,11,Budget Estimates Provided,3,12.505,0,0
+WMIDS,Lea Marston 132 kV S Stn,Shirley 132 kV S Stn,Shirley 132/11 kV,11,Budget Estimates Provided,2,3.15,0,0
+WMIDS,Lea Marston 132 kV S Stn,Solihull 132 kV S Stn,Solihull 132/11 kV,11,Budget Estimates Provided,2,10,0,0
+WMIDS,Nechells East 132 kV S Stn,-,-,11,Budget Estimates Provided,1,12,0,0
+WMIDS,Nechells East 132 kV S Stn,Boughton Rd 132/11 kV,Boughton Road 132/11 kV,11,Budget Estimates Provided,2,3,0,0
+WMIDS,Nechells East 132 kV S Stn,Erdington 132 kV S Stn,Erdington 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+WMIDS,Nechells East 132 kV S Stn,Nechells West 132 25 kV S Stn,Nechells West 132/25/11 kV,11,Budget Estimates Provided,1,2,0,0
+WMIDS,Nechells East 132 kV S Stn,Sparkbrook 132 kV S Stn,Sparkbrook 132/11 kV,11,Budget Estimates Provided,1,1,0,0
+WMIDS,Oldbury 132 kV,-,-,132,Budget Estimates Provided,1,100,0,0
+WMIDS,Oldbury 132 kV,Birchfield Lane 132 kV S Stn,Birchfield Lane 132/11 kV,11,Budget Estimates Provided,1,2,0,0
+WMIDS,Oldbury 132 kV,Oldbury B 132 kV,-,11,Budget Estimates Provided,1,2.3,0,0
+WMIDS,Oldbury 132 kV,Oldbury B 132 kV,Oldbury B 11 kV,11,Budget Estimates Provided,2,12,0,0
+WMIDS,Oldbury 132 kV,Tividale 132 kV S Stn,Tividale 132/11 kV ,11,Budget Estimates Provided,3,29.2,0,0
+WMIDS,Penn 132 kV S Stn,-,-,132,Budget Estimates Provided,5,360,15,624.8
+WMIDS,Penn 132 kV S Stn,Coseley 132 kV S Stn,Coseley 132/11 kV,11,Budget Estimates Provided,1,3,1,1.1
+WMIDS,Penn 132 kV S Stn,Dudley 132 kV S Stn,Dudley 132/11 kV,11,Budget Estimates Provided,1,1.932,0,0
+WMIDS,Penn 132 kV S Stn,Hinksford 132 kV S Stn,Hinksford 132/33/11 kV,11,Budget Estimates Provided,1,5.5,0,0
+WMIDS,Penn 132 kV S Stn,Lye 132/11 kV,Lye 11 kV ,11,Budget Estimates Provided,1,1,0,0
+WMIDS,Penn 132 kV S Stn,Wolverhampton West 132 kV S Stn,Wolverhampton West 132/33/11 kV,11,Budget Estimates Provided,0,0,1,7.6
+WMIDS,Penn 132 kV S Stn,Woodside 132 kV S Stn,Woodside 132/11 kV,11,Budget Estimates Provided,3,5.845,0,0
+WMIDS,Port Ham 132 kV S Stn,-,-,132,Budget Estimates Provided,5,215,16,621
+WMIDS,Port Ham 132 kV S Stn,Castle Meads 33 kV S Stn,Commercial Rd 33 11 kV S Stn,11,Budget Estimates Provided,2,3.32,0,0
+WMIDS,Port Ham 132 kV S Stn,Castle Meads 33 kV S Stn,Tuffley 33 11 kV S Stn,11,Budget Estimates Provided,2,10.5,0,0
+WMIDS,Port Ham 132 kV S Stn,Cheltenham 66 kV S Stn,Alderton 66 11 kV S Stn,11,Budget Estimates Provided,1,1,0,0
+WMIDS,Port Ham 132 kV S Stn,Cheltenham 66 kV S Stn,Bishops Cleeve 66 11 kV S Stn,11,Budget Estimates Provided,1,1.26,0,0
+WMIDS,Port Ham 132 kV S Stn,Eastern Avenue 132 kV S Stn,Eastern Avenue 132/11 kV,11,Budget Estimates Provided,3,4,0,0
+WMIDS,Port Ham 132 kV S Stn,Montpellier 132 kV S Stn,Montpellier 132/11 kV,11,Budget Estimates Provided,1,12,0,0
+WMIDS,Port Ham 132 kV S Stn,Tewkesbury Grid 132/11 kV,Tewkesbury Grid 132/11 kV,11,Budget Estimates Provided,3,24.36,0,0
+WMIDS,Rugeley 132 kV S Stn,-,-,132,Budget Estimates Provided,2,110,8,313.9
+WMIDS,Rugeley 132 kV S Stn,Burntwood 132 kV S Stn,Burntwood 132/11 kV,11,Budget Estimates Provided,2,2.7,1,30
+WMIDS,Rugeley 132 kV S Stn,Lichfield 132 kV S Stn,Lichfield 132/11 kV,11,Budget Estimates Provided,1,1.5,0,0
+WMIDS,Rugeley 132 kV S Stn,Rugeley 132 kV National Grid,Rugeley Town 132 11 kV S Stn,11,Budget Estimates Provided,1,10.2,0,0
+WMIDS,Shrewsbury 132 kV S Stn,-,-,132,Budget Estimates Provided,1,50,4,149.9
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Bayston Hill 33 11 kV S Stn,11,Budget Estimates Provided,1,4.975,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Dothill 33 11 kV S Stn,11,Budget Estimates Provided,0,0,1,1
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Harlescott 33 11 kV S Stn,11,Budget Estimates Provided,1,3,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Leaton 33 11 kV S Stn,11,Budget Estimates Provided,2,2.392,2,7.8
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Roushill 33 11 kV S Stn,11,Budget Estimates Provided,1,8,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Spring Gardens 33 11 kV S Stn,11,Budget Estimates Provided,2,4.2,0,0
+WMIDS,Willenhall 132/11 kV S Stn,-,-,132,Budget Estimates Provided,1,15,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Willenhall 132/25/11 kV,Willenhall 132/25/11 kV,11,Budget Estimates Provided,1,1.5,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Wolverhampton 132 kV S Stn,Wolverhampton 132/33/11 kV ,11,Budget Estimates Provided,7,15.022,0,0
+WMIDS,Bishops Wood 132 kV S Stn,-,-,132,Connection offers accepted,1,130,1,130
+WMIDS,Bishops Wood 132 kV S Stn,Hereford 66 kV S Stn,Hereford Central 66/11 kV,11,Connection offers accepted,1,1.2,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Hereford 66 kV S Stn,Leominster 66 11 kV S Stn,11,Connection offers accepted,1,1.185,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Kidderminster 132 kV S Stn,Kidderminster 132/33/11 kV,11,Connection offers accepted,2,9.956,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Ludlow 132 kV S Stn,-,11,Connection offers accepted,0,0,1,40
+WMIDS,Bishops Wood 132 kV S Stn,Timberdine 132 kV S Stn,Timberdine 132/11 kV,11,Connection offers accepted,1,3,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Upton Warren 132 kV S Stn,Upton Warren 132/66/11 kV,11,Connection offers accepted,1,1.5,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Warndon 132 kV S Stn,Warndon 132/11 kV,11,Connection offers accepted,2,3.4,0,0
+WMIDS,Bushbury D 132 kV,-,-,132,Connection offers accepted,1,49.9,1,49.9
+WMIDS,Bushbury D 132 kV,Bushbury C 132 kV S Stn,Bushbury B-C 132/33/11 kV,11,Connection offers accepted,1,1.5,1,14.3
+WMIDS,Bushbury D 132 kV,Bushbury C 132 kV S Stn,Four Ashes 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+WMIDS,Bushbury D 132 kV,Stafford 132 25 kV S Stn,-,11,Connection offers accepted,1,2.026,0,0
+WMIDS,Bushbury D 132 kV,Stafford 132 25 kV S Stn,Stafford 132/25/11 kV,11,Connection offers accepted,2,6.287,0,0
+WMIDS,Bushbury D 132 kV,Wednesfield 132 kV S Stn,Wednesfield 132/11 kV,11,Connection offers accepted,2,4,0,0
+WMIDS,Bustleholm 132 kV S Stn,Bustleholm 132/11 kV,Bustleholm 11 kV S Stn,11,Connection offers accepted,1,1.799,0,0
+WMIDS,Bustleholm 132 kV S Stn,Kingstanding 132/11 kV,Kingstanding 132/11 kV Dummy,11,Connection offers accepted,1,14,0,0
+WMIDS,Bustleholm 132 kV S Stn,Ladywood 132 11 kV S Stn,Ladywood 132/11 kV,11,Connection offers accepted,1,2.1,0,0
+WMIDS,Bustleholm 132 kV S Stn,Smethwick 132 25 kV S Stn,Smethwick 132/11 kV,11,Connection offers accepted,3,6,0,0
+WMIDS,Bustleholm 132 kV S Stn,Winson Green 132 25 11 kV S Stn,Winson Green 132/11 kV,11,Connection offers accepted,2,2,0,0
+WMIDS,Cellarhead 132 kV,-,-,132,Connection offers accepted,3,209.9,3,242.9
+WMIDS,Cellarhead 132 kV,Boothen 132 kV S Stn,Boothen 132/33/11 kV,11,Connection offers accepted,1,1.997,0,0
+WMIDS,Cellarhead 132 kV,Burslem 132 kV S Stn,Burslem 132/33/11 kV,11,Connection offers accepted,2,8.8,0,0
+WMIDS,Cellarhead 132 kV,Longton 33 kV S Stn,Longton 132/33/11 kV,11,Connection offers accepted,3,4.65,0,0
+WMIDS,Cellarhead 132 kV,Meaford C 132 kV S Stn,Market Drayton 33 11 kV S Stn,11,Connection offers accepted,1,2.9,0,0
+WMIDS,Cellarhead 132 kV,Whitfield 132 33 kV S Stn,Leek 33 11 kV S Stn,11,Connection offers accepted,1,1.09,0,0
+WMIDS,East Claydon 132 kV S Stn,Banbury 132 kV S Stn,Banbury 132/11 kV,11,Connection offers accepted,2,3.9,0,0
+WMIDS,Feckenham 66 11 kV S Stn,-,-,66,Connection offers accepted,0,0,2,38
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Ipsley 66 11 kV S Stn,11,Connection offers accepted,2,2.731,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Strensham 66 11 kV S Stn,11,Connection offers accepted,1,5,1,5
+WMIDS,Iron Acton 132 kV S Stn,Chipping Sodbury 132 kV S Stn,Naishcombe Hill 33 11 kV S Stn,11,Connection offers accepted,1,4.555,0,0
+WMIDS,Iron Acton 132 kV S Stn,Lockleaze Bsp 132 kV,Clifton 33 11 kV S Stn,11,Connection offers accepted,2,2.5,0,0
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,-,33,Connection offers accepted,1,5,1,5
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Camp 33 11 kV S Stn,11,Connection offers accepted,1,1,0,0
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Javelin Park Efw,33,Connection offers accepted,1,5.9,0,0
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Netherhills 33 11 kV S Stn,11,Connection offers accepted,2,2.5,0,0
+WMIDS,Ironbridge 132 kV S Stn,-,-,132,Connection offers accepted,1,10,1,10
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 132 33 kV S Stn,Halesfield 33 11 kV S Stn,11,Connection offers accepted,1,1.2,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,-,11,Connection offers accepted,1,25,1,25
+WMIDS,Kitwell 132 kV S Stn,Bartley Green 132/11 kV,-,11,Connection offers accepted,1,1,0,0
+WMIDS,Kitwell 132 kV S Stn,Rednal 132 kV S Stn,-,11,Connection offers accepted,1,10,0,0
+WMIDS,Kitwell 132 kV S Stn,Rednal 132 kV S Stn,Rednal 132/11 kV,11,Connection offers accepted,1,3.723,0,0
+WMIDS,Kitwell 132 kV S Stn,Selly Oak 132 Transformer Site 132 kV S Stn,Selly Oak 132/11 kV,11,Connection offers accepted,1,1.5,0,0
+WMIDS,Lea Marston 132 kV S Stn,Sutton Coldfield 132 kV S Stn,Sutton Coldfield 132/11 kV,11,Connection offers accepted,1,7,0,0
+WMIDS,Nechells East 132 kV S Stn,Castle Bromwich 132 11 kV S Stn,Castle Bromwich 132/11 kV,11,Connection offers accepted,1,2,0,0
+WMIDS,Nechells East 132 kV S Stn,Chester St  132 kV S Stn,Chester Street 132/11 kV,11,Connection offers accepted,1,1,0,0
+WMIDS,Nechells East 132 kV S Stn,Nechells West 132 25 kV S Stn,Nechells West 132/25/11 kV,11,Connection offers accepted,3,8.01,0,0
+WMIDS,Nechells East 132 kV S Stn,Sparkbrook 132 kV S Stn,Sparkbrook 132/11 kV,11,Connection offers accepted,1,1.5,0,0
+WMIDS,Oldbury 132 kV,Tividale 132 kV S Stn,Tividale 132/11 kV ,11,Connection offers accepted,1,10,0,0
+WMIDS,Penn 132 kV S Stn,-,-,132,Connection offers accepted,1,99,1,99
+WMIDS,Port Ham 132 kV S Stn,Castle Meads 33 kV S Stn,Rotol 33 11 kV S Stn,11,Connection offers accepted,1,9,0,0
+WMIDS,Port Ham 132 kV S Stn,Cheltenham 66 kV S Stn,Cheltenham 132/66/11 kV,11,Connection offers accepted,1,1,0,0
+WMIDS,Port Ham 132 kV S Stn,Tewkesbury Grid 132/11 kV,Tewkesbury Grid 132/11 kV,11,Connection offers accepted,1,1.379,0,0
+WMIDS,Rugeley 132 kV S Stn,-,-,132,Connection offers accepted,1,49.9,1,49.9
+WMIDS,Rugeley 132 kV S Stn,Lichfield 132 kV S Stn,Lichfield 132/11 kV,11,Connection offers accepted,1,1.452,0,0
+WMIDS,Shrewsbury 132 kV S Stn,-,-,132,Connection offers accepted,2,27,3,47
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,-,33,Connection offers accepted,1,15,1,35
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Leaton 33 11 kV S Stn,11,Connection offers accepted,1,1.482,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Roushill 33 11 kV S Stn,11,Connection offers accepted,2,5.7,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Spring Gardens 33 11 kV S Stn,11,Connection offers accepted,1,3.71,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Wolverhampton 132 kV S Stn,-,11,Connection offers accepted,1,5,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Wolverhampton 132 kV S Stn,Wolverhampton 132/33/11 kV ,11,Connection offers accepted,1,1.8,1,2.066
+WMIDS,Bishops Wood 132 kV S Stn,-,-,132,Connection offers not yet accepted,2,149,3,169
+WMIDS,Bishops Wood 132 kV S Stn,Kidderminster 132 kV S Stn,Kidderminster 132/33/11 kV,11,Connection offers not yet accepted,3,21.894,1,3.04
+WMIDS,Bishops Wood 132 kV S Stn,Ludlow 132 kV S Stn,Bishops Castle 33 11 kV S Stn,11,Connection offers not yet accepted,1,15,1,15
+WMIDS,Bishops Wood 132 kV S Stn,Malvern 132 kV S Stn,-,11,Connection offers not yet accepted,1,10,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Malvern 132 kV S Stn,Malvern 132/11 kV,11,Connection offers not yet accepted,1,10.32,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Timberdine 132 kV S Stn,-,132,Connection offers not yet accepted,1,9.77,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Timberdine 132 kV S Stn,Timberdine 132/11 kV,11,Connection offers not yet accepted,4,10.141,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Upton Warren 132 kV S Stn,Upton Warren 132/66/11 kV,11,Connection offers not yet accepted,1,2.5,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Warndon 132 kV S Stn,Warndon 132/11 kV,11,Connection offers not yet accepted,1,1.75,0,0
+WMIDS,Bishops Wood 132 kV S Stn,Worcester 132 kV S Stn,-,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Bushbury D 132 kV,-,-,132,Connection offers not yet accepted,3,164.3,2,149.3
+WMIDS,Bushbury D 132 kV,Bushbury C 132 kV S Stn,Bushbury B-C 132/33/11 kV,11,Connection offers not yet accepted,3,4.5,0,0
+WMIDS,Bushbury D 132 kV,Stafford 132 25 kV S Stn,Stafford 132/25/11 kV,11,Connection offers not yet accepted,1,5,0,0
+WMIDS,Bushbury D 132 kV,Stafford South 132 kV S Stn,Stafford South 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Bushbury D 132 kV,Wednesfield 132 kV S Stn,Wednesfield 132/11 kV,11,Connection offers not yet accepted,2,5,0,0
+WMIDS,Bustleholm 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,99.9,1,99.9
+WMIDS,Bustleholm 132 kV S Stn,Bustleholm 132/11 kV,Bustleholm 11 kV S Stn,11,Connection offers not yet accepted,2,2.762,0,0
+WMIDS,Bustleholm 132 kV S Stn,Kingstanding 132/11 kV,Kingstanding 132/11 kV Dummy,11,Connection offers not yet accepted,1,14,0,0
+WMIDS,Bustleholm 132 kV S Stn,Ladywood 132 11 kV S Stn,Ladywood 132/11 kV,11,Connection offers not yet accepted,1,1.25,0,0
+WMIDS,Bustleholm 132 kV S Stn,Perry Barr 132 kV S Stn,Perry Barr 132/11 kV,11,Connection offers not yet accepted,2,3,0,0
+WMIDS,Bustleholm 132 kV S Stn,Rushall 132 kV S Stn,Rushall 132/11 kV,11,Connection offers not yet accepted,1,1.8,0,0
+WMIDS,Bustleholm 132 kV S Stn,Smethwick 132 25 kV S Stn,-,11,Connection offers not yet accepted,1,7.5,0,0
+WMIDS,Bustleholm 132 kV S Stn,Smethwick 132 25 kV S Stn,Smethwick 132/11 kV,11,Connection offers not yet accepted,1,3,0,0
+WMIDS,Bustleholm 132 kV S Stn,Walsall 132/33 kV,-,33,Connection offers not yet accepted,1,7.6,0,0
+WMIDS,Bustleholm 132 kV S Stn,Winson Green 132 25 11 kV S Stn,Winson Green 132/11 kV,11,Connection offers not yet accepted,2,2,0,0
+WMIDS,Cellarhead 132 kV,-,-,132,Connection offers not yet accepted,1,22,3,82
+WMIDS,Cellarhead 132 kV,Boothen 132 kV S Stn,Boothen 132/33/11 kV,11,Connection offers not yet accepted,2,3.997,0,0
+WMIDS,Cellarhead 132 kV,Burslem 132 kV S Stn,Burslem 132/33/11 kV,11,Connection offers not yet accepted,1,2,0,0
+WMIDS,Cellarhead 132 kV,Forsbrook 33 kV S Stn,Cauldon,11,Connection offers not yet accepted,0,0,1,8
+WMIDS,Cellarhead 132 kV,Longton 33 kV S Stn,Longton 132/33/11 kV,11,Connection offers not yet accepted,2,2.9,0,0
+WMIDS,Cellarhead 132 kV,Stagefields 132 kV S Stn,Stagefields 132/33/11 kV,11,Connection offers not yet accepted,2,3.25,0,0
+WMIDS,East Claydon 132 kV S Stn,Banbury 132 kV S Stn,Banbury 132/11 kV,11,Connection offers not yet accepted,5,11.7,0,0
+WMIDS,Feckenham 66 11 kV S Stn,-,-,66,Connection offers not yet accepted,1,49.9,3,84.9
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,-,11,Connection offers not yet accepted,1,8,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Bloxham 66 11 kV S Stn,11,Connection offers not yet accepted,3,6.123,1,1.337
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Ipsley 66 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Pershore 66 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Redditch South 66 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Feckenham 66 11 kV S Stn,Feckenham 66/11 kV,Stratford 66 11 kV S Stn,11,Connection offers not yet accepted,1,1.66,0,0
+WMIDS,Iron Acton 132 kV S Stn,-,-,132,Connection offers not yet accepted,1,99,2,129
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,-,33,Connection offers not yet accepted,1,5,1,5
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Dudbridge 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,1,2
+WMIDS,Iron Acton 132 kV S Stn,Ryeford 132 kV S Stn,Hammerley Down 33 11 kV S Stn,11,Connection offers not yet accepted,1,3,0,0
+WMIDS,Ironbridge 132 kV S Stn,-,-,132,Connection offers not yet accepted,3,640.544,2,705
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 132 33 kV S Stn,Halesfield 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.2,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ironbridge 132 33 kV S Stn,Madeley 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,Ketley 132/33/11 kV,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,Newport 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,0,0
+WMIDS,Ironbridge 132 kV S Stn,Ketley 132 kV S Stn,Snedshill 33 11 kV S Stn,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Kitwell 132 kV S Stn,Bournville 132 kV S Stn,Bournville 132/11 kV,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Kitwell 132 kV S Stn,Chad Valley 132 kV S Stn,Chad Valley 132/11 kV,11,Connection offers not yet accepted,1,1.25,0,0
+WMIDS,Kitwell 132 kV S Stn,Highters Heath 132 kV S Stn,Highters Heath 132/11 kV,11,Connection offers not yet accepted,4,28.199,0,0
+WMIDS,Kitwell 132 kV S Stn,Longbridge 132 kV S Stn,Longbridge 132/11 kV,11,Connection offers not yet accepted,2,3.966,0,0
+WMIDS,Kitwell 132 kV S Stn,Rednal 132 kV S Stn,Rednal 132/11 kV,11,Connection offers not yet accepted,2,5.223,0,0
+WMIDS,Lea Marston 132 kV S Stn,Elmdon 132 kV S Stn,Elmdon 132/11 kV,11,Connection offers not yet accepted,3,16.05,0,0
+WMIDS,Lea Marston 132 kV S Stn,Hams Hall South 132 kV S Stn,Hams Hall South 132/11 kV,11,Connection offers not yet accepted,1,1.3,0,0
+WMIDS,Lea Marston 132 kV S Stn,Shirley 132 kV S Stn,Shirley 132/11 kV,11,Connection offers not yet accepted,2,4,0,0
+WMIDS,Lea Marston 132 kV S Stn,Sutton Coldfield 132 kV S Stn,Sutton Coldfield 132/11 kV,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Nechells East 132 kV S Stn,-,-,11,Connection offers not yet accepted,3,88,1,60
+WMIDS,Nechells East 132 kV S Stn,Bordesley 132 11 kV S Stn,Bordesley 132/11 kV,11,Connection offers not yet accepted,2,5.64,0,0
+WMIDS,Nechells East 132 kV S Stn,Boughton Rd 132/11 kV,Boughton Road 132/11 kV,11,Connection offers not yet accepted,1,2.5,0,0
+WMIDS,Nechells East 132 kV S Stn,Castle Bromwich 132 11 kV S Stn,-,11,Connection offers not yet accepted,1,1.6,0,0
+WMIDS,Nechells East 132 kV S Stn,Castle Bromwich 132 11 kV S Stn,Castle Bromwich 132/11 kV,11,Connection offers not yet accepted,2,3.3,1,1.081
+WMIDS,Nechells East 132 kV S Stn,Cheapside 132 kV S Stn,Cheapside 132/11 kV,11,Connection offers not yet accepted,2,7,0,0
+WMIDS,Nechells East 132 kV S Stn,Chester St  132 kV S Stn,Chester Street 132/11 kV,11,Connection offers not yet accepted,4,28,0,0
+WMIDS,Nechells East 132 kV S Stn,Erdington 132 kV S Stn,Erdington 11 kV S Stn,11,Connection offers not yet accepted,3,4.3,0,0
+WMIDS,Nechells East 132 kV S Stn,Nechells West 132 25 kV S Stn,Nechells West 132/25/11 kV,11,Connection offers not yet accepted,2,4,1,1.03
+WMIDS,Nechells East 132 kV S Stn,Summer Lane 132 kV S Stn,Hockley 132/11 kV,11,Connection offers not yet accepted,3,5.3,0,0
+WMIDS,Nechells East 132 kV S Stn,Summer Lane 132 kV S Stn,Summer Lane 132/11 kV,11,Connection offers not yet accepted,1,1.8,0,0
+WMIDS,Ocker Hill C 132 kV S Stn,Black Lake 132 kV S Stn,Black Lake 132/11 kV,11,Connection offers not yet accepted,2,3.8,0,0
+WMIDS,Oldbury 132 kV,Birchfield Lane 132 kV S Stn,Birchfield Lane 132/11 kV,11,Connection offers not yet accepted,2,3.698,0,0
+WMIDS,Oldbury 132 kV,Oldbury B 132 kV,Oldbury B 11 kV,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Oldbury 132 kV,Tividale 132 kV S Stn,Tividale 132/11 kV ,11,Connection offers not yet accepted,5,40.287,0,0
+WMIDS,Penn 132 kV S Stn,Coseley 132 kV S Stn,Coseley 132/11 kV,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Penn 132 kV S Stn,Lye 132/11 kV,Lye 11 kV ,11,Connection offers not yet accepted,1,2.5,1,1.901
+WMIDS,Penn 132 kV S Stn,Woodside 132 kV S Stn,Woodside 132/11 kV,11,Connection offers not yet accepted,2,2.94,0,0
+WMIDS,Port Ham 132 kV S Stn,-,-,132,Connection offers not yet accepted,0,0,1,15
+WMIDS,Port Ham 132 kV S Stn,Castle Meads 33 kV S Stn,Commercial Rd 33 11 kV S Stn,11,Connection offers not yet accepted,1,2,0,0
+WMIDS,Port Ham 132 kV S Stn,Castle Meads 33 kV S Stn,Rotol 33 11 kV S Stn,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Port Ham 132 kV S Stn,Cheltenham 66 kV S Stn,Bishops Cleeve 66 11 kV S Stn,11,Connection offers not yet accepted,1,1.22,1,9.999
+WMIDS,Port Ham 132 kV S Stn,Cheltenham 66 kV S Stn,Cheltenham 132/66/11 kV,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Port Ham 132 kV S Stn,Eastern Avenue 132 kV S Stn,Eastern Avenue 132/11 kV,11,Connection offers not yet accepted,4,12.5,0,0
+WMIDS,Port Ham 132 kV S Stn,Marle Hill 132 66 kV S Stn,Marle Hill 132/66/11 kV,11,Connection offers not yet accepted,1,1,0,0
+WMIDS,Port Ham 132 kV S Stn,Tewkesbury Grid 132/11 kV,Tewkesbury Grid 132/11 kV,11,Connection offers not yet accepted,2,2.6,0,0
+WMIDS,Rugeley 132 kV S Stn,-,-,132,Connection offers not yet accepted,2,625,3,675
+WMIDS,Rugeley 132 kV S Stn,Burntwood 132 kV S Stn,Burntwood 132/11 kV,11,Connection offers not yet accepted,1,1.5,0,0
+WMIDS,Rugeley 132 kV S Stn,Lichfield 132 kV S Stn,Lichfield 132/11 kV,11,Connection offers not yet accepted,5,8.58,0,0
+WMIDS,Rugeley 132 kV S Stn,Rugeley 132 kV National Grid,Rugeley Town 132 11 kV S Stn,11,Connection offers not yet accepted,2,3.044,0,0
+WMIDS,Shrewsbury 132 kV S Stn,-,-,132,Connection offers not yet accepted,0,0,1,20
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,-,33,Connection offers not yet accepted,3,101,2,115
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Bayston Hill 33 11 kV S Stn,11,Connection offers not yet accepted,2,2.769,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Dothill 33 11 kV S Stn,11,Connection offers not yet accepted,1,2.04,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Leaton 33 11 kV S Stn,11,Connection offers not yet accepted,2,19.582,1,18.1
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Malehurst 33 11 kV S Stn,11,Connection offers not yet accepted,1,3,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Roushill 33 11 kV S Stn,11,Connection offers not yet accepted,1,4.5,0,0
+WMIDS,Shrewsbury 132 kV S Stn,Shrewsbury 132/33 kV,Spring Gardens 33 11 kV S Stn,11,Connection offers not yet accepted,1,3,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Bentley 132 kV S Stn,Bentley 132/11 kV,11,Connection offers not yet accepted,4,14.7,0,0
+WMIDS,Willenhall 132/11 kV S Stn,Wolverhampton 132 kV S Stn,Wolverhampton 132/33/11 kV ,11,Connection offers not yet accepted,2,4.117,0,0

@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
-from .substations import PrimarySubstation, BSPSubstation, GSPSubstation
+from .substations import PrimarySubstation, BSPSubstation, GSPSubstation, DNOGroup 
 
 class ProposedConnectionVoltageLevel(models.Model):
     VOLTAGE_CHOICES = [
@@ -30,6 +30,7 @@ class ConnectionStatus(models.Model):
         choices=STATUS_CHOICES,
     )
 
+    
 class ReportingPeriod(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
@@ -87,7 +88,16 @@ class NewConnection(models.Model):
         related_name='new_connections'
     )
 
+    dno_group = models.ForeignKey(
+        DNOGroup, 
+        on_delete=models.CASCADE, 
+        related_name='new_connections',
+        null=True, 
+        blank=True,
+    )
+
     demand_count = models.PositiveIntegerField(blank=True, null=True)
+
     total_demand_capacity_mw =  models.DecimalField(
         max_digits=10, decimal_places=3,
         help_text="Total demand capacity in megawatts (MW)"

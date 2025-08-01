@@ -13,12 +13,13 @@ from location_input.models.substations import (
     PrimarySubstation,
 )
 
+
 class Command(BaseCommand):
     help = 'Import and process ngid data from ngid website'
 
     def handle(self, *args, **options):
 
-        self.clear_existing_nged_data()
+        self.clear_existing_nged_substations_data()
 
         self.stdout.write(f"Fetching CSV ...")
         CSV_PATH = Path(__file__).resolve().parent.parent.parent.parent / 'data' / 'ngid' / 'substation_locations_raw.csv'
@@ -27,8 +28,6 @@ class Command(BaseCommand):
         failure_ids = []
 
         with open(CSV_PATH, 'r', encoding='utf-8') as f:
-            self.clear_existing_nged_data()
-
             reader = csv.DictReader(f)
 
             for row in reader:
@@ -53,14 +52,13 @@ class Command(BaseCommand):
             self.stderr.write(self.style.ERROR(f"Failed substationIDs: {failed_list}"))
 
 
-    def clear_existing_nged_data(self):
+    def clear_existing_nged_substations_data(self):
         self.stdout.write("Clearing existing NGED substation data...")
         dno_group = DNOGroup.objects.get(abbr="NGED")
         PrimarySubstation.objects.filter(dno_group=dno_group).delete()
         BSPSubstation.objects.filter(dno_group=dno_group).delete()
         GSPSubstation.objects.filter(dno_group=dno_group).delete()
         self.stdout.write("NGED substation data cleared")
-
 
     def process_row(self, row):
         
