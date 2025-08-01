@@ -43,12 +43,24 @@ class Command(BaseCommand):
                 GSP = row.get('Grid Supply Point')
                 try:
                     self.process_row(row)           
-                    self.stdout.write(self.style.SUCCESS(f"Successfully processed row of GSP {GSP}: {row}"))
+                    # self.stdout.write(self.style.SUCCESS(f"Successfully processed row of GSP {GSP}: {row}"))
                     success_substations_gsps.append(GSP)
                 except Exception as e:
-                    self.stderr.write(self.style.ERROR(f"Error processing row of GSP {GSP}: {row}"))
+                    print('----------------------------------------')
                     self.stderr.write(self.style.ERROR(str(e)))
-                    failure_substations_gsps.append(GSP)
+                    self.stderr.write(self.style.ERROR(f"Error processing row. Refer to string name above."))
+                    
+                    names = {
+                        'GSP': {row['Grid Supply Point']}, 
+                        'BSP': {row['Bulk Supply Point']}, 
+                        'Primary': {row['Primary Substation']}
+                    }
+                    
+                    print(names)
+                    # self.stderr.write(self.style.ERROR(f"Error processing row of GSP {GSP}: {row}"))
+                    # self.stderr.write(self.style.ERROR(str(e)))
+                    failure_substations_gsps.append(names)
+                    print('----------------------------------------')
 
         self.stdout.write(self.style.SUCCESS(
             f"CSV import complete: {len(success_substations_gsps)} succeeded, {len(failure_substations_gsps)} failed."
@@ -142,21 +154,31 @@ class Command(BaseCommand):
         #handling GSPs
         if bsp_substation_name == '-':
             gsp_substation_name = self.subsequent_clean_gsp(gsp_substation_name)
+
+            print(f'gsp_substation_name &{gsp_substation_name}&')
+
             gsp_substation_obj = GSPSubstation.objects.get(name=gsp_substation_name, dno_group=dno_group_obj)
             connection.gsp_substation = gsp_substation_obj
 
         #handling BSPs
         elif bsp_substation_name and primary_substation_name == '-':
             bsp_substation_name = self.subsequent_clean_bsp(bsp_substation_name)
+
+            print(f'bsp_substation_name: &{bsp_substation_name}&')
+
             bsp_substation_obj = BSPSubstation.objects.get(name=bsp_substation_name, dno_group=dno_group_obj)
             connection.bsp_substation = bsp_substation_obj
         
         #handling primary stations
         elif primary_substation_name:
             primary_substation_name = self.subsequent_clean_primary(primary_substation_name)
+
+            print(f'primary_substation_name: &{primary_substation_name}&')
             
             primary_substation_obj = PrimarySubstation.objects.get(name=primary_substation_name, dno_group=dno_group_obj)
             connection.primary_substation = primary_substation_obj
+
+
             
         connection.save()
 
