@@ -18,6 +18,9 @@ from location_input.models.substations import (
 class Command(BaseCommand):
     help = 'Import and clean ngid data from ngid website'
 
+    voltage_levels = ['6.6', '11', '25', '33', '66', '132', '275', '400']
+
+
     def handle(self, *args, **options):
 
         clean_csv_path = Path(__file__).resolve().parent.parent.parent.parent / 'data' / 'ngid' / 'clean' / 'ngid_substations_locations_clean.csv'
@@ -34,7 +37,7 @@ class Command(BaseCommand):
         open(clean_csv_path, 'a', encoding='utf-8', newline='') as outfile:
 
             reader = csv.DictReader(infile)
-            writer = csv.DictWriter(outfile, fieldnames=['name', 'type', 'geolocation', 'dno', '6.6', '11', '33', '66', '132'])
+            writer = csv.DictWriter(outfile, fieldnames=['name', 'type', 'geolocation', 'dno', 'voltages'])
 
             for row in reader:
                 if row['Substation Type'] in {'132kv Switching Station', 'Ehv Switching Station'}:
@@ -69,8 +72,7 @@ class Command(BaseCommand):
         self.stdout.write(f"Creating blank CSV...")
         os.makedirs(os.path.dirname(PATH), exist_ok=True)
         
-        voltage_levels = [6.6, 11, 33, 66, 132]
-        headers = ['name', 'type', 'geolocation', 'dno', '6.6', '11', '33', '66', '132']
+        headers = ['name', 'type', 'geolocation', 'dno', 'voltages']
         with open(PATH, 'w', encoding='utf-8', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=headers)
             writer.writeheader()
@@ -100,49 +102,81 @@ class Command(BaseCommand):
             'type': ss_type,
             'geolocation': ss_geolocation.wkt,
             'dno': ss_dno,
-        } | ss_voltages
+            'voltages': ss_voltages
+        }
 
         return cleaned_row
 
 
     def normalise_name_and_extract_voltage_info(self, ss_name):
 
-        #remove basic suffiexs
-        ss_name = ss_name.strip()
-        suffixes_to_remove = [
-            ' Bsp',
-            ' S.G.P',
-            ' S Stn',
-            ' Primary Substation',
+        substrings_to_remove = [
+            'kv',
+            'kV',
+            'Kv',
+            'KV',
+            'Bsp',
+            'S.G.P.',
+            'S.G.P',
+            'G.S.P',
+            'S Stn',
+            'Primary Substation',
+            'S/S',
+            'S/Stn',
+            'Power Station',
+            'Primary',
+            'National Grid Site',
+            'S Stn',
+            '340038',
+            'tn',
         ]
-        for suffix in suffixes_to_remove:
-            if ss_name.endswith(suffix):
-                ss_name = ss_name[: -len(suffix)].rstrip()
+        
+        if '6 6' in ss_name:
+            ss_name = ss_name.replace('6 6', '6.6')
 
-        #extract voltages
-        voltage_levels = {
-            '6.6': None,
-            '11': None,
-            '33': None,
-            '66': None,
-            '132': None,
-        }
+        numbers_in_ss_name = set(re.findall(r'\d+(?:\.\d+)?', ss_name))
 
-        kv_index = ss_name.lower().rfind('kv')
-        if kv_index != -1:
-            ss_name = ss_name[:kv_index].rstrip()
+        voltage_levels_ss = []
 
-            #extract voltages
-            voltages_str = ss_name[ss_name.rfind(' ') + 1:]
-            ss_name = ss_name[:ss_name.rfind(' ')]
-            voltage_levels_list = voltages_str.split('/')
-            for voltage_str in voltage_levels_list:
-                voltage_levels[voltage_str] = True
+        for number_str in numbers_in_ss_name:
+            if number_str in self.voltage_levels:
+                voltage_levels_ss.append(number_str)
+                substrings_to_remove.append(number_str)
+            
+        for sub_str in substrings_to_remove:
+            ss_name = ss_name.replace(sub_str, '')
 
-        if ss_name.endswith('Primary Substation'):
-                ss_name = ss_name[: -len(suffix)].rstrip()
+        ss_name = re.sub(r'\bst\.?\b', 'Street', ss_name, flags=re.IGNORECASE)
+        ss_name = re.sub(r'\brd\.?\b', 'Road', ss_name, flags=re.IGNORECASE)
+        ss_name = re.sub(r'\bln\.?\b', 'Lane', ss_name, flags=re.IGNORECASE)
 
-        return [ss_name, voltage_levels]
+
+        ss_name = re.sub(r'\s+', ' ', ss_name).strip().rstrip('./& ')
+
+        return [ss_name, voltage_levels_ss]
+        
+
+        
+
+        # #extract voltages
+        # voltage_levels = {v: None for v in self.voltage_levels}
+
+        # kv_index = ss_name.lower().rfind('kv')
+        # if kv_index != -1:
+        #     ss_name = ss_name[:kv_index].rstrip()
+
+        #     #extract voltages
+        #     voltages_str = ss_name[ss_name.rfind(' ') + 1:]
+        #     ss_name = ss_name[:ss_name.rfind(' ')]
+        #     for voltage_str in voltages_str.split('/'):
+        #         v = voltage_str.strip()
+        #         if v in voltage_levels:
+        #             voltage_levels[v] = True
+
+        # if ss_name.endswith('Primary Substation'):
+        #         ss_name = ss_name[: -len(suffix)].rstrip()
+
+        # return [ss_name, voltage_levels]
 
 
 
