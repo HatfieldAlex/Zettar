@@ -7,6 +7,7 @@ import io
 import re
 from decimal import Decimal
 from datetime import date
+from collections import defaultdict
 
 from location_input.models.substations import (
     DNOGroup,
@@ -16,7 +17,7 @@ from location_input.models.substations import (
 )
 
 from location_input.models.new_connections import (
-    ProposedConnectionVoltageLevel,
+    ConnectionVoltageLevel,
     ConnectionStatus,
     ReportingPeriod,
     NewConnection,
@@ -33,42 +34,70 @@ class Command(BaseCommand):
         self.stdout.write(f"Fetching CSV ...")
         CSV_PATH = Path(__file__).resolve().parent.parent.parent.parent / 'data' / 'ngid' / 'new_connections_update_may_2025_raw.csv'
 
-        success_substations_gsps = []
-        failure_substations_gsps = []
+        success_substations = []
+        failure_substations = []
+        row_count=0
+        error_type_dict = defaultdict(int)
+        error_substation_type_dict = defaultdict(int)
+
 
         with open(CSV_PATH, 'r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
 
             for row in reader:
+                row_count+=1
+                print(f'processing row {row_count} ...')
                 GSP = row.get('Grid Supply Point')
                 try:
                     self.process_row(row)           
                     # self.stdout.write(self.style.SUCCESS(f"Successfully processed row of GSP {GSP}: {row}"))
-                    success_substations_gsps.append(GSP)
+                    success_substations.append(GSP)
                 except Exception as e:
-                    print('----------------------------------------')
+                    error_type_dict[type(e).__name__] += 1
                     self.stderr.write(self.style.ERROR(str(e)))
                     self.stderr.write(self.style.ERROR(f"Error processing row. Refer to string name above."))
                     
-                    names = {
-                        'GSP': {row['Grid Supply Point']}, 
-                        'BSP': {row['Bulk Supply Point']}, 
-                        'Primary': {row['Primary Substation']}
+                    substation_chain = {
+                        'Primary': row['Primary Substation'],
+                        'BSP': row['Bulk Supply Point'], 
+                        'GSP': row['Grid Supply Point'], 
                     }
-                    
-                    print(names)
+
+                    substation_name_type_tuple = next(((v, k) for k, v in substation_chain.items() if v != '-'), (None, None))
+                    error_substation_type_dict[substation_name_type_tuple[1]] +=1
+
                     # self.stderr.write(self.style.ERROR(f"Error processing row of GSP {GSP}: {row}"))
                     # self.stderr.write(self.style.ERROR(str(e)))
-                    failure_substations_gsps.append(names)
-                    print('----------------------------------------')
+                    failure_substations.append(substation_name_type_tuple)
+
+                print(f'row {row_count} processed')
+                print('---------------------------------')
+                if row_count % 100 == 0:
+                    print(f'{row_count} rows now processed')
+                    if failure_substations:
+                        print(
+                            f'failures occured on {error_substation_type_dict['Primary']} Primary, ' 
+                            f'{error_substation_type_dict['BSP']} BSP, {error_substation_type_dict['GSP']} GSP'
+                        )
+                        failed_list = ', '.join(f'{k}:{v}' for k, v in failure_substations)
+                        print(f"Substations that failed to process: {failed_list}")
+                        print(error_substation_type_dict)
+                    print('#####################################')
+        
+        self.stderr.write(self.style.ERROR(f"Error type frequency: {error_type_dict}"))
 
         self.stdout.write(self.style.SUCCESS(
-            f"CSV import complete: {len(success_substations_gsps)} succeeded, {len(failure_substations_gsps)} failed."
+            f"CSV import complete: {len(success_substations)} succeeded, {len(failure_substations)} failed."
         ))
 
-        if failure_substations_gsps:
-            failed_list = ', '.join(failure_substations_gsps)
-            self.stderr.write(self.style.ERROR(f"GSPs of rows that failed to process: {failed_list}"))
+        if failure_substations:
+            self.stderr.write(self.style.ERROR(
+                f'failures occured on {error_substation_type_dict['Primary']} Primary, ' 
+                f'{error_substation_type_dict['BSP']} BSP, {error_substation_type_dict['GSP']} GSP'
+            ))
+
+            failed_list = ', '.join(f'{k}:{v}' for k, v in failure_substations)
+            self.stderr.write(self.style.ERROR(f"Substations that failed to process: {failed_list}"))
 
 
     def clear_existing_nged_new_connections_data(self):
@@ -124,7 +153,7 @@ class Command(BaseCommand):
 
         proposed_voltage_str = row['Proposed Connection Voltage (kV)']
         level_kv = Decimal(proposed_voltage_str.strip()) 
-        proposed_connection_voltage_obj = ProposedConnectionVoltageLevel.objects.get(level_kv=level_kv)
+        proposed_connection_voltage_obj = ConnectionVoltageLevel.objects.get(level_kv=level_kv)
                
         connection_status = row['Connection Status']
         connection_status_obj = self.get_connection_status(connection_status)
@@ -154,27 +183,18 @@ class Command(BaseCommand):
         #handling GSPs
         if bsp_substation_name == '-':
             gsp_substation_name = self.subsequent_clean_gsp(gsp_substation_name)
-
-            print(f'gsp_substation_name &{gsp_substation_name}&')
-
             gsp_substation_obj = GSPSubstation.objects.get(name=gsp_substation_name, dno_group=dno_group_obj)
             connection.gsp_substation = gsp_substation_obj
 
         #handling BSPs
         elif bsp_substation_name and primary_substation_name == '-':
             bsp_substation_name = self.subsequent_clean_bsp(bsp_substation_name)
-
-            print(f'bsp_substation_name: &{bsp_substation_name}&')
-
             bsp_substation_obj = BSPSubstation.objects.get(name=bsp_substation_name, dno_group=dno_group_obj)
             connection.bsp_substation = bsp_substation_obj
         
         #handling primary stations
         elif primary_substation_name:
             primary_substation_name = self.subsequent_clean_primary(primary_substation_name)
-
-            print(f'primary_substation_name: &{primary_substation_name}&')
-            
             primary_substation_obj = PrimarySubstation.objects.get(name=primary_substation_name, dno_group=dno_group_obj)
             connection.primary_substation = primary_substation_obj
 
