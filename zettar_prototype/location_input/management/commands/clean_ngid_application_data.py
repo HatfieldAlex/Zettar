@@ -68,8 +68,8 @@ class Command(BaseCommand):
             f"raw connection applications CSV clean complete: {len(success_ss_app_name)} succeeded, {len(failure_ss_app_name)} failed."
         ))
 
-        # if failure_ss_app_name:
-        #     self.stderr.write(self.style.ERROR(f"Failed substation applications: {failure_ss_app_name}"))
+        if failure_ss_app_name:
+            self.stderr.write(self.style.ERROR(f"Failed substation applications: {failure_ss_app_name}"))
 
     def clear_existing_nged_substations_data(self, PATH):
         if PATH.exists():
@@ -90,7 +90,7 @@ class Command(BaseCommand):
         type_map = {
             'Primary Substation': 'primary',
             'Bulk Supply Point': 'bsp',
-            'Super Grid Substation': 'gsp',
+            'Grid Supply Point': 'gsp',
         }
 
         connection_status_map = {
