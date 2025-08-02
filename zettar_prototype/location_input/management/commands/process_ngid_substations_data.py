@@ -5,13 +5,15 @@ from django.contrib.gis.geos import Point
 import requests
 import io
 import re
-
+from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
+from location_input.models.shared_fields import ConnectionVoltageLevel 
 from location_input.models.substations import (
     DNOGroup,
     GSPSubstation,
     BSPSubstation,
     PrimarySubstation,
 )
+
 
 
 class Command(BaseCommand):
@@ -62,54 +64,45 @@ class Command(BaseCommand):
 
     def process_row(self, row):
         
-        substation_type = row['Substation Type']
-        name = row['Substation Name']
-        lat = row['Latitude']
-        lng = row['Longitude']
+        ss_type = row['Substation Type']
+        ss_name = row['Substation Name']
+        ss_lat = row['Latitude']
+        ss_lng = row['Longitude']
         try:
-            geolocation = Point(float(lat), float(lng))
+            ss_geolocation = Point(float(ss_lat), float(ss_lng))
         except (TypeError, ValueError) as e:
-            raise ValueError(f"Invalid latitude ({lat}), longitude ({lng})")
+            raise ValueError(f"Invalid latitude ({ss_lat}), longitude ({ss_lng})")
 
         #handling licence stuff
         dno_group_obj= DNOGroup.objects.get(abbr="NGED")
 
 
-        for i, c in enumerate(name):
-            if c.isdigit():
-                name = name[:i-1]
-                break
+        ss_name, ss_voltages = normalise_name_and_extract_voltage_info(ss_name)
+        connection_voltage_levels_objs = ConnectionVoltageLevel.objects.filter(level_kv__in=ss_voltages)
 
-        if substation_type == 'Primary Substation':
-            if name.endswith(' Primary Substation'):
-                name = name.removesuffix(' Primary Substation')
-            PrimarySubstation.objects.create(
-                name=name,
-                geolocation=geolocation,
+        if ss_type == 'Primary Substation':
+            primary_ss = PrimarySubstation.objects.create(
+                name=ss_name,
+                geolocation=ss_geolocation,
                 dno_group=dno_group_obj,
             )
+            primary_ss.voltage_kv.set(connection_voltage_levels_objs)
+            primary_ss.save()
 
-        elif substation_type == 'Bulk Supply Point':
-            if name.endswith(' Bsp'):
-                name = name.removesuffix(' Bsp')
-            if name.endswith(' ('):
-                name = name.removesuffix(' (')
-            BSPSubstation.objects.create(
-                name=name,
-                geolocation=geolocation,
+        elif ss_type == 'Bulk Supply Point':
+            bsp_ss = BSPSubstation.objects.create(
+                name=ss_name,
+                geolocation=ss_geolocation,
                 dno_group=dno_group_obj,
             )
+            bsp_ss.voltage_kv.set(connection_voltage_levels_objs)
+            bsp_ss.save()
         
-        elif substation_type == 'Super Grid Substation':
-            if name.endswith(' S.G.P'):
-                name = name.removesuffix(' Sgp')
-            if name.endswith(' ('):
-                name = name.removesuffix(' (')
-            GSPSubstation.objects.create(
-                name=name,
-                geolocation=geolocation,
+        elif ss_type == 'Super Grid Substation':
+            gsp_ss = GSPSubstation.objects.create(
+                name=ss_name,
+                geolocation=ss_geolocation,
                 dno_group=dno_group_obj,
             )
-
-
-
+            gsp_ss.voltage_kv.set(connection_voltage_levels_objs)
+            gsp_ss.save()
