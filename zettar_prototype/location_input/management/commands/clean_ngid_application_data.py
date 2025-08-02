@@ -16,7 +16,7 @@ from location_input.models.substations import (
 )
 
 class Command(BaseCommand):
-    help = 'Import and clean ngid data from ngid website'
+    help = 'Import and clean ngid application data from ngid website'
 
     voltage_levels = ['6.6', '11', '25', '33', '66', '132', '275', '400']
 
@@ -156,29 +156,7 @@ class Command(BaseCommand):
         return [ss_name, voltage_levels_ss]
         
 
-        
-
-        # #extract voltages
-        # voltage_levels = {v: None for v in self.voltage_levels}
-
-        # kv_index = ss_name.lower().rfind('kv')
-        # if kv_index != -1:
-        #     ss_name = ss_name[:kv_index].rstrip()
-
-        #     #extract voltages
-        #     voltages_str = ss_name[ss_name.rfind(' ') + 1:]
-        #     ss_name = ss_name[:ss_name.rfind(' ')]
-        #     for voltage_str in voltages_str.split('/'):
-        #         v = voltage_str.strip()
-        #         if v in voltage_levels:
-        #             voltage_levels[v] = True
-
-        # if ss_name.endswith('Primary Substation'):
-        #         ss_name = ss_name[: -len(suffix)].rstrip()
-
-        # return [ss_name, voltage_levels]
-
-
+    
 
 
 

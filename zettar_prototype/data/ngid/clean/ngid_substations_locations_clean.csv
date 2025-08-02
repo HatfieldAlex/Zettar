@@ -6,7 +6,7 @@ Hammerley Down,primary,POINT (51.625807 -2.420013),NGED,"['11', '33']"
 Cheadle,primary,POINT (52.981413 -2.004621),NGED,"['11', '33']"
 Congleton,primary,POINT (53.163438 -2.203748),NGED,"['11', '33']"
 Metheringham,primary,POINT (53.135118 -0.409248),NGED,"['11', '33']"
-Ruston & Hornsby,primary,POINT (53.225204 -0.55234),NGED,"['33', '6.6']"
+Ruston & Hornsby,primary,POINT (53.225204 -0.55234),NGED,"['6.6', '33']"
 North Hykeham,primary,POINT (53.192534 -0.599573),NGED,"['11', '33']"
 Stamford,primary,POINT (52.651724 -0.471716),NGED,['11']
 Crowland,primary,POINT (52.683462 -0.163956),NGED,"['11', '33']"
@@ -226,7 +226,7 @@ Mantle Lane,primary,POINT (52.726761 -1.375051),NGED,"['11', '33']"
 Wood Street,primary,POINT (51.477759 -3.178022),NGED,[]
 Perranporth,primary,POINT (50.321984 -5.154658),NGED,[]
 Wellington Town,primary,POINT (50.978553 -3.225716),NGED,[]
-Dunlop,primary,POINT (52.437292 -1.512279),NGED,"['33', '6.6']"
+Dunlop,primary,POINT (52.437292 -1.512279),NGED,"['6.6', '33']"
 Westhorpe,primary,POINT (53.308891 -1.31652),NGED,"['11', '33']"
 Atherstone,primary,POINT (52.585197 -1.549103),NGED,"['11', '33']"
 Bakewell,primary,POINT (53.21652 -1.68925),NGED,"['11', '33']"
@@ -241,7 +241,7 @@ Ashby De La Zouch,primary,POINT (52.75886 -1.480675),NGED,"['11', '33']"
 Leominster,primary,POINT (52.228854 -2.760891),NGED,"['66', '11']"
 Lynton,primary,POINT (51.221727 -3.848346),NGED,[]
 Banbury Lane,primary,POINT (52.215387 -0.945648),NGED,"['11', '33']"
-Gulson Road,primary,POINT (52.407526 -1.491012),NGED,"['33', '6.6']"
+Gulson Road,primary,POINT (52.407526 -1.491012),NGED,"['6.6', '33']"
 Market Harborough,primary,POINT (52.479487 -0.902447),NGED,"['11', '33']"
 Infinity Park,primary,POINT (52.879055 -1.463684),NGED,"['11', '33']"
 Erin Road,primary,POINT (53.257272 -1.333142),NGED,"['11', '33']"
@@ -266,7 +266,7 @@ Westborough,primary,POINT (52.995325 -0.738496),NGED,"['11', '33']"
 Brotheridge Green,primary,POINT (52.071678 -2.262083),NGED,"['66', '11']"
 Warwick,primary,POINT (52.286272 -1.562169),NGED,['11']
 Llandrindod Wells,primary,POINT (52.242831 -3.387604),NGED,[]
-Courtaulds,primary,POINT (52.425143 -1.505104),NGED,"['33', '6.6']"
+Courtaulds,primary,POINT (52.425143 -1.505104),NGED,"['6.6', '33']"
 Horncastle,primary,POINT (53.218146 -0.112232),NGED,"['11', '33']"
 Uplands Swansea,primary,POINT (51.618334 -3.964817),NGED,[]
 Woodland Way,primary,POINT (51.470706 -2.516573),NGED,[]
@@ -301,7 +301,7 @@ Pineham,primary,POINT (52.217877 -0.95765),NGED,"['11', '33']"
 Wellingborough Road,primary,POINT (52.252035 -0.851376),NGED,"['11', '33']"
 Braunston Road,primary,POINT (52.261205 -1.175155),NGED,"['11', '33']"
 Wolverton,primary,POINT (52.063234 -0.82212),NGED,"['11', '33']"
-Holbrook Lane,primary,POINT (52.435508 -1.507135),NGED,"['33', '6.6']"
+Holbrook Lane,primary,POINT (52.435508 -1.507135),NGED,"['6.6', '33']"
 Easton,primary,POINT (52.828223 -0.607517),NGED,"['11', '33']"
 Spalding Park Road,primary,POINT (52.795896 -0.154404),NGED,"['11', '33']"
 Old Dalby,primary,POINT (52.798061 -0.985084),NGED,"['11', '33']"
@@ -366,7 +366,7 @@ Nantwen,primary,POINT (51.700011 -3.31266),NGED,[]
 Torwood,primary,POINT (50.461418 -3.519319),NGED,[]
 Dawlish,primary,POINT (50.579018 -3.480205),NGED,[]
 Silverstone,primary,POINT (52.074748 -1.031067),NGED,"['11', '33']"
-Osmaston Road,primary,POINT (52.908165 -1.464038),NGED,"['33', '6.6']"
+Osmaston Road,primary,POINT (52.908165 -1.464038),NGED,"['6.6', '33']"
 Bentinck Generation,primary,POINT (53.091295 -1.269784),NGED,['33']
 Meadow Lane,primary,POINT (53.102119 -1.37578),NGED,"['11', '33']"
 Toes,primary,POINT (50.435207 -3.688515),NGED,[]
@@ -455,9 +455,9 @@ Flagg,primary,POINT (53.215207 -1.78197),NGED,"['11', '33']"
 Harrold,primary,POINT (52.206365 -0.604735),NGED,"['11', '33']"
 Beaumont Leys,primary,POINT (52.669377 -1.154405),NGED,"['11', '33']"
 Schwyll,primary,POINT (51.481386 -3.601858),NGED,[]
-Stoneygate,primary,POINT (52.616171 -1.101386),NGED,"['33', '6.6']"
+Stoneygate,primary,POINT (52.616171 -1.101386),NGED,"['6.6', '33']"
 Braunstone,primary,POINT (52.610191 -1.162545),NGED,"['11', '33']"
-Lero,primary,POINT (52.644559 -1.127571),NGED,"['33', '6.6']"
+Lero,primary,POINT (52.644559 -1.127571),NGED,"['6.6', '33']"
 Bideford Main,primary,POINT (51.011942 -4.198979),NGED,[]
 Chewton Mendip,primary,POINT (51.271908 -2.565199),NGED,[]
 Hookgate,primary,POINT (52.913072 -2.379798),NGED,"['11', '33']"
@@ -478,7 +478,7 @@ Alexandra Road,primary,POINT (50.409215 -4.134449),NGED,[]
 Clowne,primary,POINT (53.2789 -1.2406),NGED,"['11', '33']"
 Usk,primary,POINT (51.715653 -2.919184),NGED,[]
 Eyam,primary,POINT (53.280073 -1.673102),NGED,"['11', '33']"
-Courthouse Green,primary,POINT (52.430215 -1.484324),NGED,"['33', '6.6']"
+Courthouse Green,primary,POINT (52.430215 -1.484324),NGED,"['6.6', '33']"
 Gnosall,primary,POINT (52.782226 -2.257618),NGED,"['11', '33']"
 Astrazeneca,primary,POINT (52.788814 -1.217085),NGED,"['11', '33']"
 Corby Central,primary,POINT (52.498409 -0.673069),NGED,"['11', '33']"
@@ -486,7 +486,7 @@ Calverton,primary,POINT (53.04714 -1.102863),NGED,"['11', '33']"
 Burton,primary,POINT (52.815675 -1.623803),NGED,['11']
 Woodhall Spa,primary,POINT (53.141983 -0.240344),NGED,"['11', '33']"
 Mount Bridge Boston,primary,POINT (52.969283 -0.014575),NGED,"['11', '33']"
-Hawkesmill Lane,primary,POINT (52.442938 -1.560471),NGED,"['33', '6.6']"
+Hawkesmill Lane,primary,POINT (52.442938 -1.560471),NGED,"['6.6', '33']"
 Eagle Centre,primary,POINT (52.919579 -1.471527),NGED,"['11', '33']"
 Bugbrooke,primary,POINT (52.214637 -0.998841),NGED,"['11', '33']"
 Shenley Wood,primary,POINT (52.019054 -0.794746),NGED,"['11', '33']"
@@ -702,7 +702,7 @@ Southway,primary,POINT (50.43416 -4.119489),NGED,[]
 Merrivale,primary,POINT (50.414408 -4.154783),NGED,[]
 Yelverton,primary,POINT (50.495109 -4.080918),NGED,[]
 Street Levan Road,primary,POINT (50.385085 -4.170335),NGED,[]
-Longton,primary,POINT (52.974659 -2.133239),NGED,"['33', '132']"
+Longton,primary,POINT (52.974659 -2.133239),NGED,"['132', '33']"
 Stentaway,primary,POINT (50.365253 -4.084779),NGED,[]
 Ivybridge,primary,POINT (50.387471 -3.925012),NGED,[]
 Buckwell Street,primary,POINT (50.370299 -4.137258),NGED,[]
@@ -804,7 +804,7 @@ Exminster,primary,POINT (50.675871 -3.494007),NGED,[]
 Lockleaze,primary,POINT (51.484894 -2.56914),NGED,[]
 Bilborough,primary,POINT (52.961875 -1.213368),NGED,"['11', '33']"
 Chilwell,primary,POINT (52.915621 -1.229271),NGED,"['11', '33']"
-Sheepbridge,primary,POINT (53.270139 -1.442386),NGED,"['11', '6.6']"
+Sheepbridge,primary,POINT (53.270139 -1.442386),NGED,"['6.6', '11']"
 Woofferton,primary,POINT (52.307294 -2.72702),NGED,"['66', '11']"
 Rogerstone,primary,POINT (51.599561 -3.077173),NGED,[]
 North Tawton,primary,POINT (50.795948 -3.913924),NGED,[]
@@ -846,14 +846,14 @@ Lockheed,primary,POINT (52.272065 -1.540267),NGED,"['11', '33']"
 Lawford,primary,POINT (52.375426 -1.288167),NGED,"['11', '33']"
 Coventry North,primary,POINT (52.45373 -1.467524),NGED,['11']
 Whitley,primary,POINT (52.393395 -1.483107),NGED,['11']
-Spon Street,primary,POINT (52.408788 -1.517532),NGED,"['33', '6.6']"
-Sandy Lane,primary,POINT (52.418006 -1.511697),NGED,"['33', '6.6']"
-Courthouse Green,primary,POINT (52.43026 -1.484309),NGED,"['33', '6.6']"
+Spon Street,primary,POINT (52.408788 -1.517532),NGED,"['6.6', '33']"
+Sandy Lane,primary,POINT (52.418006 -1.511697),NGED,"['6.6', '33']"
+Courthouse Green,primary,POINT (52.43026 -1.484309),NGED,"['6.6', '33']"
 Courthouse Green,primary,POINT (52.430394 -1.484263),NGED,"['11', '33']"
-Cox Street,primary,POINT (52.409686 -1.502087),NGED,"['33', '6.6']"
+Cox Street,primary,POINT (52.409686 -1.502087),NGED,"['6.6', '33']"
 Torrington Avenue,primary,POINT (52.399349 -1.571589),NGED,"['11', '33']"
 Jaguar Browns Lane,primary,POINT (52.438137 -1.555709),NGED,"['11', '33']"
-London Road,primary,POINT (52.403516 -1.501451),NGED,"['33', '6.6']"
+London Road,primary,POINT (52.403516 -1.501451),NGED,"['6.6', '33']"
 Oxbridge,primary,POINT (51.532114 -2.459112),NGED,"['11', '33']"
 Rugby,primary,POINT (52.387759 -1.261476),NGED,['11']
 Union Street,primary,POINT (52.369228 -1.265545),NGED,"['11', '33']"
@@ -868,13 +868,13 @@ Coventry Arena,primary,POINT (52.449807 -1.493248),NGED,"['11', '33']"
 Wormington,primary,POINT (52.02838 -1.929614),NGED,"['66', '11']"
 Kettering North,primary,POINT (52.425186 -0.735126),NGED,"['11', '33']"
 Alveston,primary,POINT (51.594473 -2.520777),NGED,"['11', '33']"
-Commercial Road,primary,POINT (51.864683 -2.249927),NGED,"['11', '33', '132']"
+Commercial Road,primary,POINT (51.864683 -2.249927),NGED,"['132', '11', '33']"
 Brockworth,primary,POINT (51.845203 -2.166584),NGED,"['11', '33']"
 Broadway,primary,POINT (52.054907 -1.855457),NGED,"['66', '11']"
 Alderton,primary,POINT (51.991566 -1.998105),NGED,"['66', '11']"
 Nuneaton,primary,POINT (52.512095 -1.488155),NGED,['11']
 Tamworth Town,primary,POINT (52.632427 -1.687683),NGED,['11']
-Coton Road,primary,POINT (52.521449 -1.46675),NGED,"['33', '6.6']"
+Coton Road,primary,POINT (52.521449 -1.46675),NGED,"['6.6', '33']"
 Epwell,primary,POINT (52.070394 -1.474574),NGED,"['66', '11']"
 Budby,primary,POINT (53.225758 -1.097127),NGED,"['11', '33']"
 Misson,primary,POINT (53.448278 -0.969127),NGED,"['11', '33']"
@@ -887,7 +887,7 @@ Grassmoor,primary,POINT (53.199764 -1.383929),NGED,"['11', '33']"
 Queens Park,primary,POINT (53.233385 -1.431253),NGED,"['11', '33']"
 Ambergate,primary,POINT (53.06288 -1.4824),NGED,"['11', '33']"
 Cromford,primary,POINT (53.102142 -1.564972),NGED,"['11', '33']"
-Sheffield Road,primary,POINT (53.24819 -1.425631),NGED,"['11', '33', '6.6']"
+Sheffield Road,primary,POINT (53.24819 -1.425631),NGED,"['6.6', '11', '33']"
 Robin Hood,primary,POINT (53.243638 -1.580128),NGED,"['11', '33']"
 Longcliffe,primary,POINT (53.094817 -1.659185),NGED,"['11', '33']"
 Hindlow,primary,POINT (53.211641 -1.85455),NGED,"['11', '33']"
@@ -942,10 +942,10 @@ Hamilton,primary,POINT (52.658985 -1.078465),NGED,"['11', '33']"
 Thurnby,primary,POINT (52.634768 -1.052523),NGED,"['11', '33']"
 Dothill,primary,POINT (52.716658 -2.534372),NGED,"['11', '33']"
 Wigston,primary,POINT (52.577081 -1.143712),NGED,['11']
-Salutation,primary,POINT (52.646718 -1.098913),NGED,"['33', '6.6']"
+Salutation,primary,POINT (52.646718 -1.098913),NGED,"['6.6', '33']"
 Leicester,primary,POINT (52.623572 -1.14183),NGED,['11']
 Birstall,primary,POINT (52.669592 -1.129512),NGED,"['11', '33']"
-Hortonwood,primary,POINT (52.719002 -2.489113),NGED,"['11', '132']"
+Hortonwood,primary,POINT (52.719002 -2.489113),NGED,"['132', '11']"
 Groby Road,primary,POINT (52.650665 -1.172947),NGED,"['11', '33']"
 Loughborough,primary,POINT (52.786651 -1.209473),NGED,['11']
 Shepshed,primary,POINT (52.770059 -1.284966),NGED,"['11', '33']"
@@ -1034,9 +1034,9 @@ Wardentree Park,primary,POINT (52.81348 -0.134117),NGED,"['11', '33']"
 Hartlebury Efw,primary,POINT (52.326619 -2.207786),NGED,[]
 English Electric,primary,POINT (52.380628 -1.269939),NGED,"['11', '33']"
 Arley Switching Site,primary,POINT (52.4261 -2.3222),NGED,['33']
-Rugeley Town,primary,POINT (52.75436 -1.934943),NGED,"['11', '132']"
+Rugeley Town,primary,POINT (52.75436 -1.934943),NGED,"['132', '11']"
 Llantarnam,bsp,POINT (51.629973 -3.016346),NGED,[]
-Banbury,bsp,POINT (52.070169 -1.335557),NGED,"['11', '132']"
+Banbury,bsp,POINT (52.070169 -1.335557),NGED,"['132', '11']"
 Camborne,bsp,POINT (50.229563 -5.279225),NGED,[]
 Barry Grid,bsp,POINT (51.414511 -3.278335),NGED,[]
 Churchill,bsp,POINT (51.358128 -2.788208),NGED,['132']
@@ -1047,105 +1047,105 @@ Stony Stratford B,bsp,POINT (52.0182 -0.8668),NGED,['132']
 Bromford,bsp,POINT (52.5153 -1.7577),NGED,[]
 Lincoln No 1,bsp,POINT (53.228425 -0.518854),NGED,['33']
 Ammanford Grid,bsp,POINT (51.772558 -4.030156),NGED,[]
-Irthlingborough,bsp,POINT (52.31953 -0.614369),NGED,"['11', '33', '132']"
+Irthlingborough,bsp,POINT (52.31953 -0.614369),NGED,"['132', '11', '33']"
 Whitley,bsp,POINT (52.393555 -1.482664),NGED,['33']
 Newport East,bsp,POINT (51.587186 -2.984212),NGED,[]
 Sleaford,bsp,POINT (52.991321 -0.406506),NGED,['132']
 Wigston (M42),bsp,POINT (52.577661 -1.144438),NGED,['132']
-Spondon 'B',bsp,POINT (52.906053 -1.398495),NGED,"['11', '33', '132']"
+Spondon 'B',bsp,POINT (52.906053 -1.398495),NGED,"['132', '11', '33']"
 Heanor,bsp,POINT (53.021335 -1.362665),NGED,['33']
 Nantgarw Grid,bsp,POINT (51.563502 -3.26892),NGED,[]
-Wolverhampton West,bsp,POINT (52.573621 -2.185595),NGED,"['11', '33', '132']"
+Wolverhampton West,bsp,POINT (52.573621 -2.185595),NGED,"['132', '11', '33']"
 Cotham Grange Pv,bsp,POINT (53.02874 -0.821695),NGED,[]
 Heanor,bsp,POINT (53.021715 -1.363166),NGED,['132']
-Bartley Green,bsp,POINT (52.441353 -1.98629),NGED,"['11', '132']"
-Smethwick,bsp,POINT (52.507822 -1.969002),NGED,"['11', '25', '132']"
+Bartley Green,bsp,POINT (52.441353 -1.98629),NGED,"['132', '11']"
+Smethwick,bsp,POINT (52.507822 -1.969002),NGED,"['132', '11', '25']"
 Norrington,bsp,POINT (51.384449 -2.169602),NGED,[]
 Feeder Road,bsp,POINT (51.448748 -2.563625),NGED,['132']
-Forsbrook,bsp,POINT (52.980228 -2.043761),NGED,"['33', '132']"
+Forsbrook,bsp,POINT (52.980228 -2.043761),NGED,"['132', '33']"
 Plymouth,bsp,POINT (50.367738 -4.112548),NGED,['33']
 Tamworth,bsp,POINT (52.608507 -1.656177),NGED,['132']
 Derby,bsp,POINT (52.92601 -1.476506),NGED,['33']
 Rhoscrowther,bsp,POINT (51.681695 -5.032878),NGED,[]
-Lincoln Main/No.1/No.5,bsp,POINT (53.22868 -0.518441),NGED,"['11', '33', '132']"
+Lincoln Main/No.1/No.5,bsp,POINT (53.22868 -0.518441),NGED,"['33', '132', '11']"
 Ebbw Vale,bsp,POINT (51.766145 -3.196341),NGED,[]
 Whitfield Switching Site,bsp,POINT (53.0811 -2.174905),NGED,['132']
-Kitts Green,bsp,POINT (52.484057 -1.779281),NGED,"['11', '132']"
-Longton,bsp,POINT (52.974614 -2.133284),NGED,"['11', '33', '132']"
+Kitts Green,bsp,POINT (52.484057 -1.779281),NGED,"['132', '11']"
+Longton,bsp,POINT (52.974614 -2.133284),NGED,"['132', '11', '33']"
 Waterton Industrial Grid,bsp,POINT (51.500617 -3.534197),NGED,[]
 Chesterfield,bsp,POINT (53.225174 -1.386995),NGED,['33']
 Coventry Central,bsp,POINT (52.419948 -1.507559),NGED,['33']
-Wolverhampton,bsp,POINT (52.581407 -2.113609),NGED,"['11', '33', '132']"
+Wolverhampton,bsp,POINT (52.581407 -2.113609),NGED,"['132', '11', '33']"
 Burton South,bsp,POINT (52.77254 -1.646186),NGED,['33']
 Pengam Grid,bsp,POINT (51.67 -3.2178),NGED,[]
 Spalding Clay Lake,bsp,POINT (52.773076 -0.142768),NGED,['33']
 Radstock,bsp,POINT (51.291349 -2.508146),NGED,['132']
-Boothen,bsp,POINT (52.99644 -2.180954),NGED,"['11', '33', '132']"
-Chad Valley,bsp,POINT (52.473798 -1.953023),NGED,"['11', '132']"
+Boothen,bsp,POINT (52.99644 -2.180954),NGED,"['132', '11', '33']"
+Chad Valley,bsp,POINT (52.473798 -1.953023),NGED,"['132', '11']"
 East Claydon,bsp,POINT (51.928118 -0.908267),NGED,['33']
-Eastern Avenue,bsp,POINT (51.855517 -2.225106),NGED,"['11', '132']"
-Spalding,bsp,POINT (52.772887 -0.141027),NGED,"['33', '132']"
-Worcester,bsp,POINT (52.192098 -2.236123),NGED,"['11', '132']"
+Eastern Avenue,bsp,POINT (51.855517 -2.225106),NGED,"['132', '11']"
+Spalding,bsp,POINT (52.772887 -0.141027),NGED,"['132', '33']"
+Worcester,bsp,POINT (52.192098 -2.236123),NGED,"['132', '11']"
 Grantham,bsp,POINT (52.924313 -0.588846),NGED,['33']
 Energlyn,bsp,POINT (51.59283 -3.238988),NGED,[]
 Skegness,bsp,POINT (53.141036 0.261293),NGED,['33']
 Glan Llyn,bsp,POINT (51.58047 -2.914144),NGED,[]
 Coalville,bsp,POINT (52.688444 -1.327028),NGED,['33']
 Hinckley,bsp,POINT (52.528864 -1.395257),NGED,['33']
-Meaford C,bsp,POINT (52.931522 -2.167532),NGED,"['11', '33', '132']"
-Whitfield,bsp,POINT (53.079315 -2.178033),NGED,"['11', '33', '132']"
+Meaford C,bsp,POINT (52.931522 -2.167532),NGED,"['132', '11', '33']"
+Whitfield,bsp,POINT (53.079315 -2.178033),NGED,"['132', '11', '33']"
 Llanarth Grid,bsp,POINT (52.1881 -4.3221),NGED,[]
 Toton,bsp,POINT (52.916577 -1.265304),NGED,['132']
-Melton Mowbray,bsp,POINT (52.764908 -0.869067),NGED,"['11', '33', '132']"
+Melton Mowbray,bsp,POINT (52.764908 -0.869067),NGED,"['132', '11', '33']"
 Loughborough,bsp,POINT (52.786608 -1.209696),NGED,['33']
 Barlaston,bsp,POINT (52.924169 -2.167399),NGED,['132']
 Goitside,bsp,POINT (53.233651 -1.443819),NGED,['33']
 Harbury,bsp,POINT (52.228003 -1.432849),NGED,['33']
-Hall Green,bsp,POINT (52.440799 -1.842357),NGED,"['11', '132']"
+Hall Green,bsp,POINT (52.440799 -1.842357),NGED,"['132', '11']"
 Seabank,bsp,POINT (51.536866 -2.671046),NGED,[]
-Rassau West,bsp,POINT (51.798644 -3.23685),NGED,"['11', '132']"
-Kingstanding,bsp,POINT (52.555788 -1.879675),NGED,"['11', '132']"
+Rassau West,bsp,POINT (51.798644 -3.23685),NGED,"['132', '11']"
+Kingstanding,bsp,POINT (52.555788 -1.879675),NGED,"['132', '11']"
 Bath (Dolemeads),bsp,POINT (51.378597 -2.35398),NGED,['132']
-Wednesfield,bsp,POINT (52.599312 -2.07047),NGED,"['11', '132']"
-Tividale,bsp,POINT (52.520606 -2.053189),NGED,"['11', '132']"
+Wednesfield,bsp,POINT (52.599312 -2.07047),NGED,"['132', '11']"
+Tividale,bsp,POINT (52.520606 -2.053189),NGED,"['132', '11']"
 Selly Oak,bsp,POINT (52.444718 -1.937914),NGED,['132']
-Hams Hall South,bsp,POINT (52.525343 -1.717567),NGED,"['11', '132']"
-Grantham,bsp,POINT (52.924982 -0.588438),NGED,"['33', '132']"
-Birchfield Lane,bsp,POINT (52.493404 -2.022447),NGED,"['11', '132']"
+Hams Hall South,bsp,POINT (52.525343 -1.717567),NGED,"['132', '11']"
+Grantham,bsp,POINT (52.924982 -0.588438),NGED,"['132', '33']"
+Birchfield Lane,bsp,POINT (52.493404 -2.022447),NGED,"['132', '11']"
 Newport South,bsp,POINT (51.567046 -2.967849),NGED,[]
 Leicester Grid (M63),bsp,POINT (52.622911 -1.141104),NGED,['132']
 Rassau Unit 18,bsp,POINT (51.803319 -3.233439),NGED,['132']
 Stamford,bsp,POINT (52.651699 -0.47117),NGED,['33']
-Woodside,bsp,POINT (52.48995 -2.116789),NGED,"['11', '132']"
+Woodside,bsp,POINT (52.48995 -2.116789),NGED,"['132', '11']"
 Pinxton,bsp,POINT (53.105687 -1.302791),NGED,['132']
-Uttoxeter,bsp,POINT (52.908388 -1.856964),NGED,"['33', '132']"
-Solihull,bsp,POINT (52.415177 -1.779742),NGED,"['11', '132']"
-Tewkesbury Grid,bsp,POINT (52.001717 -2.129481),NGED,"['11', '132']"
+Uttoxeter,bsp,POINT (52.908388 -1.856964),NGED,"['132', '33']"
+Solihull,bsp,POINT (52.415177 -1.779742),NGED,"['132', '11']"
+Tewkesbury Grid,bsp,POINT (52.001717 -2.129481),NGED,"['132', '11']"
 Oakham,bsp,POINT (52.668317 -0.709587),NGED,['33']
 North Tawton,bsp,POINT (50.796504 -3.913464),NGED,[]
 Corby,bsp,POINT (52.491956 -0.668462),NGED,['33']
 Branston Solar,bsp,POINT (53.177734 -0.46992),NGED,['132']
-Ketley,bsp,POINT (52.694293 -2.483791),NGED,"['11', '33', '132']"
+Ketley,bsp,POINT (52.694293 -2.483791),NGED,"['132', '11', '33']"
 Crumlin,bsp,POINT (51.67461 -3.157858),NGED,[]
 Bradley Stoke,bsp,POINT (51.548258 -2.559677),NGED,[]
 Coventry West,bsp,POINT (52.40183 -1.604945),NGED,['33']
 Gowerton East Grid,bsp,POINT (51.646255 -4.013174),NGED,[]
-Bentley,bsp,POINT (52.581415 -2.01715),NGED,"['11', '132']"
+Bentley,bsp,POINT (52.581415 -2.01715),NGED,"['132', '11']"
 Worksop,bsp,POINT (53.306268 -1.100053),NGED,['132']
 Tamworth,bsp,POINT (52.608129 -1.655752),NGED,['33']
-Alfreton,bsp,POINT (53.109106 -1.385016),NGED,"['33', '132']"
+Alfreton,bsp,POINT (53.109106 -1.385016),NGED,"['132', '33']"
 Staveley,bsp,POINT (53.267048 -1.385976),NGED,['132']
 Kidsgrove B.R,bsp,POINT (53.081083 -2.207912),NGED,[]
 Skegness,bsp,POINT (53.140288 0.260446),NGED,['132']
-Grantham North,bsp,POINT (52.937931 -0.646659),NGED,"['11', '25', '132']"
-Stafford South,bsp,POINT (52.793893 -2.105992),NGED,"['11', '132']"
-Burnaston,bsp,POINT (52.874403 -1.573508),NGED,"['11', '132']"
-Bourne West,bsp,POINT (52.760195 -0.419669),NGED,"['25', '132']"
-South Holland,bsp,POINT (52.756879 0.031902),NGED,"['33', '132']"
-Timberdine,bsp,POINT (52.167674 -2.205275),NGED,"['11', '132']"
-Upton Warren,bsp,POINT (52.309601 -2.095764),NGED,"['66', '11', '132']"
-Warndon,bsp,POINT (52.217708 -2.19362),NGED,"['11', '132']"
-Summer Lane,bsp,POINT (52.48769 -1.898814),NGED,"['11', '132']"
+Grantham North,bsp,POINT (52.937931 -0.646659),NGED,"['132', '11', '25']"
+Stafford South,bsp,POINT (52.793893 -2.105992),NGED,"['132', '11']"
+Burnaston,bsp,POINT (52.874403 -1.573508),NGED,"['132', '11']"
+Bourne West,bsp,POINT (52.760195 -0.419669),NGED,"['132', '25']"
+South Holland,bsp,POINT (52.756879 0.031902),NGED,"['132', '33']"
+Timberdine,bsp,POINT (52.167674 -2.205275),NGED,"['132', '11']"
+Upton Warren,bsp,POINT (52.309601 -2.095764),NGED,"['66', '132', '11']"
+Warndon,bsp,POINT (52.217708 -2.19362),NGED,"['132', '11']"
+Summer Lane,bsp,POINT (52.48769 -1.898814),NGED,"['132', '11']"
 Stony Stratford,bsp,POINT (52.018448 -0.866869),NGED,['33']
 Hawton,bsp,POINT (53.05058 -0.805017),NGED,['33']
 Uttoxeter,bsp,POINT (52.908092 -1.857322),NGED,['33']
@@ -1154,13 +1154,13 @@ Derby South,bsp,POINT (52.886625 -1.461733),NGED,['33']
 Mansfield,bsp,POINT (53.156068 -1.199356),NGED,['33']
 Checkerhouse,bsp,POINT (53.306591 -0.997304),NGED,['132']
 Nottingham,bsp,POINT (52.931997 -1.162463),NGED,['132']
-Ryeford,bsp,POINT (51.739154 -2.272477),NGED,"['11', '33', '132']"
-Walsall,bsp,POINT (52.598156 -2.000459),NGED,"['33', '132']"
-Ironbridge,bsp,POINT (52.633335 -2.509079),NGED,"['33', '132']"
+Ryeford,bsp,POINT (51.739154 -2.272477),NGED,"['132', '11', '33']"
+Walsall,bsp,POINT (52.598156 -2.000459),NGED,"['132', '33']"
+Ironbridge,bsp,POINT (52.633335 -2.509079),NGED,"['132', '33']"
 Loughborough,bsp,POINT (52.787092 -1.209539),NGED,['132']
 Leicester North,bsp,POINT (52.646981 -1.142865),NGED,['132']
 Coalville,bsp,POINT (52.688761 -1.327349),NGED,['132']
-Leicester East,bsp,POINT (52.630077 -1.101219),NGED,"['33', '132', '6.6']"
+Leicester East,bsp,POINT (52.630077 -1.101219),NGED,"['6.6', '132', '33']"
 Kibworth,bsp,POINT (52.537179 -1.023648),NGED,['33']
 Leicester East,bsp,POINT (52.629933 -1.101237),NGED,['33']
 Hinckley,bsp,POINT (52.528967 -1.396169),NGED,['132']
@@ -1170,41 +1170,41 @@ Bradwell Abbey,bsp,POINT (52.049618 -0.796812),NGED,['33']
 Northampton,bsp,POINT (52.230289 -0.883462),NGED,['33']
 Kettering,bsp,POINT (52.401923 -0.738113),NGED,['33']
 Northampton West,bsp,POINT (52.245663 -0.913337),NGED,['33']
-Cheltenham,bsp,POINT (51.90905 -2.120492),NGED,"['66', '11', '132']"
-Dudley,bsp,POINT (52.507236 -2.099185),NGED,"['11', '132']"
+Cheltenham,bsp,POINT (51.90905 -2.120492),NGED,"['66', '132', '11']"
+Dudley,bsp,POINT (52.507236 -2.099185),NGED,"['132', '11']"
 Middlemarsh,bsp,POINT (53.160675 0.292647),NGED,['132']
-Hinksford,bsp,POINT (52.506039 -2.193988),NGED,"['11', '33', '132']"
-Lichfield,bsp,POINT (52.698268 -1.817535),NGED,"['11', '132']"
-Marle Hill,bsp,POINT (51.9108 -2.082307),NGED,"['66', '11', '132']"
-Montpellier,bsp,POINT (51.893024 -2.08428),NGED,"['11', '132']"
-Nechells West,bsp,POINT (52.506787 -1.857665),NGED,"['11', '25', '132']"
-Newcastle,bsp,POINT (53.029034 -2.242253),NGED,"['11', '132']"
-Ocker Hill B,bsp,POINT (52.541415 -2.03732),NGED,"['11', '33', '132']"
-Perry Barr,bsp,POINT (52.527117 -1.895864),NGED,"['11', '132']"
-Rushall,bsp,POINT (52.598448 -1.970105),NGED,"['11', '132']"
-Shirley,bsp,POINT (52.395615 -1.805822),NGED,"['11', '132']"
-Stafford,bsp,POINT (52.8104 -2.122084),NGED,"['11', '25', '132']"
-Sutton Coldfield,bsp,POINT (52.562769 -1.813406),NGED,"['11', '132']"
-Cheapside,bsp,POINT (52.472927 -1.887571),NGED,"['11', '132']"
+Hinksford,bsp,POINT (52.506039 -2.193988),NGED,"['132', '11', '33']"
+Lichfield,bsp,POINT (52.698268 -1.817535),NGED,"['132', '11']"
+Marle Hill,bsp,POINT (51.9108 -2.082307),NGED,"['66', '132', '11']"
+Montpellier,bsp,POINT (51.893024 -2.08428),NGED,"['132', '11']"
+Nechells West,bsp,POINT (52.506787 -1.857665),NGED,"['132', '11', '25']"
+Newcastle,bsp,POINT (53.029034 -2.242253),NGED,"['132', '11']"
+Ocker Hill B,bsp,POINT (52.541415 -2.03732),NGED,"['132', '11', '33']"
+Perry Barr,bsp,POINT (52.527117 -1.895864),NGED,"['132', '11']"
+Rushall,bsp,POINT (52.598448 -1.970105),NGED,"['132', '11']"
+Shirley,bsp,POINT (52.395615 -1.805822),NGED,"['132', '11']"
+Stafford,bsp,POINT (52.8104 -2.122084),NGED,"['132', '11', '25']"
+Sutton Coldfield,bsp,POINT (52.562769 -1.813406),NGED,"['132', '11']"
+Cheapside,bsp,POINT (52.472927 -1.887571),NGED,"['132', '11']"
 Annesley,bsp,POINT (53.088879 -1.245561),NGED,['33']
-Burntwood,bsp,POINT (52.680274 -1.947818),NGED,"['11', '132']"
-Longbridge,bsp,POINT (52.396751 -1.973958),NGED,"['11', '132']"
+Burntwood,bsp,POINT (52.680274 -1.947818),NGED,"['132', '11']"
+Longbridge,bsp,POINT (52.396751 -1.973958),NGED,"['132', '11']"
 Bletchley,bsp,POINT (52.01151 -0.743937),NGED,['33']
-Bletchley,bsp,POINT (52.010919 -0.743283),NGED,"['11', '33', '132']"
+Bletchley,bsp,POINT (52.010919 -0.743283),NGED,"['132', '11', '33']"
 Brackley,bsp,POINT (52.049097 -1.14608),NGED,['132']
 Kettering,bsp,POINT (52.401062 -0.738285),NGED,['132']
-Wellingborough,bsp,POINT (52.291846 -0.68579),NGED,"['33', '132']"
-Northampton West,bsp,POINT (52.24547 -0.913869),NGED,"['11', '33', '132']"
+Wellingborough,bsp,POINT (52.291846 -0.68579),NGED,"['132', '33']"
+Northampton West,bsp,POINT (52.24547 -0.913869),NGED,"['132', '11', '33']"
 Northampton,bsp,POINT (52.229665 -0.881222),NGED,['132']
 Lydney,bsp,POINT (51.736644 -2.536631),NGED,"['11', '33']"
-Castle Bromwich,bsp,POINT (52.526691 -1.781367),NGED,"['11', '132']"
+Castle Bromwich,bsp,POINT (52.526691 -1.781367),NGED,"['132', '11']"
 Hams Hall A,bsp,POINT (52.524427 -1.718266),NGED,['33']
-Erdington,bsp,POINT (52.512969 -1.827983),NGED,"['11', '132']"
-Bushbury B-C,bsp,POINT (52.634277 -2.112593),NGED,"['11', '33', '132']"
-Winson Green,bsp,POINT (52.487424 -1.927988),NGED,"['11', '132']"
-Chipping Sodbury,bsp,POINT (51.553176 -2.412175),NGED,"['11', '33', '132']"
+Erdington,bsp,POINT (52.512969 -1.827983),NGED,"['132', '11']"
+Bushbury B-C,bsp,POINT (52.634277 -2.112593),NGED,"['132', '11', '33']"
+Winson Green,bsp,POINT (52.487424 -1.927988),NGED,"['132', '11']"
+Chipping Sodbury,bsp,POINT (51.553176 -2.412175),NGED,"['132', '11', '33']"
 Rugeley Switching Site,bsp,POINT (52.753598 -1.911031),NGED,['132']
-Chester Street,bsp,POINT (52.496259 -1.881016),NGED,"['11', '132']"
+Chester Street,bsp,POINT (52.496259 -1.881016),NGED,"['132', '11']"
 Clipstone,bsp,POINT (53.165775 -1.103293),NGED,['33']
 Nottingham East,bsp,POINT (52.965574 -1.102333),NGED,['33']
 Toton,bsp,POINT (52.916804 -1.264185),NGED,['33']
@@ -1243,18 +1243,18 @@ Tiverton,bsp,POINT (50.896285 -3.380835),NGED,[]
 Bowhays Cross,bsp,POINT (51.159705 -3.339478),NGED,[]
 Street,bsp,POINT (51.132054 -2.752167),NGED,[]
 Woodcote,bsp,POINT (50.787491 -2.921228),NGED,[]
-Lincoln Local/No.2,bsp,POINT (53.228316 -0.522408),NGED,"['11', '132']"
+Lincoln Local/No.2,bsp,POINT (53.228316 -0.522408),NGED,"['132', '11']"
 Margam Grid,bsp,POINT (51.567416 -3.756311),NGED,[]
 Cardiff North Grid,bsp,POINT (51.525444 -3.19397),NGED,[]
 Bradwell Abbey,bsp,POINT (52.049561 -0.796507),NGED,['132']
 Corby,bsp,POINT (52.491301 -0.670249),NGED,['132']
-Castle Meads,bsp,POINT (51.867778 -2.257075),NGED,"['33', '132']"
+Castle Meads,bsp,POINT (51.867778 -2.257075),NGED,"['132', '33']"
 Nuneaton,bsp,POINT (52.511601 -1.488294),NGED,['33']
 Tamworth Town,bsp,POINT (52.632337 -1.687831),NGED,['33']
 Coventry North,bsp,POINT (52.453857 -1.46767),NGED,['33']
 Coventry South,bsp,POINT (52.405817 -1.538982),NGED,['33']
 Harbury,bsp,POINT (52.227821 -1.432339),NGED,['132']
-Coventry North,bsp,POINT (52.452977 -1.467827),NGED,"['11', '33', '132']"
+Coventry North,bsp,POINT (52.452977 -1.467827),NGED,"['132', '11', '33']"
 Coventry Central,bsp,POINT (52.420576 -1.507214),NGED,['132']
 Hereford,bsp,POINT (52.055146 -2.619691),NGED,"['66', '132']"
 Pailton,bsp,POINT (52.438834 -1.27626),NGED,['33']
@@ -1266,7 +1266,7 @@ Grangetown Grid,bsp,POINT (51.464119 -3.193146),NGED,[]
 Pencoed Grid,bsp,POINT (51.5227 -3.487545),NGED,[]
 Rodmills,bsp,POINT (51.480239 -3.141005),NGED,[]
 Bridgend Grid,bsp,POINT (51.518422 -3.578194),NGED,[]
-Trowbridge,bsp,POINT (51.512154 -3.098282),NGED,"['11', '132']"
+Trowbridge,bsp,POINT (51.512154 -3.098282),NGED,"['132', '11']"
 Abergavenny,bsp,POINT (51.839572 -3.013309),NGED,[]
 Tir John Grid,bsp,POINT (51.625242 -3.898063),NGED,[]
 Portable Swbd No2 - Cardiff East,bsp,POINT (51.713095 -4.041344),NGED,[]
@@ -1277,12 +1277,12 @@ Pontyclun,bsp,POINT (51.529548 -3.398674),NGED,[]
 Portishead New,bsp,POINT (51.489533 -2.744282),NGED,[]
 Cardiff South,bsp,POINT (51.4656 -3.1553),NGED,[]
 Fullabrook Windfarm,bsp,POINT (51.106727 -4.114547),NGED,[]
-Elmdon,bsp,POINT (52.452447 -1.711838),NGED,"['11', '132']"
-Sparkbrook,bsp,POINT (52.461902 -1.858869),NGED,"['11', '132']"
-Halesowen,bsp,POINT (52.454093 -2.045913),NGED,"['11', '132']"
-Lydney,bsp,POINT (51.736686 -2.537297),NGED,"['33', '132']"
-Chelmsley Wood,bsp,POINT (52.480014 -1.736262),NGED,"['11', '132']"
-Boughton Road,bsp,POINT (52.464601 -1.820517),NGED,"['11', '132']"
+Elmdon,bsp,POINT (52.452447 -1.711838),NGED,"['132', '11']"
+Sparkbrook,bsp,POINT (52.461902 -1.858869),NGED,"['132', '11']"
+Halesowen,bsp,POINT (52.454093 -2.045913),NGED,"['132', '11']"
+Lydney,bsp,POINT (51.736686 -2.537297),NGED,"['132', '33']"
+Chelmsley Wood,bsp,POINT (52.480014 -1.736262),NGED,"['132', '11']"
+Boughton Road,bsp,POINT (52.464601 -1.820517),NGED,"['132', '11']"
 Worksop,bsp,POINT (53.306502 -1.101173),NGED,['33']
 Warwick,bsp,POINT (52.285782 -1.565824),NGED,['33']
 Staveley,bsp,POINT (53.266992 -1.385452),NGED,['33']
@@ -1293,23 +1293,23 @@ Nottingham North,bsp,POINT (52.978549 -1.1733),NGED,['33']
 Nottingham,bsp,POINT (52.932472 -1.162201),NGED,['33']
 Melton Mowbray,bsp,POINT (52.764771 -0.869782),NGED,['33']
 Leicester,bsp,POINT (52.623121 -1.141573),NGED,['33']
-Whitwell,bsp,POINT (53.276766 -1.226931),NGED,"['33', '132']"
-Cannock,bsp,POINT (52.682747 -2.018448),NGED,"['11', '132']"
-Ludlow,bsp,POINT (52.366493 -2.688309),NGED,"['66', '11', '33', '132']"
-Kidderminster,bsp,POINT (52.383543 -2.25022),NGED,"['11', '33', '132']"
-Stourport,bsp,POINT (52.33857 -2.268752),NGED,"['66', '11', '33', '132']"
-Stagefields / (Reporting),bsp,POINT (53.013222 -2.169279),NGED,"['11', '132']"
+Whitwell,bsp,POINT (53.276766 -1.226931),NGED,"['132', '33']"
+Cannock,bsp,POINT (52.682747 -2.018448),NGED,"['132', '11']"
+Ludlow,bsp,POINT (52.366493 -2.688309),NGED,"['66', '132', '11', '33']"
+Kidderminster,bsp,POINT (52.383543 -2.25022),NGED,"['132', '11', '33']"
+Stourport,bsp,POINT (52.33857 -2.268752),NGED,"['66', '132', '11', '33']"
+Stagefields / (Reporting),bsp,POINT (53.013222 -2.169279),NGED,"['132', '11']"
 Checkerhouse,bsp,POINT (53.307305 -0.995682),NGED,['33']
-Selly Oak / Transformer Site,bsp,POINT (52.444393 -1.936767),NGED,"['11', '132']"
-Rednal,bsp,POINT (52.397076 -1.981512),NGED,"['11', '132']"
-Copt Heath,bsp,POINT (52.407374 -1.748529),NGED,"['11', '132']"
+Selly Oak / Transformer Site,bsp,POINT (52.444393 -1.936767),NGED,"['132', '11']"
+Rednal,bsp,POINT (52.397076 -1.981512),NGED,"['132', '11']"
+Copt Heath,bsp,POINT (52.407374 -1.748529),NGED,"['132', '11']"
 Oldbury B,bsp,POINT (52.498446 -2.025926),NGED,['33']
 Alfreton,bsp,POINT (53.109079 -1.384926),NGED,['33']
 Daventry,bsp,POINT (52.25947 -1.154763),NGED,['33']
-Highters Heath,bsp,POINT (52.404629 -1.869532),NGED,"['11', '132']"
+Highters Heath,bsp,POINT (52.404629 -1.869532),NGED,"['132', '11']"
 Stony Stratford,bsp,POINT (52.018659 -0.867315),NGED,['132']
 Whitley,bsp,POINT (52.393768 -1.482059),NGED,['132']
-Coventry South,bsp,POINT (52.405162 -1.539356),NGED,"['11', '33', '132']"
+Coventry South,bsp,POINT (52.405162 -1.539356),NGED,"['132', '11', '33']"
 Gresley,bsp,POINT (52.758633 -1.590376),NGED,['132']
 Morriston Grid,bsp,POINT (51.667638 -3.913733),NGED,[]
 Boc Margam,bsp,POINT (51.557994 -3.747148),NGED,[]
@@ -1321,51 +1321,51 @@ Leicester North,bsp,POINT (52.646786 -1.143267),NGED,['33']
 Wigston,bsp,POINT (52.577631 -1.14404),NGED,['33']
 Winster,bsp,POINT (53.126249 -1.639793),NGED,['33']
 Avonmouth,bsp,POINT (51.502609 -2.68031),NGED,[]
-Lye,bsp,POINT (52.460466 -2.12195),NGED,"['11', '132']"
+Lye,bsp,POINT (52.460466 -2.12195),NGED,"['132', '11']"
 Northampton East,bsp,POINT (52.243307 -0.836838),NGED,['33']
-Corby North,bsp,POINT (52.509615 -0.680703),NGED,"['33', '132']"
-Hockley,bsp,POINT (52.489183 -1.900298),NGED,"['11', '132']"
+Corby North,bsp,POINT (52.509615 -0.680703),NGED,"['132', '33']"
+Hockley,bsp,POINT (52.489183 -1.900298),NGED,"['132', '11']"
 Trostre Grid,bsp,POINT (51.675287 -4.13214),NGED,[]
 Spondon A,bsp,POINT (52.905134 -1.40163),NGED,['132']
 Willoughby,bsp,POINT (52.825856 -1.071748),NGED,['33']
-Nuneaton,bsp,POINT (52.51134 -1.488179),NGED,"['11', '33', '132']"
+Nuneaton,bsp,POINT (52.51134 -1.488179),NGED,"['132', '11', '33']"
 Bytham,bsp,POINT (52.744682 -0.493888),NGED,['25']
-Grantham South,bsp,POINT (52.903971 -0.638365),NGED,"['11', '132']"
+Grantham South,bsp,POINT (52.903971 -0.638365),NGED,"['132', '11']"
 Oakham,bsp,POINT (52.668219 -0.710463),NGED,['132']
 Boston,bsp,POINT (52.966407 -0.014111),NGED,['33']
-Clipstone,bsp,POINT (53.166312 -1.102983),NGED,"['11', '33', '132']"
-Willoughby,bsp,POINT (52.826487 -1.070814),NGED,"['11', '33', '132']"
-Retford,bsp,POINT (53.325188 -0.96145),NGED,"['25', '132']"
+Clipstone,bsp,POINT (53.166312 -1.102983),NGED,"['132', '11', '33']"
+Willoughby,bsp,POINT (52.826487 -1.070814),NGED,"['132', '11', '33']"
+Retford,bsp,POINT (53.325188 -0.96145),NGED,"['132', '25']"
 Carmarthen Grid,bsp,POINT (51.847898 -4.356836),NGED,[]
-Panteg,bsp,POINT (51.680879 -3.01575),NGED,"['11', '132']"
+Panteg,bsp,POINT (51.680879 -3.01575),NGED,"['132', '11']"
 Sudbrook,bsp,POINT (51.586503 -2.7116),NGED,[]
-Daventry,bsp,POINT (52.259824 -1.154068),NGED,"['11', '33', '132']"
+Daventry,bsp,POINT (52.259824 -1.154068),NGED,"['132', '11', '33']"
 Cambridge Arms,bsp,POINT (51.741775 -2.380869),NGED,['132']
 Waterston Grid,bsp,POINT (51.710583 -4.985573),NGED,[]
-Carlton Park,bsp,POINT (52.584415 -1.20944),NGED,"['11', '132']"
+Carlton Park,bsp,POINT (52.584415 -1.20944),NGED,"['132', '11']"
 Bourne,bsp,POINT (52.765708 -0.384386),NGED,['33']
-Nottingham East,bsp,POINT (52.965081 -1.102418),NGED,"['33', '132']"
+Nottingham East,bsp,POINT (52.965081 -1.102418),NGED,"['132', '33']"
 Irthlingborough,bsp,POINT (52.319301 -0.61398),NGED,['33']
 Sleaford,bsp,POINT (52.991676 -0.405436),NGED,['33']
 Wellingborough,bsp,POINT (52.292157 -0.684651),NGED,['33']
 Annesley,bsp,POINT (53.08768 -1.243671),NGED,['132']
-Northampton East,bsp,POINT (52.24289 -0.836585),NGED,"['11', '33', '132']"
+Northampton East,bsp,POINT (52.24289 -0.836585),NGED,"['132', '11', '33']"
 Tamworth Town,bsp,POINT (52.632524 -1.687239),NGED,['132']
-Stanton,bsp,POINT (52.948253 -1.312869),NGED,"['33', '132']"
-Winster,bsp,POINT (53.126248 -1.639584),NGED,"['33', '132']"
-Stamford,bsp,POINT (52.651769 -0.470296),NGED,"['33', '132']"
-Burslem,bsp,POINT (53.050979 -2.202232),NGED,"['11', '132']"
-Bournville,bsp,POINT (52.428061 -1.925716),NGED,"['11', '132']"
-Black Lake,bsp,POINT (52.531028 -2.005956),NGED,"['11', '132']"
-Coseley,bsp,POINT (52.552434 -2.091264),NGED,"['11', '132']"
+Stanton,bsp,POINT (52.948253 -1.312869),NGED,"['132', '33']"
+Winster,bsp,POINT (53.126248 -1.639584),NGED,"['132', '33']"
+Stamford,bsp,POINT (52.651769 -0.470296),NGED,"['132', '33']"
+Burslem,bsp,POINT (53.050979 -2.202232),NGED,"['132', '11']"
+Bournville,bsp,POINT (52.428061 -1.925716),NGED,"['132', '11']"
+Black Lake,bsp,POINT (52.531028 -2.005956),NGED,"['132', '11']"
+Coseley,bsp,POINT (52.552434 -2.091264),NGED,"['132', '11']"
 Rhos Grid,bsp,POINT (52.005951 -4.361856),NGED,[]
 Milford Haven Grid,bsp,POINT (51.734266 -4.972708),NGED,[]
 North Greetwell Switching Station,bsp,POINT (53.254599 -0.489874),NGED,['132']
 Boston,bsp,POINT (52.966442 -0.015108),NGED,['132']
 Whitwell,bsp,POINT (53.277162 -1.226879),NGED,['33']
 Nottingham North,bsp,POINT (52.978954 -1.173381),NGED,['132']
-Mansfield,bsp,POINT (53.155233 -1.198175),NGED,"['11', '33', '132']"
-Bordesley,bsp,POINT (52.474618 -1.879248),NGED,"['11', '132']"
+Mansfield,bsp,POINT (53.155233 -1.198175),NGED,"['132', '11', '33']"
+Bordesley,bsp,POINT (52.474618 -1.879248),NGED,"['132', '11']"
 East Yelland,bsp,POINT (51.068627 -4.171133),NGED,[]
 Sowton,bsp,POINT (50.726989 -3.465709),NGED,[]
 Torquay,bsp,POINT (50.488314 -3.544218),NGED,[]
@@ -1383,13 +1383,13 @@ Kibworth (M46),bsp,POINT (52.537425 -1.025162),NGED,['132']
 Hatton Gas Compressor,bsp,POINT (53.270099 -0.234817),NGED,['132']
 Pailton,bsp,POINT (52.439085 -1.276167),NGED,['132']
 Sleaford Rep,bsp,POINT (53.000149 -0.381802),NGED,['132']
-Rugby,bsp,POINT (52.388369 -1.262641),NGED,"['11', '33', '132']"
+Rugby,bsp,POINT (52.388369 -1.262641),NGED,"['132', '11', '33']"
 Lincoln No.2,bsp,POINT (53.228623 -0.518907),NGED,['33']
 Rover Way Grid,bsp,POINT (51.473693 -3.138134),NGED,[]
 Golden Hill Grid,bsp,POINT (51.683948 -4.908335),NGED,[]
 Plympton,bsp,POINT (50.372373 -4.011454),NGED,[]
 Paignton,bsp,POINT (50.421516 -3.58971),NGED,[]
-Malvern,bsp,POINT (52.127417 -2.304159),NGED,"['11', '132']"
+Malvern,bsp,POINT (52.127417 -2.304159),NGED,"['132', '11']"
 Hayle,bsp,POINT (50.19336 -5.42963),NGED,[]
 Taunton Main,bsp,POINT (51.017329 -3.152712),NGED,[]
 Merthyr East Grid,bsp,POINT (51.757782 -3.360105),NGED,[]
@@ -1397,7 +1397,7 @@ Exmouth,bsp,POINT (50.631493 -3.400336),NGED,[]
 Hirwaun Grid,bsp,POINT (51.74183 -3.536041),NGED,[]
 Burton,bsp,POINT (52.816366 -1.623456),NGED,['132']
 Staythorpe B Switching Station,bsp,POINT (53.077885 -0.864108),NGED,['132']
-Ladywood,bsp,POINT (52.47696 -1.915888),NGED,"['11', '132']"
+Ladywood,bsp,POINT (52.47696 -1.915888),NGED,"['132', '11']"
 Dowlais Grid,bsp,POINT (51.774169 -3.34651),NGED,[]
 Seabank Sgp,gsp,POINT (51.537053 -2.669737),NGED,[]
 Grendon,gsp,POINT (52.243426 -0.725638),NGED,"['132', '400']"
@@ -1405,7 +1405,7 @@ Bridgwater,gsp,POINT (51.118052 -2.968536),NGED,[]
 Walpole,gsp,POINT (52.727802 0.199163),NGED,['132']
 Axminster,gsp,POINT (50.786972 -2.924325),NGED,[]
 Indian Queens Sgp,gsp,POINT (50.396581 -4.898885),NGED,[]
-Chesterfield / (Ngt),gsp,POINT (53.224985 -1.386818),NGED,"['275', '132']"
+Chesterfield / (Ngt),gsp,POINT (53.224985 -1.386818),NGED,"['132', '275']"
 Bustleholm,gsp,POINT (52.552985 -1.96251),NGED,['132']
 Pyle Grid,gsp,POINT (51.536414 -3.687449),NGED,[]
 Landulph,gsp,POINT (50.445355 -4.24197),NGED,[]
@@ -1420,19 +1420,19 @@ Ratcliffe On Soar,gsp,POINT (52.863594 -1.252519),NGED,['132']
 Iron Acton,gsp,POINT (51.570415 -2.480174),NGED,[]
 Abham,gsp,POINT (50.472347 -3.729791),NGED,[]
 Alverdiscott,gsp,POINT (51.00633 -4.136448),NGED,[]
-Bishops Wood,gsp,POINT (52.313039 -2.243147),NGED,"['275', '132']"
+Bishops Wood,gsp,POINT (52.313039 -2.243147),NGED,"['132', '275']"
 Ironbridge,gsp,POINT (52.632623 -2.509588),NGED,"['132', '400']"
-Coventry,gsp,POINT (52.45571 -1.46388),NGED,"['275', '132']"
+Coventry,gsp,POINT (52.45571 -1.46388),NGED,"['132', '275']"
 Rassau,gsp,POINT (51.808942 -3.225411),NGED,[]
 Lea Marston,gsp,POINT (52.5276 -1.7082),NGED,['132']
 Swansea North Grid,gsp,POINT (51.683165 -3.960809),NGED,[]
 Feckenham,gsp,POINT (52.252827 -1.97183),NGED,"['66', '11']"
-Shrewsbury,gsp,POINT (52.709173 -2.69341),NGED,"['33', '132']"
-Willenhall,gsp,POINT (52.57732 -2.059353),NGED,"['11', '132']"
-Drakelow,gsp,POINT (52.773349 -1.649322),NGED,"['275', '132']"
+Shrewsbury,gsp,POINT (52.709173 -2.69341),NGED,"['132', '33']"
+Willenhall,gsp,POINT (52.57732 -2.059353),NGED,"['132', '11']"
+Drakelow,gsp,POINT (52.773349 -1.649322),NGED,"['132', '275']"
 Bushbury D,gsp,POINT (52.636594 -2.114402),NGED,['132']
 Cardiff East Grid,gsp,POINT (51.497082 -3.143644),NGED,[]
-Berkswell,gsp,POINT (52.386945 -1.613835),NGED,"['275', '132']"
+Berkswell,gsp,POINT (52.386945 -1.613835),NGED,"['132', '275']"
 Enderby,gsp,POINT (52.598206 -1.214817),NGED,['132']
 East Claydon,gsp,POINT (51.927273 -0.907298),NGED,['132']
 Uskmouth,gsp,POINT (51.547842 -2.977306),NGED,[]
