@@ -2,7 +2,15 @@ from django.db import models
 from django.contrib.gis.db import models as gis_models
 from .substations import PrimarySubstation, BSPSubstation, GSPSubstation, DNOGroup 
 from .shared_fields import ConnectionVoltageLevel
+from location_input.utils.constants import VOLTAGE_CHOICES
 
+
+class ProposedConnectionVoltageLevel(models.Model):
+    level_kv = models.DecimalField(
+        max_digits=5,
+        decimal_places=1,
+        choices=VOLTAGE_CHOICES,
+    )
 
 class ConnectionStatus(models.Model):
     STATUS_CHOICES = [
@@ -24,6 +32,7 @@ class ReportingPeriod(models.Model):
     class Meta:
         unique_together = ('start_date', 'end_date')
 
+
 class NewConnection(models.Model):
 
     connection_status = models.ForeignKey(
@@ -34,8 +43,8 @@ class NewConnection(models.Model):
         related_name='new_connections'
     )
 
-    voltage_level = models.ForeignKey(
-        ConnectionVoltageLevel,
+    connection_voltage_level = models.ForeignKey(
+        ProposedConnectionVoltageLevel,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,

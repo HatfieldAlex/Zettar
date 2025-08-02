@@ -1,29 +1,57 @@
+import re
+from decimal import Decimal
+from location_input.utils.constants import VOLTAGE_LEVELS
+
+
 def normalise_name_and_extract_voltage_info(ss_name):
+    voltage_levels = VOLTAGE_LEVELS
 
-    #remove basic suffiexs
-    ss_name = ss_name.strip()
-    suffixes_to_remove = [
-        ' Bsp',
-        ' S.G.P',
-        ' S Stn',
-        ' Primary Substation',
+    substrings_to_remove = [
+        'kv',
+        'kV',
+        'Kv',
+        'KV',
+        'Bsp',
+        'S.G.P.',
+        'S.G.P',
+        'G.S.P',
+        'S Stn',
+        'Primary Substation',
+        'S/S',
+        'S/Stn',
+        'Power Station',
+        'Primary',
+        'National Grid Site',
+        'S Stn',
+        '340038',
+        ' tn',
+        'BSP',
+
     ]
-    for suffix in suffixes_to_remove:
-        if ss_name.endswith(suffix):
-            ss_name = ss_name[: -len(suffix)].rstrip()
+    
+    if '6 6' in ss_name:
+        ss_name = ss_name.replace('6 6', '6.6')
 
-    voltage_levels = []
-    kv_index = ss_name.lower().rfind('kv')
-    if kv_index != -1:
-        ss_name = ss_name[:kv_index].rstrip()
+    numbers_in_ss_name = set(re.findall(r'\d+(?:\.\d+)?', ss_name))
+    voltage_levels_ss = []
 
-        #extract voltages
-        voltages_str = ss_name[ss_name.rfind(' ') + 1:]
-        ss_name = ss_name[:ss_name.rfind(' ')]
-        voltage_levels = voltages_str.split('/')
-        voltage_levels = [float(v) for v in voltage_levels]
+    for number_str in numbers_in_ss_name:
+        if number_str in voltage_levels:
+            voltage_levels_ss.append(number_str)
+            substrings_to_remove.append(number_str)
+        
+    for sub_str in substrings_to_remove:
+        ss_name = ss_name.replace(sub_str, '')
 
-    if ss_name.endswith('Primary Substation'):
-            ss_name = ss_name[: -len(suffix)].rstrip()
+    ss_name = re.sub(r'\bst\.?\b', 'Street', ss_name, flags=re.IGNORECASE)
+    ss_name = re.sub(r'\brd\.?\b', 'Road', ss_name, flags=re.IGNORECASE)
+    ss_name = re.sub(r'\bln\.?\b', 'Lane', ss_name, flags=re.IGNORECASE)
 
-    return [ss_name, voltage_levels]
+
+    ss_name = re.sub(r'\s+', ' ', ss_name).strip().rstrip('./& ')
+
+    return [ss_name, voltage_levels_ss]
+    
+
+
+print(normalise_name_and_extract_voltage_info('Alliance And Leicester 33 11 kV S Stn'))

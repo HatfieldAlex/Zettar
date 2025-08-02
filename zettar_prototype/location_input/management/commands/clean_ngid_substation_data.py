@@ -14,11 +14,12 @@ from location_input.models.substations import (
     BSPSubstation,
     PrimarySubstation,
 )
+from location_input.utils.constants import VOLTAGE_CHOICES
 
 class Command(BaseCommand):
     help = 'Import and clean ngid data from ngid website'
 
-    voltage_levels = ['6.6', '11', '25', '33', '66', '132', '275', '400']
+    voltage_levels = VOLTAGE_CHOICES
 
 
     def handle(self, *args, **options):
