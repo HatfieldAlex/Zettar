@@ -95,7 +95,7 @@ class Command(BaseCommand):
 
         ss_dno = 'NGED'
         ss_geolocation = Point(float(ss_lat), float(ss_lng))
-        ss_name, ss_voltages = self.normalise_name_and_extract_voltage_info(row['Substation Name'])
+        ss_name, ss_voltages = normalise_name_and_extract_voltage_info(row['Substation Name'])
         ss_type = type_map[ss_type]
 
         cleaned_row = {
@@ -107,58 +107,3 @@ class Command(BaseCommand):
         }
 
         return cleaned_row
-
-
-    def normalise_name_and_extract_voltage_info(self, ss_name):
-
-        substrings_to_remove = [
-            'kv',
-            'kV',
-            'Kv',
-            'KV',
-            'Bsp',
-            'S.G.P.',
-            'S.G.P',
-            'G.S.P',
-            'S Stn',
-            'Primary Substation',
-            'S/S',
-            'S/Stn',
-            'Power Station',
-            'Primary',
-            'National Grid Site',
-            'S Stn',
-            '340038',
-            'tn',
-        ]
-        
-        if '6 6' in ss_name:
-            ss_name = ss_name.replace('6 6', '6.6')
-
-        numbers_in_ss_name = set(re.findall(r'\d+(?:\.\d+)?', ss_name))
-
-        voltage_levels_ss = []
-
-        for number_str in numbers_in_ss_name:
-            if number_str in self.voltage_levels:
-                voltage_levels_ss.append(number_str)
-                substrings_to_remove.append(number_str)
-            
-        for sub_str in substrings_to_remove:
-            ss_name = ss_name.replace(sub_str, '')
-
-        ss_name = re.sub(r'\bst\.?\b', 'Street', ss_name, flags=re.IGNORECASE)
-        ss_name = re.sub(r'\brd\.?\b', 'Road', ss_name, flags=re.IGNORECASE)
-        ss_name = re.sub(r'\bln\.?\b', 'Lane', ss_name, flags=re.IGNORECASE)
-
-
-        ss_name = re.sub(r'\s+', ' ', ss_name).strip().rstrip('./& ')
-
-        return [ss_name, voltage_levels_ss]
-        
-
-    
-
-
-
-
