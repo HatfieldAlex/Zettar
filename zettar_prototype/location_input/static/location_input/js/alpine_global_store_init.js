@@ -3,11 +3,11 @@ console.log('💥 Global store script loaded');
 document.addEventListener('alpine:init', () => {
 
     Alpine.store('app', {
-        // nearestSubstationName: 'Islington',
-        // demandApplicationSum: 0,
-        // demandCapacityMW: 0,
-        // generationApplicationSum: 0,
-        // generationCapacityMW: 0,
+        nearestSubstationName: 'Islington',
+        demandApplicationSum: 0,
+        demandCapacityMW: 0,
+        generationApplicationSum: 0,
+        generationCapacityMW: 0,
 
         generateInsights() {
             console.log('🚀 generateInsights() called');

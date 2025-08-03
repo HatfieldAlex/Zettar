@@ -37,12 +37,12 @@ def get_estimate(request):
                 .first()
             )
 
+            new_connection_objs = nearest_substation_obj.new_connections.all()
+            print(f'new_connection_objs: {new_connection_objs}')
             filter_kwags = {nc_field_name: nearest_substation_obj}
-            new_connection_objs = NewConnection.objects.filter(**filter_kwags)
 
-            #variables to send back to front end
-            #genera
             nearest_substation_name = nearest_substation_obj.name
+
             connection_user_info = defaultdict(int)
             status_fields = ['pending', 'budget', 'accepted']
 
@@ -64,12 +64,16 @@ def get_estimate(request):
                     connection_user_info[f'generation_{connection_status}_status_sum'] += generation_count
 
             # Final summary dictionary
+
+            print(f'connection_user_info: {connection_user_info}')
+            
+            
             connection_summary = {
                 'nearest_substation_name': nearest_substation_name,
                 **dict(connection_user_info)  # Spread all metrics into top-level keys
             }
 
-            print(connection_summary)
+            print(f'connection_summary: {connection_summary}')
             
 
             return JsonResponse(connection_summary)

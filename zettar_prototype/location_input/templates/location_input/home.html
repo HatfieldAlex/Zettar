@@ -99,6 +99,31 @@
                     <p class="text-3xl font-extrabold text-green-600 mb-4">
                     <span x-text="$store.app.nearestSubstationName"></span>
                     </p>
+                    <p class="text-gray-700 text-lg mb-4">is your nearest substation.</p>
+
+
+                <div class="text-gray-800 space-y-2 text-lg">
+                    <!-- 🔍 Show insights only if there are any applications -->
+                    <template x-if="$store.app.demandApplicationSum || $store.app.generationApplicationSum">
+                        <div>
+                            <p>
+                                🔌 <strong x-text="$store.app.demandApplicationSum"></strong> demand applications requesting 
+                                <strong x-text="$store.app.demandCapacityMW + ' MW'"></strong>
+                            </p>
+                            <p>
+                                ⚡ <strong x-text="$store.app.generationApplicationSum"></strong> generation applications proposing 
+                                <strong x-text="$store.app.generationCapacityMW + ' MW'"></strong>
+                            </p>
+                        </div>
+                    </template>
+
+                    <!-- 🛑 Fallback message when both counts are 0 or missing -->
+                    <template x-if="!$store.app.demandApplicationSum && !$store.app.generationApplicationSum">
+                        <p class="italic text-gray-600">
+                            There are currently no active applications for connections to this site.
+                        </p>
+                    </template>
+                </div>
 
             </div>
 
