@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Test Alpine Global Store Init</title>
+
+
+
     <script src="https://unpkg.com/alpinejs" defer></script>
-    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}" defer></script>
+    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}"></script>
 </head>
 <body x-data>
 
     <button 
-        @click="$store.app.alpine_function()"
+        @click="$store.app.generateInsights()"
     >
         🔥 Test Alpine Store
     </button>
 
-    <p x-text="$store.app.nearestSubstationName"></p>
+    <div x-data><p x-text="$store.app.name"></p></div>
 
 </body>
 </html>

@@ -2,44 +2,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Set the page title shown in the browser tab -->
-    <title>Zettar</title>
-    <!-- Define character encoding as UTF-8 (standard for modern web) -->
-    <meta charset="UTF-8">
-    <!-- Load Inter font from Google Fonts for consistent typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Load Tailwind CSS via CDN for utility-first styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Ensure elements with x-cloak (Alpine-specific) are hidden until Alpine is ready -->
-    <style>[x-cloak] { display: none !important; }</style>
-    <!-- Load Alpine.js (lightweight reactive JavaScript framework) -->
     <script src="https://unpkg.com/alpinejs" defer></script>
-    <!-- Initialize global Alpine store for app-wide state management -->
-    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}" defer></script>
-    <!-- Load custom Alpine-driven form behavior (e.g. submission logic) -->
-    <!-- <script src="{% static 'location_input/js/estimate_form.js' %}" defer></script> -->
-    <!-- Load map logic for handling Google Maps integration and marker interaction -->
-    <script type="module" src="{% static 'location_input/js/map_script.js' %}"></script>
-    <!-- <script src="{% static 'location_input/js/map_script.js' %}" async defer></script> -->
-    <!-- Load Google Maps JavaScript API and call `initMap` when loaded -->
+    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}"></script>
+    <script type="module" src="{% static 'location_input/js/map_script.js' %}" defer></script>
+
+    <meta charset="UTF-8">
+    <title>Zettar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>[x-cloak] { display: none !important; }</style>
+    
+    
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxQ51BfivW16FpJSX99-TFVlM5lsuK8N0&callback=initMap&loading=async"></script>
 
 </head>
-<body class="font-[Inter] bg-gray-50 min-h-screen">
-
-    <body x-data>
-        <button 
-            @click="$store.app.alpine_function()"
-            class="bg-blue-600 text-white px-4 py-2 rounded"
-        >
-            🔥 Test Alpine Store
-        </button>
-    </body>
-
+<body x-data class="font-[Inter] bg-gray-50 min-h-screen">
 
     {% include 'partials/header.html' %}
 
-    <main x-data class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
+    <main class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
 
         <div class="flex flex-1 gap-6">
 
@@ -65,8 +46,8 @@
                         <legend class="sr-only">Connection Type</legend>
 
                         <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="connection_type" value="primary" class="accent-blue-600" @change="$store.app.connectionType = 'primary'">
-                        <span class="text-gray-800 font-medium">Secondary</span>
+                        <input type="radio" name="connection_type" value="secondary" class="accent-blue-600" @change="$store.app.connectionType = 'primary'">
+                        <span class="text-gray-800 font-medium">Primary</span>
                         </label>
 
                         <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
@@ -124,4 +105,5 @@
     </main>
 
 </body>
+
 </html>

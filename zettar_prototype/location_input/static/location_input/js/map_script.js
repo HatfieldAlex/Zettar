@@ -6,7 +6,6 @@ import { mapOptions } from './map_config.js';
 
 function initMap() {
 
-  console.log('DOES IT GET HERE??')
 
   map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
