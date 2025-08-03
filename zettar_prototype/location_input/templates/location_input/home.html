@@ -17,7 +17,7 @@
     <!-- Initialize global Alpine store for app-wide state management -->
     <script src="{% static 'location_input/js/alpine_global_store_init.js' %}"></script>
     <!-- Load custom Alpine-driven form behavior (e.g. submission logic) -->
-    <script src="{% static 'location_input/js/estimate_form.js' %}" defer></script>
+    <!-- <script src="{% static 'location_input/js/estimate_form.js' %}" defer></script> -->
     <!-- Load map logic for handling Google Maps integration and marker interaction -->
     <script type="module" src="{% static 'location_input/js/map_script.js' %}"></script>
     <!-- <script src="{% static 'location_input/js/map_script.js' %}" async defer></script> -->
@@ -65,18 +65,18 @@
                         <legend class="sr-only">Connection Type</legend>
 
                         <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="connection_type" value="primary" class="accent-blue-600" @change="$store.app.connectionType = 'Primary'">
-                        <span class="text-gray-800 font-medium">Primary</span>
-                        </label>
-
-                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="connection_type" value="secondary" class="accent-blue-600" @change="$store.app.connectionType = 'Secondary'">
+                        <input type="radio" name="connection_type" value="primary" class="accent-blue-600" @change="$store.app.connectionType = 'primary'">
                         <span class="text-gray-800 font-medium">Secondary</span>
                         </label>
 
                         <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
-                        <input type="radio" name="connection_type" value="bsp" class="accent-blue-600" @change="$store.app.connectionType = 'Bulk Supply Point (BSP)'">
+                        <input type="radio" name="connection_type" value="bsp" class="accent-blue-600" @change="$store.app.connectionType = 'bsp'">
                         <span class="text-gray-800 font-medium">Bulk Supply Point (BSP)</span>
+                        </label>
+
+                        <label class="flex items-center gap-3 p-3 border rounded-lg cursor-pointer hover:bg-gray-50">
+                        <input type="radio" name="connection_type" value="gsp" class="accent-blue-600" @change="$store.app.connectionType = 'gsp'">
+                        <span class="text-gray-800 font-medium">Grid Supply Point (GSP)</span>
                         </label>
                     </fieldset>
                 </div>
@@ -89,19 +89,11 @@
                 </div>
 
 
-                <!--  -->
-
-
                 <div class="bg-white rounded-2xl shadow p-4 flex-1 overflow-auto">
                     <h2 class="text-xl font-semibold mb-2">3. Generate Insights</h2>
-                    <!-- <button type="button"
-                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 mx-auto block"
-                        @click="$store.app.submitEstimate()">
-                        Calculate Estimate
-                    </button> -->
                     <button type="button"
                         class="bg-blue-600 text-white px-6 py-3 rounded-2xl text-lg font-semibold hover:bg-blue-700 transition duration-200 w-full"
-                        @click="$store.app.submitEstimate()">
+                        @click="$store.app.generateInsights()">
                         Run Connection Check
                     </button>
                 </div>
@@ -116,34 +108,15 @@
         <!-- ✅ This goes directly under the two-column layout -->
             <div 
                 id="estimate-box"
-                x-show="$store.app.showEstimate"
+                x-show="$store.app.nearestSubstationName"
                 x-transition
                 x-cloak  
                 class="bg-white rounded-2xl shadow p-6 mt-6 mb-6 max-w-7xl mx-auto w-full"
             >
-                <h2 class="text-xl font-semibold mb-4">Connection Cost Estimate</h2>
+                <h2 class="text-xl font-semibold mb-4">Connection Insights</h2>
 
                     <p class="text-3xl font-extrabold text-green-600 mb-4">
-                    <span x-text="$store.app.GBPFormatCost"></span>
-                    </p>
-
-                    <div class="text-gray-700 space-y-3 text-base leading-relaxed">
-                    <p>
-                    This estimate includes:
-                    </p>
-                    <ul class="list-disc list-inside ml-2">
-                    <li><strong>Upfront cost:</strong> Approximately <span class="font-semibold text-gray-800">[£X]</span> for a <span class="font-semibold text-gray-800">[substation type]</span>.</li>
-                    <li><strong>Per metre cost:</strong> <span class="font-semibold text-gray-800">[£Y/m]</span> along the public road network.</li>
-                    <li><strong>Distance:</strong> Your closest <span class="font-semibold text-gray-800">[substation_type]</span> is <span class="font-semibold text-gray-800">[name of substation]</span>, about <span class="font-semibold text-gray-800">[Y]m</span> away by public road.</li>
-                    <li><strong>Additional buffer:</strong> We've added <span class="font-semibold text-gray-800">[X]m</span> for typical diversions (e.g. under a bridge, avoiding infrastructure).</li>
-                    </ul>
-
-                    <p>
-                    👉 This gives a total estimated route length of <span class="font-semibold text-gray-800">[Z]m</span>, and a combined estimated cost of <span class="font-bold text-green-700">£[Total]</span>.
-                    </p>
-
-                    <p class="italic text-sm text-gray-500">
-                    Note: This is a high-level estimate based on typical conditions and public road routing. Actual costs may vary.
+                    <span x-text="$store.app.nearestSubstationName"></span>
                     </p>
 
             </div>
