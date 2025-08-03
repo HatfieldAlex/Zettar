@@ -15,7 +15,7 @@
     <!-- Load Alpine.js (lightweight reactive JavaScript framework) -->
     <script src="https://unpkg.com/alpinejs" defer></script>
     <!-- Initialize global Alpine store for app-wide state management -->
-    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}"></script>
+    <script src="{% static 'location_input/js/alpine_global_store_init.js' %}" defer></script>
     <!-- Load custom Alpine-driven form behavior (e.g. submission logic) -->
     <!-- <script src="{% static 'location_input/js/estimate_form.js' %}" defer></script> -->
     <!-- Load map logic for handling Google Maps integration and marker interaction -->
@@ -27,12 +27,19 @@
 </head>
 <body class="font-[Inter] bg-gray-50 min-h-screen">
 
+    <body x-data>
+        <button 
+            @click="$store.app.alpine_function()"
+            class="bg-blue-600 text-white px-4 py-2 rounded"
+        >
+            🔥 Test Alpine Store
+        </button>
+    </body>
+
 
     {% include 'partials/header.html' %}
 
     <main x-data class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
-    <!-- <main class="flex flex-col max-w-7xl mx-auto p-4 space-y-6 pb-12"> -->
-
 
         <div class="flex flex-1 gap-6">
 
@@ -51,14 +58,7 @@
                     </p>
                 </div>
 
-                <!-- <div class="bg-white rounded-2xl shadow p-4 flex items-center justify-start">
-                    <h2 class="text-xl font-semibold">1. Select a Location</h2>
-                    <p class="text-gray-700">
-                        Simply click the desired location on the map where you would put your site and drop the pin. Zettar then finds the nearest substation of your required type 
-                    </p>
-                </div> -->
 
-                <!-- Which type of connection do you need? -->
                 <div class="bg-white rounded-2xl shadow p-4">
                     <h2 class="text-xl font-semibold mb-2">1. Select Connection Type</h2>
                     <fieldset class="space-y-3">
@@ -108,7 +108,7 @@
         <!-- ✅ This goes directly under the two-column layout -->
             <div 
                 id="estimate-box"
-                x-show="$store.app.nearestSubstationName"
+
                 x-transition
                 x-cloak  
                 class="bg-white rounded-2xl shadow p-6 mt-6 mb-6 max-w-7xl mx-auto w-full"
