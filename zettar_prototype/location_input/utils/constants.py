@@ -1,17 +1,15 @@
-from decimal import Decimal
-
 VOLTAGE_LEVELS = [
     '6.6', 
-    '11', 
-    '25', 
-    '33', 
-    '66', 
-    '132', 
-    '275', 
-    '400', 
+    '11.0', 
+    '25.0', 
+    '33.0', 
+    '66.0', 
+    '132.0', 
+    '275.0', 
+    '400.0', 
     #remember to migrate if adding/changing a voltage level
     ] 
 
 VOLTAGE_CHOICES = [
-    (Decimal(v), f"{v} kV") for v in VOLTAGE_LEVELS
+    (v, f"{v} kV") for v in VOLTAGE_LEVELS
 ] 

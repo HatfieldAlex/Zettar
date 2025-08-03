@@ -1,1081 +1,1081 @@
 name,type,dno,ss_voltages,proposed_voltage,connection_status,total_demand_number,total_demand_capacity_mw,total_generation_number,total_generation_capacity_mw
-Berkswell,gsp,NGED,['132'],132,budget,5,257.9,7,345.9
-Sandy Lane,primary,NGED,"['6.6', '33']",6.6,budget,1,1.972,0,0
-University Of Warwick,primary,NGED,"['11', '33']",11,budget,1,1.17,0,0
-Coventry West,bsp,NGED,['33'],33,budget,0,0,2,60
-Jaguar Cars Browns Lane,primary,NGED,"['11', '33']",11,budget,1,2.8,0,0
-Harbury,bsp,NGED,['33'],33,budget,0,0,1,30
-Gaydon,primary,NGED,"['11', '33']",11,budget,2,22.5,0,0
-Harbury,primary,NGED,['11'],11,budget,1,1,1,1
-Banbury Road,primary,NGED,"['11', '33']",11,budget,2,2.125,0,0
-Clifton,primary,NGED,"['11', '33']",11,budget,1,9.428,0,0
-Bicker Fen,gsp,NGED,['132'],132,budget,1,50,14,909.3
-Grantham,bsp,NGED,['33'],33,budget,0,0,2,60
-New Beacon Road Grantham,primary,NGED,"['11', '33']",11,budget,1,4,0,0
-Skegness,bsp,NGED,['33'],33,budget,1,30,3,90
-Alford,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Sleaford,bsp,NGED,['33'],33,budget,0,0,8,214.9
-Chesterfield,gsp,NGED,['132'],132,budget,1,49.9,9,435.8
-Alfreton,bsp,NGED,['33'],33,budget,0,0,6,155
-Blackwell,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Annesley,bsp,NGED,['33'],33,budget,3,50,7,160
-Annesley (Kirkby),primary,NGED,['11'],11,budget,1,1,0,0
-Sherwood Park,primary,NGED,"['11', '33']",11,budget,3,15,0,0
-Chesterfield,bsp,NGED,['33'],33,budget,1,21,8,186.02
-Clipstone,bsp,NGED,['33'],33,budget,1,30,5,140
-Goitside,bsp,NGED,['33'],33,budget,0,0,6,135
-Mansfield,bsp,NGED,['33'],33,budget,1,20,1,20
-Pinxton,primary,NGED,['11'],11,budget,2,2.25,0,0
-Staveley,bsp,NGED,['33'],33,budget,1,30,2,60
-Staveley,primary,NGED,['11'],11,budget,1,1.3,0,0
-Whitwell,bsp,NGED,['33'],33,budget,0,0,3,75
-Westhorpe,primary,NGED,"['11', '33']",11,budget,0,0,1,5
-Coventry,gsp,NGED,['132'],132,budget,1,80,10,459.8
-Walsgrave,primary,NGED,"['11', '33']",11,budget,1,5,0,0
-Daventry,bsp,NGED,['33'],33,budget,0,0,2,50
-Crick,primary,NGED,"['11', '33']",11,budget,2,6,0,0
-Hinckley,bsp,NGED,['33'],33,budget,1,10,3,60
-Hinckley,primary,NGED,['11'],11,budget,1,2.5,0,0
-Sapcote,primary,NGED,"['11', '33']",11,budget,1,1.28,0,0
-Wood Lane,primary,NGED,"['11', '33']",11,budget,2,21.7,0,0
-Nuneaton,bsp,NGED,['33'],33,budget,0,0,1,30
-Langdale Drive,primary,NGED,"['11', '33']",11,budget,2,9.995,0,0
-Pailton,bsp,NGED,['33'],33,budget,0,0,3,70
-Lawford,primary,NGED,"['11', '33']",11,budget,1,1.25,0,0
-Coventry South,primary,NGED,['11'],11,budget,2,4.5,0,0
-London Road,primary,NGED,"['6.6', '33']",6.6,budget,1,1.4,0,0
-Drakelow,gsp,NGED,['132'],132,budget,2,113,3,163
-Burton,primary,NGED,['11'],11,budget,1,1.3,0,0
-Burton,bsp,NGED,['33'],33,budget,0,0,1,16
-Hatton,primary,NGED,"['11', '33']",11,budget,0,0,1,5
-Trent Alloys,primary,NGED,"['11', '33']",11,budget,1,1.25,0,0
-Barton Under Needwood,primary,NGED,"['11', '33']",11,budget,1,1.7,0,0
-Gresley,bsp,NGED,['33'],33,budget,1,17,2,45
-Ashby,primary,NGED,"['11', '33']",11,budget,1,1.22,0,0
-Gresley,primary,NGED,['11'],11,budget,0,0,1,5
-East Claydon,gsp,NGED,['132'],132,budget,2,119.9,7,369.9
-Victoria Road,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Brackley,bsp,NGED,['132'],132,budget,2,60,1,30
-Towcester,primary,NGED,"['11', '33']",11,budget,3,11,0,0
-Bradwell Abbey,bsp,NGED,['33'],33,budget,0,0,1,30
-Marlborough Street,primary,NGED,"['11', '33']",11,budget,1,1.275,0,0
-Newport Pagnell,primary,NGED,"['11', '33']",11,budget,1,9.5,0,0
-Wolverton,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Stony Stratford,bsp,NGED,['33'],33,budget,0,0,3,66
-Buckingham,primary,NGED,"['11', '33']",11,budget,1,1.5,0,0
-Kiln Farm,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Enderby,gsp,NGED,['132'],132,budget,4,340,5,400
-Coalville,bsp,NGED,['33'],33,budget,1,30,3,90
-Interlink Park,primary,NGED,"['11', '33']",11,budget,1,1.4,0,0
-Osbaston,primary,NGED,"['11', '33']",11,budget,1,5,0,0
-Leicester,primary,NGED,['11'],11,budget,1,1.5,0,0
-Leicester East,bsp,NGED,['33'],33,budget,1,21.012,0,0
-Stoneygate,primary,NGED,"['6.6', '33']",6.6,budget,2,31.154,1,5
-Thurnby,primary,NGED,"['11', '33']",11,budget,1,1.622,0,0
-Beaumont Leys,primary,NGED,"['11', '33']",11,budget,6,7.4,0,0
-Hockley Farm Road,primary,NGED,"['11', '33']",11,budget,1,1.6,0,0
-Wigston,bsp,NGED,['33'],33,budget,4,69,1,30
-Alliance And Leicester,primary,NGED,"['11', '33']",11,budget,2,21,0,0
-Whetstone,primary,NGED,"['11', '33']",11,budget,3,8.052,2,8
-Grendon,gsp,NGED,['132'],132,budget,8,810,13,664.9
-Corby,bsp,NGED,['33'],33,budget,1,20,4,85
-Corby No2,primary,NGED,['11'],11,budget,4,10.2,1,5
-Corby North,bsp,NGED,['132'],33,budget,0,0,1,30
-Irthlingborough,bsp,NGED,['33'],33,budget,1,80,0,0
-Kettering,bsp,NGED,['33'],33,budget,1,24,1,24
-Burton Latimer,primary,NGED,"['11', '33']",11,budget,1,1,0,0
-Desborough,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Kibworth,bsp,NGED,['33'],33,budget,1,15,4,90
-Farndon Road,primary,NGED,"['11', '33']",11,budget,1,1.3,0,0
-Kibworth,primary,NGED,['11'],11,budget,1,1.44,0,0
-Melton Mowbray,bsp,NGED,['33'],33,budget,3,69.4,3,90
-Holwell,primary,NGED,"['11', '33']",11,budget,3,12.19,0,0
-Melton Mowbray,primary,NGED,['11'],11,budget,1,1.225,0,0
-Old Dalby,primary,NGED,"['11', '33']",11,budget,1,1.5,0,0
-Campbell Street,primary,NGED,"['11', '33']",11,budget,1,4.1,0,0
-Northampton East,bsp,NGED,['33'],33,budget,0,0,2,38.2
-Oakham,bsp,NGED,['33'],33,budget,0,0,2,60
-Oakham,primary,NGED,['11'],11,budget,1,1.32,0,0
-Wellingborough,bsp,NGED,['33'],33,budget,3,82,5,150
-Tamworth,bsp,NGED,['33'],33,budget,1,10,1,10
-Tamworth Town,primary,NGED,['11'],11,budget,1,1.125,1,1
-Ratcliffe On Soar,gsp,NGED,['132'],132,budget,2,125,5,274.9
-Shepshed,primary,NGED,"['11', '33']",11,budget,2,2,1,4.94
-Castle Road,primary,NGED,"['11', '33']",11,budget,1,2,0,0
-Clifton,primary,NGED,"['11', '33']",11,budget,2,3,0,0
-Cotgrave,primary,NGED,"['11', '33']",11,budget,1,1,0,0
-North Wilford,primary,NGED,"['11', '33']",11,budget,2,3,0,0
-Toton 3,bsp,NGED,['33'],33,budget,0,0,1,30
-Ratcliffe On Soar,primary,NGED,"['11', '33']",11,budget,0,0,1,7
-Willoughby,bsp,NGED,['33'],33,budget,0,0,2,55
-Syston,primary,NGED,"['11', '33']",11,budget,2,7.6,0,0
-Staythorpe C,gsp,NGED,['132'],132,budget,2,149,12,678.8
-Checkerhouse,bsp,NGED,['33'],33,budget,0,0,12,260
-Tuxford,primary,NGED,"['11', '33']",11,budget,1,1,0,0
-Grantham South,bsp,NGED,['132'],132,budget,0,0,1,25
-Hawton,bsp,NGED,['33'],33,budget,1,3.542,5,140
-Newark Junction,primary,NGED,"['11', '33']",11,budget,1,5.5,0,0
-Swinderby,primary,NGED,"['11', '33']",11,budget,2,9.1,0,0
-Staythorpe B,bsp,NGED,['132'],132,budget,1,30,2,60
-Stoke Bardolph,gsp,NGED,['132'],132,budget,1,150,0,0
-Nottingham East,bsp,NGED,['33'],33,budget,1,18,1,10
-Nottingham North,bsp,NGED,['33'],33,budget,2,43,0,0
-Walpole,gsp,NGED,['132'],132,budget,0,0,6,340
-Boston,bsp,NGED,['33'],33,budget,0,0,4,100
-Marsh Lane,primary,NGED,"['11', '33']",11,budget,1,5,1,5
-Mount Bridge Boston,primary,NGED,"['11', '33']",11,budget,1,1.2,0,0
-South Holland,bsp,NGED,['33'],33,budget,0,0,1,30
-Spalding,bsp,NGED,['132'],132,budget,1,20,0,0
-Spalding Clay Lake,bsp,NGED,['33'],33,budget,0,0,3,75
-Crown Fm,primary,NGED,"['11', '33']",11,budget,1,5,1,5
-Spalding Clay Lake,primary,NGED,['11'],11,budget,2,8.5,1,1.5
-Stamford,bsp,NGED,['33'],33,budget,0,0,1,20
-Stamford,primary,NGED,['11'],11,budget,1,1.2,0,0
-West Burton,gsp,NGED,['132'],132,budget,1,300,8,369.9
-Lincoln No 2,primary,NGED,['11'],11,budget,4,13.5,0,0
-Lincoln Main No 1,bsp,NGED,['33'],33,budget,1,20,3,90
-Doddington Park,primary,NGED,"['11', '33']",11,budget,2,7,0,0
-North Hykeham,primary,NGED,"['11', '33']",11,budget,1,1.2,0,0
-Rookery Lane Lincoln,primary,NGED,"['11', '33']",11,budget,1,2.911,0,0
-Worksop,bsp,NGED,['33'],33,budget,2,17.9,1,30
-Kilton Road,primary,NGED,"['11', '33']",11,budget,1,5,0,0
-Willington,gsp,NGED,['132'],132,budget,4,214,15,768.9
-Derby,primary,NGED,['11'],11,budget,4,4.5,0,0
-Chaddesden,primary,NGED,"['11', '33']",11,budget,1,3,0,0
-Derby South,bsp,NGED,['33'],33,budget,0,0,2,75
-Allenton,primary,NGED,"['11', '33']",11,budget,1,3,0,0
-Infinity Park,primary,NGED,"['11', '33']",11,budget,2,3.115,0,0
-Silverstone,primary,NGED,"['11', '33']",11,budget,1,1,0,0
-Heanor,bsp,NGED,['33'],33,budget,0,0,5,120
-Spondon,primary,NGED,['11'],11,budget,2,3.5,0,0
-Stanton,bsp,NGED,['33'],33,budget,2,33,1,30
-Uttoxeter,bsp,NGED,['33'],33,budget,0,0,2,55
-Winster,bsp,NGED,['33'],33,budget,0,0,2,60
-Matlock,primary,NGED,"['11', '33']",11,budget,1,2.5,0,0
-Holbrook Lane,primary,NGED,"['6.6', '33']",6.6,accepted,1,2.999,0,0
-Sandy Lane,primary,NGED,"['6.6', '33']",6.6,accepted,1,1.5,0,0
-Hawkesmill Lane,primary,NGED,"['6.6', '33']",6.6,accepted,1,1.164,0,0
-Warwick,primary,NGED,['11'],11,accepted,1,2,0,0
-Grantham North,primary,NGED,['11'],11,accepted,1,6,1,1.7
-Skegness,bsp,NGED,['33'],33,accepted,0,0,1,9.6
-Spilsby,primary,NGED,"['11', '33']",11,accepted,1,3,0,0
-Woodhall Spa,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Chesterfield,gsp,NGED,['132'],132,accepted,0,0,1,20
-Meadow Lane,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Annesley,bsp,NGED,['33'],33,accepted,1,8,0,0
-Annesley (Kirkby),primary,NGED,['11'],11,accepted,1,1,0,0
-Hucknall,primary,NGED,[],11,accepted,1,4,0,0
-Chesterfield,bsp,NGED,['33'],33,accepted,0,0,1,9.029
-Sheepbridge,primary,NGED,['6.6'],11,accepted,1,2.2,0,0
-Crown Fm,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Rufford,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
+Berkswell,gsp,NGED,['132.0'],132.0,budget,5,257.9,7,345.9
+Sandy Lane,primary,NGED,"['6.6', '33.0']",6.6,budget,1,1.972,0,0
+University Of Warwick,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.17,0,0
+Coventry West,bsp,NGED,['33.0'],33.0,budget,0,0,2,60
+Jaguar Cars Browns Lane,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2.8,0,0
+Harbury,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Gaydon,primary,NGED,"['11.0', '33.0']",11.0,budget,2,22.5,0,0
+Harbury,primary,NGED,['11.0'],11.0,budget,1,1,1,1
+Banbury Road,primary,NGED,"['11.0', '33.0']",11.0,budget,2,2.125,0,0
+Clifton,primary,NGED,"['11.0', '33.0']",11.0,budget,1,9.428,0,0
+Bicker Fen,gsp,NGED,['132.0'],132.0,budget,1,50,14,909.3
+Grantham,bsp,NGED,['33.0'],33.0,budget,0,0,2,60
+New Beacon Road Grantham,primary,NGED,"['11.0', '33.0']",11.0,budget,1,4,0,0
+Skegness,bsp,NGED,['33.0'],33.0,budget,1,30,3,90
+Alford,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Sleaford,bsp,NGED,['33.0'],33.0,budget,0,0,8,214.9
+Chesterfield,gsp,NGED,['132.0'],132.0,budget,1,49.9,9,435.8
+Alfreton,bsp,NGED,['33.0'],33.0,budget,0,0,6,155
+Blackwell,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Annesley,bsp,NGED,['33.0'],33.0,budget,3,50,7,160
+Annesley (Kirkby),primary,NGED,['11.0'],11.0,budget,1,1,0,0
+Sherwood Park,primary,NGED,"['11.0', '33.0']",11.0,budget,3,15,0,0
+Chesterfield,bsp,NGED,['33.0'],33.0,budget,1,21,8,186.02
+Clipstone,bsp,NGED,['33.0'],33.0,budget,1,30,5,140
+Goitside,bsp,NGED,['33.0'],33.0,budget,0,0,6,135
+Mansfield,bsp,NGED,['33.0'],33.0,budget,1,20,1,20
+Pinxton,primary,NGED,['11.0'],11.0,budget,2,2.25,0,0
+Staveley,bsp,NGED,['33.0'],33.0,budget,1,30,2,60
+Staveley,primary,NGED,['11.0'],11.0,budget,1,1.3,0,0
+Whitwell,bsp,NGED,['33.0'],33.0,budget,0,0,3,75
+Westhorpe,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,5
+Coventry,gsp,NGED,['132.0'],132.0,budget,1,80,10,459.8
+Walsgrave,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,0,0
+Daventry,bsp,NGED,['33.0'],33.0,budget,0,0,2,50
+Crick,primary,NGED,"['11.0', '33.0']",11.0,budget,2,6,0,0
+Hinckley,bsp,NGED,['33.0'],33.0,budget,1,10,3,60
+Hinckley,primary,NGED,['11.0'],11.0,budget,1,2.5,0,0
+Sapcote,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.28,0,0
+Wood Lane,primary,NGED,"['11.0', '33.0']",11.0,budget,2,21.7,0,0
+Nuneaton,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Langdale Drive,primary,NGED,"['11.0', '33.0']",11.0,budget,2,9.995,0,0
+Pailton,bsp,NGED,['33.0'],33.0,budget,0,0,3,70
+Lawford,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.25,0,0
+Coventry South,primary,NGED,['11.0'],11.0,budget,2,4.5,0,0
+London Road,primary,NGED,"['6.6', '33.0']",6.6,budget,1,1.4,0,0
+Drakelow,gsp,NGED,['132.0'],132.0,budget,2,113,3,163
+Burton,primary,NGED,['11.0'],11.0,budget,1,1.3,0,0
+Burton,bsp,NGED,['33.0'],33.0,budget,0,0,1,16
+Hatton,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,5
+Trent Alloys,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.25,0,0
+Barton Under Needwood,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.7,0,0
+Gresley,bsp,NGED,['33.0'],33.0,budget,1,17,2,45
+Ashby,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.22,0,0
+Gresley,primary,NGED,['11.0'],11.0,budget,0,0,1,5
+East Claydon,gsp,NGED,['132.0'],132.0,budget,2,119.9,7,369.9
+Victoria Road,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Brackley,bsp,NGED,['132.0'],132.0,budget,2,60,1,30
+Towcester,primary,NGED,"['11.0', '33.0']",11.0,budget,3,11,0,0
+Bradwell Abbey,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Marlborough Street,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.275,0,0
+Newport Pagnell,primary,NGED,"['11.0', '33.0']",11.0,budget,1,9.5,0,0
+Wolverton,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Stony Stratford,bsp,NGED,['33.0'],33.0,budget,0,0,3,66
+Buckingham,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.5,0,0
+Kiln Farm,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Enderby,gsp,NGED,['132.0'],132.0,budget,4,340,5,400
+Coalville,bsp,NGED,['33.0'],33.0,budget,1,30,3,90
+Interlink Park,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.4,0,0
+Osbaston,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,0,0
+Leicester,primary,NGED,['11.0'],11.0,budget,1,1.5,0,0
+Leicester East,bsp,NGED,['33.0'],33.0,budget,1,21.012,0,0
+Stoneygate,primary,NGED,"['6.6', '33.0']",6.6,budget,2,31.154,1,5
+Thurnby,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.622,0,0
+Beaumont Leys,primary,NGED,"['11.0', '33.0']",11.0,budget,6,7.4,0,0
+Hockley Farm Road,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.6,0,0
+Wigston,bsp,NGED,['33.0'],33.0,budget,4,69,1,30
+Alliance And Leicester,primary,NGED,"['11.0', '33.0']",11.0,budget,2,21,0,0
+Whetstone,primary,NGED,"['11.0', '33.0']",11.0,budget,3,8.052,2,8
+Grendon,gsp,NGED,['132.0'],132.0,budget,8,810,13,664.9
+Corby,bsp,NGED,['33.0'],33.0,budget,1,20,4,85
+Corby No2,primary,NGED,['11.0'],11.0,budget,4,10.2,1,5
+Corby North,bsp,NGED,['132.0'],33.0,budget,0,0,1,30
+Irthlingborough,bsp,NGED,['33.0'],33.0,budget,1,80,0,0
+Kettering,bsp,NGED,['33.0'],33.0,budget,1,24,1,24
+Burton Latimer,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1,0,0
+Desborough,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Kibworth,bsp,NGED,['33.0'],33.0,budget,1,15,4,90
+Farndon Road,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.3,0,0
+Kibworth,primary,NGED,['11.0'],11.0,budget,1,1.44,0,0
+Melton Mowbray,bsp,NGED,['33.0'],33.0,budget,3,69.4,3,90
+Holwell,primary,NGED,"['11.0', '33.0']",11.0,budget,3,12.19,0,0
+Melton Mowbray,primary,NGED,['11.0'],11.0,budget,1,1.225,0,0
+Old Dalby,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.5,0,0
+Campbell Street,primary,NGED,"['11.0', '33.0']",11.0,budget,1,4.1,0,0
+Northampton East,bsp,NGED,['33.0'],33.0,budget,0,0,2,38.2
+Oakham,bsp,NGED,['33.0'],33.0,budget,0,0,2,60
+Oakham,primary,NGED,['11.0'],11.0,budget,1,1.32,0,0
+Wellingborough,bsp,NGED,['33.0'],33.0,budget,3,82,5,150
+Tamworth,bsp,NGED,['33.0'],33.0,budget,1,10,1,10
+Tamworth Town,primary,NGED,['11.0'],11.0,budget,1,1.125,1,1
+Ratcliffe On Soar,gsp,NGED,['132.0'],132.0,budget,2,125,5,274.9
+Shepshed,primary,NGED,"['11.0', '33.0']",11.0,budget,2,2,1,4.94
+Castle Road,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2,0,0
+Clifton,primary,NGED,"['11.0', '33.0']",11.0,budget,2,3,0,0
+Cotgrave,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1,0,0
+North Wilford,primary,NGED,"['11.0', '33.0']",11.0,budget,2,3,0,0
+Toton 3,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Ratcliffe On Soar,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,7
+Willoughby,bsp,NGED,['33.0'],33.0,budget,0,0,2,55
+Syston,primary,NGED,"['11.0', '33.0']",11.0,budget,2,7.6,0,0
+Staythorpe C,gsp,NGED,['132.0'],132.0,budget,2,149,12,678.8
+Checkerhouse,bsp,NGED,['33.0'],33.0,budget,0,0,12,260
+Tuxford,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1,0,0
+Grantham South,bsp,NGED,['132.0'],132.0,budget,0,0,1,25
+Hawton,bsp,NGED,['33.0'],33.0,budget,1,3.542,5,140
+Newark Junction,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5.5,0,0
+Swinderby,primary,NGED,"['11.0', '33.0']",11.0,budget,2,9.1,0,0
+Staythorpe B,bsp,NGED,['132.0'],132.0,budget,1,30,2,60
+Stoke Bardolph,gsp,NGED,['132.0'],132.0,budget,1,150,0,0
+Nottingham East,bsp,NGED,['33.0'],33.0,budget,1,18,1,10
+Nottingham North,bsp,NGED,['33.0'],33.0,budget,2,43,0,0
+Walpole,gsp,NGED,['132.0'],132.0,budget,0,0,6,340
+Boston,bsp,NGED,['33.0'],33.0,budget,0,0,4,100
+Marsh Lane,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,1,5
+Mount Bridge Boston,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.2,0,0
+South Holland,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Spalding,bsp,NGED,['132.0'],132.0,budget,1,20,0,0
+Spalding Clay Lake,bsp,NGED,['33.0'],33.0,budget,0,0,3,75
+Crown Fm,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,1,5
+Spalding Clay Lake,primary,NGED,['11.0'],11.0,budget,2,8.5,1,1.5
+Stamford,bsp,NGED,['33.0'],33.0,budget,0,0,1,20
+Stamford,primary,NGED,['11.0'],11.0,budget,1,1.2,0,0
+West Burton,gsp,NGED,['132.0'],132.0,budget,1,300,8,369.9
+Lincoln No 2,primary,NGED,['11.0'],11.0,budget,4,13.5,0,0
+Lincoln Main No 1,bsp,NGED,['33.0'],33.0,budget,1,20,3,90
+Doddington Park,primary,NGED,"['11.0', '33.0']",11.0,budget,2,7,0,0
+North Hykeham,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.2,0,0
+Rookery Lane Lincoln,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2.911,0,0
+Worksop,bsp,NGED,['33.0'],33.0,budget,2,17.9,1,30
+Kilton Road,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,0,0
+Willington,gsp,NGED,['132.0'],132.0,budget,4,214,15,768.9
+Derby,primary,NGED,['11.0'],11.0,budget,4,4.5,0,0
+Chaddesden,primary,NGED,"['11.0', '33.0']",11.0,budget,1,3,0,0
+Derby South,bsp,NGED,['33.0'],33.0,budget,0,0,2,75
+Allenton,primary,NGED,"['11.0', '33.0']",11.0,budget,1,3,0,0
+Infinity Park,primary,NGED,"['11.0', '33.0']",11.0,budget,2,3.115,0,0
+Silverstone,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1,0,0
+Heanor,bsp,NGED,['33.0'],33.0,budget,0,0,5,120
+Spondon,primary,NGED,['11.0'],11.0,budget,2,3.5,0,0
+Stanton,bsp,NGED,['33.0'],33.0,budget,2,33,1,30
+Uttoxeter,bsp,NGED,['33.0'],33.0,budget,0,0,2,55
+Winster,bsp,NGED,['33.0'],33.0,budget,0,0,2,60
+Matlock,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2.5,0,0
+Holbrook Lane,primary,NGED,"['6.6', '33.0']",6.6,accepted,1,2.999,0,0
+Sandy Lane,primary,NGED,"['6.6', '33.0']",6.6,accepted,1,1.5,0,0
+Hawkesmill Lane,primary,NGED,"['6.6', '33.0']",6.6,accepted,1,1.164,0,0
+Warwick,primary,NGED,['11.0'],11.0,accepted,1,2,0,0
+Grantham North,primary,NGED,['11.0'],11.0,accepted,1,6,1,1.7
+Skegness,bsp,NGED,['33.0'],33.0,accepted,0,0,1,9.6
+Spilsby,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3,0,0
+Woodhall Spa,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Chesterfield,gsp,NGED,['132.0'],132.0,accepted,0,0,1,20
+Meadow Lane,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Annesley,bsp,NGED,['33.0'],33.0,accepted,1,8,0,0
+Annesley (Kirkby),primary,NGED,['11.0'],11.0,accepted,1,1,0,0
+Hucknall,primary,NGED,[],11.0,accepted,1,4,0,0
+Chesterfield,bsp,NGED,['33.0'],33.0,accepted,0,0,1,9.029
+Sheepbridge,primary,NGED,['6.6'],11.0,accepted,1,2.2,0,0
+Crown Fm,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Rufford,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
 Goitside,primary,NGED,['6.6'],6.6,accepted,1,1,0,0
-Queens Park,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Skegby Lane,primary,NGED,"['11', '33']",11,accepted,1,1.1,0,0
-Teversal,primary,NGED,"['11', '33']",11,accepted,1,1.415,0,0
-Pinxton,primary,NGED,['11'],11,accepted,1,13.3,0,0
-Coventry,gsp,NGED,['132'],132,accepted,1,10,1,50
-Coventry North,bsp,NGED,['33'],33,accepted,0,0,1,35
-Walsgrave,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Weedon,primary,NGED,"['11', '33']",11,accepted,1,3,0,0
-Hinckley,bsp,NGED,['33'],33,accepted,0,0,1,20
-Barwell,primary,NGED,"['11', '33']",11,accepted,1,6.758,0,0
-Hinckley,primary,NGED,['11'],11,accepted,1,1.5,0,0
-Sapcote,primary,NGED,"['11', '33']",11,accepted,1,1.35,0,0
-Nuneaton,primary,NGED,['11'],11,accepted,1,1,0,0
-Rugby,primary,NGED,['11'],11,accepted,2,2.886,0,0
-Rugby,bsp,NGED,['33'],33,accepted,1,5,0,0
-Lawford,primary,NGED,"['11', '33']",11,accepted,1,6,0,0
-Ryton,primary,NGED,"['11', '33']",11,accepted,1,3,0,0
-Drakelow,gsp,NGED,['132'],132,accepted,1,35,1,35
-Burton,primary,NGED,['11'],11,accepted,2,3.9,0,0
-Hatton,primary,NGED,"['11', '33']",11,accepted,1,3,0,0
-Trent Alloys,primary,NGED,"['11', '33']",11,accepted,1,1.25,0,0
-Ashby,primary,NGED,"['11', '33']",11,accepted,1,4.4,0,0
-East Claydon,gsp,NGED,['132'],132,accepted,3,159.8,3,189.8
-Fox Milne,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Kingston,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Secklow Gate,primary,NGED,"['11', '33']",11,accepted,2,3.6,0,0
-Tattenhoe,primary,NGED,[],11,accepted,1,1.192,0,0
-Towcester,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Stony Stratford,bsp,NGED,['33'],33,accepted,0,0,1,21.875
-Kiln Farm,primary,NGED,"['11', '33']",11,accepted,1,5,0,0
-Enderby,gsp,NGED,['132'],132,accepted,1,49.9,2,99.8
-Coalville,bsp,NGED,['33'],33,accepted,1,10.4,0,0
-Desford,primary,NGED,"['11', '33']",11,accepted,1,8.262,0,0
-Interlink Park,primary,NGED,"['11', '33']",11,accepted,1,4,0,0
-Osbaston,primary,NGED,"['11', '33']",11,accepted,1,1.9,0,0
-Groby Road,primary,NGED,"['11', '33']",11,accepted,1,5,0,0
-Wigston Magna,primary,NGED,"['11', '33']",11,accepted,1,1.407,1,1.0595
-Grendon,gsp,NGED,['132'],132,accepted,5,409.8,4,259.8
-Corby Central,primary,NGED,"['11', '33']",11,accepted,1,10,0,0
-Earlstrees,primary,NGED,"['11', '33']",11,accepted,2,2.5,0,0
-Hazelwood,primary,NGED,"['11', '33']",11,accepted,3,4.95,0,0
-Irthlingborough,bsp,NGED,['33'],33,accepted,1,17.5,1,35
-Pytchley Road,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Kettering,bsp,NGED,['33'],33,accepted,1,1.5,1,10
-Field Street,primary,NGED,"['11', '33']",11,accepted,1,1.25,0,0
-Kettering North,primary,NGED,"['11', '33']",11,accepted,1,8,0,0
-Farndon Road,primary,NGED,"['11', '33']",11,accepted,1,1.734,0,0
-Kibworth,primary,NGED,['11'],11,accepted,2,2.25,0,0
-Holwell,primary,NGED,"['11', '33']",11,accepted,1,1.554,0,0
-Melton Mowbray,primary,NGED,['11'],11,accepted,1,2.25,0,0
-Northampton,bsp,NGED,['33'],33,accepted,1,40,0,0
-Campbell Street,primary,NGED,"['11', '33']",11,accepted,1,1.1,0,0
-Wootton,primary,NGED,"['11', '33']",11,accepted,1,1.14,0,0
-Northampton East,bsp,NGED,['33'],33,accepted,1,10,1,34
-Banbury Lane,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Ellesmere Avenue,primary,NGED,"['11', '33']",11,accepted,3,8.65,0,0
-Oakham,bsp,NGED,['33'],33,accepted,1,40,1,40
-Empingham,primary,NGED,"['11', '33']",11,accepted,1,9,0,0
-Market Overton,primary,NGED,"['11', '33']",11,accepted,1,1.2,0,0
-Wellingborough / (Reserve),primary,NGED,"['11', '132']",11,accepted,1,1.287,0,0
-Cannon Street,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Park Farm,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Sharnbrook,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Lea Marston,gsp,NGED,['132'],132,accepted,0,0,1,44
-Tamworth,bsp,NGED,['33'],33,accepted,1,1,1,18.5
-Tamworth Grid,primary,NGED,['11'],11,accepted,1,5.15,0,0
-Wood End,primary,NGED,"['11', '33']",11,accepted,1,3,0,0
-Tamworth Town,bsp,NGED,['33'],33,accepted,1,20,0,0
-Ratcliffe On Soar,gsp,NGED,['132'],132,accepted,1,150,2,199.9
-Loughborough,primary,NGED,['11'],11,accepted,1,2,0,0
-Loughborough,bsp,NGED,['33'],33,accepted,1,10,0,0
-North Wilford,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Sneinton,primary,NGED,"['11', '33']",11,accepted,2,8,0,0
-West Bridgford,primary,NGED,"['11', '33']",11,accepted,1,2.25,0,0
-East Leake,primary,NGED,"['11', '33']",11,accepted,1,1.183,0,0
-Mountsorrel,primary,NGED,"['11', '33']",11,accepted,1,9,0,0
-Syston,primary,NGED,"['11', '33']",11,accepted,2,7.7,0,0
-Staythorpe C,gsp,NGED,['132'],132,accepted,1,100,0,0
-Bevercotes,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Hallcroft Road,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Carlton On Trent,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Fernwood,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Southwell,primary,NGED,"['11', '33']",11,accepted,1,2.331,0,0
-Westborough,primary,NGED,"['11', '33']",11,accepted,1,3.699,0,0
-Bulwell,primary,NGED,"['11', '33']",11,accepted,1,4.1,0,0
-Donnington,primary,NGED,"['11', '33']",11,accepted,1,1.8,0,0
-Marsh Lane,primary,NGED,"['11', '33']",11,accepted,1,1.5,0,0
-Mount Bridge Boston,primary,NGED,"['11', '33']",11,accepted,1,3.6,0,0
-Stickney,primary,NGED,"['11', '33']",11,accepted,1,2.3,0,0
-Wrangle,primary,NGED,"['11', '33']",11,accepted,1,2.8,0,0
-Holbeach,primary,NGED,"['11', '33']",11,accepted,1,1.79,0,0
-Spalding Clay Lake,primary,NGED,['11'],11,accepted,1,6,0,0
-Spalding Park Road,primary,NGED,"['11', '33']",11,accepted,1,2.1,0,0
-Tinwell Road Ketton,primary,NGED,"['11', '33']",11,accepted,1,2.099,0,0
-West Burton,gsp,NGED,['132'],132,accepted,2,149.8,4,252.753
-Lincoln No 2,primary,NGED,['11'],11,accepted,1,7.5,0,0
-Doddington Park,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Manton,primary,NGED,"['11', '33']",11,accepted,1,2.5,0,0
-Mackworth,primary,NGED,"['11', '33']",11,accepted,1,1.721,0,0
-Derby South,bsp,NGED,['33'],33,accepted,1,25,0,0
-Denby,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Moorgreen,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Spondon B,bsp,NGED,['33'],33,accepted,0,0,1,20
-Bakewell,primary,NGED,"['11', '33']",11,accepted,1,2,0,0
-Courthouse Green,primary,NGED,"['11', '33']",11,pending,1,1.7,0,0
-Courthouse Green,primary,NGED,"['6.6', '33']",6.6,pending,1,1,0,0
+Queens Park,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Skegby Lane,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.1,0,0
+Teversal,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.415,0,0
+Pinxton,primary,NGED,['11.0'],11.0,accepted,1,13.3,0,0
+Coventry,gsp,NGED,['132.0'],132.0,accepted,1,10,1,50
+Coventry North,bsp,NGED,['33.0'],33.0,accepted,0,0,1,35
+Walsgrave,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Weedon,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3,0,0
+Hinckley,bsp,NGED,['33.0'],33.0,accepted,0,0,1,20
+Barwell,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,6.758,0,0
+Hinckley,primary,NGED,['11.0'],11.0,accepted,1,1.5,0,0
+Sapcote,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.35,0,0
+Nuneaton,primary,NGED,['11.0'],11.0,accepted,1,1,0,0
+Rugby,primary,NGED,['11.0'],11.0,accepted,2,2.886,0,0
+Rugby,bsp,NGED,['33.0'],33.0,accepted,1,5,0,0
+Lawford,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,6,0,0
+Ryton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3,0,0
+Drakelow,gsp,NGED,['132.0'],132.0,accepted,1,35,1,35
+Burton,primary,NGED,['11.0'],11.0,accepted,2,3.9,0,0
+Hatton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3,0,0
+Trent Alloys,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.25,0,0
+Ashby,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,4.4,0,0
+East Claydon,gsp,NGED,['132.0'],132.0,accepted,3,159.8,3,189.8
+Fox Milne,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Kingston,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Secklow Gate,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,3.6,0,0
+Tattenhoe,primary,NGED,[],11.0,accepted,1,1.192,0,0
+Towcester,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Stony Stratford,bsp,NGED,['33.0'],33.0,accepted,0,0,1,21.875
+Kiln Farm,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,5,0,0
+Enderby,gsp,NGED,['132.0'],132.0,accepted,1,49.9,2,99.8
+Coalville,bsp,NGED,['33.0'],33.0,accepted,1,10.4,0,0
+Desford,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,8.262,0,0
+Interlink Park,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,4,0,0
+Osbaston,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.9,0,0
+Groby Road,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,5,0,0
+Wigston Magna,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.407,1,1.0595
+Grendon,gsp,NGED,['132.0'],132.0,accepted,5,409.8,4,259.8
+Corby Central,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,10,0,0
+Earlstrees,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,2.5,0,0
+Hazelwood,primary,NGED,"['11.0', '33.0']",11.0,accepted,3,4.95,0,0
+Irthlingborough,bsp,NGED,['33.0'],33.0,accepted,1,17.5,1,35
+Pytchley Road,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Kettering,bsp,NGED,['33.0'],33.0,accepted,1,1.5,1,10
+Field Street,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.25,0,0
+Kettering North,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,8,0,0
+Farndon Road,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.734,0,0
+Kibworth,primary,NGED,['11.0'],11.0,accepted,2,2.25,0,0
+Holwell,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.554,0,0
+Melton Mowbray,primary,NGED,['11.0'],11.0,accepted,1,2.25,0,0
+Northampton,bsp,NGED,['33.0'],33.0,accepted,1,40,0,0
+Campbell Street,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.1,0,0
+Wootton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.14,0,0
+Northampton East,bsp,NGED,['33.0'],33.0,accepted,1,10,1,34
+Banbury Lane,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Ellesmere Avenue,primary,NGED,"['11.0', '33.0']",11.0,accepted,3,8.65,0,0
+Oakham,bsp,NGED,['33.0'],33.0,accepted,1,40,1,40
+Empingham,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,9,0,0
+Market Overton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.2,0,0
+Wellingborough / (Reserve),primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.287,0,0
+Cannon Street,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Park Farm,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Sharnbrook,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Lea Marston,gsp,NGED,['132.0'],132.0,accepted,0,0,1,44
+Tamworth,bsp,NGED,['33.0'],33.0,accepted,1,1,1,18.5
+Tamworth Grid,primary,NGED,['11.0'],11.0,accepted,1,5.15,0,0
+Wood End,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3,0,0
+Tamworth Town,bsp,NGED,['33.0'],33.0,accepted,1,20,0,0
+Ratcliffe On Soar,gsp,NGED,['132.0'],132.0,accepted,1,150,2,199.9
+Loughborough,primary,NGED,['11.0'],11.0,accepted,1,2,0,0
+Loughborough,bsp,NGED,['33.0'],33.0,accepted,1,10,0,0
+North Wilford,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Sneinton,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,8,0,0
+West Bridgford,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.25,0,0
+East Leake,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.183,0,0
+Mountsorrel,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,9,0,0
+Syston,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,7.7,0,0
+Staythorpe C,gsp,NGED,['132.0'],132.0,accepted,1,100,0,0
+Bevercotes,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Hallcroft Road,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Carlton On Trent,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Fernwood,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Southwell,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.331,0,0
+Westborough,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3.699,0,0
+Bulwell,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,4.1,0,0
+Donnington,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.8,0,0
+Marsh Lane,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.5,0,0
+Mount Bridge Boston,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3.6,0,0
+Stickney,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.3,0,0
+Wrangle,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.8,0,0
+Holbeach,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.79,0,0
+Spalding Clay Lake,primary,NGED,['11.0'],11.0,accepted,1,6,0,0
+Spalding Park Road,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.1,0,0
+Tinwell Road Ketton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.099,0,0
+West Burton,gsp,NGED,['132.0'],132.0,accepted,2,149.8,4,252.753
+Lincoln No 2,primary,NGED,['11.0'],11.0,accepted,1,7.5,0,0
+Doddington Park,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Manton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.5,0,0
+Mackworth,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.721,0,0
+Derby South,bsp,NGED,['33.0'],33.0,accepted,1,25,0,0
+Denby,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Moorgreen,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Spondon B,bsp,NGED,['33.0'],33.0,accepted,0,0,1,20
+Bakewell,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2,0,0
+Courthouse Green,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.7,0,0
+Courthouse Green,primary,NGED,"['6.6', '33.0']",6.6,pending,1,1,0,0
 Coventry West,primary,NGED,['6.6'],6.6,pending,1,2.56,0,0
-Hawkesmill Lane,primary,NGED,"['6.6', '33']",6.6,pending,1,1.164,0,0
-Harbury,bsp,NGED,['33'],33,pending,1,20.16,1,20.16
-Gaydon,primary,NGED,"['11', '33']",11,pending,1,8.774,0,0
-Harbury,primary,NGED,['11'],11,pending,1,1.1,0,0
-Southam,primary,NGED,"['11', '33']",11,pending,1,3.73,0,0
-Warwick,primary,NGED,['11'],11,pending,1,2.4,0,0
-Banbury Road,primary,NGED,"['11', '33']",11,pending,1,1.4,0,0
-Kenilworth,primary,NGED,"['11', '33']",11,pending,1,1.755,0,0
-Wise Street,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Bicker Fen,gsp,NGED,['132'],132,pending,2,149.8,2,149.8
-New Beacon Road Grantham,primary,NGED,"['11', '33']",11,pending,1,4,0,0
-Ingoldmells,primary,NGED,"['11', '33']",11,pending,1,1.3,0,0
-Ruskington,primary,NGED,"['11', '33']",11,pending,2,5,0,0
-Tattershall,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Alfreton,bsp,NGED,['33'],33,pending,0,0,1,14.78
-Meadow Lane,primary,NGED,"['11', '33']",11,pending,1,10,0,0
-Annesley,bsp,NGED,['33'],33,pending,1,30,1,22.5
-Annesley (Kirkby),primary,NGED,['11'],11,pending,3,4.1,1,4.26
-Calverton,primary,NGED,"['11', '33']",11,pending,1,1.5,2,5.1
-Hucknall,primary,NGED,[],11,pending,1,4,0,0
-Sherwood Park,primary,NGED,"['11', '33']",11,pending,3,9.817,0,0
-Sutton Junction,primary,NGED,"['11', '33']",11,pending,1,4.4,0,0
-Chesterfield,bsp,NGED,['33'],33,pending,0,0,1,21.12
-Clipstone,bsp,NGED,['33'],33,pending,1,20,0,0
-Sheffield Road,primary,NGED,"['6.6', '11', '33']",6.6,pending,1,1.5,0,0
-Lime Tree Place,primary,NGED,"['11', '33']",11,pending,1,1.3,0,0
-Skegby Lane,primary,NGED,"['11', '33']",11,pending,1,1.1,0,0
-Staveley,bsp,NGED,['33'],33,pending,0,0,1,9.2
-Erin Road,primary,NGED,[],11,pending,1,5,0,0
-Whitwell,bsp,NGED,['33'],33,pending,0,0,1,10
-Coventry,gsp,NGED,['132'],132,pending,2,59,2,148.99
-Coventry Arena,primary,NGED,"['11', '33']",11,pending,1,3,0,0
-Coventry North,primary,NGED,['11'],11,pending,1,1.5,0,0
-Crick,primary,NGED,"['11', '33']",11,pending,2,2.5,0,0
-Hinckley,primary,NGED,['11'],11,pending,1,1.5,0,0
-Middlefield,primary,NGED,"['11', '33']",11,pending,3,4.65,1,1.215
-Sapcote,primary,NGED,"['11', '33']",11,pending,3,12.618,0,0
-Gipsy Lane,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Newdigate,primary,NGED,"['11', '33']",11,pending,3,3.487,0,0
-Nuneaton,primary,NGED,['11'],11,pending,1,1,0,0
-Pailton,bsp,NGED,['33'],33,pending,1,10,1,10
-Magna Park,primary,NGED,"['11', '33']",11,pending,3,14.3,0,0
-Rugby,primary,NGED,['11'],11,pending,1,1.25,0,0
-Rugby,bsp,NGED,['33'],33,pending,1,15,0,0
-Rugby Gateway,primary,NGED,[],11,pending,1,6,0,0
-Union Street,primary,NGED,"['11', '33']",11,pending,3,5.545,0,0
-Dillotford Ave,primary,NGED,"['11', '33']",11,pending,1,1.6,0,0
-Burton,primary,NGED,['11'],11,pending,1,3.661,0,0
-Hatton,primary,NGED,"['11', '33']",11,pending,3,5.61,0,0
-Trent Alloys,primary,NGED,"['11', '33']",11,pending,1,1.25,0,0
-Barton Under Needwood,primary,NGED,"['11', '33']",11,pending,2,7.65,0,0
-Wellington Street,primary,NGED,"['11', '33']",11,pending,1,1.29,0,0
-Ashby,primary,NGED,"['11', '33']",11,pending,2,5.694,0,0
-Gresley,primary,NGED,['11'],11,pending,1,1.5,0,0
-Willesley,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-East Claydon,gsp,NGED,['132'],132,pending,2,220,4,286
-Bletchley,primary,NGED,['11'],11,pending,1,1,0,0
-Kingston,primary,NGED,"['11', '33']",11,pending,2,3,0,0
-Secklow Gate,primary,NGED,"['11', '33']",11,pending,1,1.6,0,0
-Tattenhoe,primary,NGED,[],11,pending,1,9.199,1,2.925
-Wavendon Gate,primary,NGED,"['11', '33']",11,pending,4,10.086,0,0
-Brackley,primary,NGED,['11'],11,pending,3,6.921,2,4.2
-Silverstone,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Towcester,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Childs Way,primary,NGED,"['11', '33']",11,pending,2,8.881,0,0
-Marlborough Street,primary,NGED,"['11', '33']",11,pending,2,3.15,0,0
-Newport Pagnell,primary,NGED,"['11', '33']",11,pending,3,7.229,0,0
-Wolverton,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Stony Stratford,bsp,NGED,['33'],33,pending,0,0,1,21.875
-Buckingham,primary,NGED,"['11', '33']",11,pending,3,4,0,0
-Eldergate,primary,NGED,"['11', '33']",11,pending,1,1.322,0,0
-Shenley Wood,primary,NGED,"['11', '33']",11,pending,1,1.3,0,0
-Steeple Claydon,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Enderby,gsp,NGED,['132'],132,pending,1,20,1,1.56
-Bardon,primary,NGED,"['11', '33']",11,pending,2,5.65,0,0
-Mantle Lane Coalville,primary,NGED,"['11', '33']",11,pending,2,3.437,0,0
-Osbaston,primary,NGED,"['11', '33']",11,pending,1,1.57,0,0
-Braunstone,primary,NGED,"['11', '33']",11,pending,1,2.168,0,0
-Thurnby,primary,NGED,"['11', '33']",11,pending,1,3.378,0,0
-Beaumont Leys,primary,NGED,"['11', '33']",11,pending,4,12.469,1,1.898
-Birstall,primary,NGED,"['11', '33']",11,pending,1,1.569,0,0
-Groby Road,primary,NGED,"['11', '33']",11,pending,2,11.3,0,0
-Lero,primary,NGED,"['6.6', '33']",6.6,pending,1,2.3,0,0
-Alliance And Leicester,primary,NGED,"['11', '33']",11,pending,1,6,0,0
-Whetstone,primary,NGED,"['11', '33']",11,pending,1,6,0,0
-Wigston Magna,primary,NGED,"['11', '33']",11,pending,4,6.587,1,1.06
-Grendon,gsp,NGED,['132'],132,pending,1,500,1,500
-Corby Central,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Corby No2,primary,NGED,['11'],11,pending,2,4.34,1,1.7
-Earlstrees,primary,NGED,"['11', '33']",11,pending,1,5,0,0
-Hazelwood,primary,NGED,"['11', '33']",11,pending,2,5.25,1,6.65
-Oakley,primary,NGED,"['11', '33']",11,pending,1,1.708,0,0
-Irthlingborough,bsp,NGED,['33'],33,pending,1,31,1,31
-Pytchley Road,primary,NGED,"['11', '33']",11,pending,3,3.5,0,0
-Kettering,bsp,NGED,['33'],33,pending,1,5,1,5
-Burton Latimer,primary,NGED,"['11', '33']",11,pending,0,0,1,4.2
-Desborough,primary,NGED,"['11', '33']",11,pending,1,1.218,0,0
-Field Street,primary,NGED,"['11', '33']",11,pending,1,2,0,0
-Kibworth,primary,NGED,['11'],11,pending,1,1.25,0,0
-Melton Mowbray,bsp,NGED,['33'],33,pending,0,0,1,40
-Holwell,primary,NGED,"['11', '33']",11,pending,1,1.554,0,0
-Melton Mowbray,primary,NGED,['11'],11,pending,5,8.428,0,0
-Northampton,bsp,NGED,['33'],33,pending,0,0,1,40
-Wootton,primary,NGED,"['11', '33']",11,pending,2,3.286,0,0
-Northampton East,bsp,NGED,['33'],33,pending,2,45.1,1,39.6
-Banbury Lane,primary,NGED,"['11', '33']",11,pending,2,5.38,0,0
-Ellesmere Avenue,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Empingham,primary,NGED,"['11', '33']",11,pending,1,5.32,0,0
-Oakham,primary,NGED,['11'],11,pending,1,1,0,0
-Sharnbrook,primary,NGED,"['11', '33']",11,pending,2,3.88,0,0
-Atherstone,primary,NGED,"['11', '33']",11,pending,1,1.461,0,0
-Wood End,primary,NGED,"['11', '33']",11,pending,1,3,0,0
-Tamworth Town,primary,NGED,['11'],11,pending,2,5.075,0,0
-Ratcliffe On Soar,gsp,NGED,['132'],132,pending,1,70,1,70
-Loughborough,primary,NGED,['11'],11,pending,3,5.7,0,0
-Loughborough,bsp,NGED,['33'],33,pending,0,0,2,31.99
-Brush,primary,NGED,"['11', '33']",11,pending,2,2,0,0
-Shepshed,primary,NGED,"['11', '33']",11,pending,3,5.3,0,0
-Clifton,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-North Wilford,primary,NGED,"['11', '33']",11,pending,1,4.188,0,0
-Sneinton,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Talbot Street,primary,NGED,"['11', '33']",11,pending,1,2.499,0,0
-West Bridgford,primary,NGED,"['11', '33']",11,pending,2,6.853,0,0
-Wollaton Road,primary,NGED,"['11', '33']",11,pending,2,6.5,0,0
-Toton,primary,NGED,['11'],11,pending,1,1.421,0,0
-Mountsorrel,primary,NGED,"['11', '33']",11,pending,1,9,0,0
-Syston,primary,NGED,"['11', '33']",11,pending,2,2.828,0,0
-Willoughby,primary,NGED,['11'],11,pending,1,1,0,0
-Grantham South,primary,NGED,['11'],11,pending,1,1,0,0
-Hawton,bsp,NGED,['33'],33,pending,1,8,0,0
-Fernwood,primary,NGED,"['11', '33']",11,pending,1,3.351,1,1.37
-Newark Junction,primary,NGED,"['11', '33']",11,pending,2,4.542,0,0
-Nottingham East,bsp,NGED,['33'],33,pending,1,21.57,0,0
-Colwick,primary,NGED,"['11', '33']",11,pending,1,6,0,0
-Nottingham North,bsp,NGED,['33'],33,pending,2,27.514,1,2.119
-Bulwell,primary,NGED,"['11', '33']",11,pending,1,2,0,0
-Church Street,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Marlborough Road,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Marsh Lane,primary,NGED,"['11', '33']",11,pending,2,5,0,0
-Sleaford Road Boston,primary,NGED,"['11', '33']",11,pending,1,4.183,0,0
-Stickney,primary,NGED,"['11', '33']",11,pending,1,2.3,0,0
-Wrangle,primary,NGED,"['11', '33']",11,pending,1,1.25,0,0
-Holbeach,primary,NGED,"['11', '33']",11,pending,2,3.24,0,0
-Spalding Clay Lake,primary,NGED,['11'],11,pending,1,1.55,0,0
-Spalding Park Road,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Wittering,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-West Burton,gsp,NGED,['132'],132,pending,4,397.39,5,466.29
-Doddington Park,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-North Hykeham,primary,NGED,"['11', '33']",11,pending,3,9,0,0
-Rookery Lane Lincoln,primary,NGED,"['11', '33']",11,pending,1,18.1,0,0
-Wragby,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Worksop,bsp,NGED,['33'],33,pending,1,8.642,0,0
-Kilton Road,primary,NGED,"['11', '33']",11,pending,2,8.372,0,0
-Willington,gsp,NGED,['132'],132,pending,1,99.9,1,99.9
-Derby South,bsp,NGED,['33'],33,pending,2,39,0,0
-Allenton,primary,NGED,"['11', '33']",11,pending,1,1.25,0,0
-Infinity Park,primary,NGED,"['11', '33']",11,pending,1,1.799,0,0
-Normanton,primary,NGED,"['11', '33']",11,pending,1,1.447,0,0
-Silverstone,primary,NGED,"['11', '33']",11,pending,2,3.75,0,0
-Denby,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Heanor,primary,NGED,['11'],11,pending,1,1.3,0,0
-Trent Lane,primary,NGED,"['11', '33']",11,pending,2,2,0,0
-Sandiacre,primary,NGED,"['11', '33']",11,pending,1,3.105,0,0
-Church Street,primary,NGED,"['11', '33']",11,pending,2,5.438,0,0
-Ashbourne,primary,NGED,"['11', '33']",11,pending,1,2.5,0,0
-Bakewell,primary,NGED,"['11', '33']",11,pending,1,2,0,0
-Aberthaw,gsp,NGED,[],132,budget,1,80,0,0
-Cardiff West Grid,bsp,NGED,[],33,budget,0,0,4,130
-East Aberthaw,bsp,NGED,[],33,budget,0,0,2,80
-Sully Grid,bsp,NGED,[],11,budget,1,15,2,80
-Cardiff East Grid,gsp,NGED,[],132,budget,2,250,0,0
-Sandon Street,primary,NGED,[],11,budget,1,1.622,0,0
-Cardiff East Grid,bsp,NGED,[],33,budget,1,20,1,20
-Heath,primary,NGED,[],11,budget,1,5,0,0
-Street Mellons,primary,NGED,[],11,budget,1,1.4,1,7.6
-Rover Way,primary,NGED,[],11,budget,1,10,0,0
-Pembroke,gsp,NGED,[],132,budget,2,290,2,290
-Golden Hill Grid,bsp,NGED,[],33,budget,0,0,2,17
-Golden Hill,primary,NGED,[],11,budget,1,12,2,3
-Neyland,primary,NGED,[],11,budget,1,2.7,1,1
-Street Florence,primary,NGED,[],11,budget,0,0,1,5
-Haverfordwest Grid,bsp,NGED,[],33,budget,1,25,5,120
-Pyle Grid,gsp,NGED,[],132,budget,2,162.9,6,322.9
-Bridgend Grid,bsp,NGED,[],33,budget,2,37,0,0
-Bridgend Trading Estate,primary,NGED,[],11,budget,5,28.045,0,0
-Llangewydd,primary,NGED,[],11,budget,1,3.352,0,0
-Pyle,primary,NGED,[],11,budget,2,3.5,0,0
-Abergavenny,bsp,NGED,[],11,budget,1,30,3,110
-Abergavenny,primary,NGED,[],11,budget,1,10,2,9.6
-Brecon,primary,NGED,[],11,budget,1,1.36,1,19.36
-Crumlin,bsp,NGED,[],33,budget,0,0,2,80
-Swansea North Grid,gsp,NGED,"['132', '33']",132,budget,4,350,7,274.8
-Ammanford Grid,bsp,NGED,[],33,budget,2,45,8,137.6
-Meinciau,primary,NGED,[],11,budget,0,0,1,7.6
-Pantyffynon,primary,NGED,[],11,budget,0,0,1,7
-Briton Ferry Grid,bsp,NGED,[],33,budget,1,150,4,279.9
-Victoria Road,primary,NGED,[],11,budget,1,1.6,0,0
-Wern,primary,NGED,[],11,budget,1,8,0,0
-Ynys Street,primary,NGED,[],11,budget,1,1.25,0,0
-Trevaughan,primary,NGED,[],11,budget,1,1,1,6
-Hirwaun Grid,bsp,NGED,[],33,budget,2,162.9,6,260.4
-Hirwaun,primary,NGED,[],11,budget,1,6.23,1,7.6
-Lampeter Grid,bsp,NGED,[],33,budget,0,0,1,15
-Llanfihangel Ystrad,primary,NGED,[],11,budget,0,0,1,7.6
-Aberaeron,primary,NGED,[],11,budget,0,0,1,2.5
-Llanarth,primary,NGED,[],11,budget,0,0,1,7.6
-Llanelli Grid,bsp,NGED,[],11,budget,0,0,2,30
-Cardigan,primary,NGED,[],11,budget,2,2.75,0,0
-Rhos,primary,NGED,[],11,budget,0,0,1,2.25
-Swansea North,bsp,NGED,[],33,budget,1,75,1,20
-Garngoch,primary,NGED,[],11,budget,4,4,0,0
-Ravenhill,primary,NGED,[],11,budget,2,8.48,0,0
-Upper Bank,primary,NGED,[],11,budget,2,2,0,0
-Ystradgynlais Grid,bsp,NGED,[],33,budget,0,0,3,55.2
-Upper Boat,gsp,NGED,[],132,budget,2,90,5,210
-Dowlais Grid,bsp,NGED,[],33,budget,1,20,3,100
-Merthyr East,primary,NGED,[],11,budget,0,0,1,10
-Mountain Ash Grid,bsp,NGED,[],33,budget,0,0,2,80
-Mountain Ash,primary,NGED,[],11,budget,0,0,1,1.4
-Pencoed Grid,bsp,NGED,[],11,budget,0,0,4,155
-Pontyclun,primary,NGED,"['11', '132']",11,budget,0,0,1,7.5
-Talbot Green,primary,NGED,[],11,budget,1,3.3,0,0
-Upper Boat,bsp,NGED,[],33,budget,0,0,1,15
-Uskmouth,gsp,NGED,[],132,budget,3,95,4,160
-Llantarnam,bsp,NGED,[],66,budget,1,15,3,55
-Llantarnam,primary,NGED,[],11,budget,1,1.252,0,0
-Rogerstone,primary,NGED,[],11,budget,0,0,1,10
-Magor Grid,bsp,NGED,[],11,budget,0,0,2,80
-Newport East,bsp,NGED,[],11,budget,1,1.6,0,0
-Newport South,bsp,NGED,[],33,budget,1,15,3,104.9
-Newport West,primary,NGED,[],11,budget,1,1,0,0
-Panteg,bsp,NGED,"['11', '132']",11,budget,0,0,2,80
-Cardiff South Grid,primary,NGED,[],11,accepted,1,5.3,0,0
-Fairwater,primary,NGED,[],11,accepted,1,1,1,1.0307
-Grangetown Grid,primary,NGED,[],11,accepted,1,1,0,0
-Sully Grid,primary,NGED,[],11,accepted,1,1,0,0
-Sandon Street,primary,NGED,[],11,accepted,1,1.216,0,0
-Wood Street,primary,NGED,[],11,accepted,2,3.5,0,0
-Street Mellons,primary,NGED,[],11,accepted,1,1.5,0,0
-Rover Way,primary,NGED,[],11,accepted,1,5.9,0,0
-Grange,bsp,NGED,[],66,accepted,1,3,1,22
-Pembroke,gsp,NGED,[],132,accepted,1,50,1,49.9
-Steynton,primary,NGED,[],11,accepted,1,3,0,0
-Pyle Grid,gsp,NGED,[],132,accepted,1,50,2,130
-Bridgend Trading Estate,primary,NGED,[],11,accepted,1,1.6,0,0
-Waterton Industrial,primary,NGED,[],11,accepted,1,3.8,0,0
-Abergavenny,primary,NGED,[],11,accepted,1,1.5,0,0
-Crumlin,bsp,NGED,[],11,accepted,1,28,1,28
-Cwmfelinfach,primary,NGED,[],11,accepted,1,2,0,0
-Swansea North Grid,gsp,NGED,"['132', '33']",132,accepted,1,87.8,3,161.8
-Ynys Street,primary,NGED,[],11,accepted,1,2.65,0,0
-Aberpergwm,primary,NGED,[],11,accepted,1,1.5,0,0
-Swansea Waterfront,primary,NGED,[],11,accepted,1,3.5,0,0
+Hawkesmill Lane,primary,NGED,"['6.6', '33.0']",6.6,pending,1,1.164,0,0
+Harbury,bsp,NGED,['33.0'],33.0,pending,1,20.16,1,20.16
+Gaydon,primary,NGED,"['11.0', '33.0']",11.0,pending,1,8.774,0,0
+Harbury,primary,NGED,['11.0'],11.0,pending,1,1.1,0,0
+Southam,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3.73,0,0
+Warwick,primary,NGED,['11.0'],11.0,pending,1,2.4,0,0
+Banbury Road,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.4,0,0
+Kenilworth,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.755,0,0
+Wise Street,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Bicker Fen,gsp,NGED,['132.0'],132.0,pending,2,149.8,2,149.8
+New Beacon Road Grantham,primary,NGED,"['11.0', '33.0']",11.0,pending,1,4,0,0
+Ingoldmells,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.3,0,0
+Ruskington,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5,0,0
+Tattershall,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Alfreton,bsp,NGED,['33.0'],33.0,pending,0,0,1,14.78
+Meadow Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,1,10,0,0
+Annesley,bsp,NGED,['33.0'],33.0,pending,1,30,1,22.5
+Annesley (Kirkby),primary,NGED,['11.0'],11.0,pending,3,4.1,1,4.26
+Calverton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,2,5.1
+Hucknall,primary,NGED,[],11.0,pending,1,4,0,0
+Sherwood Park,primary,NGED,"['11.0', '33.0']",11.0,pending,3,9.817,0,0
+Sutton Junction,primary,NGED,"['11.0', '33.0']",11.0,pending,1,4.4,0,0
+Chesterfield,bsp,NGED,['33.0'],33.0,pending,0,0,1,21.12
+Clipstone,bsp,NGED,['33.0'],33.0,pending,1,20,0,0
+Sheffield Road,primary,NGED,"['6.6', '11.0', '33.0']",6.6,pending,1,1.5,0,0
+Lime Tree Place,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.3,0,0
+Skegby Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.1,0,0
+Staveley,bsp,NGED,['33.0'],33.0,pending,0,0,1,9.2
+Erin Road,primary,NGED,[],11.0,pending,1,5,0,0
+Whitwell,bsp,NGED,['33.0'],33.0,pending,0,0,1,10
+Coventry,gsp,NGED,['132.0'],132.0,pending,2,59,2,148.99
+Coventry Arena,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3,0,0
+Coventry North,primary,NGED,['11.0'],11.0,pending,1,1.5,0,0
+Crick,primary,NGED,"['11.0', '33.0']",11.0,pending,2,2.5,0,0
+Hinckley,primary,NGED,['11.0'],11.0,pending,1,1.5,0,0
+Middlefield,primary,NGED,"['11.0', '33.0']",11.0,pending,3,4.65,1,1.215
+Sapcote,primary,NGED,"['11.0', '33.0']",11.0,pending,3,12.618,0,0
+Gipsy Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Newdigate,primary,NGED,"['11.0', '33.0']",11.0,pending,3,3.487,0,0
+Nuneaton,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Pailton,bsp,NGED,['33.0'],33.0,pending,1,10,1,10
+Magna Park,primary,NGED,"['11.0', '33.0']",11.0,pending,3,14.3,0,0
+Rugby,primary,NGED,['11.0'],11.0,pending,1,1.25,0,0
+Rugby,bsp,NGED,['33.0'],33.0,pending,1,15,0,0
+Rugby Gateway,primary,NGED,[],11.0,pending,1,6,0,0
+Union Street,primary,NGED,"['11.0', '33.0']",11.0,pending,3,5.545,0,0
+Dillotford Ave,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.6,0,0
+Burton,primary,NGED,['11.0'],11.0,pending,1,3.661,0,0
+Hatton,primary,NGED,"['11.0', '33.0']",11.0,pending,3,5.61,0,0
+Trent Alloys,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.25,0,0
+Barton Under Needwood,primary,NGED,"['11.0', '33.0']",11.0,pending,2,7.65,0,0
+Wellington Street,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.29,0,0
+Ashby,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5.694,0,0
+Gresley,primary,NGED,['11.0'],11.0,pending,1,1.5,0,0
+Willesley,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+East Claydon,gsp,NGED,['132.0'],132.0,pending,2,220,4,286
+Bletchley,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Kingston,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3,0,0
+Secklow Gate,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.6,0,0
+Tattenhoe,primary,NGED,[],11.0,pending,1,9.199,1,2.925
+Wavendon Gate,primary,NGED,"['11.0', '33.0']",11.0,pending,4,10.086,0,0
+Brackley,primary,NGED,['11.0'],11.0,pending,3,6.921,2,4.2
+Silverstone,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Towcester,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Childs Way,primary,NGED,"['11.0', '33.0']",11.0,pending,2,8.881,0,0
+Marlborough Street,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.15,0,0
+Newport Pagnell,primary,NGED,"['11.0', '33.0']",11.0,pending,3,7.229,0,0
+Wolverton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Stony Stratford,bsp,NGED,['33.0'],33.0,pending,0,0,1,21.875
+Buckingham,primary,NGED,"['11.0', '33.0']",11.0,pending,3,4,0,0
+Eldergate,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.322,0,0
+Shenley Wood,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.3,0,0
+Steeple Claydon,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Enderby,gsp,NGED,['132.0'],132.0,pending,1,20,1,1.56
+Bardon,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5.65,0,0
+Mantle Lane Coalville,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.437,0,0
+Osbaston,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.57,0,0
+Braunstone,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2.168,0,0
+Thurnby,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3.378,0,0
+Beaumont Leys,primary,NGED,"['11.0', '33.0']",11.0,pending,4,12.469,1,1.898
+Birstall,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.569,0,0
+Groby Road,primary,NGED,"['11.0', '33.0']",11.0,pending,2,11.3,0,0
+Lero,primary,NGED,"['6.6', '33.0']",6.6,pending,1,2.3,0,0
+Alliance And Leicester,primary,NGED,"['11.0', '33.0']",11.0,pending,1,6,0,0
+Whetstone,primary,NGED,"['11.0', '33.0']",11.0,pending,1,6,0,0
+Wigston Magna,primary,NGED,"['11.0', '33.0']",11.0,pending,4,6.587,1,1.06
+Grendon,gsp,NGED,['132.0'],132.0,pending,1,500,1,500
+Corby Central,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Corby No2,primary,NGED,['11.0'],11.0,pending,2,4.34,1,1.7
+Earlstrees,primary,NGED,"['11.0', '33.0']",11.0,pending,1,5,0,0
+Hazelwood,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5.25,1,6.65
+Oakley,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.708,0,0
+Irthlingborough,bsp,NGED,['33.0'],33.0,pending,1,31,1,31
+Pytchley Road,primary,NGED,"['11.0', '33.0']",11.0,pending,3,3.5,0,0
+Kettering,bsp,NGED,['33.0'],33.0,pending,1,5,1,5
+Burton Latimer,primary,NGED,"['11.0', '33.0']",11.0,pending,0,0,1,4.2
+Desborough,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.218,0,0
+Field Street,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,0,0
+Kibworth,primary,NGED,['11.0'],11.0,pending,1,1.25,0,0
+Melton Mowbray,bsp,NGED,['33.0'],33.0,pending,0,0,1,40
+Holwell,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.554,0,0
+Melton Mowbray,primary,NGED,['11.0'],11.0,pending,5,8.428,0,0
+Northampton,bsp,NGED,['33.0'],33.0,pending,0,0,1,40
+Wootton,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.286,0,0
+Northampton East,bsp,NGED,['33.0'],33.0,pending,2,45.1,1,39.6
+Banbury Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5.38,0,0
+Ellesmere Avenue,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Empingham,primary,NGED,"['11.0', '33.0']",11.0,pending,1,5.32,0,0
+Oakham,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Sharnbrook,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.88,0,0
+Atherstone,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.461,0,0
+Wood End,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3,0,0
+Tamworth Town,primary,NGED,['11.0'],11.0,pending,2,5.075,0,0
+Ratcliffe On Soar,gsp,NGED,['132.0'],132.0,pending,1,70,1,70
+Loughborough,primary,NGED,['11.0'],11.0,pending,3,5.7,0,0
+Loughborough,bsp,NGED,['33.0'],33.0,pending,0,0,2,31.99
+Brush,primary,NGED,"['11.0', '33.0']",11.0,pending,2,2,0,0
+Shepshed,primary,NGED,"['11.0', '33.0']",11.0,pending,3,5.3,0,0
+Clifton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+North Wilford,primary,NGED,"['11.0', '33.0']",11.0,pending,1,4.188,0,0
+Sneinton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Talbot Street,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2.499,0,0
+West Bridgford,primary,NGED,"['11.0', '33.0']",11.0,pending,2,6.853,0,0
+Wollaton Road,primary,NGED,"['11.0', '33.0']",11.0,pending,2,6.5,0,0
+Toton,primary,NGED,['11.0'],11.0,pending,1,1.421,0,0
+Mountsorrel,primary,NGED,"['11.0', '33.0']",11.0,pending,1,9,0,0
+Syston,primary,NGED,"['11.0', '33.0']",11.0,pending,2,2.828,0,0
+Willoughby,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Grantham South,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Hawton,bsp,NGED,['33.0'],33.0,pending,1,8,0,0
+Fernwood,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3.351,1,1.37
+Newark Junction,primary,NGED,"['11.0', '33.0']",11.0,pending,2,4.542,0,0
+Nottingham East,bsp,NGED,['33.0'],33.0,pending,1,21.57,0,0
+Colwick,primary,NGED,"['11.0', '33.0']",11.0,pending,1,6,0,0
+Nottingham North,bsp,NGED,['33.0'],33.0,pending,2,27.514,1,2.119
+Bulwell,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,0,0
+Church Street,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Marlborough Road,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Marsh Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5,0,0
+Sleaford Road Boston,primary,NGED,"['11.0', '33.0']",11.0,pending,1,4.183,0,0
+Stickney,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2.3,0,0
+Wrangle,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.25,0,0
+Holbeach,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.24,0,0
+Spalding Clay Lake,primary,NGED,['11.0'],11.0,pending,1,1.55,0,0
+Spalding Park Road,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Wittering,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+West Burton,gsp,NGED,['132.0'],132.0,pending,4,397.39,5,466.29
+Doddington Park,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+North Hykeham,primary,NGED,"['11.0', '33.0']",11.0,pending,3,9,0,0
+Rookery Lane Lincoln,primary,NGED,"['11.0', '33.0']",11.0,pending,1,18.1,0,0
+Wragby,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Worksop,bsp,NGED,['33.0'],33.0,pending,1,8.642,0,0
+Kilton Road,primary,NGED,"['11.0', '33.0']",11.0,pending,2,8.372,0,0
+Willington,gsp,NGED,['132.0'],132.0,pending,1,99.9,1,99.9
+Derby South,bsp,NGED,['33.0'],33.0,pending,2,39,0,0
+Allenton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.25,0,0
+Infinity Park,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.799,0,0
+Normanton,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.447,0,0
+Silverstone,primary,NGED,"['11.0', '33.0']",11.0,pending,2,3.75,0,0
+Denby,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Heanor,primary,NGED,['11.0'],11.0,pending,1,1.3,0,0
+Trent Lane,primary,NGED,"['11.0', '33.0']",11.0,pending,2,2,0,0
+Sandiacre,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3.105,0,0
+Church Street,primary,NGED,"['11.0', '33.0']",11.0,pending,2,5.438,0,0
+Ashbourne,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2.5,0,0
+Bakewell,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,0,0
+Aberthaw,gsp,NGED,[],132.0,budget,1,80,0,0
+Cardiff West Grid,bsp,NGED,[],33.0,budget,0,0,4,130
+East Aberthaw,bsp,NGED,[],33.0,budget,0,0,2,80
+Sully Grid,bsp,NGED,[],11.0,budget,1,15,2,80
+Cardiff East Grid,gsp,NGED,[],132.0,budget,2,250,0,0
+Sandon Street,primary,NGED,[],11.0,budget,1,1.622,0,0
+Cardiff East Grid,bsp,NGED,[],33.0,budget,1,20,1,20
+Heath,primary,NGED,[],11.0,budget,1,5,0,0
+Street Mellons,primary,NGED,[],11.0,budget,1,1.4,1,7.6
+Rover Way,primary,NGED,[],11.0,budget,1,10,0,0
+Pembroke,gsp,NGED,[],132.0,budget,2,290,2,290
+Golden Hill Grid,bsp,NGED,[],33.0,budget,0,0,2,17
+Golden Hill,primary,NGED,[],11.0,budget,1,12,2,3
+Neyland,primary,NGED,[],11.0,budget,1,2.7,1,1
+Street Florence,primary,NGED,[],11.0,budget,0,0,1,5
+Haverfordwest Grid,bsp,NGED,[],33.0,budget,1,25,5,120
+Pyle Grid,gsp,NGED,[],132.0,budget,2,162.9,6,322.9
+Bridgend Grid,bsp,NGED,[],33.0,budget,2,37,0,0
+Bridgend Trading Estate,primary,NGED,[],11.0,budget,5,28.045,0,0
+Llangewydd,primary,NGED,[],11.0,budget,1,3.352,0,0
+Pyle,primary,NGED,[],11.0,budget,2,3.5,0,0
+Abergavenny,bsp,NGED,[],11.0,budget,1,30,3,110
+Abergavenny,primary,NGED,[],11.0,budget,1,10,2,9.6
+Brecon,primary,NGED,[],11.0,budget,1,1.36,1,19.36
+Crumlin,bsp,NGED,[],33.0,budget,0,0,2,80
+Swansea North Grid,gsp,NGED,"['33.0', '132.0']",132.0,budget,4,350,7,274.8
+Ammanford Grid,bsp,NGED,[],33.0,budget,2,45,8,137.6
+Meinciau,primary,NGED,[],11.0,budget,0,0,1,7.6
+Pantyffynon,primary,NGED,[],11.0,budget,0,0,1,7
+Briton Ferry Grid,bsp,NGED,[],33.0,budget,1,150,4,279.9
+Victoria Road,primary,NGED,[],11.0,budget,1,1.6,0,0
+Wern,primary,NGED,[],11.0,budget,1,8,0,0
+Ynys Street,primary,NGED,[],11.0,budget,1,1.25,0,0
+Trevaughan,primary,NGED,[],11.0,budget,1,1,1,6
+Hirwaun Grid,bsp,NGED,[],33.0,budget,2,162.9,6,260.4
+Hirwaun,primary,NGED,[],11.0,budget,1,6.23,1,7.6
+Lampeter Grid,bsp,NGED,[],33.0,budget,0,0,1,15
+Llanfihangel Ystrad,primary,NGED,[],11.0,budget,0,0,1,7.6
+Aberaeron,primary,NGED,[],11.0,budget,0,0,1,2.5
+Llanarth,primary,NGED,[],11.0,budget,0,0,1,7.6
+Llanelli Grid,bsp,NGED,[],11.0,budget,0,0,2,30
+Cardigan,primary,NGED,[],11.0,budget,2,2.75,0,0
+Rhos,primary,NGED,[],11.0,budget,0,0,1,2.25
+Swansea North,bsp,NGED,[],33.0,budget,1,75,1,20
+Garngoch,primary,NGED,[],11.0,budget,4,4,0,0
+Ravenhill,primary,NGED,[],11.0,budget,2,8.48,0,0
+Upper Bank,primary,NGED,[],11.0,budget,2,2,0,0
+Ystradgynlais Grid,bsp,NGED,[],33.0,budget,0,0,3,55.2
+Upper Boat,gsp,NGED,[],132.0,budget,2,90,5,210
+Dowlais Grid,bsp,NGED,[],33.0,budget,1,20,3,100
+Merthyr East,primary,NGED,[],11.0,budget,0,0,1,10
+Mountain Ash Grid,bsp,NGED,[],33.0,budget,0,0,2,80
+Mountain Ash,primary,NGED,[],11.0,budget,0,0,1,1.4
+Pencoed Grid,bsp,NGED,[],11.0,budget,0,0,4,155
+Pontyclun,primary,NGED,"['11.0', '132.0']",11.0,budget,0,0,1,7.5
+Talbot Green,primary,NGED,[],11.0,budget,1,3.3,0,0
+Upper Boat,bsp,NGED,[],33.0,budget,0,0,1,15
+Uskmouth,gsp,NGED,[],132.0,budget,3,95,4,160
+Llantarnam,bsp,NGED,[],66.0,budget,1,15,3,55
+Llantarnam,primary,NGED,[],11.0,budget,1,1.252,0,0
+Rogerstone,primary,NGED,[],11.0,budget,0,0,1,10
+Magor Grid,bsp,NGED,[],11.0,budget,0,0,2,80
+Newport East,bsp,NGED,[],11.0,budget,1,1.6,0,0
+Newport South,bsp,NGED,[],33.0,budget,1,15,3,104.9
+Newport West,primary,NGED,[],11.0,budget,1,1,0,0
+Panteg,bsp,NGED,"['11.0', '132.0']",11.0,budget,0,0,2,80
+Cardiff South Grid,primary,NGED,[],11.0,accepted,1,5.3,0,0
+Fairwater,primary,NGED,[],11.0,accepted,1,1,1,1.0307
+Grangetown Grid,primary,NGED,[],11.0,accepted,1,1,0,0
+Sully Grid,primary,NGED,[],11.0,accepted,1,1,0,0
+Sandon Street,primary,NGED,[],11.0,accepted,1,1.216,0,0
+Wood Street,primary,NGED,[],11.0,accepted,2,3.5,0,0
+Street Mellons,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Rover Way,primary,NGED,[],11.0,accepted,1,5.9,0,0
+Grange,bsp,NGED,[],66.0,accepted,1,3,1,22
+Pembroke,gsp,NGED,[],132.0,accepted,1,50,1,49.9
+Steynton,primary,NGED,[],11.0,accepted,1,3,0,0
+Pyle Grid,gsp,NGED,[],132.0,accepted,1,50,2,130
+Bridgend Trading Estate,primary,NGED,[],11.0,accepted,1,1.6,0,0
+Waterton Industrial,primary,NGED,[],11.0,accepted,1,3.8,0,0
+Abergavenny,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Crumlin,bsp,NGED,[],11.0,accepted,1,28,1,28
+Cwmfelinfach,primary,NGED,[],11.0,accepted,1,2,0,0
+Swansea North Grid,gsp,NGED,"['33.0', '132.0']",132.0,accepted,1,87.8,3,161.8
+Ynys Street,primary,NGED,[],11.0,accepted,1,2.65,0,0
+Aberpergwm,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Swansea Waterfront,primary,NGED,[],11.0,accepted,1,3.5,0,0
 Tir John,primary,NGED,[],6.6,accepted,0,0,1,2.5
-Trostre Grid,bsp,NGED,[],33,accepted,1,25,2,43
-Maesarddafen,primary,NGED,[],11,accepted,1,1,0,0
-Upper Boat,gsp,NGED,[],132,accepted,1,49.9,1,49.9
-Pontyclun,primary,NGED,"['11', '132']",11,accepted,1,1.685,0,0
-Talbot Green,primary,NGED,[],11,accepted,1,1,0,0
-Upper Boat,bsp,NGED,[],11,accepted,0,0,1,7.5
-Uskmouth,gsp,NGED,[],132,accepted,0,0,1,48
-Llantarnam,bsp,NGED,[],11,accepted,0,0,1,19.2
-Magor,primary,NGED,[],11,accepted,2,3.207,0,0
-Ringland Newport,primary,NGED,[],11,accepted,1,1.35,0,0
-Sudbrook,bsp,NGED,[],11,accepted,0,0,1,20
-Cardiff South Grid,primary,NGED,[],11,pending,1,4,0,0
-Fairwater,primary,NGED,[],11,pending,0,0,1,1.0304
-East Aberthaw,primary,NGED,[],11,pending,1,1.1,0,0
-Grangetown Grid,primary,NGED,[],11,pending,1,1,0,0
-Cardiff East Grid,gsp,NGED,[],132,pending,1,135,0,0
-Wood Street,primary,NGED,[],11,pending,1,2.957,0,0
-Cardiff East Grid,primary,NGED,[],11,pending,2,4,0,0
-Cyncoed,primary,NGED,[],11,pending,1,1,0,0
-Street Mellons,primary,NGED,[],11,pending,1,1,0,0
-Grange,bsp,NGED,[],11,pending,1,10,0,0
-Pembroke,gsp,NGED,[],132,pending,2,446,2,145.9
-Haverfordwest Power Stn,primary,NGED,[],11,pending,1,2.589,0,0
-Milford Haven Grid,bsp,NGED,[],132,pending,0,0,1,110
-Pyle Grid,gsp,NGED,[],132,pending,2,149.9,2,189.9
-Bridgend Trading Estate,primary,NGED,[],11,pending,3,8.157,0,0
-Llangewydd,primary,NGED,[],11,pending,2,6.15,0,0
-Schwyll,primary,NGED,[],11,pending,1,3.542,0,0
-Abergavenny,bsp,NGED,[],66,pending,0,0,1,10
-Abergavenny,primary,NGED,[],11,pending,2,2.5,0,0
-Brecon,primary,NGED,[],11,pending,1,1.3,0,0
-Ebbw Vale,primary,NGED,[],11,pending,0,0,1,2.1
-Swansea North Grid,gsp,NGED,"['132', '33']",132,pending,2,250,3,124
-Hendy,primary,NGED,[],11,pending,1,1,0,0
-Pantyffynon,primary,NGED,[],11,pending,1,2,0,0
-Britton Ferry,primary,NGED,[],11,pending,1,4.2,0,0
-Ynys Street,primary,NGED,[],11,pending,1,1.6,0,0
-Carmarthen Grid,bsp,NGED,[],33,pending,1,8.5,1,10
-Cwmffrwd,primary,NGED,[],11,pending,1,1.643,0,0
-Street Clears,primary,NGED,[],11,pending,0,0,1,9.9
-Trevaughan,primary,NGED,[],11,pending,2,2.4,0,0
-Hirwaun Grid,bsp,NGED,[],33,pending,0,0,1,14.1
-Morriston,primary,NGED,[],11,pending,6,11.95,0,0
-Rhos Grid,bsp,NGED,[],11,pending,0,0,1,15.3
-Swansea North,bsp,NGED,[],33,pending,0,0,1,15
-Garngoch,primary,NGED,[],11,pending,2,8.3,0,0
-Lime Street Gorseinon,primary,NGED,[],11,pending,1,1,0,0
-Llandarcy,primary,NGED,[],11,pending,1,1.6,0,0
-Upper Bank,primary,NGED,[],11,pending,1,1.177,0,0
-Ystradgynlais Grid,bsp,NGED,[],33,pending,1,30,1,60
-Travellers Rest,primary,NGED,[],11,pending,1,1,0,0
-Upper Boat,gsp,NGED,[],132,pending,1,49.9,1,49.9
-Dowlais Grid,bsp,NGED,[],33,pending,0,0,1,15
-Pencoed,primary,NGED,[],11,pending,1,8.16,0,0
-Caerphilly,primary,NGED,[],11,pending,2,2.2,0,0
-Creigiau,primary,NGED,[],11,pending,2,3.029,0,0
-Uskmouth,gsp,NGED,[],132,pending,3,138,2,260
-Magor,primary,NGED,[],11,pending,2,2.207,0,0
-Newport South,bsp,NGED,[],33,pending,1,8,0,0
-Newport West,bsp,NGED,[],11,pending,1,2,0,0
-Abham,gsp,NGED,[],132,budget,0,0,1,25
-Dawlish,primary,NGED,[],11,budget,2,4.31,1,2.5
-Newton Abbot Main,primary,NGED,[],11,budget,0,0,1,2.97
-Paignton,bsp,NGED,[],33,budget,0,0,2,120
-Colley End,primary,NGED,[],11,budget,1,1,1,25
-Plymouth,bsp,NGED,[],33,budget,0,0,2,80
-Adelaide Road,primary,NGED,[],11,budget,2,3.6,0,0
-Buckwell Street,primary,NGED,[],11,budget,1,1,0,0
-Langage,primary,NGED,[],11,budget,1,1.6,0,0
-Torquay,bsp,NGED,[],33,budget,1,6,0,0
-Barton,primary,NGED,[],11,budget,1,6,0,0
-Upton Valley,primary,NGED,[],11,budget,1,1.884,0,0
-Totnes,bsp,NGED,[],33,budget,0,0,2,80
-Kingsbridge,primary,NGED,[],11,budget,1,1,0,0
-Alverdiscott,gsp,NGED,[],132,budget,3,82.5,3,82.485
-Barnstaple,bsp,NGED,[],33,budget,3,19.528,6,175
-Rock Park,primary,NGED,[],11,budget,1,3,0,0
-East Yelland,bsp,NGED,[],33,budget,2,25,4,149.99
-Braunton,primary,NGED,[],11,budget,1,5.88,0,0
-Fremington,primary,NGED,[],11,budget,0,0,1,4.898
-North Tawton,bsp,NGED,[],33,budget,0,0,9,252.9
-Pyworthy,bsp,NGED,[],33,budget,2,25,8,299.89
-Clovelly,primary,NGED,[],11,budget,1,1.6,0,0
-Lifton,primary,NGED,[],11,budget,0,0,1,3
-Woodcote,bsp,NGED,[],33,budget,0,0,2,80
-Bridgwater,gsp,NGED,[],132,budget,0,0,1,30
-Bridgwater Grid,bsp,NGED,[],33,budget,0,0,1,50
-Bath Road,primary,NGED,[],11,budget,1,2,0,0
-Colley Lane,primary,NGED,[],11,budget,1,4,0,0
-Somerton,primary,NGED,[],11,budget,1,1.15,0,0
-Watchfield,primary,NGED,[],11,budget,2,2.75,0,0
-Churchill,bsp,NGED,['33'],33,budget,0,0,1,30
-Street,bsp,NGED,[],33,budget,1,5,3,105
-Millfield,primary,NGED,[],11,budget,1,1,0,0
-Exeter Main,gsp,NGED,[],132,budget,4,47.04,1,49.9
-Exeter City,bsp,NGED,[],33,budget,1,75,3,149.9
-Exminster,primary,NGED,[],11,budget,1,6.75,0,0
-Folly Bridge,primary,NGED,[],11,budget,0,0,1,3.96
-Exeter Main,bsp,NGED,[],33,budget,1,10,14,497
-Withycombe Raleigh,primary,NGED,[],11,budget,1,3.493,0,0
-Sowton,bsp,NGED,[],33,budget,0,0,2,80
-Exeter Science Park,primary,NGED,[],11,budget,1,4,0,0
-Marsh Green,primary,NGED,[],11,budget,2,2.563,0,0
-Tiverton,bsp,NGED,[],33,budget,2,25,3,119.99
-Bridge Mills,primary,NGED,[],11,budget,0,0,1,3
-Cullompton,primary,NGED,[],11,budget,3,11,0,0
-Indian Queens,gsp,NGED,[],132,budget,1,49.9,2,49.9
-Camborne,bsp,NGED,[],33,budget,2,25,4,149.99
-Fraddon,bsp,NGED,[],33,budget,0,0,2,80
-Street Mawgan,primary,NGED,[],11,budget,0,0,1,2
-Hayle,bsp,NGED,[],33,budget,2,25,2,69.99
-Newlyn,primary,NGED,[],11,budget,1,1.315,0,0
-Penzance Heamoor,primary,NGED,[],11,budget,1,3,0,0
-Rame,bsp,NGED,[],33,budget,3,31,6,161.99
-Falmouth Bickland Hl,primary,NGED,[],11,budget,1,1.5,0,0
-Helston,primary,NGED,[],11,budget,1,4,0,0
-Penryn,primary,NGED,[],11,budget,0,0,1,6
-Street Austell,bsp,NGED,[],33,budget,0,0,2,80
-Par Harbour,primary,NGED,[],11,budget,1,1,0,0
-Sawles Road,primary,NGED,[],11,budget,1,1.5,0,0
-Street Austell,primary,NGED,[],11,budget,1,1.6,0,0
-Street Tudy,bsp,NGED,[],11,budget,2,25,4,149.99
-Wadebridge,primary,NGED,[],11,budget,2,3.732,0,0
-Truro,bsp,NGED,[],33,budget,2,25,4,149.99
-Truro Shortlanesend,primary,NGED,[],11,budget,1,6,0,0
-Iron Acton,gsp,NGED,['132'],132,budget,3,190,2,90
-Almondsbury,primary,NGED,[],11,budget,3,5.9,0,0
-Bradley Stoke,primary,NGED,[],11,budget,1,1,0,0
-Feeder Road,bsp,NGED,['33'],33,budget,1,70,0,0
-Bedminster,primary,NGED,[],11,budget,1,3.7,0,0
-Feeder Road,primary,NGED,['11'],11,budget,2,2.808,0,0
-Whitchurch,primary,NGED,[],11,budget,1,9.124,0,0
-Eastville,primary,NGED,[],11,budget,1,1,0,0
-Filton Dc,primary,NGED,[],11,budget,1,1.2,0,0
-Lockleaze,primary,NGED,[],11,budget,1,1.285,0,0
-Patchway,primary,NGED,[],11,budget,2,8,0,0
-Seabank,bsp,NGED,[],33,budget,0,0,3,71.27
-Western Approach,primary,NGED,[],11,budget,1,6,0,0
-Street Pauls,primary,NGED,['11'],11,budget,3,5.32,0,0
-Landulph,gsp,NGED,[],132,budget,0,0,2,60
-Southway,primary,NGED,[],11,budget,1,1.118,0,0
-Landulph,bsp,NGED,[],33,budget,2,10,6,130
-Street Germans,bsp,NGED,[],33,budget,4,125,6,299.99
-Churchill,bsp,NGED,['132'],132,budget,1,200,1,50
-Westwick,primary,NGED,[],11,budget,1,1.5,0,0
-Weston Central,primary,NGED,[],11,budget,1,1,0,0
-Seabank,gsp,NGED,[],132,budget,0,0,2,80
-Avonmouth,bsp,NGED,[],33,budget,0,0,3,100.8
-Avonmouth,primary,NGED,[],11,budget,2,3,0,0
-Cairns Road,primary,NGED,[],11,budget,1,1.25,0,0
-Kingsweston,primary,NGED,[],11,budget,1,1,0,0
-Radstock,bsp,NGED,['33'],33,budget,0,0,1,5
-Radstock,bsp,NGED,['132'],132,budget,0,0,2,80
-Evercreech,primary,NGED,[],11,budget,1,2,0,0
-Keynsham East,primary,NGED,[],11,budget,1,2,0,0
-Newbury,primary,NGED,[],11,budget,0,0,1,5
-Taunton,gsp,NGED,[],132,budget,2,25.1,2,94.9
-Bowhays Cross,bsp,NGED,[],33,budget,2,25,6,184.9
-Taunton Main,bsp,NGED,[],33,budget,0,0,2,80
-Bradley Lane,primary,NGED,[],11,accepted,1,8.25,0,0
-Dawlish,primary,NGED,[],11,accepted,1,2,0,0
-Newton Abbot Main,primary,NGED,[],11,accepted,1,2,0,0
-Newton Ferrers,primary,NGED,[],11,accepted,1,1.045,0,0
-Torycombe,primary,NGED,[],11,accepted,1,2,0,0
-Lawes Bridge,primary,NGED,[],11,accepted,1,1.5,0,0
-Barnstaple,bsp,NGED,[],33,accepted,1,17,1,17
-Barnstaple Quay,primary,NGED,[],11,accepted,1,1.2,0,0
-Lifton,primary,NGED,[],11,accepted,1,1,0,0
-Shebbear,primary,NGED,[],11,accepted,1,49.99,1,49.99
-Bridport,primary,NGED,[],11,accepted,1,1.5,0,0
-Bridgwater,gsp,NGED,[],132,accepted,1,10,1,10
-Bath Road,primary,NGED,[],11,accepted,1,1.2,0,0
-Colley Lane,primary,NGED,[],11,accepted,2,5.95,0,0
-Street,bsp,NGED,[],33,accepted,1,5,1,10
-Millfield,primary,NGED,[],11,accepted,1,1.5,0,0
-Exeter Main,gsp,NGED,[],132,accepted,0,0,1,49.9
-Exeter City,bsp,NGED,[],33,accepted,1,1.612,2,30
-Exeter Main,bsp,NGED,[],33,accepted,0,0,1,27
-Sowton,bsp,NGED,[],33,accepted,2,50,2,50
-Clyst Honiton,primary,NGED,[],11,accepted,1,1.5,0,0
-Burlescombe,primary,NGED,[],11,accepted,1,40,1,40
-Tiverton South,primary,NGED,[],11,accepted,1,1,0,0
-Indian Queens,gsp,NGED,[],132,accepted,0,0,1,50
-Camborne,bsp,NGED,[],33,accepted,0,0,1,10
-Fraddon,bsp,NGED,[],33,accepted,1,1.25,0,0
-Mevagissey,primary,NGED,[],11,accepted,1,1,0,0
-Hayle,bsp,NGED,[],33,accepted,1,8,1,14
-Falmouth Bickland Hl,primary,NGED,[],11,accepted,1,1.5,0,0
-Falmouth Docks,primary,NGED,[],11,accepted,1,2.5,0,0
-Bradley Stoke,primary,NGED,[],11,accepted,1,1,0,0
-Bedminster,primary,NGED,[],11,accepted,1,1,0,0
-Bower Ashton,primary,NGED,[],11,accepted,1,6,0,0
-Feeder Road,primary,NGED,['11'],11,accepted,1,1.5,0,0
-Feeder Road B,primary,NGED,[],11,accepted,1,1.2,0,0
-Emersons Green,primary,NGED,[],11,accepted,0,0,1,9.212
-Filton Dc,primary,NGED,[],11,accepted,1,1,0,0
-Patchway,primary,NGED,[],11,accepted,1,4,0,0
-Street Pauls,primary,NGED,['11'],11,accepted,4,12.6,0,0
-Alexandra Road,primary,NGED,[],11,accepted,2,2.7,0,0
+Trostre Grid,bsp,NGED,[],33.0,accepted,1,25,2,43
+Maesarddafen,primary,NGED,[],11.0,accepted,1,1,0,0
+Upper Boat,gsp,NGED,[],132.0,accepted,1,49.9,1,49.9
+Pontyclun,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.685,0,0
+Talbot Green,primary,NGED,[],11.0,accepted,1,1,0,0
+Upper Boat,bsp,NGED,[],11.0,accepted,0,0,1,7.5
+Uskmouth,gsp,NGED,[],132.0,accepted,0,0,1,48
+Llantarnam,bsp,NGED,[],11.0,accepted,0,0,1,19.2
+Magor,primary,NGED,[],11.0,accepted,2,3.207,0,0
+Ringland Newport,primary,NGED,[],11.0,accepted,1,1.35,0,0
+Sudbrook,bsp,NGED,[],11.0,accepted,0,0,1,20
+Cardiff South Grid,primary,NGED,[],11.0,pending,1,4,0,0
+Fairwater,primary,NGED,[],11.0,pending,0,0,1,1.0304
+East Aberthaw,primary,NGED,[],11.0,pending,1,1.1,0,0
+Grangetown Grid,primary,NGED,[],11.0,pending,1,1,0,0
+Cardiff East Grid,gsp,NGED,[],132.0,pending,1,135,0,0
+Wood Street,primary,NGED,[],11.0,pending,1,2.957,0,0
+Cardiff East Grid,primary,NGED,[],11.0,pending,2,4,0,0
+Cyncoed,primary,NGED,[],11.0,pending,1,1,0,0
+Street Mellons,primary,NGED,[],11.0,pending,1,1,0,0
+Grange,bsp,NGED,[],11.0,pending,1,10,0,0
+Pembroke,gsp,NGED,[],132.0,pending,2,446,2,145.9
+Haverfordwest Power Stn,primary,NGED,[],11.0,pending,1,2.589,0,0
+Milford Haven Grid,bsp,NGED,[],132.0,pending,0,0,1,110
+Pyle Grid,gsp,NGED,[],132.0,pending,2,149.9,2,189.9
+Bridgend Trading Estate,primary,NGED,[],11.0,pending,3,8.157,0,0
+Llangewydd,primary,NGED,[],11.0,pending,2,6.15,0,0
+Schwyll,primary,NGED,[],11.0,pending,1,3.542,0,0
+Abergavenny,bsp,NGED,[],66.0,pending,0,0,1,10
+Abergavenny,primary,NGED,[],11.0,pending,2,2.5,0,0
+Brecon,primary,NGED,[],11.0,pending,1,1.3,0,0
+Ebbw Vale,primary,NGED,[],11.0,pending,0,0,1,2.1
+Swansea North Grid,gsp,NGED,"['33.0', '132.0']",132.0,pending,2,250,3,124
+Hendy,primary,NGED,[],11.0,pending,1,1,0,0
+Pantyffynon,primary,NGED,[],11.0,pending,1,2,0,0
+Britton Ferry,primary,NGED,[],11.0,pending,1,4.2,0,0
+Ynys Street,primary,NGED,[],11.0,pending,1,1.6,0,0
+Carmarthen Grid,bsp,NGED,[],33.0,pending,1,8.5,1,10
+Cwmffrwd,primary,NGED,[],11.0,pending,1,1.643,0,0
+Street Clears,primary,NGED,[],11.0,pending,0,0,1,9.9
+Trevaughan,primary,NGED,[],11.0,pending,2,2.4,0,0
+Hirwaun Grid,bsp,NGED,[],33.0,pending,0,0,1,14.1
+Morriston,primary,NGED,[],11.0,pending,6,11.95,0,0
+Rhos Grid,bsp,NGED,[],11.0,pending,0,0,1,15.3
+Swansea North,bsp,NGED,[],33.0,pending,0,0,1,15
+Garngoch,primary,NGED,[],11.0,pending,2,8.3,0,0
+Lime Street Gorseinon,primary,NGED,[],11.0,pending,1,1,0,0
+Llandarcy,primary,NGED,[],11.0,pending,1,1.6,0,0
+Upper Bank,primary,NGED,[],11.0,pending,1,1.177,0,0
+Ystradgynlais Grid,bsp,NGED,[],33.0,pending,1,30,1,60
+Travellers Rest,primary,NGED,[],11.0,pending,1,1,0,0
+Upper Boat,gsp,NGED,[],132.0,pending,1,49.9,1,49.9
+Dowlais Grid,bsp,NGED,[],33.0,pending,0,0,1,15
+Pencoed,primary,NGED,[],11.0,pending,1,8.16,0,0
+Caerphilly,primary,NGED,[],11.0,pending,2,2.2,0,0
+Creigiau,primary,NGED,[],11.0,pending,2,3.029,0,0
+Uskmouth,gsp,NGED,[],132.0,pending,3,138,2,260
+Magor,primary,NGED,[],11.0,pending,2,2.207,0,0
+Newport South,bsp,NGED,[],33.0,pending,1,8,0,0
+Newport West,bsp,NGED,[],11.0,pending,1,2,0,0
+Abham,gsp,NGED,[],132.0,budget,0,0,1,25
+Dawlish,primary,NGED,[],11.0,budget,2,4.31,1,2.5
+Newton Abbot Main,primary,NGED,[],11.0,budget,0,0,1,2.97
+Paignton,bsp,NGED,[],33.0,budget,0,0,2,120
+Colley End,primary,NGED,[],11.0,budget,1,1,1,25
+Plymouth,bsp,NGED,[],33.0,budget,0,0,2,80
+Adelaide Road,primary,NGED,[],11.0,budget,2,3.6,0,0
+Buckwell Street,primary,NGED,[],11.0,budget,1,1,0,0
+Langage,primary,NGED,[],11.0,budget,1,1.6,0,0
+Torquay,bsp,NGED,[],33.0,budget,1,6,0,0
+Barton,primary,NGED,[],11.0,budget,1,6,0,0
+Upton Valley,primary,NGED,[],11.0,budget,1,1.884,0,0
+Totnes,bsp,NGED,[],33.0,budget,0,0,2,80
+Kingsbridge,primary,NGED,[],11.0,budget,1,1,0,0
+Alverdiscott,gsp,NGED,[],132.0,budget,3,82.5,3,82.485
+Barnstaple,bsp,NGED,[],33.0,budget,3,19.528,6,175
+Rock Park,primary,NGED,[],11.0,budget,1,3,0,0
+East Yelland,bsp,NGED,[],33.0,budget,2,25,4,149.99
+Braunton,primary,NGED,[],11.0,budget,1,5.88,0,0
+Fremington,primary,NGED,[],11.0,budget,0,0,1,4.898
+North Tawton,bsp,NGED,[],33.0,budget,0,0,9,252.9
+Pyworthy,bsp,NGED,[],33.0,budget,2,25,8,299.89
+Clovelly,primary,NGED,[],11.0,budget,1,1.6,0,0
+Lifton,primary,NGED,[],11.0,budget,0,0,1,3
+Woodcote,bsp,NGED,[],33.0,budget,0,0,2,80
+Bridgwater,gsp,NGED,[],132.0,budget,0,0,1,30
+Bridgwater Grid,bsp,NGED,[],33.0,budget,0,0,1,50
+Bath Road,primary,NGED,[],11.0,budget,1,2,0,0
+Colley Lane,primary,NGED,[],11.0,budget,1,4,0,0
+Somerton,primary,NGED,[],11.0,budget,1,1.15,0,0
+Watchfield,primary,NGED,[],11.0,budget,2,2.75,0,0
+Churchill,bsp,NGED,['33.0'],33.0,budget,0,0,1,30
+Street,bsp,NGED,[],33.0,budget,1,5,3,105
+Millfield,primary,NGED,[],11.0,budget,1,1,0,0
+Exeter Main,gsp,NGED,[],132.0,budget,4,47.04,1,49.9
+Exeter City,bsp,NGED,[],33.0,budget,1,75,3,149.9
+Exminster,primary,NGED,[],11.0,budget,1,6.75,0,0
+Folly Bridge,primary,NGED,[],11.0,budget,0,0,1,3.96
+Exeter Main,bsp,NGED,[],33.0,budget,1,10,14,497
+Withycombe Raleigh,primary,NGED,[],11.0,budget,1,3.493,0,0
+Sowton,bsp,NGED,[],33.0,budget,0,0,2,80
+Exeter Science Park,primary,NGED,[],11.0,budget,1,4,0,0
+Marsh Green,primary,NGED,[],11.0,budget,2,2.563,0,0
+Tiverton,bsp,NGED,[],33.0,budget,2,25,3,119.99
+Bridge Mills,primary,NGED,[],11.0,budget,0,0,1,3
+Cullompton,primary,NGED,[],11.0,budget,3,11,0,0
+Indian Queens,gsp,NGED,[],132.0,budget,1,49.9,2,49.9
+Camborne,bsp,NGED,[],33.0,budget,2,25,4,149.99
+Fraddon,bsp,NGED,[],33.0,budget,0,0,2,80
+Street Mawgan,primary,NGED,[],11.0,budget,0,0,1,2
+Hayle,bsp,NGED,[],33.0,budget,2,25,2,69.99
+Newlyn,primary,NGED,[],11.0,budget,1,1.315,0,0
+Penzance Heamoor,primary,NGED,[],11.0,budget,1,3,0,0
+Rame,bsp,NGED,[],33.0,budget,3,31,6,161.99
+Falmouth Bickland Hl,primary,NGED,[],11.0,budget,1,1.5,0,0
+Helston,primary,NGED,[],11.0,budget,1,4,0,0
+Penryn,primary,NGED,[],11.0,budget,0,0,1,6
+Street Austell,bsp,NGED,[],33.0,budget,0,0,2,80
+Par Harbour,primary,NGED,[],11.0,budget,1,1,0,0
+Sawles Road,primary,NGED,[],11.0,budget,1,1.5,0,0
+Street Austell,primary,NGED,[],11.0,budget,1,1.6,0,0
+Street Tudy,bsp,NGED,[],11.0,budget,2,25,4,149.99
+Wadebridge,primary,NGED,[],11.0,budget,2,3.732,0,0
+Truro,bsp,NGED,[],33.0,budget,2,25,4,149.99
+Truro Shortlanesend,primary,NGED,[],11.0,budget,1,6,0,0
+Iron Acton,gsp,NGED,['132.0'],132.0,budget,3,190,2,90
+Almondsbury,primary,NGED,[],11.0,budget,3,5.9,0,0
+Bradley Stoke,primary,NGED,[],11.0,budget,1,1,0,0
+Feeder Road,bsp,NGED,['33.0'],33.0,budget,1,70,0,0
+Bedminster,primary,NGED,[],11.0,budget,1,3.7,0,0
+Feeder Road,primary,NGED,['11.0'],11.0,budget,2,2.808,0,0
+Whitchurch,primary,NGED,[],11.0,budget,1,9.124,0,0
+Eastville,primary,NGED,[],11.0,budget,1,1,0,0
+Filton Dc,primary,NGED,[],11.0,budget,1,1.2,0,0
+Lockleaze,primary,NGED,[],11.0,budget,1,1.285,0,0
+Patchway,primary,NGED,[],11.0,budget,2,8,0,0
+Seabank,bsp,NGED,[],33.0,budget,0,0,3,71.27
+Western Approach,primary,NGED,[],11.0,budget,1,6,0,0
+Street Pauls,primary,NGED,['11.0'],11.0,budget,3,5.32,0,0
+Landulph,gsp,NGED,[],132.0,budget,0,0,2,60
+Southway,primary,NGED,[],11.0,budget,1,1.118,0,0
+Landulph,bsp,NGED,[],33.0,budget,2,10,6,130
+Street Germans,bsp,NGED,[],33.0,budget,4,125,6,299.99
+Churchill,bsp,NGED,['132.0'],132.0,budget,1,200,1,50
+Westwick,primary,NGED,[],11.0,budget,1,1.5,0,0
+Weston Central,primary,NGED,[],11.0,budget,1,1,0,0
+Seabank,gsp,NGED,[],132.0,budget,0,0,2,80
+Avonmouth,bsp,NGED,[],33.0,budget,0,0,3,100.8
+Avonmouth,primary,NGED,[],11.0,budget,2,3,0,0
+Cairns Road,primary,NGED,[],11.0,budget,1,1.25,0,0
+Kingsweston,primary,NGED,[],11.0,budget,1,1,0,0
+Radstock,bsp,NGED,['33.0'],33.0,budget,0,0,1,5
+Radstock,bsp,NGED,['132.0'],132.0,budget,0,0,2,80
+Evercreech,primary,NGED,[],11.0,budget,1,2,0,0
+Keynsham East,primary,NGED,[],11.0,budget,1,2,0,0
+Newbury,primary,NGED,[],11.0,budget,0,0,1,5
+Taunton,gsp,NGED,[],132.0,budget,2,25.1,2,94.9
+Bowhays Cross,bsp,NGED,[],33.0,budget,2,25,6,184.9
+Taunton Main,bsp,NGED,[],33.0,budget,0,0,2,80
+Bradley Lane,primary,NGED,[],11.0,accepted,1,8.25,0,0
+Dawlish,primary,NGED,[],11.0,accepted,1,2,0,0
+Newton Abbot Main,primary,NGED,[],11.0,accepted,1,2,0,0
+Newton Ferrers,primary,NGED,[],11.0,accepted,1,1.045,0,0
+Torycombe,primary,NGED,[],11.0,accepted,1,2,0,0
+Lawes Bridge,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Barnstaple,bsp,NGED,[],33.0,accepted,1,17,1,17
+Barnstaple Quay,primary,NGED,[],11.0,accepted,1,1.2,0,0
+Lifton,primary,NGED,[],11.0,accepted,1,1,0,0
+Shebbear,primary,NGED,[],11.0,accepted,1,49.99,1,49.99
+Bridport,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Bridgwater,gsp,NGED,[],132.0,accepted,1,10,1,10
+Bath Road,primary,NGED,[],11.0,accepted,1,1.2,0,0
+Colley Lane,primary,NGED,[],11.0,accepted,2,5.95,0,0
+Street,bsp,NGED,[],33.0,accepted,1,5,1,10
+Millfield,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Exeter Main,gsp,NGED,[],132.0,accepted,0,0,1,49.9
+Exeter City,bsp,NGED,[],33.0,accepted,1,1.612,2,30
+Exeter Main,bsp,NGED,[],33.0,accepted,0,0,1,27
+Sowton,bsp,NGED,[],33.0,accepted,2,50,2,50
+Clyst Honiton,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Burlescombe,primary,NGED,[],11.0,accepted,1,40,1,40
+Tiverton South,primary,NGED,[],11.0,accepted,1,1,0,0
+Indian Queens,gsp,NGED,[],132.0,accepted,0,0,1,50
+Camborne,bsp,NGED,[],33.0,accepted,0,0,1,10
+Fraddon,bsp,NGED,[],33.0,accepted,1,1.25,0,0
+Mevagissey,primary,NGED,[],11.0,accepted,1,1,0,0
+Hayle,bsp,NGED,[],33.0,accepted,1,8,1,14
+Falmouth Bickland Hl,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Falmouth Docks,primary,NGED,[],11.0,accepted,1,2.5,0,0
+Bradley Stoke,primary,NGED,[],11.0,accepted,1,1,0,0
+Bedminster,primary,NGED,[],11.0,accepted,1,1,0,0
+Bower Ashton,primary,NGED,[],11.0,accepted,1,6,0,0
+Feeder Road,primary,NGED,['11.0'],11.0,accepted,1,1.5,0,0
+Feeder Road B,primary,NGED,[],11.0,accepted,1,1.2,0,0
+Emersons Green,primary,NGED,[],11.0,accepted,0,0,1,9.212
+Filton Dc,primary,NGED,[],11.0,accepted,1,1,0,0
+Patchway,primary,NGED,[],11.0,accepted,1,4,0,0
+Street Pauls,primary,NGED,['11.0'],11.0,accepted,4,12.6,0,0
+Alexandra Road,primary,NGED,[],11.0,accepted,2,2.7,0,0
 Oldfield Park,primary,NGED,[],6.6,accepted,2,4.1,0,0
 Twerton,primary,NGED,[],6.6,accepted,1,4.5,0,0
-Weston Locking Road,primary,NGED,[],11,accepted,1,1.5,0,0
-Avonmouth,primary,NGED,[],11,accepted,2,2.25,0,0
-Kingsweston,primary,NGED,[],11,accepted,3,3.895,0,0
-High Littleton,primary,NGED,[],11,accepted,1,1,0,0
-Bowhays Cross,bsp,NGED,[],11,accepted,1,9,1,9
-Taunton Main,bsp,NGED,[],33,accepted,0,0,1,20
-Abham,gsp,NGED,[],132,pending,1,50,1,50
-Bovey Tracey,primary,NGED,[],11,pending,1,1,0,0
-Dawlish,primary,NGED,[],11,pending,1,2,0,0
-Elim Terrace,primary,NGED,[],11,pending,1,2.5,0,0
-Longbridge,primary,NGED,[],11,pending,2,2.148,0,0
-Plymstock South,primary,NGED,[],11,pending,1,1.5,0,0
-Prince Rock,primary,NGED,[],11,pending,1,5,1,5
-Plympton,bsp,NGED,[],33,pending,1,25,0,0
-Langage,primary,NGED,[],11,pending,1,6,0,0
-Newton Ferrers,primary,NGED,[],11,pending,1,1.045,0,0
-Great Torrington,primary,NGED,[],11,pending,1,2.168,0,0
-Rock Park,primary,NGED,[],11,pending,3,8.146,0,0
-Roundswell,primary,NGED,[],11,pending,2,2.9,0,0
-East Yelland,bsp,NGED,[],33,pending,0,0,1,7.5
-Whiddon Down,primary,NGED,[],11,pending,1,1.5,0,0
-Pyworthy,bsp,NGED,[],33,pending,1,15,2,64.5
-Lifton,primary,NGED,[],11,pending,1,1.8,0,0
-Stratton,primary,NGED,[],11,pending,2,16.5,1,15
-Axminster,gsp,NGED,[],132,pending,0,0,1,5.87
-Axminster,primary,NGED,[],11,pending,1,1.5,0,0
-East Chinnock,primary,NGED,[],11,pending,1,1.974,0,0
-Montacute,primary,NGED,[],11,pending,1,1,0,0
-Bridgwater,gsp,NGED,[],132,pending,1,10,1,10
-Bridgwater Local,primary,NGED,[],11,pending,1,1.5,0,0
-Burnham,primary,NGED,[],11,pending,1,1.5,0,0
-Colley Lane,primary,NGED,[],11,pending,6,17.004,0,0
-Millfield,primary,NGED,[],11,pending,4,8.35,0,0
-Exeter Main,gsp,NGED,[],132,pending,2,185,3,269.9
-Crediton,primary,NGED,[],11,pending,1,2.5,0,0
-Street Thomas,primary,NGED,[],11,pending,1,1.8,0,0
-Exeter Main,bsp,NGED,[],33,pending,0,0,1,27
-Sidmouth Town,primary,NGED,[],11,pending,0,0,1,1
-Withycombe Raleigh,primary,NGED,[],11,pending,1,3.493,0,0
-Sowton,bsp,NGED,[],33,pending,0,0,1,20
-Clyst Honiton,primary,NGED,[],11,pending,1,2.476,0,0
-Countess Wear,primary,NGED,[],11,pending,1,1.5,0,0
-Heavitree,primary,NGED,[],11,pending,1,2.305,0,0
-Marsh Green,primary,NGED,[],11,pending,4,10.434,0,0
-Tiverton,bsp,NGED,[],33,pending,1,10,0,0
-Cullompton,primary,NGED,[],11,pending,1,1.25,0,0
-Tiverton Junction,primary,NGED,[],11,pending,2,2.5,0,0
-Indian Queens,gsp,NGED,[],132,pending,1,60,1,25.3
-Redruth,primary,NGED,[],11,pending,1,1.2,0,0
-Fraddon,bsp,NGED,[],33,pending,0,0,1,17
-Newquay Trevemper,primary,NGED,[],11,pending,1,2,0,0
-Marazion,primary,NGED,[],11,pending,1,1,0,0
-Penzance Heamoor,primary,NGED,[],11,pending,1,1.5,0,0
-Penryn,primary,NGED,[],11,pending,1,4.5,0,0
-Wadebridge,primary,NGED,[],11,pending,1,1.5,0,0
-Truro,bsp,NGED,[],33,pending,1,6.266,0,0
-Truro Shortlanesend,primary,NGED,[],11,pending,1,5.3,0,0
-Truro Treyew Road,primary,NGED,[],11,pending,1,1.8,0,0
-Twelveheads,primary,NGED,[],11,pending,1,4,0,0
-Abbeywood,primary,NGED,[],11,pending,1,1,0,0
-Almondsbury,primary,NGED,[],11,pending,2,3.06,0,0
-Bradley Stoke,primary,NGED,[],11,pending,1,5.859,0,0
-Bedminster,primary,NGED,[],11,pending,1,3.7,0,0
-Bishopsworth,primary,NGED,[],11,pending,1,1.5,0,0
-Bower Ashton,primary,NGED,[],11,pending,4,10.082,0,0
-Broadweir,primary,NGED,[],11,pending,1,2.47,0,0
-Feeder Road,primary,NGED,['11'],11,pending,2,3.9,0,0
-Whitchurch,primary,NGED,[],11,pending,1,3.351,0,0
-Woodland Way,primary,NGED,[],11,pending,0,0,1,9.212
-Eastville,primary,NGED,[],11,pending,1,1.4,0,0
-Patchway,primary,NGED,[],11,pending,1,8.831,0,0
-Winterbourne,primary,NGED,[],11,pending,1,1,0,0
-Seabank,bsp,NGED,[],33,pending,1,13,0,0
-Western Approach,primary,NGED,[],11,pending,1,1,0,0
-Alexandra Road,primary,NGED,[],11,pending,3,3.7,0,0
-Milehouse,bsp,NGED,[],33,pending,1,3.481,0,0
-Alma Road,primary,NGED,[],11,pending,1,1,0,0
-Street Germans,bsp,NGED,[],33,pending,0,0,1,15
-Liskeard,primary,NGED,[],11,pending,1,1.5,0,0
-Street Neot,primary,NGED,[],11,pending,1,1.25,0,0
+Weston Locking Road,primary,NGED,[],11.0,accepted,1,1.5,0,0
+Avonmouth,primary,NGED,[],11.0,accepted,2,2.25,0,0
+Kingsweston,primary,NGED,[],11.0,accepted,3,3.895,0,0
+High Littleton,primary,NGED,[],11.0,accepted,1,1,0,0
+Bowhays Cross,bsp,NGED,[],11.0,accepted,1,9,1,9
+Taunton Main,bsp,NGED,[],33.0,accepted,0,0,1,20
+Abham,gsp,NGED,[],132.0,pending,1,50,1,50
+Bovey Tracey,primary,NGED,[],11.0,pending,1,1,0,0
+Dawlish,primary,NGED,[],11.0,pending,1,2,0,0
+Elim Terrace,primary,NGED,[],11.0,pending,1,2.5,0,0
+Longbridge,primary,NGED,[],11.0,pending,2,2.148,0,0
+Plymstock South,primary,NGED,[],11.0,pending,1,1.5,0,0
+Prince Rock,primary,NGED,[],11.0,pending,1,5,1,5
+Plympton,bsp,NGED,[],33.0,pending,1,25,0,0
+Langage,primary,NGED,[],11.0,pending,1,6,0,0
+Newton Ferrers,primary,NGED,[],11.0,pending,1,1.045,0,0
+Great Torrington,primary,NGED,[],11.0,pending,1,2.168,0,0
+Rock Park,primary,NGED,[],11.0,pending,3,8.146,0,0
+Roundswell,primary,NGED,[],11.0,pending,2,2.9,0,0
+East Yelland,bsp,NGED,[],33.0,pending,0,0,1,7.5
+Whiddon Down,primary,NGED,[],11.0,pending,1,1.5,0,0
+Pyworthy,bsp,NGED,[],33.0,pending,1,15,2,64.5
+Lifton,primary,NGED,[],11.0,pending,1,1.8,0,0
+Stratton,primary,NGED,[],11.0,pending,2,16.5,1,15
+Axminster,gsp,NGED,[],132.0,pending,0,0,1,5.87
+Axminster,primary,NGED,[],11.0,pending,1,1.5,0,0
+East Chinnock,primary,NGED,[],11.0,pending,1,1.974,0,0
+Montacute,primary,NGED,[],11.0,pending,1,1,0,0
+Bridgwater,gsp,NGED,[],132.0,pending,1,10,1,10
+Bridgwater Local,primary,NGED,[],11.0,pending,1,1.5,0,0
+Burnham,primary,NGED,[],11.0,pending,1,1.5,0,0
+Colley Lane,primary,NGED,[],11.0,pending,6,17.004,0,0
+Millfield,primary,NGED,[],11.0,pending,4,8.35,0,0
+Exeter Main,gsp,NGED,[],132.0,pending,2,185,3,269.9
+Crediton,primary,NGED,[],11.0,pending,1,2.5,0,0
+Street Thomas,primary,NGED,[],11.0,pending,1,1.8,0,0
+Exeter Main,bsp,NGED,[],33.0,pending,0,0,1,27
+Sidmouth Town,primary,NGED,[],11.0,pending,0,0,1,1
+Withycombe Raleigh,primary,NGED,[],11.0,pending,1,3.493,0,0
+Sowton,bsp,NGED,[],33.0,pending,0,0,1,20
+Clyst Honiton,primary,NGED,[],11.0,pending,1,2.476,0,0
+Countess Wear,primary,NGED,[],11.0,pending,1,1.5,0,0
+Heavitree,primary,NGED,[],11.0,pending,1,2.305,0,0
+Marsh Green,primary,NGED,[],11.0,pending,4,10.434,0,0
+Tiverton,bsp,NGED,[],33.0,pending,1,10,0,0
+Cullompton,primary,NGED,[],11.0,pending,1,1.25,0,0
+Tiverton Junction,primary,NGED,[],11.0,pending,2,2.5,0,0
+Indian Queens,gsp,NGED,[],132.0,pending,1,60,1,25.3
+Redruth,primary,NGED,[],11.0,pending,1,1.2,0,0
+Fraddon,bsp,NGED,[],33.0,pending,0,0,1,17
+Newquay Trevemper,primary,NGED,[],11.0,pending,1,2,0,0
+Marazion,primary,NGED,[],11.0,pending,1,1,0,0
+Penzance Heamoor,primary,NGED,[],11.0,pending,1,1.5,0,0
+Penryn,primary,NGED,[],11.0,pending,1,4.5,0,0
+Wadebridge,primary,NGED,[],11.0,pending,1,1.5,0,0
+Truro,bsp,NGED,[],33.0,pending,1,6.266,0,0
+Truro Shortlanesend,primary,NGED,[],11.0,pending,1,5.3,0,0
+Truro Treyew Road,primary,NGED,[],11.0,pending,1,1.8,0,0
+Twelveheads,primary,NGED,[],11.0,pending,1,4,0,0
+Abbeywood,primary,NGED,[],11.0,pending,1,1,0,0
+Almondsbury,primary,NGED,[],11.0,pending,2,3.06,0,0
+Bradley Stoke,primary,NGED,[],11.0,pending,1,5.859,0,0
+Bedminster,primary,NGED,[],11.0,pending,1,3.7,0,0
+Bishopsworth,primary,NGED,[],11.0,pending,1,1.5,0,0
+Bower Ashton,primary,NGED,[],11.0,pending,4,10.082,0,0
+Broadweir,primary,NGED,[],11.0,pending,1,2.47,0,0
+Feeder Road,primary,NGED,['11.0'],11.0,pending,2,3.9,0,0
+Whitchurch,primary,NGED,[],11.0,pending,1,3.351,0,0
+Woodland Way,primary,NGED,[],11.0,pending,0,0,1,9.212
+Eastville,primary,NGED,[],11.0,pending,1,1.4,0,0
+Patchway,primary,NGED,[],11.0,pending,1,8.831,0,0
+Winterbourne,primary,NGED,[],11.0,pending,1,1,0,0
+Seabank,bsp,NGED,[],33.0,pending,1,13,0,0
+Western Approach,primary,NGED,[],11.0,pending,1,1,0,0
+Alexandra Road,primary,NGED,[],11.0,pending,3,3.7,0,0
+Milehouse,bsp,NGED,[],33.0,pending,1,3.481,0,0
+Alma Road,primary,NGED,[],11.0,pending,1,1,0,0
+Street Germans,bsp,NGED,[],33.0,pending,0,0,1,15
+Liskeard,primary,NGED,[],11.0,pending,1,1.5,0,0
+Street Neot,primary,NGED,[],11.0,pending,1,1.25,0,0
 Combe Park,primary,NGED,[],6.6,pending,1,4,0,0
 Dorchester Street - New,primary,NGED,[],6.6,pending,1,4,0,0
 Oldfield Park,primary,NGED,[],6.6,pending,1,2.9,0,0
-Bristol International Airport,primary,NGED,[],11,pending,1,2,0,0
-Westwick,primary,NGED,[],11,pending,3,10,0,0
-East Brent,primary,NGED,[],11,pending,1,1.8,0,0
-Weston Central,primary,NGED,[],11,pending,1,1.8,0,0
-Avonmouth,bsp,NGED,[],33,pending,2,15.5,1,5
-Avonmouth,primary,NGED,[],11,pending,2,2.8,1,5.258
-Kingsweston,primary,NGED,[],11,pending,3,5.945,0,0
-Easton-In-Gordano,primary,NGED,[],11,pending,1,8,0,0
-Portishead Ashlands,primary,NGED,[],11,pending,1,1,0,0
-Royal Portbury Dock,primary,NGED,[],11,pending,1,7.5,0,0
-Chewton Mendip,primary,NGED,[],11,pending,2,2.8,0,0
-Keynsham East,primary,NGED,[],11,pending,1,1.5,0,0
-Taunton,gsp,NGED,[],132,pending,2,129.9,2,99.9
-Bowhays Cross,primary,NGED,[],11,pending,1,1.19,0,0
-Staplegrove,primary,NGED,[],11,pending,2,3.413,0,0
-Taunton Local,primary,NGED,[],11,pending,1,1.5,0,0
-Wellington Town,primary,NGED,[],11,pending,4,6.139,0,0
-Bishops Wood,gsp,NGED,['132'],132,budget,4,240,17,763.9
-Bromyard,primary,NGED,"['11', '66']",11,budget,1,2.5,0,0
-Ledbury,primary,NGED,"['11', '66']",11,budget,1,1.647,0,0
-Newent,primary,NGED,"['11', '66']",11,budget,2,6,0,0
-Stourport,primary,NGED,"['11', '132', '33', '66']",11,budget,0,0,2,8
-Upton Warren,bsp,NGED,['132'],66,budget,1,35,1,35
-Warndon,primary,NGED,"['11', '132']",11,budget,1,1.3,0,0
-Worcester,primary,NGED,"['11', '132']",11,budget,2,5.8,0,0
-Bushbury D,gsp,NGED,['132'],132,budget,1,30,5,170
-Bushbury B-C,primary,NGED,"['11', '132', '33']",11,budget,2,2.6,0,0
-Bustleholm,gsp,NGED,['132'],132,budget,2,36,2,80
-Bustleholm,primary,NGED,['11'],11,budget,2,6.074,2,2.067
-Rushall,primary,NGED,"['11', '132']",11,budget,0,0,2,10
-Smethwick,primary,NGED,"['11', '132']",11,budget,1,3.5,0,0
-Winson Green,primary,NGED,"['11', '132']",11,budget,4,10.45,0,0
-Cellarhead,gsp,NGED,['132'],132,budget,2,70,18,625
-Boothen,primary,NGED,"['11', '132', '33']",11,budget,1,2,0,0
-Hill Chorlton,primary,NGED,"['11', '33']",11,budget,0,0,1,7.6
-Meaford C,primary,NGED,"['11', '132', '33']",11,budget,1,1.875,0,0
-Stagefields,primary,NGED,"['11', '132', '33']",11,budget,1,2,0,0
-Congleton,primary,NGED,"['11', '33']",11,budget,1,1.25,0,0
-Banbury,primary,NGED,"['11', '132']",11,budget,3,10,0,0
-Feckenham,gsp,NGED,"['11', '66']",66,budget,3,140,9,289
-Broadway,primary,NGED,"['11', '66']",11,budget,0,0,1,1.96
-Epwell,primary,NGED,"['11', '66']",11,budget,1,5,1,5
-Evesham,primary,NGED,"['11', '66']",11,budget,2,2.655,0,0
-Long Marston,primary,NGED,"['11', '66']",11,budget,0,0,2,5
-Pershore,primary,NGED,"['11', '66']",11,budget,2,2.665,0,0
-Stratford,primary,NGED,"['11', '66']",11,budget,1,3,0,0
-Iron Acton,gsp,NGED,['132'],132,budget,3,145,9,320
-Alveston,primary,NGED,"['11', '33']",11,budget,1,5,2,5.51
-Oxbridge,primary,NGED,"['11', '33']",11,budget,1,2.818,0,0
-Clifton,primary,NGED,"['11', '33']",11,budget,8,20.412,0,0
-Hammerley Down,primary,NGED,"['11', '33']",11,budget,0,0,1,4.26
-Ryeford,primary,NGED,"['11', '132', '33']",11,budget,0,0,1,5
-Ironbridge,gsp,NGED,['132'],132,budget,1,3,6,157
-Halesfield,primary,NGED,"['11', '33']",11,budget,1,2.5,1,1.1
-Madeley,primary,NGED,"['11', '33']",11,budget,0,0,1,5
-Hortonwood,primary,NGED,"['11', '132']",11,budget,1,2.08,0,0
-Donnington,primary,NGED,"['11', '33']",11,budget,1,1.8,1,5
-Ketley,primary,NGED,"['11', '132', '33']",11,budget,0,0,2,10
-Kitwell,gsp,NGED,['132'],132,budget,1,25,5,170
-Bartley Green,primary,NGED,"['11', '132']",11,budget,1,10,0,0
-Halesowen,primary,NGED,"['11', '132']",11,budget,1,1.2,0,0
-Rednal,primary,NGED,"['11', '132']",11,budget,1,2,0,0
-Lea Marston,gsp,NGED,['132'],132,budget,2,220,4,160
-Chelmsley Wood,primary,NGED,[],11,budget,3,12.505,0,0
-Shirley,primary,NGED,"['11', '132']",11,budget,2,3.15,0,0
-Solihull,primary,NGED,"['11', '132']",11,budget,2,10,0,0
-Nechells East,gsp,NGED,['132'],11,budget,1,12,0,0
-Boughton Road,primary,NGED,"['11', '132']",11,budget,2,3,0,0
-Erdington,primary,NGED,['11'],11,budget,1,1,0,0
-Nechells West,primary,NGED,"['11', '132', '25']",11,budget,1,2,0,0
-Sparkbrook,primary,NGED,"['11', '132']",11,budget,1,1,0,0
-Oldbury,gsp,NGED,['132'],132,budget,1,100,0,0
-Birchfield Lane,primary,NGED,"['11', '132']",11,budget,1,2,0,0
-Oldbury B,bsp,NGED,['132'],11,budget,1,2.3,0,0
-Oldbury B,primary,NGED,['11'],11,budget,2,12,0,0
-Tividale,primary,NGED,"['11', '132']",11,budget,3,29.2,0,0
-Penn,gsp,NGED,['132'],132,budget,5,360,15,624.8
-Coseley,primary,NGED,"['11', '132']",11,budget,1,3,1,1.1
-Dudley,primary,NGED,"['11', '132']",11,budget,1,1.932,0,0
-Hinksford,primary,NGED,"['11', '132', '33']",11,budget,1,5.5,0,0
-Lye,primary,NGED,['11'],11,budget,1,1,0,0
-Wolverhampton West,primary,NGED,"['11', '132', '33']",11,budget,0,0,1,7.6
-Woodside,primary,NGED,"['11', '132']",11,budget,3,5.845,0,0
-Port Ham,gsp,NGED,['132'],132,budget,5,215,16,621
-Commercial Road,primary,NGED,"['11', '33']",11,budget,2,3.32,0,0
-Tuffley,primary,NGED,"['11', '33']",11,budget,2,10.5,0,0
-Alderton,primary,NGED,"['11', '66']",11,budget,1,1,0,0
-Bishops Cleeve,primary,NGED,"['11', '66']",11,budget,1,1.26,0,0
-Eastern Avenue,primary,NGED,"['11', '132']",11,budget,3,4,0,0
-Montpellier,primary,NGED,"['11', '132']",11,budget,1,12,0,0
-Tewkesbury Grid,primary,NGED,"['11', '132']",11,budget,3,24.36,0,0
-Rugeley,gsp,NGED,['132'],132,budget,2,110,8,313.9
-Burntwood,primary,NGED,"['11', '132']",11,budget,2,2.7,1,30
-Lichfield,primary,NGED,"['11', '132']",11,budget,1,1.5,0,0
-Rugeley Town,primary,NGED,"['11', '132']",11,budget,1,10.2,0,0
-Shrewsbury,gsp,NGED,['132'],132,budget,1,50,4,149.9
-Bayston Hill,primary,NGED,"['11', '33']",11,budget,1,4.975,0,0
-Dothill,primary,NGED,"['11', '33']",11,budget,0,0,1,1
-Harlescott,primary,NGED,"['11', '33']",11,budget,1,3,0,0
-Leaton,primary,NGED,"['11', '33']",11,budget,2,2.392,2,7.8
-Roushill,primary,NGED,"['11', '33']",11,budget,1,8,0,0
-Spring Gardens,primary,NGED,"['11', '33']",11,budget,2,4.2,0,0
-Willenhall,gsp,NGED,"['11', '132']",132,budget,1,15,0,0
-Willenhall,primary,NGED,"['11', '132', '25']",11,budget,1,1.5,0,0
-Wolverhampton,primary,NGED,"['11', '132', '33']",11,budget,7,15.022,0,0
-Bishops Wood,gsp,NGED,['132'],132,accepted,1,130,1,130
-Hereford Central,primary,NGED,"['11', '66']",11,accepted,1,1.2,0,0
-Leominster,primary,NGED,"['11', '66']",11,accepted,1,1.185,0,0
-Kidderminster,primary,NGED,"['11', '132', '33']",11,accepted,2,9.956,0,0
-Ludlow,bsp,NGED,['132'],11,accepted,0,0,1,40
-Timberdine,primary,NGED,"['11', '132']",11,accepted,1,3,0,0
-Upton Warren,primary,NGED,"['11', '132', '66']",11,accepted,1,1.5,0,0
-Warndon,primary,NGED,"['11', '132']",11,accepted,2,3.4,0,0
-Bushbury D,gsp,NGED,['132'],132,accepted,1,49.9,1,49.9
-Bushbury B-C,primary,NGED,"['11', '132', '33']",11,accepted,1,1.5,1,14.3
-Four Ashes,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Stafford,bsp,NGED,"['132', '25']",11,accepted,1,2.026,0,0
-Stafford,primary,NGED,"['11', '132', '25']",11,accepted,2,6.287,0,0
-Wednesfield,primary,NGED,"['11', '132']",11,accepted,2,4,0,0
-Bustleholm,primary,NGED,['11'],11,accepted,1,1.799,0,0
-Kingstanding / Dummy,primary,NGED,"['11', '132']",11,accepted,1,14,0,0
-Ladywood,primary,NGED,"['11', '132']",11,accepted,1,2.1,0,0
-Smethwick,primary,NGED,"['11', '132']",11,accepted,3,6,0,0
-Winson Green,primary,NGED,"['11', '132']",11,accepted,2,2,0,0
-Cellarhead,gsp,NGED,['132'],132,accepted,3,209.9,3,242.9
-Boothen,primary,NGED,"['11', '132', '33']",11,accepted,1,1.997,0,0
-Burslem,primary,NGED,"['11', '132', '33']",11,accepted,2,8.8,0,0
-Longton,primary,NGED,"['11', '132', '33']",11,accepted,3,4.65,0,0
-Market Drayton,primary,NGED,"['11', '33']",11,accepted,1,2.9,0,0
-Leek,primary,NGED,"['11', '33']",11,accepted,1,1.09,0,0
-Banbury,primary,NGED,"['11', '132']",11,accepted,2,3.9,0,0
-Feckenham,gsp,NGED,"['11', '66']",66,accepted,0,0,2,38
-Ipsley,primary,NGED,"['11', '66']",11,accepted,2,2.731,0,0
-Strensham,primary,NGED,"['11', '66']",11,accepted,1,5,1,5
-Naishcombe Hill,primary,NGED,"['11', '33']",11,accepted,1,4.555,0,0
-Clifton,primary,NGED,"['11', '33']",11,accepted,2,2.5,0,0
-Ryeford,bsp,NGED,['132'],33,accepted,1,5,1,5
-Camp,primary,NGED,"['11', '33']",11,accepted,1,1,0,0
-Javelin Park Efw,primary,NGED,[],33,accepted,1,5.9,0,0
-Netherhills,primary,NGED,"['11', '33']",11,accepted,2,2.5,0,0
-Ironbridge,gsp,NGED,['132'],132,accepted,1,10,1,10
-Halesfield,primary,NGED,"['11', '33']",11,accepted,1,1.2,0,0
-Ketley,bsp,NGED,['132'],11,accepted,1,25,1,25
-Bartley Green,bsp,NGED,"['11', '132']",11,accepted,1,1,0,0
-Rednal,bsp,NGED,['132'],11,accepted,1,10,0,0
-Rednal,primary,NGED,"['11', '132']",11,accepted,1,3.723,0,0
-Selly Oak,primary,NGED,"['11', '132']",11,accepted,1,1.5,0,0
-Sutton Coldfield,primary,NGED,"['11', '132']",11,accepted,1,7,0,0
-Castle Bromwich,primary,NGED,"['11', '132']",11,accepted,1,2,0,0
-Chester Street,primary,NGED,"['11', '132']",11,accepted,1,1,0,0
-Nechells West,primary,NGED,"['11', '132', '25']",11,accepted,3,8.01,0,0
-Sparkbrook,primary,NGED,"['11', '132']",11,accepted,1,1.5,0,0
-Tividale,primary,NGED,"['11', '132']",11,accepted,1,10,0,0
-Penn,gsp,NGED,['132'],132,accepted,1,99,1,99
-Rotol,primary,NGED,"['11', '33']",11,accepted,1,9,0,0
-Cheltenham,primary,NGED,"['11', '132', '66']",11,accepted,1,1,0,0
-Tewkesbury Grid,primary,NGED,"['11', '132']",11,accepted,1,1.379,0,0
-Rugeley,gsp,NGED,['132'],132,accepted,1,49.9,1,49.9
-Lichfield,primary,NGED,"['11', '132']",11,accepted,1,1.452,0,0
-Shrewsbury,gsp,NGED,['132'],132,accepted,2,27,3,47
-Shrewsbury,bsp,NGED,"['132', '33']",33,accepted,1,15,1,35
-Leaton,primary,NGED,"['11', '33']",11,accepted,1,1.482,0,0
-Roushill,primary,NGED,"['11', '33']",11,accepted,2,5.7,0,0
-Spring Gardens,primary,NGED,"['11', '33']",11,accepted,1,3.71,0,0
-Wolverhampton,bsp,NGED,['132'],11,accepted,1,5,0,0
-Wolverhampton,primary,NGED,"['11', '132', '33']",11,accepted,1,1.8,1,2.066
-Bishops Wood,gsp,NGED,['132'],132,pending,2,149,3,169
-Kidderminster,primary,NGED,"['11', '132', '33']",11,pending,3,21.894,1,3.04
-Bishops Castle,primary,NGED,"['11', '33']",11,pending,1,15,1,15
-Malvern,bsp,NGED,['132'],11,pending,1,10,0,0
-Malvern,primary,NGED,"['11', '132']",11,pending,1,10.32,0,0
-Timberdine,bsp,NGED,['132'],132,pending,1,9.77,0,0
-Timberdine,primary,NGED,"['11', '132']",11,pending,4,10.141,0,0
-Upton Warren,primary,NGED,"['11', '132', '66']",11,pending,1,2.5,0,0
-Warndon,primary,NGED,"['11', '132']",11,pending,1,1.75,0,0
-Worcester,bsp,NGED,['132'],11,pending,1,1,0,0
-Bushbury D,gsp,NGED,['132'],132,pending,3,164.3,2,149.3
-Bushbury B-C,primary,NGED,"['11', '132', '33']",11,pending,3,4.5,0,0
-Stafford,primary,NGED,"['11', '132', '25']",11,pending,1,5,0,0
-Stafford South,primary,NGED,['11'],11,pending,1,1,0,0
-Wednesfield,primary,NGED,"['11', '132']",11,pending,2,5,0,0
-Bustleholm,gsp,NGED,['132'],132,pending,1,99.9,1,99.9
-Bustleholm,primary,NGED,['11'],11,pending,2,2.762,0,0
-Kingstanding / Dummy,primary,NGED,"['11', '132']",11,pending,1,14,0,0
-Ladywood,primary,NGED,"['11', '132']",11,pending,1,1.25,0,0
-Perry Barr,primary,NGED,"['11', '132']",11,pending,2,3,0,0
-Rushall,primary,NGED,"['11', '132']",11,pending,1,1.8,0,0
-Smethwick,bsp,NGED,"['132', '25']",11,pending,1,7.5,0,0
-Smethwick,primary,NGED,"['11', '132']",11,pending,1,3,0,0
-Walsall,bsp,NGED,"['132', '33']",33,pending,1,7.6,0,0
-Winson Green,primary,NGED,"['11', '132']",11,pending,2,2,0,0
-Cellarhead,gsp,NGED,['132'],132,pending,1,22,3,82
-Boothen,primary,NGED,"['11', '132', '33']",11,pending,2,3.997,0,0
-Burslem,primary,NGED,"['11', '132', '33']",11,pending,1,2,0,0
-Cauldon,primary,NGED,[],11,pending,0,0,1,8
-Longton,primary,NGED,"['11', '132', '33']",11,pending,2,2.9,0,0
-Stagefields,primary,NGED,"['11', '132', '33']",11,pending,2,3.25,0,0
-Banbury,primary,NGED,"['11', '132']",11,pending,5,11.7,0,0
-Feckenham,gsp,NGED,"['11', '66']",66,pending,1,49.9,3,84.9
-Feckenham,bsp,NGED,"['11', '66']",11,pending,1,8,0,0
-Bloxham,primary,NGED,"['11', '66']",11,pending,3,6.123,1,1.337
-Ipsley,primary,NGED,"['11', '66']",11,pending,1,1.5,0,0
-Pershore,primary,NGED,"['11', '66']",11,pending,1,1,0,0
-Redditch South,primary,NGED,"['11', '66']",11,pending,1,1.5,0,0
-Stratford,primary,NGED,"['11', '66']",11,pending,1,1.66,0,0
-Iron Acton,gsp,NGED,['132'],132,pending,1,99,2,129
-Ryeford,bsp,NGED,['132'],33,pending,1,5,1,5
-Dudbridge,primary,NGED,"['11', '33']",11,pending,1,2,1,2
-Hammerley Down,primary,NGED,"['11', '33']",11,pending,1,3,0,0
-Ironbridge,gsp,NGED,['132'],132,pending,3,640.544,2,705
-Halesfield,primary,NGED,"['11', '33']",11,pending,1,1.2,0,0
-Madeley,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Ketley,primary,NGED,"['11', '132', '33']",11,pending,1,1,0,0
-Newport,primary,NGED,"['11', '33']",11,pending,1,2,0,0
-Snedshill,primary,NGED,"['11', '33']",11,pending,1,1.5,0,0
-Bournville,primary,NGED,"['11', '132']",11,pending,1,1.5,0,0
-Chad Valley,primary,NGED,"['11', '132']",11,pending,1,1.25,0,0
-Highters Heath,primary,NGED,"['11', '132']",11,pending,4,28.199,0,0
-Longbridge,primary,NGED,"['11', '132']",11,pending,2,3.966,0,0
-Rednal,primary,NGED,"['11', '132']",11,pending,2,5.223,0,0
-Elmdon,primary,NGED,"['11', '132']",11,pending,3,16.05,0,0
-Hams Hall South,primary,NGED,"['11', '132']",11,pending,1,1.3,0,0
-Shirley,primary,NGED,"['11', '132']",11,pending,2,4,0,0
-Sutton Coldfield,primary,NGED,"['11', '132']",11,pending,1,1,0,0
-Nechells East,gsp,NGED,['132'],11,pending,3,88,1,60
-Bordesley,primary,NGED,"['11', '132']",11,pending,2,5.64,0,0
-Boughton Road,primary,NGED,"['11', '132']",11,pending,1,2.5,0,0
-Castle Bromwich,bsp,NGED,"['11', '132']",11,pending,1,1.6,0,0
-Castle Bromwich,primary,NGED,"['11', '132']",11,pending,2,3.3,1,1.081
-Cheapside,primary,NGED,"['11', '132']",11,pending,2,7,0,0
-Chester Street,primary,NGED,"['11', '132']",11,pending,4,28,0,0
-Erdington,primary,NGED,['11'],11,pending,3,4.3,0,0
-Nechells West,primary,NGED,"['11', '132', '25']",11,pending,2,4,1,1.03
-Hockley,primary,NGED,"['11', '132']",11,pending,3,5.3,0,0
-Summer Lane,primary,NGED,"['11', '132']",11,pending,1,1.8,0,0
-Black Lake,primary,NGED,"['11', '132']",11,pending,2,3.8,0,0
-Birchfield Lane,primary,NGED,"['11', '132']",11,pending,2,3.698,0,0
-Oldbury B,primary,NGED,['11'],11,pending,1,1,0,0
-Tividale,primary,NGED,"['11', '132']",11,pending,5,40.287,0,0
-Coseley,primary,NGED,"['11', '132']",11,pending,1,1,0,0
-Lye,primary,NGED,['11'],11,pending,1,2.5,1,1.901
-Woodside,primary,NGED,"['11', '132']",11,pending,2,2.94,0,0
-Port Ham,gsp,NGED,['132'],132,pending,0,0,1,15
-Commercial Road,primary,NGED,"['11', '33']",11,pending,1,2,0,0
-Rotol,primary,NGED,"['11', '33']",11,pending,1,1,0,0
-Bishops Cleeve,primary,NGED,"['11', '66']",11,pending,1,1.22,1,9.999
-Cheltenham,primary,NGED,"['11', '132', '66']",11,pending,1,1.5,0,0
-Eastern Avenue,primary,NGED,"['11', '132']",11,pending,4,12.5,0,0
-Marle Hill,primary,NGED,"['11', '132', '66']",11,pending,1,1,0,0
-Tewkesbury Grid,primary,NGED,"['11', '132']",11,pending,2,2.6,0,0
-Rugeley,gsp,NGED,['132'],132,pending,2,625,3,675
-Burntwood,primary,NGED,"['11', '132']",11,pending,1,1.5,0,0
-Lichfield,primary,NGED,"['11', '132']",11,pending,5,8.58,0,0
-Rugeley Town,primary,NGED,"['11', '132']",11,pending,2,3.044,0,0
-Shrewsbury,gsp,NGED,['132'],132,pending,0,0,1,20
-Shrewsbury,bsp,NGED,"['132', '33']",33,pending,3,101,2,115
-Bayston Hill,primary,NGED,"['11', '33']",11,pending,2,2.769,0,0
-Dothill,primary,NGED,"['11', '33']",11,pending,1,2.04,0,0
-Leaton,primary,NGED,"['11', '33']",11,pending,2,19.582,1,18.1
-Malehurst,primary,NGED,"['11', '33']",11,pending,1,3,0,0
-Roushill,primary,NGED,"['11', '33']",11,pending,1,4.5,0,0
-Spring Gardens,primary,NGED,"['11', '33']",11,pending,1,3,0,0
-Bentley,primary,NGED,"['11', '132']",11,pending,4,14.7,0,0
-Wolverhampton,primary,NGED,"['11', '132', '33']",11,pending,2,4.117,0,0
+Bristol International Airport,primary,NGED,[],11.0,pending,1,2,0,0
+Westwick,primary,NGED,[],11.0,pending,3,10,0,0
+East Brent,primary,NGED,[],11.0,pending,1,1.8,0,0
+Weston Central,primary,NGED,[],11.0,pending,1,1.8,0,0
+Avonmouth,bsp,NGED,[],33.0,pending,2,15.5,1,5
+Avonmouth,primary,NGED,[],11.0,pending,2,2.8,1,5.258
+Kingsweston,primary,NGED,[],11.0,pending,3,5.945,0,0
+Easton-In-Gordano,primary,NGED,[],11.0,pending,1,8,0,0
+Portishead Ashlands,primary,NGED,[],11.0,pending,1,1,0,0
+Royal Portbury Dock,primary,NGED,[],11.0,pending,1,7.5,0,0
+Chewton Mendip,primary,NGED,[],11.0,pending,2,2.8,0,0
+Keynsham East,primary,NGED,[],11.0,pending,1,1.5,0,0
+Taunton,gsp,NGED,[],132.0,pending,2,129.9,2,99.9
+Bowhays Cross,primary,NGED,[],11.0,pending,1,1.19,0,0
+Staplegrove,primary,NGED,[],11.0,pending,2,3.413,0,0
+Taunton Local,primary,NGED,[],11.0,pending,1,1.5,0,0
+Wellington Town,primary,NGED,[],11.0,pending,4,6.139,0,0
+Bishops Wood,gsp,NGED,['132.0'],132.0,budget,4,240,17,763.9
+Bromyard,primary,NGED,"['11.0', '66.0']",11.0,budget,1,2.5,0,0
+Ledbury,primary,NGED,"['11.0', '66.0']",11.0,budget,1,1.647,0,0
+Newent,primary,NGED,"['11.0', '66.0']",11.0,budget,2,6,0,0
+Stourport,primary,NGED,"['11.0', '33.0', '66.0', '132.0']",11.0,budget,0,0,2,8
+Upton Warren,bsp,NGED,['132.0'],66.0,budget,1,35,1,35
+Warndon,primary,NGED,"['11.0', '132.0']",11.0,budget,1,1.3,0,0
+Worcester,primary,NGED,"['11.0', '132.0']",11.0,budget,2,5.8,0,0
+Bushbury D,gsp,NGED,['132.0'],132.0,budget,1,30,5,170
+Bushbury B-C,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,2,2.6,0,0
+Bustleholm,gsp,NGED,['132.0'],132.0,budget,2,36,2,80
+Bustleholm,primary,NGED,['11.0'],11.0,budget,2,6.074,2,2.067
+Rushall,primary,NGED,"['11.0', '132.0']",11.0,budget,0,0,2,10
+Smethwick,primary,NGED,"['11.0', '132.0']",11.0,budget,1,3.5,0,0
+Winson Green,primary,NGED,"['11.0', '132.0']",11.0,budget,4,10.45,0,0
+Cellarhead,gsp,NGED,['132.0'],132.0,budget,2,70,18,625
+Boothen,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,1,2,0,0
+Hill Chorlton,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,7.6
+Meaford C,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,1,1.875,0,0
+Stagefields,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,1,2,0,0
+Congleton,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.25,0,0
+Banbury,primary,NGED,"['11.0', '132.0']",11.0,budget,3,10,0,0
+Feckenham,gsp,NGED,"['11.0', '66.0']",66.0,budget,3,140,9,289
+Broadway,primary,NGED,"['11.0', '66.0']",11.0,budget,0,0,1,1.96
+Epwell,primary,NGED,"['11.0', '66.0']",11.0,budget,1,5,1,5
+Evesham,primary,NGED,"['11.0', '66.0']",11.0,budget,2,2.655,0,0
+Long Marston,primary,NGED,"['11.0', '66.0']",11.0,budget,0,0,2,5
+Pershore,primary,NGED,"['11.0', '66.0']",11.0,budget,2,2.665,0,0
+Stratford,primary,NGED,"['11.0', '66.0']",11.0,budget,1,3,0,0
+Iron Acton,gsp,NGED,['132.0'],132.0,budget,3,145,9,320
+Alveston,primary,NGED,"['11.0', '33.0']",11.0,budget,1,5,2,5.51
+Oxbridge,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2.818,0,0
+Clifton,primary,NGED,"['11.0', '33.0']",11.0,budget,8,20.412,0,0
+Hammerley Down,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,4.26
+Ryeford,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,0,0,1,5
+Ironbridge,gsp,NGED,['132.0'],132.0,budget,1,3,6,157
+Halesfield,primary,NGED,"['11.0', '33.0']",11.0,budget,1,2.5,1,1.1
+Madeley,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,5
+Hortonwood,primary,NGED,"['11.0', '132.0']",11.0,budget,1,2.08,0,0
+Donnington,primary,NGED,"['11.0', '33.0']",11.0,budget,1,1.8,1,5
+Ketley,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,0,0,2,10
+Kitwell,gsp,NGED,['132.0'],132.0,budget,1,25,5,170
+Bartley Green,primary,NGED,"['11.0', '132.0']",11.0,budget,1,10,0,0
+Halesowen,primary,NGED,"['11.0', '132.0']",11.0,budget,1,1.2,0,0
+Rednal,primary,NGED,"['11.0', '132.0']",11.0,budget,1,2,0,0
+Lea Marston,gsp,NGED,['132.0'],132.0,budget,2,220,4,160
+Chelmsley Wood,primary,NGED,[],11.0,budget,3,12.505,0,0
+Shirley,primary,NGED,"['11.0', '132.0']",11.0,budget,2,3.15,0,0
+Solihull,primary,NGED,"['11.0', '132.0']",11.0,budget,2,10,0,0
+Nechells East,gsp,NGED,['132.0'],11.0,budget,1,12,0,0
+Boughton Road,primary,NGED,"['11.0', '132.0']",11.0,budget,2,3,0,0
+Erdington,primary,NGED,['11.0'],11.0,budget,1,1,0,0
+Nechells West,primary,NGED,"['11.0', '25.0', '132.0']",11.0,budget,1,2,0,0
+Sparkbrook,primary,NGED,"['11.0', '132.0']",11.0,budget,1,1,0,0
+Oldbury,gsp,NGED,['132.0'],132.0,budget,1,100,0,0
+Birchfield Lane,primary,NGED,"['11.0', '132.0']",11.0,budget,1,2,0,0
+Oldbury B,bsp,NGED,['132.0'],11.0,budget,1,2.3,0,0
+Oldbury B,primary,NGED,['11.0'],11.0,budget,2,12,0,0
+Tividale,primary,NGED,"['11.0', '132.0']",11.0,budget,3,29.2,0,0
+Penn,gsp,NGED,['132.0'],132.0,budget,5,360,15,624.8
+Coseley,primary,NGED,"['11.0', '132.0']",11.0,budget,1,3,1,1.1
+Dudley,primary,NGED,"['11.0', '132.0']",11.0,budget,1,1.932,0,0
+Hinksford,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,1,5.5,0,0
+Lye,primary,NGED,['11.0'],11.0,budget,1,1,0,0
+Wolverhampton West,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,0,0,1,7.6
+Woodside,primary,NGED,"['11.0', '132.0']",11.0,budget,3,5.845,0,0
+Port Ham,gsp,NGED,['132.0'],132.0,budget,5,215,16,621
+Commercial Road,primary,NGED,"['11.0', '33.0']",11.0,budget,2,3.32,0,0
+Tuffley,primary,NGED,"['11.0', '33.0']",11.0,budget,2,10.5,0,0
+Alderton,primary,NGED,"['11.0', '66.0']",11.0,budget,1,1,0,0
+Bishops Cleeve,primary,NGED,"['11.0', '66.0']",11.0,budget,1,1.26,0,0
+Eastern Avenue,primary,NGED,"['11.0', '132.0']",11.0,budget,3,4,0,0
+Montpellier,primary,NGED,"['11.0', '132.0']",11.0,budget,1,12,0,0
+Tewkesbury Grid,primary,NGED,"['11.0', '132.0']",11.0,budget,3,24.36,0,0
+Rugeley,gsp,NGED,['132.0'],132.0,budget,2,110,8,313.9
+Burntwood,primary,NGED,"['11.0', '132.0']",11.0,budget,2,2.7,1,30
+Lichfield,primary,NGED,"['11.0', '132.0']",11.0,budget,1,1.5,0,0
+Rugeley Town,primary,NGED,"['11.0', '132.0']",11.0,budget,1,10.2,0,0
+Shrewsbury,gsp,NGED,['132.0'],132.0,budget,1,50,4,149.9
+Bayston Hill,primary,NGED,"['11.0', '33.0']",11.0,budget,1,4.975,0,0
+Dothill,primary,NGED,"['11.0', '33.0']",11.0,budget,0,0,1,1
+Harlescott,primary,NGED,"['11.0', '33.0']",11.0,budget,1,3,0,0
+Leaton,primary,NGED,"['11.0', '33.0']",11.0,budget,2,2.392,2,7.8
+Roushill,primary,NGED,"['11.0', '33.0']",11.0,budget,1,8,0,0
+Spring Gardens,primary,NGED,"['11.0', '33.0']",11.0,budget,2,4.2,0,0
+Willenhall,gsp,NGED,"['11.0', '132.0']",132.0,budget,1,15,0,0
+Willenhall,primary,NGED,"['11.0', '25.0', '132.0']",11.0,budget,1,1.5,0,0
+Wolverhampton,primary,NGED,"['11.0', '33.0', '132.0']",11.0,budget,7,15.022,0,0
+Bishops Wood,gsp,NGED,['132.0'],132.0,accepted,1,130,1,130
+Hereford Central,primary,NGED,"['11.0', '66.0']",11.0,accepted,1,1.2,0,0
+Leominster,primary,NGED,"['11.0', '66.0']",11.0,accepted,1,1.185,0,0
+Kidderminster,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,2,9.956,0,0
+Ludlow,bsp,NGED,['132.0'],11.0,accepted,0,0,1,40
+Timberdine,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,3,0,0
+Upton Warren,primary,NGED,"['11.0', '66.0', '132.0']",11.0,accepted,1,1.5,0,0
+Warndon,primary,NGED,"['11.0', '132.0']",11.0,accepted,2,3.4,0,0
+Bushbury D,gsp,NGED,['132.0'],132.0,accepted,1,49.9,1,49.9
+Bushbury B-C,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,1,1.5,1,14.3
+Four Ashes,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Stafford,bsp,NGED,"['25.0', '132.0']",11.0,accepted,1,2.026,0,0
+Stafford,primary,NGED,"['11.0', '25.0', '132.0']",11.0,accepted,2,6.287,0,0
+Wednesfield,primary,NGED,"['11.0', '132.0']",11.0,accepted,2,4,0,0
+Bustleholm,primary,NGED,['11.0'],11.0,accepted,1,1.799,0,0
+Kingstanding / Dummy,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,14,0,0
+Ladywood,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,2.1,0,0
+Smethwick,primary,NGED,"['11.0', '132.0']",11.0,accepted,3,6,0,0
+Winson Green,primary,NGED,"['11.0', '132.0']",11.0,accepted,2,2,0,0
+Cellarhead,gsp,NGED,['132.0'],132.0,accepted,3,209.9,3,242.9
+Boothen,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,1,1.997,0,0
+Burslem,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,2,8.8,0,0
+Longton,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,3,4.65,0,0
+Market Drayton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,2.9,0,0
+Leek,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.09,0,0
+Banbury,primary,NGED,"['11.0', '132.0']",11.0,accepted,2,3.9,0,0
+Feckenham,gsp,NGED,"['11.0', '66.0']",66.0,accepted,0,0,2,38
+Ipsley,primary,NGED,"['11.0', '66.0']",11.0,accepted,2,2.731,0,0
+Strensham,primary,NGED,"['11.0', '66.0']",11.0,accepted,1,5,1,5
+Naishcombe Hill,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,4.555,0,0
+Clifton,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,2.5,0,0
+Ryeford,bsp,NGED,['132.0'],33.0,accepted,1,5,1,5
+Camp,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1,0,0
+Javelin Park Efw,primary,NGED,[],33.0,accepted,1,5.9,0,0
+Netherhills,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,2.5,0,0
+Ironbridge,gsp,NGED,['132.0'],132.0,accepted,1,10,1,10
+Halesfield,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.2,0,0
+Ketley,bsp,NGED,['132.0'],11.0,accepted,1,25,1,25
+Bartley Green,bsp,NGED,"['11.0', '132.0']",11.0,accepted,1,1,0,0
+Rednal,bsp,NGED,['132.0'],11.0,accepted,1,10,0,0
+Rednal,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,3.723,0,0
+Selly Oak,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.5,0,0
+Sutton Coldfield,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,7,0,0
+Castle Bromwich,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,2,0,0
+Chester Street,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1,0,0
+Nechells West,primary,NGED,"['11.0', '25.0', '132.0']",11.0,accepted,3,8.01,0,0
+Sparkbrook,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.5,0,0
+Tividale,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,10,0,0
+Penn,gsp,NGED,['132.0'],132.0,accepted,1,99,1,99
+Rotol,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,9,0,0
+Cheltenham,primary,NGED,"['11.0', '66.0', '132.0']",11.0,accepted,1,1,0,0
+Tewkesbury Grid,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.379,0,0
+Rugeley,gsp,NGED,['132.0'],132.0,accepted,1,49.9,1,49.9
+Lichfield,primary,NGED,"['11.0', '132.0']",11.0,accepted,1,1.452,0,0
+Shrewsbury,gsp,NGED,['132.0'],132.0,accepted,2,27,3,47
+Shrewsbury,bsp,NGED,"['33.0', '132.0']",33.0,accepted,1,15,1,35
+Leaton,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,1.482,0,0
+Roushill,primary,NGED,"['11.0', '33.0']",11.0,accepted,2,5.7,0,0
+Spring Gardens,primary,NGED,"['11.0', '33.0']",11.0,accepted,1,3.71,0,0
+Wolverhampton,bsp,NGED,['132.0'],11.0,accepted,1,5,0,0
+Wolverhampton,primary,NGED,"['11.0', '33.0', '132.0']",11.0,accepted,1,1.8,1,2.066
+Bishops Wood,gsp,NGED,['132.0'],132.0,pending,2,149,3,169
+Kidderminster,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,3,21.894,1,3.04
+Bishops Castle,primary,NGED,"['11.0', '33.0']",11.0,pending,1,15,1,15
+Malvern,bsp,NGED,['132.0'],11.0,pending,1,10,0,0
+Malvern,primary,NGED,"['11.0', '132.0']",11.0,pending,1,10.32,0,0
+Timberdine,bsp,NGED,['132.0'],132.0,pending,1,9.77,0,0
+Timberdine,primary,NGED,"['11.0', '132.0']",11.0,pending,4,10.141,0,0
+Upton Warren,primary,NGED,"['11.0', '66.0', '132.0']",11.0,pending,1,2.5,0,0
+Warndon,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.75,0,0
+Worcester,bsp,NGED,['132.0'],11.0,pending,1,1,0,0
+Bushbury D,gsp,NGED,['132.0'],132.0,pending,3,164.3,2,149.3
+Bushbury B-C,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,3,4.5,0,0
+Stafford,primary,NGED,"['11.0', '25.0', '132.0']",11.0,pending,1,5,0,0
+Stafford South,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Wednesfield,primary,NGED,"['11.0', '132.0']",11.0,pending,2,5,0,0
+Bustleholm,gsp,NGED,['132.0'],132.0,pending,1,99.9,1,99.9
+Bustleholm,primary,NGED,['11.0'],11.0,pending,2,2.762,0,0
+Kingstanding / Dummy,primary,NGED,"['11.0', '132.0']",11.0,pending,1,14,0,0
+Ladywood,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.25,0,0
+Perry Barr,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3,0,0
+Rushall,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.8,0,0
+Smethwick,bsp,NGED,"['25.0', '132.0']",11.0,pending,1,7.5,0,0
+Smethwick,primary,NGED,"['11.0', '132.0']",11.0,pending,1,3,0,0
+Walsall,bsp,NGED,"['33.0', '132.0']",33.0,pending,1,7.6,0,0
+Winson Green,primary,NGED,"['11.0', '132.0']",11.0,pending,2,2,0,0
+Cellarhead,gsp,NGED,['132.0'],132.0,pending,1,22,3,82
+Boothen,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,2,3.997,0,0
+Burslem,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,1,2,0,0
+Cauldon,primary,NGED,[],11.0,pending,0,0,1,8
+Longton,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,2,2.9,0,0
+Stagefields,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,2,3.25,0,0
+Banbury,primary,NGED,"['11.0', '132.0']",11.0,pending,5,11.7,0,0
+Feckenham,gsp,NGED,"['11.0', '66.0']",66.0,pending,1,49.9,3,84.9
+Feckenham,bsp,NGED,"['11.0', '66.0']",11.0,pending,1,8,0,0
+Bloxham,primary,NGED,"['11.0', '66.0']",11.0,pending,3,6.123,1,1.337
+Ipsley,primary,NGED,"['11.0', '66.0']",11.0,pending,1,1.5,0,0
+Pershore,primary,NGED,"['11.0', '66.0']",11.0,pending,1,1,0,0
+Redditch South,primary,NGED,"['11.0', '66.0']",11.0,pending,1,1.5,0,0
+Stratford,primary,NGED,"['11.0', '66.0']",11.0,pending,1,1.66,0,0
+Iron Acton,gsp,NGED,['132.0'],132.0,pending,1,99,2,129
+Ryeford,bsp,NGED,['132.0'],33.0,pending,1,5,1,5
+Dudbridge,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,1,2
+Hammerley Down,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3,0,0
+Ironbridge,gsp,NGED,['132.0'],132.0,pending,3,640.544,2,705
+Halesfield,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.2,0,0
+Madeley,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Ketley,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,1,1,0,0
+Newport,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,0,0
+Snedshill,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1.5,0,0
+Bournville,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.5,0,0
+Chad Valley,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.25,0,0
+Highters Heath,primary,NGED,"['11.0', '132.0']",11.0,pending,4,28.199,0,0
+Longbridge,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3.966,0,0
+Rednal,primary,NGED,"['11.0', '132.0']",11.0,pending,2,5.223,0,0
+Elmdon,primary,NGED,"['11.0', '132.0']",11.0,pending,3,16.05,0,0
+Hams Hall South,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.3,0,0
+Shirley,primary,NGED,"['11.0', '132.0']",11.0,pending,2,4,0,0
+Sutton Coldfield,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1,0,0
+Nechells East,gsp,NGED,['132.0'],11.0,pending,3,88,1,60
+Bordesley,primary,NGED,"['11.0', '132.0']",11.0,pending,2,5.64,0,0
+Boughton Road,primary,NGED,"['11.0', '132.0']",11.0,pending,1,2.5,0,0
+Castle Bromwich,bsp,NGED,"['11.0', '132.0']",11.0,pending,1,1.6,0,0
+Castle Bromwich,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3.3,1,1.081
+Cheapside,primary,NGED,"['11.0', '132.0']",11.0,pending,2,7,0,0
+Chester Street,primary,NGED,"['11.0', '132.0']",11.0,pending,4,28,0,0
+Erdington,primary,NGED,['11.0'],11.0,pending,3,4.3,0,0
+Nechells West,primary,NGED,"['11.0', '25.0', '132.0']",11.0,pending,2,4,1,1.03
+Hockley,primary,NGED,"['11.0', '132.0']",11.0,pending,3,5.3,0,0
+Summer Lane,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.8,0,0
+Black Lake,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3.8,0,0
+Birchfield Lane,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3.698,0,0
+Oldbury B,primary,NGED,['11.0'],11.0,pending,1,1,0,0
+Tividale,primary,NGED,"['11.0', '132.0']",11.0,pending,5,40.287,0,0
+Coseley,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1,0,0
+Lye,primary,NGED,['11.0'],11.0,pending,1,2.5,1,1.901
+Woodside,primary,NGED,"['11.0', '132.0']",11.0,pending,2,2.94,0,0
+Port Ham,gsp,NGED,['132.0'],132.0,pending,0,0,1,15
+Commercial Road,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2,0,0
+Rotol,primary,NGED,"['11.0', '33.0']",11.0,pending,1,1,0,0
+Bishops Cleeve,primary,NGED,"['11.0', '66.0']",11.0,pending,1,1.22,1,9.999
+Cheltenham,primary,NGED,"['11.0', '66.0', '132.0']",11.0,pending,1,1.5,0,0
+Eastern Avenue,primary,NGED,"['11.0', '132.0']",11.0,pending,4,12.5,0,0
+Marle Hill,primary,NGED,"['11.0', '66.0', '132.0']",11.0,pending,1,1,0,0
+Tewkesbury Grid,primary,NGED,"['11.0', '132.0']",11.0,pending,2,2.6,0,0
+Rugeley,gsp,NGED,['132.0'],132.0,pending,2,625,3,675
+Burntwood,primary,NGED,"['11.0', '132.0']",11.0,pending,1,1.5,0,0
+Lichfield,primary,NGED,"['11.0', '132.0']",11.0,pending,5,8.58,0,0
+Rugeley Town,primary,NGED,"['11.0', '132.0']",11.0,pending,2,3.044,0,0
+Shrewsbury,gsp,NGED,['132.0'],132.0,pending,0,0,1,20
+Shrewsbury,bsp,NGED,"['33.0', '132.0']",33.0,pending,3,101,2,115
+Bayston Hill,primary,NGED,"['11.0', '33.0']",11.0,pending,2,2.769,0,0
+Dothill,primary,NGED,"['11.0', '33.0']",11.0,pending,1,2.04,0,0
+Leaton,primary,NGED,"['11.0', '33.0']",11.0,pending,2,19.582,1,18.1
+Malehurst,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3,0,0
+Roushill,primary,NGED,"['11.0', '33.0']",11.0,pending,1,4.5,0,0
+Spring Gardens,primary,NGED,"['11.0', '33.0']",11.0,pending,1,3,0,0
+Bentley,primary,NGED,"['11.0', '132.0']",11.0,pending,4,14.7,0,0
+Wolverhampton,primary,NGED,"['11.0', '33.0', '132.0']",11.0,pending,2,4.117,0,0

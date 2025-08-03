@@ -19,7 +19,6 @@ from location_input.models.substations import (
 from location_input.models.new_connections import (
     NewConnection,
     ConnectionStatus,
-    ProposedConnectionVoltageLevel,
     ReportingPeriod,
 )
 
@@ -68,11 +67,11 @@ class Command(BaseCommand):
     def process_row(self, row):
 
         #finding variables
-        ss_name = normalise_name_and_extract_voltage_info(row['name'])[0]
+        ss_name = row['name']
         ss_type = row['type']
         ss_dno = row['dno']
         ss_voltages = ast.literal_eval(row['ss_voltages'])
-        ss_proposed_voltage = row['proposed_voltage']
+        connection_voltage_level = row['proposed_voltage']
         ss_connection_status = row['connection_status']
         ss_total_demand_number = row['total_demand_number']
         ss_total_demand_capacity = row['total_demand_capacity_mw']
@@ -81,7 +80,9 @@ class Command(BaseCommand):
 
         #finding object instances 
         connection_status_obj = ConnectionStatus.objects.get(status=ss_connection_status)
-        proposed_voltage_level_obj = ProposedConnectionVoltageLevel.objects.get(level_kv=ss_proposed_voltage)
+
+        print(f'connection_voltage_level type: {connection_voltage_level}')
+        proposed_voltage_level_obj = ConnectionVoltageLevel.objects.get(level_kv=connection_voltage_level)
         
         reporting_period_obj = ReportingPeriod.objects.get(start_date=date(2025, 1, 1), end_date=date(2025, 5, 31))
         dno_group_obj = DNOGroup.objects.get(abbr=ss_dno)
@@ -108,13 +109,19 @@ class Command(BaseCommand):
         model_class = substation_model_map.get(ss_type)[1]
         new_connection_ss_attribute = substation_model_map.get(ss_type)[0] 
     
-        if model_class:
+        #finding substation obj - challenge is that there may be many be many so we have to isolate by voltage lvl
+        try:
             substation_obj = model_class.objects.get(
                 name=ss_name,
                 dno_group=dno_group_obj,
             )
-            connection_voltage_levels_objs = ConnectionVoltageLevel.objects.filter(level_kv__in=ss_voltages)
-            substation_obj.voltage_kv.set(connection_voltage_levels_objs)
+        except:
+            substations_with_ss_name = model_class.objects.filter(name=ss_name)
+            for candidate_ss in substations_with_ss_name:
+                candidate_ss_voltages_qs = candidate_ss.voltage_kv.order_by('level_kv').values_list('level_kv', flat=True)
+                candidate_ss_voltages_list = list(candidate_ss_voltages_qs)
+                if candidate_ss_voltages_list == ss_voltages:
+                    substation_obj = candidate_ss
 
         setattr(new_connection, new_connection_ss_attribute, substation_obj)
 

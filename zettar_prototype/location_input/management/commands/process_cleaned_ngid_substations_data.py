@@ -58,7 +58,7 @@ class Command(BaseCommand):
         PrimarySubstation.objects.filter(dno_group=dno_group).delete()
         BSPSubstation.objects.filter(dno_group=dno_group).delete()
         GSPSubstation.objects.filter(dno_group=dno_group).delete()
-        self.stdout.write("Previous cleaned NGED substation data cleared")
+        self.stdout.write("Previous NGED substation data cleared")
 
     def process_row(self, row):
 

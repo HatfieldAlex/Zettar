@@ -102,7 +102,10 @@ class Command(BaseCommand):
         ss_type_raw = next((k for k in type_map if row.get(k, '-') != '-'), None)
 
         ss_name, ss_voltages = normalise_name_and_extract_voltage_info(row[ss_type_raw])
-        ss_proposed_voltage = row['Proposed Connection Voltage (kV)']
+        ss_proposed_voltage = f'{float(row['Proposed Connection Voltage (kV)']):.1f}'
+        
+        print(f'ss_proposed_voltage, type: {ss_proposed_voltage}, {type(ss_proposed_voltage)}')
+
         ss_type = type_map[ss_type_raw]
         ss_dno = 'NGED'
         ss_connection_status = connection_status_map[row['Connection Status']]
@@ -125,3 +128,5 @@ class Command(BaseCommand):
         }
 
         return cleaned_row
+    
+    def resolve_edge_cases(self, cleaned_application_ss_name):

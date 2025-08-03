@@ -5,13 +5,6 @@ from .shared_fields import ConnectionVoltageLevel
 from location_input.utils.constants import VOLTAGE_CHOICES
 
 
-class ProposedConnectionVoltageLevel(models.Model):
-    level_kv = models.DecimalField(
-        max_digits=5,
-        decimal_places=1,
-        choices=VOLTAGE_CHOICES,
-    )
-
 class ConnectionStatus(models.Model):
     STATUS_CHOICES = [
         ('budget', 'Budget Estimate Provided'),
@@ -44,7 +37,7 @@ class NewConnection(models.Model):
     )
 
     connection_voltage_level = models.ForeignKey(
-        ProposedConnectionVoltageLevel,
+        ConnectionVoltageLevel,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,
