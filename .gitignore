@@ -1,1 +1,6 @@
 zettar_prototype/data/clean/
+*.py[cod]
+__pycache__/
+env
+node_modules/
+staticfiles/

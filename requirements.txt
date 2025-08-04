@@ -32,6 +32,7 @@ poetry==2.1.2
 poetry-core==2.1.2
 psycopg2-binary==2.9.10
 pyproject_hooks==1.2.0
+python-decouple==3.8
 pywin32-ctypes==0.2.3
 RapidFuzz==3.12.2
 requests==2.32.3
