@@ -1,25 +1,42 @@
-console.log('💥 Global store script loaded');
+console.log('Global store script loaded');
+
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
 document.addEventListener('alpine:init', () => {
 
     Alpine.store('app', {
-        nearestSubstationName: 'Islington',
+        nearestSubstationName: '',
         demandApplicationSum: 0,
         demandCapacityMW: 0,
         generationApplicationSum: 0,
         generationCapacityMW: 0,
+        showInsights: false,
 
         generateInsights() {
-            console.log('🚀 generateInsights() called');
-            console.log('📦 Sending to Django:', {
+            console.log('generateInsights() called');
+            console.log('Sending to Django:', {
                 connection_type: this.connectionType,
                 location: this.location
             });
 
-            fetch('/get-estimate/', {
+            fetch('/get_nearby_application_data/', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken') 
                 },
                 body: JSON.stringify({
                     connection_type: this.connectionType,
@@ -39,9 +56,7 @@ document.addEventListener('alpine:init', () => {
                 this.demandCapacityMW = data.demand_capacity_mw;
                 this.generationApplicationSum = data.generation_application_sum;
                 this.generationCapacityMW = data.generation_capacity_mw;
-
-                console.log('✅ Alpine store updated with estimate data:');
-
+                this.showInsights = true;
 
                 Alpine.nextTick(() => {
                     setTimeout(() => {
@@ -49,10 +64,9 @@ document.addEventListener('alpine:init', () => {
                     }, 200); 
                 });
                             
-
             })
             .catch(error => {
-                console.error('❌ Error fetching estimate:', error);
+                console.error('Error fetching estimate:', error);
             });
         }
     })

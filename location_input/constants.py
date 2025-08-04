@@ -13,3 +13,5 @@ VOLTAGE_LEVELS = [
 VOLTAGE_CHOICES = [
     (v, f"{v} kV") for v in VOLTAGE_LEVELS
 ] 
+
+APPLICATION_STATUS_FIELDS = ['pending', 'budget', 'accepted']

@@ -1,16 +1,21 @@
-# Data: NGED Network Opportunity Map Headroom
+# ⚡ Zettar
 
-This folder contains the source data used to populate the `substations` table in the database.
+**Instantly Access Grid Application Insights**  
+Zettar allows users to drop a pin on a map and instantly view connection application data from nearby substations, based on live DNO datasets.
 
-## 📥 Source
+## 🚀 Features
 
-- **Dataset**: Network Opportunity Map Headroom  
-- **Provider**: National Grid Electricity Distribution (NGED)  
-- **Website**: https://www.nationalgrid.co.uk/network-opportunity-map-application/  
-- **Download Link (CSV)**:  
-  https://connecteddata.nationalgrid.co.uk/dataset/c72bb09a-56d3-4863-bf68-0c83e4dc29db/resource/d1963858-d451-4794-a6bf-123fad0f0b3a/download/network_opportunity_map_headroom.csv
+- 🔍 **Substation Search by Location & Type**  
+  Users can select a location and a connection type (Primary, BSP, or GSP) to find the nearest relevant substation.
 
-## 🗂️ Files
+- 📊 **Instant Connection Insights**  
+  Displays up-to-date statistics on generation and demand applications at substations, including capacity and applicant count.
 
-- `substations.csv` – A raw export of the Network Opportunity Map Headroom dataset  
-  (with headers, as downloaded on May 2, 2025)
+- 🗺️ **Interactive Mapping**  
+  Simple, map-based UI allows for quick, intuitive selection of a site location.
+
+## 🛠 Tech Stack
+
+- **Backend:** Django
+- **Frontend:** Alpine.js, Wagtail
+- **Data Source:** Datasets from the DNO 

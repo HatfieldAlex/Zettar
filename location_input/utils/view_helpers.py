@@ -1,9 +1,13 @@
-import requests
+from collections import defaultdict
+import logging
+
 from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from django.shortcuts import render
+
 from ..models.substations import PrimarySubstation, BSPSubstation, GSPSubstation
-import logging
+from ..constants import APPLICATION_STATUS_FIELDS 
+
 
 def find_nearest_substation_obj(geolocation, substation_type):
     """
@@ -53,5 +57,33 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
     return nearest_substation_obj
 
+
+def get_substation_object_connection_data(substation_obj):
+    connection_user_info = defaultdict(int)
+    
+    for obj in substation_obj.new_connections.all():
+        demand_count = obj.demand_count or 0
+        demand_capacity = obj.total_demand_capacity_mw or 0
+        generation_count = obj.generation_count or 0
+        generation_capacity = obj.total_generation_capacity_mw or 0
+
+        connection_user_info['demand_application_sum'] += demand_count
+        connection_user_info['demand_capacity_mw'] += demand_capacity
+        connection_user_info['generation_application_sum'] += generation_count
+        connection_user_info['generation_capacity_mw'] += generation_capacity
+
+        connection_status = obj.connection_status
+
+        if connection_status in APPLICATION_STATUS_FIELDS:
+            connection_user_info[f'demand_{connection_status}_status_sum'] += demand_count
+            connection_user_info[f'generation_{connection_status}_status_sum'] += generation_count
+
+        
+    connection_summary = {
+            'nearest_substation_name': substation_obj.name,
+            **dict(connection_user_info)  
+        }
+            
+    return connection_summary
 
 
