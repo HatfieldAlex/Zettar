@@ -1,8 +1,8 @@
 import json
 import logging
 
-
 from django.contrib.gis.db.models.functions import Distance
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.gis.geos import Point
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -12,7 +12,7 @@ from .models.substations import GSPSubstation, BSPSubstation, PrimarySubstation
 from .models.new_connections import NewConnection
 from .utils.view_helpers import find_nearest_substation_obj, get_substation_object_connection_data
 
-#get_estimate
+@ensure_csrf_cookie
 def get_nearby_application_data(request):
     """
     Process POST requests to estimate connection statistics near a location.

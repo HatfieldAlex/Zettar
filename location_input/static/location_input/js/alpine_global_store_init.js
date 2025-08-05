@@ -17,6 +17,7 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.store('app', {
         nearestSubstationName: '',
+        nearestSubstationType: '',
         demandApplicationSum: 0,
         demandCapacityMW: 0,
         generationApplicationSum: 0,
@@ -50,6 +51,7 @@ document.addEventListener('alpine:init', () => {
             .then(data => {
                 console.log('💰 Connection application data received:', data);
                 this.nearestSubstationName = data.nearest_substation_name;
+                this.nearestSubstationType = data.nearest_substation_type;
                 this.demandApplicationSum = data.demand_application_sum;
                 this.demandCapacityMW = data.demand_capacity_mw;
                 this.generationApplicationSum = data.generation_application_sum;
@@ -67,6 +69,7 @@ document.addEventListener('alpine:init', () => {
                 console.error('Error fetching estimate:', error);
             });
         }
+        
     })
     
 });

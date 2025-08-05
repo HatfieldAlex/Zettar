@@ -1,12 +1,14 @@
 from collections import defaultdict
 import logging
+from decimal import Decimal, ROUND_DOWN
 
 from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from django.shortcuts import render
 
 from ..models.substations import PrimarySubstation, BSPSubstation, GSPSubstation
-from ..constants import APPLICATION_STATUS_FIELDS 
+from ..constants import APPLICATION_STATUS_FIELDS
+from ..mappings import substation_type_abbr_to_model, substation_type_model_to_display_name
 
 
 def find_nearest_substation_obj(geolocation, substation_type):
@@ -36,13 +38,7 @@ def find_nearest_substation_obj(geolocation, substation_type):
     if substation_type not in {'primary', 'bsp', 'gsp'}:
         raise ValueError(f"Invalid substation_type: {substation_type}")
 
-    type_input_to_model = {
-        'gsp': GSPSubstation,
-        'bsp': BSPSubstation, 
-        'primary': PrimarySubstation, 
-    }
-
-    substation_class = type_input_to_model[f'{substation_type}']
+    substation_class = substation_type_abbr_to_model[f'{substation_type}']
 
     nearest_substation_obj = (
         substation_class.objects
@@ -78,9 +74,17 @@ def get_substation_object_connection_data(substation_obj):
             connection_user_info[f'demand_{connection_status}_status_sum'] += demand_count
             connection_user_info[f'generation_{connection_status}_status_sum'] += generation_count
 
+    # Convert summed capacities to Decimal and truncate decimals
+    demand_capacity_total = Decimal(connection_user_info['demand_capacity_mw']).quantize(Decimal('1'), rounding=ROUND_DOWN)
+    generation_capacity_total = Decimal(connection_user_info['generation_capacity_mw']).quantize(Decimal('1'), rounding=ROUND_DOWN)
+
+    # Update the dict with truncated values
+    connection_user_info['demand_capacity_mw'] = demand_capacity_total
+    connection_user_info['generation_capacity_mw'] = generation_capacity_total
         
     connection_summary = {
             'nearest_substation_name': substation_obj.name,
+            'nearest_substation_type': substation_type_model_to_display_name.get(type(substation_obj), None),
             **dict(connection_user_info)  
         }
             

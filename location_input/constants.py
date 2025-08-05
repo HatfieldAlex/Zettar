@@ -15,3 +15,4 @@ VOLTAGE_CHOICES = [
 ] 
 
 APPLICATION_STATUS_FIELDS = ['pending', 'budget', 'accepted']
+

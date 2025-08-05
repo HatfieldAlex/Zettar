@@ -10,6 +10,14 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 ALLOWED_HOSTS = []
 
+if ENV == "local":
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+else:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+
+
 
 if ENV == "local":
     DB_NAME = config("LOCAL_DB_NAME")
