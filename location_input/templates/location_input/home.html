@@ -4,6 +4,13 @@
 <head>
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="{% static 'location_input/js/alpine_global_store_init.js' %}"></script>
+    <script>
+        window.initMap = function() {
+            if (window.actualInitMap) {
+            window.actualInitMap();
+            }
+        };
+    </script>
     <script type="module" src="{% static 'location_input/js/map_script.js' %}" defer></script>
 
     <meta charset="UTF-8">
@@ -33,10 +40,13 @@
   
             <div class="w-1/3 h-full flex flex-col gap-6">
                 <div class="bg-white rounded-2xl shadow p-4">
-                    <h2 class="text-xl font-semibold mb-2">Instantly Access Grid Application Insights</h2>
+                    <h2 class="text-xl font-semibold mb-2">Instant Grid Application Insights</h2>
                     <p class="text-gray-700">
-                        With Zettar, just drop a pin on your site, choose your substation type, and instantly see up-to-date data on existing grid connection applications at the nearest substations. Clear, fast, and hassle-free.
+                        With Zettar, just drop a pin on your site, choose your substation type, and instantly see up-to-date data on existing grid connection applications at the nearest substations. 
                     </p>
+                    <div class="mt-4 p-3 rounded border-l-4 border-yellow-500 bg-yellow-50 text-yellow-800 font-mono text-xs">
+                        ⚠️ Zettar currently only covers the South West, West Midlands, South Wales, and East Midlands regions.
+                    </div>
                 </div>
 
 
@@ -65,7 +75,7 @@
                 <div class="bg-white rounded-2xl shadow p-4 space-y-2">
                     <h2 class="text-xl font-semibold">2. Select a Location</h2>
                     <p class="text-gray-700">
-                        Click anywhere on the map to drop a pin at your desired site location. Zettar will automatically find the nearest substation that matches your selected type.
+                        Click the map to drop a pin at your site. Zettar will then find the nearest matching connection automatically.
                     </p>
                 </div>
 

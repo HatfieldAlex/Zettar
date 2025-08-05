@@ -1,5 +1,3 @@
-console.log('Global store script loaded');
-
 function getCookie(name) {
     let cookieValue = null;
     if (document.cookie && document.cookie !== '') {
