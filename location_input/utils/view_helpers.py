@@ -56,20 +56,31 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
 def get_substation_object_connection_data(substation_obj):
     connection_user_info = defaultdict(int)
+
+    # connection_status_freq = {
+    #     'demand_pending': 0,
+    #     'demand_budget': 0,
+    #     'demand_accepted': 0,
+    #     'generation_pending': 0,
+    #     'generation_budget': 0,
+    #     'generation_accepted': 0,
+    # }
     
     for obj in substation_obj.new_connections.all():
+
         demand_count = obj.demand_count or 0
         demand_capacity = obj.total_demand_capacity_mw or 0
-        generation_count = obj.generation_count or 0
-        generation_capacity = obj.total_generation_capacity_mw or 0
-
         connection_user_info['demand_application_sum'] += demand_count
         connection_user_info['demand_capacity_mw'] += demand_capacity
+        # connection_status_freq[f'demand_{obj.status}'] += obj.demand_count
+
+        generation_count = obj.generation_count or 0
+        generation_capacity = obj.total_generation_capacity_mw or 0
         connection_user_info['generation_application_sum'] += generation_count
         connection_user_info['generation_capacity_mw'] += generation_capacity
+        # connection_status_freq[f'generation_{obj.status}'] += obj.generation_count
 
-        connection_status = obj.connection_status
-
+        connection_status = obj.connection_status.status 
         if connection_status in APPLICATION_STATUS_FIELDS:
             connection_user_info[f'demand_{connection_status}_status_sum'] += demand_count
             connection_user_info[f'generation_{connection_status}_status_sum'] += generation_count

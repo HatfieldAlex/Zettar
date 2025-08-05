@@ -37,6 +37,7 @@ def get_nearby_application_data(request):
             geolocation = Point(data['location']['lat'], data['location']['lng'], srid=4326)
             nearest_substation_obj = find_nearest_substation_obj(geolocation, connection_type)
             connection_summary = get_substation_object_connection_data(nearest_substation_obj)
+            print(f'connection_summary: {connection_summary}')
             return JsonResponse(connection_summary)
         except json.JSONDecodeError:
             return JsonResponse({'status': 'error', 'message': 'Invalid JSON'}, status=400)

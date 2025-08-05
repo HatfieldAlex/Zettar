@@ -23,6 +23,12 @@ document.addEventListener('alpine:init', () => {
         generationApplicationSum: 0,
         generationCapacityMW: 0,
         showInsights: false,
+        demandBudgetStatusSum: 0,
+        generationBudgetStatusSum: 0,
+        demandAcceptedStatusSum: 0,
+        generationAcceptedStatusSum: 0,
+        demandPendingStatusSum: 0,
+        generationPendingStatusSum: 0,
 
         generateInsights() {
             console.log('generateInsights() called');
@@ -57,6 +63,13 @@ document.addEventListener('alpine:init', () => {
                 this.generationApplicationSum = data.generation_application_sum;
                 this.generationCapacityMW = data.generation_capacity_mw;
                 this.showInsights = true;
+
+                this.demandBudgetStatusSum = data.demand_budget_status_sum;
+                this.generationBudgetStatusSum = data.generation_budget_status_sum;
+                this.demandAcceptedStatusSum = data.demand_accepted_status_sum;
+                this.generationAcceptedStatusSum = data.generation_accepted_status_sum;
+                this.demandPendingStatusSum = data.demand_pending_status_sum;
+                this.generationPendingStatusSum = data.generation_pending_status_sum;
 
                 Alpine.nextTick(() => {
                     setTimeout(() => {

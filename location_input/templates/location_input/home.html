@@ -127,8 +127,12 @@
                     <template x-if="$store.app.demandApplicationSum">
                         <div>
                             <p>
-                                🔌 <strong x-text="$store.app.demandApplicationSum"></strong> demand applications requesting 
-                                <strong x-text="$store.app.demandCapacityMW + ' MW'"></strong>, with X budget estimates, Y pending offers, and Z accepted.
+                                🔌 
+                                <strong x-text="$store.app.demandApplicationSum"></strong> demand applications requesting 
+                                <strong x-text="$store.app.demandCapacityMW + ' MW'"></strong>:
+                                <span x-text="$store.app.demandBudgetStatusSum"></span>  with budget estimates, 
+                                <span x-text="$store.app.demandPendingStatusSum"></span> in pending stage, and 
+                                <span x-text="$store.app.demandAcceptedStatusSum"></span> accepted.
                             </p>
                         </div>
                     </template>
@@ -142,10 +146,12 @@
                     <template x-if="$store.app.generationApplicationSum">
                         <div>
                             <p>
-                                ⚡ <strong x-text="$store.app.generationApplicationSum"></strong> generation applications proposing 
-                                <strong x-text="$store.app.generationCapacityMW + ' MW'"></strong>, with X budget estimates, Y pending offers, and Z accepted.
-
-
+                                ⚡
+                                <strong x-text="$store.app.generationApplicationSum"></strong> generation applications proposing 
+                                <strong x-text="$store.app.generationCapacityMW + ' MW'"></strong>:
+                                <span x-text="$store.app.generationBudgetStatusSum"></span> with budget estimates, 
+                                <span x-text="$store.app.generationPendingStatusSum"></span> in pending stage, and 
+                                <span x-text="$store.app.generationAcceptedStatusSum"></span> accepted.
                             </p>
                         </div>
                     </template>
