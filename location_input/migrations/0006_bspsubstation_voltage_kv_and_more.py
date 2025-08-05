@@ -6,18 +6,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0005_substationvoltagelevel_gspsubstation_voltage_kv'),
+        ("location_input", "0005_substationvoltagelevel_gspsubstation_voltage_kv"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='bspsubstation',
-            name='voltage_kv',
-            field=models.ManyToManyField(blank=True, related_name='bsp_substations', to='location_input.substationvoltagelevel'),
+            model_name="bspsubstation",
+            name="voltage_kv",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="bsp_substations",
+                to="location_input.substationvoltagelevel",
+            ),
         ),
         migrations.AddField(
-            model_name='primarysubstation',
-            name='voltage_kv',
-            field=models.ManyToManyField(blank=True, related_name='primary_substations', to='location_input.substationvoltagelevel'),
+            model_name="primarysubstation",
+            name="voltage_kv",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="primary_substations",
+                to="location_input.substationvoltagelevel",
+            ),
         ),
     ]

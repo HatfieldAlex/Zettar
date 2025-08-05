@@ -7,13 +7,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0012_alter_connectionvoltagelevel_level_kv'),
+        ("location_input", "0012_alter_connectionvoltagelevel_level_kv"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='proposedconnectionvoltagelevel',
-            name='level_kv',
-            field=models.DecimalField(choices=[(Decimal('6.6'), '6.6 kV'), (Decimal('11'), '11 kV'), (Decimal('25'), '25 kV'), (Decimal('33'), '33 kV'), (Decimal('66'), '66 kV'), (Decimal('132'), '132 kV'), (Decimal('275'), '275 kV'), (Decimal('400'), '400 kV')], decimal_places=1, max_digits=5),
+            model_name="proposedconnectionvoltagelevel",
+            name="level_kv",
+            field=models.DecimalField(
+                choices=[
+                    (Decimal("6.6"), "6.6 kV"),
+                    (Decimal("11"), "11 kV"),
+                    (Decimal("25"), "25 kV"),
+                    (Decimal("33"), "33 kV"),
+                    (Decimal("66"), "66 kV"),
+                    (Decimal("132"), "132 kV"),
+                    (Decimal("275"), "275 kV"),
+                    (Decimal("400"), "400 kV"),
+                ],
+                decimal_places=1,
+                max_digits=5,
+            ),
         ),
     ]

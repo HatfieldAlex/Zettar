@@ -7,13 +7,19 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0003_remove_dnogroup_name_dnogroup_abbr'),
+        ("location_input", "0003_remove_dnogroup_name_dnogroup_abbr"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='newconnection',
-            name='dno_group',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='new_connections', to='location_input.dnogroup'),
+            model_name="newconnection",
+            name="dno_group",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="new_connections",
+                to="location_input.dnogroup",
+            ),
         ),
     ]

@@ -7,16 +7,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0013_alter_proposedconnectionvoltagelevel_level_kv'),
+        ("location_input", "0013_alter_proposedconnectionvoltagelevel_level_kv"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='newconnection',
-            name='connection_voltage_level',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.connectionvoltagelevel'),
+            model_name="newconnection",
+            name="connection_voltage_level",
+            field=models.ForeignKey(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="new_connections",
+                to="location_input.connectionvoltagelevel",
+            ),
         ),
         migrations.DeleteModel(
-            name='ProposedConnectionVoltageLevel',
+            name="ProposedConnectionVoltageLevel",
         ),
     ]

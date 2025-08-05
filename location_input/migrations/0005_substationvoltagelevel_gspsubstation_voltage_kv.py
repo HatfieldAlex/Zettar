@@ -6,20 +6,32 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0004_newconnection_dno_group'),
+        ("location_input", "0004_newconnection_dno_group"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='SubstationVoltageLevel',
+            name="SubstationVoltageLevel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('voltage_kv', models.DecimalField(decimal_places=2, max_digits=6)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("voltage_kv", models.DecimalField(decimal_places=2, max_digits=6)),
             ],
         ),
         migrations.AddField(
-            model_name='gspsubstation',
-            name='voltage_kv',
-            field=models.ManyToManyField(blank=True, related_name='gsp_substations', to='location_input.substationvoltagelevel'),
+            model_name="gspsubstation",
+            name="voltage_kv",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="gsp_substations",
+                to="location_input.substationvoltagelevel",
+            ),
         ),
     ]

@@ -7,24 +7,23 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         groups = [
-            ('UKPN', 'UK Power Networks'),
-            ('NGED', 'National Grid Electricity Distribution'),
-            ('SPEN', 'SP Energy Networks'),
-            ('NP', 'Northern Powergrid'),
-            ('ENW', 'Electricity North West'),
-            ('SSEN', 'Scottish and Southern Electricity Networks'),
+            ("UKPN", "UK Power Networks"),
+            ("NGED", "National Grid Electricity Distribution"),
+            ("SPEN", "SP Energy Networks"),
+            ("NP", "Northern Powergrid"),
+            ("ENW", "Electricity North West"),
+            ("SSEN", "Scottish and Southern Electricity Networks"),
         ]
 
         created_count = 0
         for abbr, _ in groups:  # Ignoring name for now since the model only has 'abbr'
-            obj, created = DNOGroup.objects.get_or_create(
-                abbr=abbr,
-                defaults={}
-            )
+            obj, created = DNOGroup.objects.get_or_create(abbr=abbr, defaults={})
             if created:
                 self.stdout.write(self.style.SUCCESS(f"Created: {abbr}"))
                 created_count += 1
             else:
                 self.stdout.write(f"Exists: {abbr}")
 
-        self.stdout.write(self.style.SUCCESS(f"Done. {created_count} new DNOGroup(s) added."))
+        self.stdout.write(
+            self.style.SUCCESS(f"Done. {created_count} new DNOGroup(s) added.")
+        )

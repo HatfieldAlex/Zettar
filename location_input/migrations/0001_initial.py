@@ -9,83 +9,282 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='ConnectionStatus',
+            name="ConnectionStatus",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('status', models.CharField(choices=[('budget', 'Budget Estimate Provided'), ('pending', 'Connection Offer – Pending Acceptance'), ('accepted', 'Connection Offer – Accepted')], max_length=20)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[
+                            ("budget", "Budget Estimate Provided"),
+                            ("pending", "Connection Offer – Pending Acceptance"),
+                            ("accepted", "Connection Offer – Accepted"),
+                        ],
+                        max_length=20,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='DNOGroup',
+            name="DNOGroup",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('abbreviation', models.CharField(max_length=10, unique=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("abbreviation", models.CharField(max_length=10, unique=True)),
             ],
         ),
         migrations.CreateModel(
-            name='ProposedConnectionVoltageLevel',
+            name="ProposedConnectionVoltageLevel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('level_kv', models.DecimalField(choices=[(6.6, '6.6 kV'), (11.0, '11 kV'), (33.0, '33 kV'), (66.0, '66 kV'), (132.0, '132 kV')], decimal_places=1, max_digits=5)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "level_kv",
+                    models.DecimalField(
+                        choices=[
+                            (6.6, "6.6 kV"),
+                            (11.0, "11 kV"),
+                            (33.0, "33 kV"),
+                            (66.0, "66 kV"),
+                            (132.0, "132 kV"),
+                        ],
+                        decimal_places=1,
+                        max_digits=5,
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='BSPSubstation',
+            name="BSPSubstation",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('geolocation', django.contrib.gis.db.models.fields.PointField(blank=True, null=True, srid=4326)),
-                ('dno_group', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='bsp_substations', to='location_input.dnogroup')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                (
+                    "geolocation",
+                    django.contrib.gis.db.models.fields.PointField(
+                        blank=True, null=True, srid=4326
+                    ),
+                ),
+                (
+                    "dno_group",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="bsp_substations",
+                        to="location_input.dnogroup",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='GSPSubstation',
+            name="GSPSubstation",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('geolocation', django.contrib.gis.db.models.fields.PointField(blank=True, null=True, srid=4326)),
-                ('dno_group', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='gsp_substations', to='location_input.dnogroup')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                (
+                    "geolocation",
+                    django.contrib.gis.db.models.fields.PointField(
+                        blank=True, null=True, srid=4326
+                    ),
+                ),
+                (
+                    "dno_group",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="gsp_substations",
+                        to="location_input.dnogroup",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='PrimarySubstation',
+            name="PrimarySubstation",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('geolocation', django.contrib.gis.db.models.fields.PointField(blank=True, null=True, srid=4326)),
-                ('dno_group', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='primary_substations', to='location_input.dnogroup')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                (
+                    "geolocation",
+                    django.contrib.gis.db.models.fields.PointField(
+                        blank=True, null=True, srid=4326
+                    ),
+                ),
+                (
+                    "dno_group",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="primary_substations",
+                        to="location_input.dnogroup",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='ReportingPeriod',
+            name="ReportingPeriod",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('start_date', models.DateField()),
-                ('end_date', models.DateField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("start_date", models.DateField()),
+                ("end_date", models.DateField()),
             ],
             options={
-                'unique_together': {('start_date', 'end_date')},
+                "unique_together": {("start_date", "end_date")},
             },
         ),
         migrations.CreateModel(
-            name='NewConnection',
+            name="NewConnection",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('demand_count', models.PositiveIntegerField(blank=True, null=True)),
-                ('total_demand_capacity_mw', models.DecimalField(decimal_places=3, help_text='Total demand capacity in megawatts (MW)', max_digits=10)),
-                ('generation_count', models.PositiveIntegerField(blank=True, null=True)),
-                ('total_generation_capacity_mw', models.DecimalField(decimal_places=3, help_text='Total generation capacity in megawatts (MW)', max_digits=10)),
-                ('bsp_substation', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.bspsubstation')),
-                ('connection_status', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.connectionstatus')),
-                ('gsp_substation', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.gspsubstation')),
-                ('primary_substation', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.primarysubstation')),
-                ('voltage_level', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.proposedconnectionvoltagelevel')),
-                ('reporting_period', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='new_connections', to='location_input.reportingperiod')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("demand_count", models.PositiveIntegerField(blank=True, null=True)),
+                (
+                    "total_demand_capacity_mw",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text="Total demand capacity in megawatts (MW)",
+                        max_digits=10,
+                    ),
+                ),
+                (
+                    "generation_count",
+                    models.PositiveIntegerField(blank=True, null=True),
+                ),
+                (
+                    "total_generation_capacity_mw",
+                    models.DecimalField(
+                        decimal_places=3,
+                        help_text="Total generation capacity in megawatts (MW)",
+                        max_digits=10,
+                    ),
+                ),
+                (
+                    "bsp_substation",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.bspsubstation",
+                    ),
+                ),
+                (
+                    "connection_status",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.connectionstatus",
+                    ),
+                ),
+                (
+                    "gsp_substation",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.gspsubstation",
+                    ),
+                ),
+                (
+                    "primary_substation",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.primarysubstation",
+                    ),
+                ),
+                (
+                    "voltage_level",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.proposedconnectionvoltagelevel",
+                    ),
+                ),
+                (
+                    "reporting_period",
+                    models.ForeignKey(
+                        blank=True,
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        related_name="new_connections",
+                        to="location_input.reportingperiod",
+                    ),
+                ),
             ],
         ),
     ]

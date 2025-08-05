@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0002_remove_dnogroup_abbreviation_dnogroup_name'),
+        ("location_input", "0002_remove_dnogroup_abbreviation_dnogroup_name"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='dnogroup',
-            name='name',
+            model_name="dnogroup",
+            name="name",
         ),
         migrations.AddField(
-            model_name='dnogroup',
-            name='abbr',
+            model_name="dnogroup",
+            name="abbr",
             field=models.CharField(blank=True, max_length=10, null=True, unique=True),
         ),
     ]

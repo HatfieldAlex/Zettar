@@ -6,23 +6,23 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0006_bspsubstation_voltage_kv_and_more'),
+        ("location_input", "0006_bspsubstation_voltage_kv_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='primarysubstation',
-            name='voltage_kv',
+            model_name="primarysubstation",
+            name="voltage_kv",
         ),
         migrations.RemoveField(
-            model_name='bspsubstation',
-            name='voltage_kv',
+            model_name="bspsubstation",
+            name="voltage_kv",
         ),
         migrations.RemoveField(
-            model_name='gspsubstation',
-            name='voltage_kv',
+            model_name="gspsubstation",
+            name="voltage_kv",
         ),
         migrations.DeleteModel(
-            name='SubstationVoltageLevel',
+            name="SubstationVoltageLevel",
         ),
     ]

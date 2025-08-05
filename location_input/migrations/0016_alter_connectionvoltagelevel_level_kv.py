@@ -6,13 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('location_input', '0015_alter_connectionvoltagelevel_level_kv'),
+        ("location_input", "0015_alter_connectionvoltagelevel_level_kv"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='connectionvoltagelevel',
-            name='level_kv',
-            field=models.CharField(choices=[('6.6', '6.6 kV'), ('11.0', '11.0 kV'), ('25.0', '25.0 kV'), ('33.0', '33.0 kV'), ('66.0', '66.0 kV'), ('132.0', '132.0 kV'), ('275.0', '275.0 kV'), ('400.0', '400.0 kV')], max_length=10),
+            model_name="connectionvoltagelevel",
+            name="level_kv",
+            field=models.CharField(
+                choices=[
+                    ("6.6", "6.6 kV"),
+                    ("11.0", "11.0 kV"),
+                    ("25.0", "25.0 kV"),
+                    ("33.0", "33.0 kV"),
+                    ("66.0", "66.0 kV"),
+                    ("132.0", "132.0 kV"),
+                    ("275.0", "275.0 kV"),
+                    ("400.0", "400.0 kV"),
+                ],
+                max_length=10,
+            ),
         ),
     ]
