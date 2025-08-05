@@ -29,7 +29,10 @@ class Migration(migrations.Migration):
                     models.CharField(
                         choices=[
                             ("budget", "Budget Estimate Provided"),
-                            ("pending", "Connection Offer – Pending Acceptance"),
+                            (
+                                "pending",
+                                "Connection Offer – Pending Acceptance",
+                            ),
                             ("accepted", "Connection Offer – Accepted"),
                         ],
                         max_length=20,
@@ -204,7 +207,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("demand_count", models.PositiveIntegerField(blank=True, null=True)),
+                (
+                    "demand_count",
+                    models.PositiveIntegerField(blank=True, null=True),
+                ),
                 (
                     "total_demand_capacity_mw",
                     models.DecimalField(

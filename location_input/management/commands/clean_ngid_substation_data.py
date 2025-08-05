@@ -6,7 +6,9 @@ import requests
 import io
 import re
 import os
-from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
+from location_input.utils.command_helpers import (
+    normalise_name_and_extract_voltage_info,
+)
 from location_input.models.shared_fields import ConnectionVoltageLevel
 from location_input.models.substations import (
     DNOGroup,
@@ -52,7 +54,8 @@ class Command(BaseCommand):
 
             reader = csv.DictReader(infile)
             writer = csv.DictWriter(
-                outfile, fieldnames=["name", "type", "geolocation", "dno", "voltages"]
+                outfile,
+                fieldnames=["name", "type", "geolocation", "dno", "voltages"],
             )
 
             for row in reader:
@@ -88,11 +91,15 @@ class Command(BaseCommand):
 
         if failure_ids:
             failed_list = ", ".join(failure_ids)
-            self.stderr.write(self.style.ERROR(f"Failed substationIDs: {failed_list}"))
+            self.stderr.write(
+                self.style.ERROR(f"Failed substationIDs: {failed_list}")
+            )
 
     def clear_existing_nged_substations_data(self, PATH):
         if PATH.exists():
-            self.stdout.write("Removing previous cleaned NGED substation data csv...")
+            self.stdout.write(
+                "Removing previous cleaned NGED substation data csv..."
+            )
             PATH.unlink()
             self.stdout.write("...cleaned NGED substation data csv removed.")
 

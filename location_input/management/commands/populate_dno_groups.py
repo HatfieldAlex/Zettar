@@ -16,8 +16,13 @@ class Command(BaseCommand):
         ]
 
         created_count = 0
-        for abbr, _ in groups:  # Ignoring name for now since the model only has 'abbr'
-            obj, created = DNOGroup.objects.get_or_create(abbr=abbr, defaults={})
+        for (
+            abbr,
+            _,
+        ) in groups:  # Ignoring name for now since the model only has 'abbr'
+            obj, created = DNOGroup.objects.get_or_create(
+                abbr=abbr, defaults={}
+            )
             if created:
                 self.stdout.write(self.style.SUCCESS(f"Created: {abbr}"))
                 created_count += 1

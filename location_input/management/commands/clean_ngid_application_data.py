@@ -6,7 +6,9 @@ import requests
 import io
 import re
 import os
-from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
+from location_input.utils.command_helpers import (
+    normalise_name_and_extract_voltage_info,
+)
 from location_input.models.shared_fields import ConnectionVoltageLevel
 from location_input.models.substations import (
     DNOGroup,
@@ -32,7 +34,9 @@ class Command(BaseCommand):
         "total_generation_number",
         "total_generation_capacity_mw",
     ]
-    data_dir_path = Path(__file__).resolve().parent.parent.parent.parent / "data"
+    data_dir_path = (
+        Path(__file__).resolve().parent.parent.parent.parent / "data"
+    )
 
     def handle(self, *args, **options):
 
@@ -47,7 +51,10 @@ class Command(BaseCommand):
         self.initialise_blank_csv(clean_csv_path)
 
         raw_csv_path = (
-            self.data_dir_path / "ngid" / "raw" / "ngid_connection_applications_raw.csv"
+            self.data_dir_path
+            / "ngid"
+            / "raw"
+            / "ngid_connection_applications_raw.csv"
         )
 
         success_ss_app_name = []
@@ -58,7 +65,9 @@ class Command(BaseCommand):
         ) as outfile:
 
             reader = csv.DictReader(infile)
-            writer = csv.DictWriter(outfile, fieldnames=self.cleaned_csv_headers)
+            writer = csv.DictWriter(
+                outfile, fieldnames=self.cleaned_csv_headers
+            )
 
             for row in reader:
                 ss_chain = {
@@ -70,7 +79,9 @@ class Command(BaseCommand):
                     cleaned_row = self.clean_row(row)
                     writer.writerow(cleaned_row)
                     self.stdout.write(
-                        self.style.SUCCESS(f"Successfully cleaned row: {ss_chain}")
+                        self.style.SUCCESS(
+                            f"Successfully cleaned row: {ss_chain}"
+                        )
                     )
                     success_ss_app_name.append(ss_chain)
                 except Exception as e:
@@ -95,7 +106,9 @@ class Command(BaseCommand):
 
     def clear_existing_nged_substations_data(self, PATH):
         if PATH.exists():
-            self.stdout.write("Removing previous cleaned NGED substation data csv...")
+            self.stdout.write(
+                "Removing previous cleaned NGED substation data csv..."
+            )
             PATH.unlink()
             self.stdout.write("...cleaned NGED substation data csv removed.")
 
@@ -120,10 +133,16 @@ class Command(BaseCommand):
             "Connection offers accepted": "accepted",
         }
 
-        ss_type_raw = next((k for k in type_map if row.get(k, "-") != "-"), None)
+        ss_type_raw = next(
+            (k for k in type_map if row.get(k, "-") != "-"), None
+        )
 
-        ss_name, ss_voltages = normalise_name_and_extract_voltage_info(row[ss_type_raw])
-        ss_proposed_voltage = f"{float(row['Proposed Connection Voltage (kV)']):.1f}"
+        ss_name, ss_voltages = normalise_name_and_extract_voltage_info(
+            row[ss_type_raw]
+        )
+        ss_proposed_voltage = (
+            f"{float(row['Proposed Connection Voltage (kV)']):.1f}"
+        )
 
         print(
             f"ss_proposed_voltage, type: {ss_proposed_voltage}, {type(ss_proposed_voltage)}"

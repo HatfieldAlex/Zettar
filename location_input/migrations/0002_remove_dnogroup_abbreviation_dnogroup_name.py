@@ -17,6 +17,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="dnogroup",
             name="name",
-            field=models.CharField(blank=True, max_length=50, null=True, unique=True),
+            field=models.CharField(
+                blank=True, max_length=50, null=True, unique=True
+            ),
         ),
     ]

@@ -7,7 +7,10 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("location_input", "0013_alter_proposedconnectionvoltagelevel_level_kv"),
+        (
+            "location_input",
+            "0013_alter_proposedconnectionvoltagelevel_level_kv",
+        ),
     ]
 
     operations = [

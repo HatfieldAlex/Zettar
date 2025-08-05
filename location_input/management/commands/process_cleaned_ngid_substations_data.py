@@ -5,7 +5,9 @@ from django.contrib.gis.geos import Point
 import requests
 import io
 import re
-from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
+from location_input.utils.command_helpers import (
+    normalise_name_and_extract_voltage_info,
+)
 from location_input.models.shared_fields import ConnectionVoltageLevel
 import ast
 from django.contrib.gis.geos import GEOSGeometry

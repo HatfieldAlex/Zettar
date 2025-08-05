@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
-from .substations import PrimarySubstation, BSPSubstation, GSPSubstation, DNOGroup
+from .substations import (
+    PrimarySubstation,
+    BSPSubstation,
+    GSPSubstation,
+    DNOGroup,
+)
 from .shared_fields import ConnectionVoltageLevel
 from location_input.constants import VOLTAGE_CHOICES
 
@@ -105,7 +110,9 @@ class NewConnection(models.Model):
             self.bsp_substation,
             self.gsp_substation,
         ]
-        filled_substation_fields = sum(s is not None for s in substation_fields)
+        filled_substation_fields = sum(
+            s is not None for s in substation_fields
+        )
         if filled_substation_fields != 1:
             raise ValidationError(
                 "Exactly one of primary, BSP, or GSP substation must be set."

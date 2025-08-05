@@ -10,7 +10,9 @@ class Command(BaseCommand):
         parser.add_argument(
             "start_date", type=str, help="Start date in YYYY-MM-DD format"
         )
-        parser.add_argument("end_date", type=str, help="End date in YYYY-MM-DD format")
+        parser.add_argument(
+            "end_date", type=str, help="End date in YYYY-MM-DD format"
+        )
 
     def handle(self, *args, **options):
         start_date_str = options["start_date"]

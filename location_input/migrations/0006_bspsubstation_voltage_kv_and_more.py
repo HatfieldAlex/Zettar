@@ -6,7 +6,10 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("location_input", "0005_substationvoltagelevel_gspsubstation_voltage_kv"),
+        (
+            "location_input",
+            "0005_substationvoltagelevel_gspsubstation_voltage_kv",
+        ),
     ]
 
     operations = [

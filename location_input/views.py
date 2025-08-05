@@ -55,7 +55,8 @@ def get_nearby_application_data(request):
             )
     else:
         return JsonResponse(
-            {"status": "error", "message": "Only POST method allowed"}, status=405
+            {"status": "error", "message": "Only POST method allowed"},
+            status=405,
         )
 
 

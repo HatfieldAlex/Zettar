@@ -22,7 +22,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("voltage_kv", models.DecimalField(decimal_places=2, max_digits=6)),
+                (
+                    "voltage_kv",
+                    models.DecimalField(decimal_places=2, max_digits=6),
+                ),
             ],
         ),
         migrations.AddField(

@@ -6,7 +6,11 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
 from django.shortcuts import render
 
-from ..models.substations import PrimarySubstation, BSPSubstation, GSPSubstation
+from ..models.substations import (
+    PrimarySubstation,
+    BSPSubstation,
+    GSPSubstation,
+)
 from ..constants import APPLICATION_STATUS_FIELDS
 from ..mappings import (
     substation_type_abbr_to_model,
@@ -44,7 +48,9 @@ def find_nearest_substation_obj(geolocation, substation_type):
     substation_class = substation_type_abbr_to_model[f"{substation_type}"]
 
     nearest_substation_obj = (
-        substation_class.objects.annotate(distance=Distance("geolocation", geolocation))
+        substation_class.objects.annotate(
+            distance=Distance("geolocation", geolocation)
+        )
         .order_by("distance")
         .first()
     )
