@@ -2,19 +2,19 @@ from collections import defaultdict
 import logging
 from decimal import Decimal, ROUND_DOWN
 
-from django.contrib.gis.geos import Point
 from django.contrib.gis.db.models.functions import Distance
+from django.contrib.gis.geos import Point
 from django.shortcuts import render
 
-from ..models.substations import (
-    PrimarySubstation,
-    BSPSubstation,
-    GSPSubstation,
-)
 from ..constants import APPLICATION_STATUS_FIELDS
 from ..mappings import (
     substation_type_abbr_to_model,
     substation_type_model_to_display_name,
+)
+from ..models.substations import (
+    PrimarySubstation,
+    BSPSubstation,
+    GSPSubstation,
 )
 
 
@@ -65,6 +65,31 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
 
 def get_substation_object_connection_data(substation_obj):
+    def get_substation_object_connection_data(substation_obj):
+    """
+    Aggregate connection data from new connections related to a substation.
+
+    Iterates over all 'new_connections' associated with the given 'substation_obj' instance,
+    summing demand and generation counts and capacities. Additionally aggregates counts
+    by connection status fields defined in 'APPLICATION_STATUS_FIELDS'. Capacity values
+    are rounded down to the nearest whole number.
+
+    Args:
+        substation_obj (ModelInstance): A substation model instance with a 'new_connections'
+            related manager. Expected to have a 'name' attribute and type mappable via
+            'substation_type_model_to_display_name'.
+
+    Returns:
+        dict: A summary dictionary containing:
+            - nearest_substation_name (str): Name of the substation.
+            - nearest_substation_type (str or None): Display name of the substation type.
+            - demand_application_sum (int): Total demand application count.
+            - demand_capacity_mw (Decimal): Total demand capacity in megawatts, rounded down.
+            - generation_application_sum (int): Total generation application count.
+            - generation_capacity_mw (Decimal): Total generation capacity in megawatts, rounded down.
+            - demand_<status>_status_sum (int): Summed demand counts for each status in APPLICATION_STATUS_FIELDS.
+            - generation_<status>_status_sum (int): Summed generation counts for each status in APPLICATION_STATUS_FIELDS.
+    """
     connection_user_info = defaultdict(int)
     
     for obj in substation_obj.new_connections.all():
@@ -73,13 +98,11 @@ def get_substation_object_connection_data(substation_obj):
         demand_capacity = obj.total_demand_capacity_mw or 0
         connection_user_info["demand_application_sum"] += demand_count
         connection_user_info["demand_capacity_mw"] += demand_capacity
-        # connection_status_freq[f'demand_{obj.status}'] += obj.demand_count
 
         generation_count = obj.generation_count or 0
         generation_capacity = obj.total_generation_capacity_mw or 0
         connection_user_info["generation_application_sum"] += generation_count
         connection_user_info["generation_capacity_mw"] += generation_capacity
-        # connection_status_freq[f'generation_{obj.status}'] += obj.generation_count
 
         connection_status = obj.connection_status.status
         if connection_status in APPLICATION_STATUS_FIELDS:
@@ -90,7 +113,6 @@ def get_substation_object_connection_data(substation_obj):
                 f"generation_{connection_status}_status_sum"
             ] += generation_count
 
-    # Convert summed capacities to Decimal and truncate decimals
     demand_capacity_total = Decimal(
         connection_user_info["demand_capacity_mw"]
     ).quantize(Decimal("1"), rounding=ROUND_DOWN)
@@ -98,7 +120,6 @@ def get_substation_object_connection_data(substation_obj):
         connection_user_info["generation_capacity_mw"]
     ).quantize(Decimal("1"), rounding=ROUND_DOWN)
 
-    # Update the dict with truncated values
     connection_user_info["demand_capacity_mw"] = demand_capacity_total
     connection_user_info["generation_capacity_mw"] = generation_capacity_total
 

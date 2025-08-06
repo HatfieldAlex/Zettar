@@ -5,7 +5,11 @@ from .utils.view_helpers import find_nearest_substation_obj
 
 
 class FindNearestSubstationFuncTestCase(TestCase):
-    """Tests the find_nearest_substation_obj function"""
+    """Test cases for the 'find_nearest_substation_obj' function.
+
+    Includes validation of correct nearest substation lookup,
+    behavior with invalid input, and no match scenarios.
+    """
 
     def setUp(self):
         """Create test substations and initialize common test data."""

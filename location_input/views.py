@@ -1,15 +1,13 @@
 import json
-import logging
 
-from django.contrib.gis.db.models.functions import Distance
-from django.views.decorators.csrf import ensure_csrf_cookie
 from django.contrib.gis.geos import Point
 from django.http import JsonResponse
 from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.csrf import ensure_csrf_cookie
 
-from .models.substations import GSPSubstation, BSPSubstation, PrimarySubstation
+
 from .models.new_connections import NewConnection
+from .models.substations import GSPSubstation, BSPSubstation, PrimarySubstation
 from .utils.view_helpers import (
     find_nearest_substation_obj,
     get_substation_object_connection_data,
@@ -19,21 +17,24 @@ from .utils.view_helpers import (
 @ensure_csrf_cookie
 def get_nearby_application_data(request):
     """
-    Process POST requests to estimate connection statistics near a location.
+    Handle POST requests to estimate connection application insights near a location.
 
-    Parses request JSON body to extract connection type and location,
-    finds the nearest substation, aggregates counts and capacities from new connections,
-    and returns a summary JSON response of aggregated connection data.
+    Parses the JSON body of the request to extract connection type and geolocation,
+    finds the nearest substation, aggregates connection counts and capacities from new connections,
+    and returns a summary JSON response with the aggregated data.
 
     Args:
-        request (HttpRequest): Django HTTP request object, expects JSON body with
-                               'connection_type' and 'location' keys.
+        request (HttpRequest): Django HTTP request object. Expects a JSON payload with:
+            - connection_type (str): Type of the connection.
+            - location (dict): Dictionary with latitude and longitude coordinates, 
+            containing:
+                - lat (float): Latitude.
+                - lng (float): Longitude.
 
     Returns:
-        JsonResponse: JSON containing nearest substation name and summed connection stats,
-                      or error message with appropriate HTTP status for invalid requests.
+        JsonResponse: JSON containing the nearest substation name and aggregated application data,
+                    or an error message with an appropriate HTTP status if the request is invalid.
     """
-
     if request.method == "POST":
         try:
             data = json.loads(request.body)
@@ -60,4 +61,12 @@ def get_nearby_application_data(request):
 
 
 def home(request):
+    """Render the home page with a location input form.
+
+    Args:
+        request (HttpRequest): The HTTP request object.
+
+    Returns:
+        HttpResponse: The rendered homepage response.
+    """
     return render(request, "location_input/home.html")

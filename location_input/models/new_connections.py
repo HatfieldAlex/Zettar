@@ -1,14 +1,15 @@
-from django.db import models
 from django.contrib.gis.db import models as gis_models
+from django.db import models
+
+from location_input.constants import VOLTAGE_CHOICES
+
+from .shared_fields import ConnectionVoltageLevel
 from .substations import (
     PrimarySubstation,
     BSPSubstation,
     GSPSubstation,
     DNOGroup,
 )
-from .shared_fields import ConnectionVoltageLevel
-from location_input.constants import VOLTAGE_CHOICES
-
 
 class ConnectionStatus(models.Model):
     STATUS_CHOICES = [

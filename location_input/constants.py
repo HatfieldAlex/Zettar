@@ -7,7 +7,6 @@ VOLTAGE_LEVELS = [
     "132.0",
     "275.0",
     "400.0",
-    # remember to migrate if adding/changing a voltage level
 ]
 
 VOLTAGE_CHOICES = [(v, f"{v} kV") for v in VOLTAGE_LEVELS]
