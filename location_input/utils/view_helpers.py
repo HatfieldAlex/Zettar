@@ -66,16 +66,7 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
 def get_substation_object_connection_data(substation_obj):
     connection_user_info = defaultdict(int)
-
-    # connection_status_freq = {
-    #     'demand_pending': 0,
-    #     'demand_budget': 0,
-    #     'demand_accepted': 0,
-    #     'generation_pending': 0,
-    #     'generation_budget': 0,
-    #     'generation_accepted': 0,
-    # }
-
+    
     for obj in substation_obj.new_connections.all():
 
         demand_count = obj.demand_count or 0

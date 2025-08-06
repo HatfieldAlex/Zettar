@@ -7,23 +7,21 @@ ENV = config("ENV", default="production")
 SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['*']
 
 if ENV == "local":
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
-else:
-    CSRF_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-
-
-if ENV == "local":
+    DEBUG = True
     DB_NAME = config("LOCAL_DB_NAME")
     DB_USER = config("LOCAL_DB_USER")
     DB_PASSWORD = config("LOCAL_DB_PASSWORD")
     DB_HOST = config("LOCAL_DB_HOST")
 else:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    DEBUG = False
     DB_NAME = config("PROD_DB_NAME")
     DB_USER = config("PROD_DB_USER")
     DB_PASSWORD = config("PROD_DB_PASSWORD")
@@ -43,6 +41,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -102,8 +101,8 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 USE_TZ = True
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-GDAL_LIBRARY_PATH = "C:\\OSGeo4W\\bin\\gdal311.dll"
