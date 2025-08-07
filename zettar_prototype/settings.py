@@ -18,6 +18,7 @@ if ENV == "local":
     DB_USER = config("LOCAL_DB_USER")
     DB_PASSWORD = config("LOCAL_DB_PASSWORD")
     DB_HOST = config("LOCAL_DB_HOST")
+    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
 else:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
@@ -27,6 +28,7 @@ else:
     DB_PASSWORD = config("PROD_DB_PASSWORD")
     DB_HOST = config("PROD_DB_HOST")
 
+GOOGLE_MAPS_API_KEY = config("GOOGLE_MAPS_API_KEY")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
