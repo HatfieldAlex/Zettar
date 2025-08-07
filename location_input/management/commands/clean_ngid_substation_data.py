@@ -20,7 +20,7 @@ from location_input.utils.constants import VOLTAGE_CHOICES
 
 
 class Command(BaseCommand):
-    help = "Import and clean ngid data from ngid website"
+    help = "Import and clean ngid data from NGED website"
 
     voltage_levels = VOLTAGE_CHOICES
 
@@ -40,9 +40,8 @@ class Command(BaseCommand):
         raw_csv_path = (
             Path(__file__).resolve().parent.parent.parent.parent
             / "data"
-            / "ngid"
             / "raw"
-            / "ngid_substation_locations_raw.csv"
+            / "substation_locations_raw_NGED.csv"
         )
 
         success_ids = []

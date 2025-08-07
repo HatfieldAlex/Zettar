@@ -99,6 +99,43 @@ class Command(BaseCommand):
                 )
             )
 
+    # def handle_row_NGED(row)
+    #             ss_chain = {
+    #                 "gsp": row["Grid Supply Point"],
+    #                 "bsp": row["Bulk Supply Point"],
+    #                 "primary": row["Primary Substation"],
+    #             }
+    #             try:
+    #                 cleaned_row = self.clean_row(row)
+    #                 writer.writerow(cleaned_row)
+    #                 self.stdout.write(
+    #                     self.style.SUCCESS(
+    #                         f"Successfully cleaned row: {ss_chain}"
+    #                     )
+    #                 )
+    #                 success_ss_app_name.append(ss_chain)
+    #             except Exception as e:
+    #                 self.stderr.write(
+    #                     self.style.ERROR(f"Error cleaning row: {ss_chain}")
+    #                 )
+    #                 self.stderr.write(self.style.ERROR(str(e)))
+    #                 failure_ss_app_name.append(ss_chain)
+
+    #     return (number_failures, number_successes)
+
+    #     self.stdout.write(
+    #         self.style.SUCCESS(
+    #             f"raw connection applications CSV clean complete: {len(success_ss_app_name)} succeeded, {len(failure_ss_app_name)} failed."
+    #         )
+    #     )
+
+    #     if failure_ss_app_name:
+    #         self.stderr.write(
+    #             self.style.ERROR(
+    #                 f"Failed substation applications: {failure_ss_app_name}"
+    #             )
+    #         )
+
     def clear_existing_nged_substations_data(self, PATH):
         if PATH.exists():
             self.stdout.write(
