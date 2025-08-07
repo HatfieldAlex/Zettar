@@ -65,7 +65,6 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
 
 def get_substation_object_connection_data(substation_obj):
-    def get_substation_object_connection_data(substation_obj):
     """
     Aggregate connection data from new connections related to a substation.
 
