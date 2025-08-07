@@ -1,17 +1,19 @@
-<table style="margin: 0 auto; text-align: center; border: 1px solid #ccc;">
-  <tr>
-    <td align=center>
-      <img src="location_input/static/location_input/images/zettar_logo.svg" style="width:100%; height:auto;">
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <table style="margin: 0 auto; border: 1px solid #ccc;">
+    <tr>
+      <td align=center>
+        <img src="location_input/static/location_input/images/zettar_logo.svg" style="width:100%; height:auto;">
+      </td>
+    </tr>
+  </table>
+</div>
 
 <p style="text-align: center;">
   Zettar helps developers find viable grid connection points by turning messy DNO data into clean insights using geospatial technology and up-to-date application data.
 </p>
 
 ## 📷 Interface Preview  
-<div style="text-align: center;">
+<div align="center">
   <img src="location_input/static/location_input/images/zettar_full_page_screenshot.png" style="width:75%; height:auto;">
 </div>
 
@@ -58,7 +60,7 @@ Zettar’s Django backend provides a set of custom management commands that can 
 
 There are 14 electricity distribution licence areas across Great Britain, operated by six groups: UK Power Networks, National Grid Electricity Distribution, SP Energy Networks, Northern Powergrid, Electricity North West, and Scottish and Southern Electricity Networks.
 
-<div style="text-align: center; margin-bottom: 10px;">
+<div align="center" style="margin-bottom: 10px;">
   <img src="location_input/static/location_input/images/gb_electricity_distribution_map.jpg" style="width:60%; height:auto;">
 </div>
 
