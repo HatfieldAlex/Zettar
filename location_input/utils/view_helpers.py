@@ -7,16 +7,7 @@ from django.contrib.gis.geos import Point
 from django.shortcuts import render
 
 from ..constants import APPLICATION_STATUS_FIELDS
-from ..mappings import (
-    substation_type_abbr_to_model,
-    substation_type_model_to_display_name,
-)
-from ..models.substations import (
-    PrimarySubstation,
-    BSPSubstation,
-    GSPSubstation,
-)
-
+from ..models.substations import Substation
 
 def find_nearest_substation_obj(geolocation, substation_type):
     """
@@ -29,10 +20,10 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
     Args:
         geolocation (Point) - the geographical location to search nearby
-        substation_type (str) - One of 'Primary', 'Secondary', or 'BSP'
+        substation_type (str) - One of 'primary', 'bsp', or 'gsp'
 
     Returns:
-        The Substations model instance of nearest substation matching the type if found, else None
+        The Substation model instance of nearest substation matching the type if found, else None
 
     Raises:
         TypeError: If geolocation is not a Point object.
@@ -45,12 +36,11 @@ def find_nearest_substation_obj(geolocation, substation_type):
     if substation_type not in {"primary", "bsp", "gsp"}:
         raise ValueError(f"Invalid substation_type: {substation_type}")
 
-    substation_class = substation_type_abbr_to_model[f"{substation_type}"]
 
     nearest_substation_obj = (
-        substation_class.objects.annotate(
-            distance=Distance("geolocation", geolocation)
-        )
+        Substation.objects
+        .filter(type=substation_type)
+        .annotate(distance=Distance("geolocation", geolocation))
         .order_by("distance")
         .first()
     )
@@ -124,9 +114,7 @@ def get_substation_object_connection_data(substation_obj):
 
     connection_summary = {
         "nearest_substation_name": substation_obj.name,
-        "nearest_substation_type": substation_type_model_to_display_name.get(
-            type(substation_obj), None
-        ),
+        "nearest_substation_type": substation_obj.type,
         **dict(connection_user_info),
     }
 

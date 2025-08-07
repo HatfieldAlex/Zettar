@@ -4,12 +4,7 @@ from django.db import models
 from location_input.constants import VOLTAGE_CHOICES
 
 from .shared_fields import ConnectionVoltageLevel
-from .substations import (
-    PrimarySubstation,
-    BSPSubstation,
-    GSPSubstation,
-    DNOGroup,
-)
+from .substations import Substation, DNOGroup
 
 class ConnectionStatus(models.Model):
     STATUS_CHOICES = [
@@ -58,24 +53,8 @@ class NewConnection(models.Model):
         related_name="new_connections",
     )
 
-    primary_substation = models.ForeignKey(
-        PrimarySubstation,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="new_connections",
-    )
-
-    bsp_substation = models.ForeignKey(
-        BSPSubstation,
-        on_delete=models.SET_NULL,
-        null=True,
-        blank=True,
-        related_name="new_connections",
-    )
-
-    gsp_substation = models.ForeignKey(
-        GSPSubstation,
+    substation = models.ForeignKey(
+        Substation,
         on_delete=models.SET_NULL,
         null=True,
         blank=True,

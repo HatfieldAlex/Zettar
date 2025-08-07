@@ -10,12 +10,7 @@ from location_input.utils.command_helpers import (
     normalise_name_and_extract_voltage_info,
 )
 from location_input.models.shared_fields import ConnectionVoltageLevel
-from location_input.models.substations import (
-    DNOGroup,
-    GSPSubstation,
-    BSPSubstation,
-    PrimarySubstation,
-)
+from location_input.models.substations import Substation
 from location_input.utils.constants import VOLTAGE_CHOICES
 
 

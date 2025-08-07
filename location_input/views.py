@@ -8,12 +8,11 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 
 
 from .models.new_connections import NewConnection
-from .models.substations import GSPSubstation, BSPSubstation, PrimarySubstation
+from .models.substations import Substation
 from .utils.view_helpers import (
     find_nearest_substation_obj,
     get_substation_object_connection_data,
 )
-
 
 @ensure_csrf_cookie
 def get_nearby_application_data(request):
@@ -46,6 +45,10 @@ def get_nearby_application_data(request):
             nearest_substation_obj = find_nearest_substation_obj(
                 geolocation, connection_type
             )
+            print('-----------------')
+            print(f'nearest_substation_obj: {nearest_substation_obj}')
+            print('-------------------')
+
             connection_summary = get_substation_object_connection_data(
                 nearest_substation_obj
             )

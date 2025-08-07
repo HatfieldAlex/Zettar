@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand
-from location_input.models import (
-    ConnectionStatus,
-)  # adjust import to your actual app
+from location_input.models import ConnectionStatus
+
 
 
 class Command(BaseCommand):

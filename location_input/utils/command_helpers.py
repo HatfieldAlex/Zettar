@@ -1,7 +1,7 @@
 import re
 from decimal import Decimal
 
-from location_input.utils.constants import VOLTAGE_LEVELS
+from location_input.constants import VOLTAGE_LEVELS
 
 substrings_to_remove = [
         "kv",
@@ -26,7 +26,7 @@ substrings_to_remove = [
     ]
 
 def normalise_name_and_extract_voltage_info(ss_name):
-     """Normalises a substation name and extract voltage level information.
+    """Normalises a substation name and extract voltage level information.
 
     This function performs the following steps:
         - Replaces certain malformed patterns (e.g., "6 6" -> "6.6").
@@ -45,6 +45,7 @@ def normalise_name_and_extract_voltage_info(ss_name):
                 - Normalized substation name (str)
                 - Sorted list of voltage levels (List[str])
     """
+
     voltage_levels = VOLTAGE_LEVELS
 
     #standardise malformed voltage spacing

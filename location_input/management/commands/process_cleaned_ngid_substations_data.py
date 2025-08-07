@@ -5,19 +5,12 @@ from django.contrib.gis.geos import Point
 import requests
 import io
 import re
-from location_input.utils.command_helpers import (
-    normalise_name_and_extract_voltage_info,
-)
+from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
+
 from location_input.models.shared_fields import ConnectionVoltageLevel
 import ast
 from django.contrib.gis.geos import GEOSGeometry
-from location_input.models.substations import (
-    DNOGroup,
-    GSPSubstation,
-    BSPSubstation,
-    PrimarySubstation,
-)
-
+from location_input.models.substations import DNOGroup, Substation
 
 class Command(BaseCommand):
     help = "Process cleaned ngid data"
@@ -75,9 +68,7 @@ class Command(BaseCommand):
     def clear_existing_cleaned_nged_substation_data(self):
         self.stdout.write("Clearing existing cleaned NGED substation data...")
         dno_group = DNOGroup.objects.get(abbr="NGED")
-        PrimarySubstation.objects.filter(dno_group=dno_group).delete()
-        BSPSubstation.objects.filter(dno_group=dno_group).delete()
-        GSPSubstation.objects.filter(dno_group=dno_group).delete()
+        Substation.objects.filter(dno_group=dno_group).delete()
         self.stdout.write("Previous NGED substation data cleared")
 
     def process_row(self, row):
@@ -88,23 +79,17 @@ class Command(BaseCommand):
         ss_dno = row["dno"]
         ss_voltages = ast.literal_eval(row["voltages"])
 
-        substation_model_map = {
-            "primary": PrimarySubstation,
-            "bsp": BSPSubstation,
-            "gsp": GSPSubstation,
-        }
-
-        model_class = substation_model_map.get(ss_type)
         dno_group_obj = DNOGroup.objects.get(abbr=ss_dno)
         connection_voltage_levels_objs = ConnectionVoltageLevel.objects.filter(
             level_kv__in=ss_voltages
         )
 
-        if model_class:
-            substation = model_class.objects.create(
-                name=ss_name,
-                geolocation=ss_geolocation,
-                dno_group=dno_group_obj,
-            )
-            substation.voltage_kv.set(connection_voltage_levels_objs)
-            substation.save()
+
+        substation = Substation.objects.create(
+            name=ss_name,
+            geolocation=ss_geolocation,
+            type=ss_type,
+            dno_group=dno_group_obj,
+        )
+        substation.voltage_kv.set(connection_voltage_levels_objs)
+        substation.save()

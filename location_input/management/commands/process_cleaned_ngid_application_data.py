@@ -12,18 +12,12 @@ from location_input.models.shared_fields import ConnectionVoltageLevel
 import ast
 from django.contrib.gis.geos import GEOSGeometry
 from datetime import date
-from location_input.models.substations import (
-    DNOGroup,
-    GSPSubstation,
-    BSPSubstation,
-    PrimarySubstation,
-)
 from location_input.models.new_connections import (
     NewConnection,
     ConnectionStatus,
     ReportingPeriod,
 )
-
+from location_input.models.substations import DNOGroup, Substation
 
 class Command(BaseCommand):
     help = "Process cleaned ngid application data"
@@ -123,24 +117,16 @@ class Command(BaseCommand):
             total_generation_capacity_mw=ss_total_generation_capacity,
         )
 
-        # finding substatiob object instance
-        substation_model_map = {
-            "primary": ["primary_substation", PrimarySubstation],
-            "bsp": ["bsp_substation", BSPSubstation],
-            "gsp": ["gsp_substation", GSPSubstation],
-        }
-
-        model_class = substation_model_map.get(ss_type)[1]
-        new_connection_ss_attribute = substation_model_map.get(ss_type)[0]
 
         # finding substation obj - challenge is that there may be many be many so we have to isolate by voltage lvl
         try:
-            substation_obj = model_class.objects.get(
+            substation_obj = Substation.objects.get(
                 name=ss_name,
                 dno_group=dno_group_obj,
+                type=ss_type,
             )
         except:
-            substations_with_ss_name = model_class.objects.filter(name=ss_name)
+            substations_with_ss_name = Substation.objects.filter(name=ss_name)
             for candidate_ss in substations_with_ss_name:
                 candidate_ss_voltages_qs = candidate_ss.voltage_kv.order_by(
                     "level_kv"
@@ -149,6 +135,10 @@ class Command(BaseCommand):
                 if candidate_ss_voltages_list == ss_voltages:
                     substation_obj = candidate_ss
 
-        setattr(new_connection, new_connection_ss_attribute, substation_obj)
+        setattr(new_connection, "substation", substation_obj)
 
         new_connection.save()
+
+
+# #edge case connections that need to be managed:
+# Failed substation names: Coventry West, Jaguar Cars Browns Lane, Harbury, Clifton, Grantham, Skegness, Sleaford, Chesterfield, Alfreton, Annesley, Clipstone, Goitside, Mansfield, Staveley, Whitwell, Daventry, Hinckley, Nuneaton, Pailton, Burton, Gresley, Ashby, Victoria Road, Bradwell Abbey, Stony Stratford, Coalville, Leicester East, Corby, Irthlingborough, Kettering, Melton Mowbray, Northampton East, Oakham, Wellingborough, Tamworth, Clifton, Toton 3, Willoughby, Staythorpe C, Checkerhouse, Hawton, Staythorpe B, Nottingham East, Nottingham North, Boston, South Holland, Crown Fm, Stamford, Lincoln Main No 1, Rookery Lane Lincoln, Worksop, Derby South, Heanor, Stanton, Uttoxeter, Winster, Skegness, Chesterfield, Annesley, Crown Fm, Coventry North, Hinckley, Rugby, Ashby, Stony Stratford, Coalville, Irthlingborough, Kettering, Northampton, Northampton East, Oakham, Wellingborough / (Reserve), Tamworth, Tamworth Town, Loughborough, Staythorpe C, Derby South, Courthouse Green, Courthouse Green, Harbury, Alfreton, Annesley, Clipstone, Staveley, Whitwell, Pailton, Rugby, Ashby, Stony Stratford, Mantle Lane Coalville, Irthlingborough, Kettering, Melton Mowbray, Northampton, Northampton East, Loughborough, Clifton, Hawton, Nottingham East, Nottingham North, Rookery Lane Lincoln, Worksop, Derby South, Rover Way, Golden Hill, Pyle, Hirwaun, Llanarth, Rhos, Swansea North, Merthyr East, Pontyclun, Talbot Green, Cardiff South Grid, Rover Way, Waterton Industrial, Tir John, Pontyclun, Talbot Green, Magor, Cardiff South Grid, Britton Ferry, Morriston, Swansea North, Travellers Rest, Pencoed, Magor, Indian Queens, Feeder Road, Indian Queens, Indian Queens, Stourport, Warndon, Worcester, Bushbury B-C, Bustleholm, Rushall, Smethwick, Winson Green, Boothen, Meaford C, Stagefields, Banbury, Clifton, Ryeford, Ketley, Bartley Green, Halesowen, Rednal, Shirley, Solihull, Boughton Road, Nechells West, Sparkbrook, Birchfield Lane, Oldbury B, Tividale, Coseley, Dudley, Hinksford, Lye, Wolverhampton West, Woodside, Eastern Avenue, Montpellier, Tewkesbury Grid, Rugeley, Burntwood, Lichfield, Willenhall, Wolverhampton, Kidderminster, Timberdine, Upton Warren, Warndon, Bushbury B-C, Stafford, Wednesfield, Bustleholm, Kingstanding / Dummy, Ladywood, Smethwick, Winson Green, Boothen, Burslem, Banbury, Clifton, Rednal, Selly Oak, Sutton Coldfield, Castle Bromwich, Chester Street, Nechells West, Sparkbrook, Tividale, Cheltenham, Tewkesbury Grid, Rugeley, Lichfield, Shrewsbury, Wolverhampton, Kidderminster, Malvern, Timberdine, Upton Warren, Warndon, Bushbury B-C, Stafford, Wednesfield, Bustleholm, Kingstanding / Dummy, Ladywood, Perry Barr, Rushall, Smethwick, Winson Green, Boothen, Burslem, Stagefields, Banbury, Feckenham, Ketley, Chad Valley, Highters Heath, Rednal, Elmdon, Hams Hall South, Shirley, Sutton Coldfield, Bordesley, Boughton Road, Castle Bromwich, Cheapside, Chester Street, Nechells West, Hockley, Summer Lane, Black Lake, Birchfield Lane, Oldbury B, Tividale, Coseley, Lye, Woodside, Cheltenham, Eastern Avenue, Marle Hill, Tewkesbury Grid, Rugeley, Burntwood, Lichfield, Shrewsbury, Bentley, Wolverhampton

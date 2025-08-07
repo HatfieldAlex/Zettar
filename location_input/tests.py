@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.gis.geos import Point
-from .models.substations import GSPSubstation, BSPSubstation, PrimarySubstation
+from .models.substations import Substation
 from .utils.view_helpers import find_nearest_substation_obj
 
 
@@ -13,20 +13,23 @@ class FindNearestSubstationFuncTestCase(TestCase):
 
     def setUp(self):
         """Create test substations and initialize common test data."""
-        self.substation_1 = PrimarySubstation.objects.create(
+        self.substation_1 = Substation.objects.create(
             name="Primary 1",
+            type="primary",
             geolocation=Point(
                 -3.5924521424325064, 50.72095863371211, srid=4326
             ),
         )
-        self.substation_2 = PrimarySubstation.objects.create(
+        self.substation_2 = Substation.objects.create(
             name="Primary 2",
+            type="primary",
             geolocation=Point(
                 -3.251875990277052, 50.81476274479066, srid=4326
             ),
         )
-        self.substation_3 = BSPSubstation.objects.create(
+        self.substation_3 = Substation.objects.create(
             name="BSP 1",
+            type="bsp",
             geolocation=Point(-3.537520504988079, 50.7070457296884, srid=4326),
         )
         self.substation_type = "primary"
