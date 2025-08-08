@@ -6,8 +6,8 @@ import requests
 import io
 import re
 import os
-from location_input.utils.command_helpers.command_helpers import normalise_name_and_extract_voltage_info
-from location_input.utils.command_helpers.shared_helpers import get_data_csv_path, reset_csv, open_csv, clean_data_map
+from location_input.utils.command_helpers.helpers_NGED import normalise_name_and_extract_voltage_info
+from location_input.utils.command_helpers.shared_helpers import get_data_csv_path, reset_csv, open_csv, clean_data_map, handle_row, report_results
 from location_input.models.shared_fields import ConnectionVoltageLevel
 from location_input.models.substations import Substation
 from location_input.constants import VOLTAGE_CHOICES, CLEAN_CSV_HEADERS
@@ -39,46 +39,6 @@ class Command(BaseCommand):
             failed_identifiers = []
             
             for row in reader:
-                result, ss_chain = self.handle_row(row, writer, dno_group_abbr)
-                if result:
-                    successful_identifiers.append(ss_chain)
-                else:
-                    failed_identifiers.append(ss_chain)
+                handle_row(row, writer, dno_group_abbr, successful_identifiers, failed_identifiers, self)
 
-
-        self.stdout.write(
-            self.style.SUCCESS(
-                f"raw connection applications CSV clean complete: {len(successful_identifiers)} succeeded, {len(failed_identifiers)} failed."
-            )
-        )
-
-        if failed_identifiers:
-            self.stderr.write(
-                self.style.ERROR(
-                    f"Failed substation applications: {failed_identifiers}"
-                )
-            )
-
-    def handle_row(self, row, writer, dno_group_abbr):
-        if dno_group_abbr == "NGED":
-            ss_chain = {
-                "gsp": row["Grid Supply Point"],
-                "bsp": row["Bulk Supply Point"],
-                "primary": row["Primary Substation"],
-            }
-            try:
-                cleaned_row = clean_data_map(row, dno_group_abbr)
-                writer.writerow(cleaned_row)
-                self.stdout.write(
-                    self.style.SUCCESS(
-                        f"Successfully cleaned row: {ss_chain}"
-                    )
-                )
-                return (True, ss_chain)
-
-            except Exception as e:
-                self.stderr.write(
-                    self.style.ERROR(f"Error cleaning row: {ss_chain}")
-                )
-                self.stderr.write(self.style.ERROR(str(e)))
-                return (False, ss_chain)
+        report_results(self, successful_identifiers, failed_identifiers)

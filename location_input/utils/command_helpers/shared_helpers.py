@@ -2,7 +2,7 @@ from pathlib import Path
 import csv
 import os
 from django.core.management.base import CommandError
-from location_input.utils.command_helpers.command_helpers import normalise_name_and_extract_voltage_info
+from location_input.utils.command_helpers.helpers_NGED import clean_data_map_NGED, extract_identifier_from_row_NGED
 
 def open_csv(path, mode):
     return open(path, mode, encoding="utf-8", newline="")
@@ -42,50 +42,35 @@ def reset_csv(file_path, csv_headers, stdout):
 
 def clean_data_map(data_map, category):
     if category == 'NGED':
-        type_map = {
-            "Primary Substation": "primary",
-            "Bulk Supply Point": "bsp",
-            "Grid Supply Point": "gsp",
-        }
+        return clean_data_map_NGED(data_map, category)
 
-        connection_status_map = {
-            "Connection offers not yet accepted": "pending",
-            "Budget Estimates Provided": "budget",
-            "Connection offers accepted": "accepted",
-        }
 
-        ss_type_raw = next(
-            (k for k in type_map if data_map.get(k, "-") != "-"), None
+def extract_identifier_from_row(row, dno_group_abbr):
+    if dno_group_abbr == "NGED":
+        return extract_identifier_from_row_NGED(row, dno_group_abbr)
+
+
+def handle_row(row, writer, dno_group_abbr, successes, failures, command):
+    identifier_name, identifier = extract_identifier_from_row(row, dno_group_abbr)
+    try:
+        cleaned_row = clean_data_map(row, dno_group_abbr)
+        writer.writerow(cleaned_row)
+        command.stdout.write(command.style.SUCCESS(f"Successfully cleaned row of {identifier_name}: {identifier}"))
+        successes.append(identifier_name)
+
+    except Exception as e:
+        command.stderr.write(command.style.ERROR(f"Error cleaning row of {identifier_name}: {identifier}"))
+        command.stderr.write(command.style.ERROR(str(e)))
+        failures.append(identifier_name)
+
+
+def report_results(command, successes, failures):
+    command.stdout.write(
+        command.style.SUCCESS(
+            f"CSV clean complete: {len(successes)} succeeded, {len(failures)} failed."
         )
-
-        ss_name, ss_voltages = normalise_name_and_extract_voltage_info(
-            data_map[ss_type_raw]
+    )
+    if failures:
+        command.stderr.write(
+            command.style.ERROR(f"Failed identifiers: {failures}")
         )
-
-        ss_proposed_voltage = (
-            f"{float(data_map['Proposed Connection Voltage (kV)']):.1f}"
-        )
-
-        ss_type = type_map[ss_type_raw]
-        ss_dno = category
-        ss_connection_status = connection_status_map[data_map["Connection Status"]]
-        ss_tot_demand_num = data_map["Total Demand Number"]
-        ss_tot_demand_capacity = data_map["Total Demand Capacity (MW)"]
-        ss_tot_generation_num = data_map["Total Generation Number"]
-        ss_tot_generation_capacity = data_map["Total Generation Capacity (MW)"]
-
-    cleaned_data_map = {
-        "name": ss_name,
-        "type": ss_type,
-        "dno": ss_dno,
-        "ss_voltages": ss_voltages,
-        "proposed_voltage": ss_proposed_voltage,
-        "connection_status": ss_connection_status,
-        "total_demand_number": ss_tot_demand_num,
-        "total_demand_capacity_mw": ss_tot_demand_capacity,
-        "total_generation_number": ss_tot_generation_num,
-        "total_generation_capacity_mw": ss_tot_generation_capacity,
-    }
-
-    return cleaned_data_map
-
