@@ -5,15 +5,18 @@ from django.contrib.gis.geos import Point
 import requests
 import io
 import re
-from location_input.utils.command_helpers import normalise_name_and_extract_voltage_info
-
+from location_input.utils.command_helpers.shared_helpers import get_data_csv_path, reset_csv, open_csv, clean_data_map, handle_row, report_results
 from location_input.models.shared_fields import ConnectionVoltageLevel
 import ast
 from django.contrib.gis.geos import GEOSGeometry
 from location_input.models.substations import DNOGroup, Substation
+from location_input.constants import VOLTAGE_CHOICES, CLEAN_SUBSTATION_CSV_HEADERS
+
+from location_input.utils.command_helpers.process.shared_helpers_process import process_row, handle_row_process
+
 
 class Command(BaseCommand):
-    help = "Process cleaned ngid data"
+    help = "Process cleaned substation data"
 
     def add_arguments(self, parser):
         parser.add_argument('dno_group_abbr', type=str)
@@ -21,77 +24,17 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         dno_group_abbr = options['dno_group_abbr']
 
-        self.clear_existing_cleaned_nged_substation_data(dno_group_abbr)
-        self.stdout.write(f"Fetching CSV ...")
-        CSV_PATH = (
-            Path(__file__).resolve().parent.parent.parent.parent
-            / "data"
-            / "clean"
-            / f"substation_locations_clean_{dno_group_abbr}.csv"
-        )
+        clean_csv_path = get_data_csv_path("clean", "substation_locations", dno_group_abbr)
 
-        success_ss_names = []
-        failure_ss_names = []
-
-        with open(CSV_PATH, "r", encoding="utf-8") as file:
+        with open_csv(clean_csv_path, "r") as file:
             reader = csv.DictReader(file)
 
+            successful_identifiers = []
+            failed_identifiers = []
+
             for row in reader:
-                substation_name = row["name"]
-                try:
-                    self.process_row(row)
-                    self.stdout.write(
-                        self.style.SUCCESS(
-                            f"Successfully processed row with substation name {substation_name}"
-                        )
-                    )
-                    success_ss_names.append(substation_name)
-                except Exception as e:
-                    self.stderr.write(
-                        self.style.ERROR(
-                            f"Error processing row  with substation name: {substation_name}"
-                        )
-                    )
-                    self.stderr.write(self.style.ERROR(str(e)))
-                    failure_ss_names.append(substation_name)
+                handle_row_process(row, successful_identifiers, failed_identifiers, self, dno_group_abbr)
 
-        self.stdout.write(
-            self.style.SUCCESS(
-                f"CSV import complete: {len(success_ss_names)} succeeded, {len(failure_ss_names)} failed."
-            )
-        )
-
-        if failure_ss_names:
-            failed_list = ", ".join(failure_ss_names)
-            self.stderr.write(
-                self.style.ERROR(f"Failed substation names: {failed_list}")
-            )
-
-    def clear_existing_cleaned_nged_substation_data(self, dno_group_abbr):
-        self.stdout.write(f"Clearing existing cleaned {dno_group_abbr} substation data...")
-        dno_group = DNOGroup.objects.get(abbr=f"{dno_group_abbr}")
-        Substation.objects.filter(dno_group=dno_group).delete()
-        self.stdout.write(f"Previous {dno_group_abbr} substation data cleared")
-
-    def process_row(self, row):
-
-        ss_name = row["name"]
-        ss_type = row["type"]
-        ss_geolocation = GEOSGeometry(row["geolocation"])
-        ss_dno = row["dno"]
-        ss_voltages = ast.literal_eval(row["voltages"])
-
-        dno_group_obj = DNOGroup.objects.get(abbr=ss_dno)
-        connection_voltage_levels_objs = ConnectionVoltageLevel.objects.filter(
-            level_kv__in=ss_voltages
-        )
+        report_results(self, successful_identifiers, failed_identifiers)
 
 
-        substation = Substation.objects.create(
-            name=ss_name,
-            geolocation=ss_geolocation,
-            type=ss_type,
-            dno_group=dno_group_obj,
-        )
-        substation.voltage_kv.set(connection_voltage_levels_objs)
-        substation.save()

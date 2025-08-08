@@ -75,7 +75,7 @@ def handle_row(row, writer, dno_group_abbr, data_type, successes, failures, comm
 def report_results(command, successes, failures):
     command.stdout.write(
         command.style.SUCCESS(
-            f"CSV clean complete: {len(successes)} succeeded, {len(failures)} failed."
+            f"Script complete: {len(successes)} succeeded, {len(failures)} failed."
         )
     )
     if failures:

@@ -99,7 +99,6 @@ class Command(BaseCommand):
             status=ss_connection_status
         )
 
-        print(f"connection_voltage_level type: {connection_voltage_level}")
         proposed_voltage_level_obj = ConnectionVoltageLevel.objects.get(
             level_kv=connection_voltage_level
         )
