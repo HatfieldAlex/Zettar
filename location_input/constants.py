@@ -12,3 +12,16 @@ VOLTAGE_LEVELS = [
 VOLTAGE_CHOICES = [(v, f"{v} kV") for v in VOLTAGE_LEVELS]
 
 APPLICATION_STATUS_FIELDS = ["pending", "budget", "accepted"]
+
+CLEAN_CSV_HEADERS = [
+        "name",
+        "type",
+        "dno",
+        "ss_voltages",
+        "proposed_voltage",
+        "connection_status",
+        "total_demand_number",
+        "total_demand_capacity_mw",
+        "total_generation_number",
+        "total_generation_capacity_mw",
+    ]
