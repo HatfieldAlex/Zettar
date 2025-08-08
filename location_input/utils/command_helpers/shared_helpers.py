@@ -2,17 +2,18 @@ from pathlib import Path
 import csv
 import os
 from django.core.management.base import CommandError
-from location_input.utils.command_helpers.helpers_NGED import clean_data_map_NGED, extract_identifier_from_row_NGED
+from location_input.utils.command_helpers.application_data.helpers_application_NGED import clean_data_map_application_NGED, extract_identifier_from_row_application_NGED
+from location_input.utils.command_helpers.substations_data.helpers_NGED import clean_data_map_substation_NGED, extract_identifier_from_row_substation_NGED
 
 def open_csv(path, mode):
     return open(path, mode, encoding="utf-8", newline="")
 
-def get_data_csv_path(data_stage, dno_group_abbr):
+def get_data_csv_path(data_stage, data_type, dno_group_abbr):
     return (
         Path(__file__).resolve().parent.parent.parent.parent 
             / "data"
             / f"{data_stage}"
-            / f"connection_applications_{data_stage}_{dno_group_abbr}.csv"
+            / f"{data_type}_{data_stage}_{dno_group_abbr}.csv"
     )
 
 
@@ -40,20 +41,27 @@ def reset_csv(file_path, csv_headers, stdout):
     except Exception as e:
         raise CommandError(f"Error resetting CSV {file_path}: {e}")
 
-def clean_data_map(data_map, category):
-    if category == 'NGED':
-        return clean_data_map_NGED(data_map, category)
+def clean_data_map(data_map, data_type, category):
+    if category == "NGED" and data_type == "application":
+        return clean_data_map_application_NGED(data_map)
+    if category == "NGED" and data_type == "substation":
+        return clean_data_map_substation_NGED(data_map)
 
 
-def extract_identifier_from_row(row, dno_group_abbr):
-    if dno_group_abbr == "NGED":
-        return extract_identifier_from_row_NGED(row, dno_group_abbr)
+def extract_identifier_from_row(row, data_type, dno_group_abbr):
+    if dno_group_abbr == "NGED" and data_type == "application":
+        return extract_identifier_from_row_application_NGED(row)
+    elif dno_group_abbr == "NGED" and data_type == "substation":
+        return extract_identifier_from_row_substation_NGED(row) 
 
+def handle_row(row, writer, dno_group_abbr, data_type, successes, failures, command):
+    if dno_group_abbr == "NGED" and data_type == "substation":
+        if row["Substation Type"] in {"132kv Switching Station", "Ehv Switching Station"}:
+            return
 
-def handle_row(row, writer, dno_group_abbr, successes, failures, command):
-    identifier_name, identifier = extract_identifier_from_row(row, dno_group_abbr)
+    identifier_name, identifier = extract_identifier_from_row(row, data_type, dno_group_abbr)
     try:
-        cleaned_row = clean_data_map(row, dno_group_abbr)
+        cleaned_row = clean_data_map(row, data_type, dno_group_abbr)
         writer.writerow(cleaned_row)
         command.stdout.write(command.style.SUCCESS(f"Successfully cleaned row of {identifier_name}: {identifier}"))
         successes.append(identifier_name)

@@ -13,7 +13,12 @@ VOLTAGE_CHOICES = [(v, f"{v} kV") for v in VOLTAGE_LEVELS]
 
 APPLICATION_STATUS_FIELDS = ["pending", "budget", "accepted"]
 
-CLEAN_CSV_HEADERS = [
+CLEAN_SUBSTATION_CSV_HEADERS = [
+    "name", "type", "geolocation", "dno", "voltages"
+    ]
+
+
+CLEAN_APPLICATION_CSV_HEADERS = [
         "name",
         "type",
         "dno",

@@ -84,7 +84,7 @@ def normalise_name_and_extract_voltage_info(ss_name):
     return [ss_name, voltage_levels_ss]
 
 
-def clean_data_map_NGED(data_map, category):
+def clean_data_map_application_NGED(data_map):
     type_map = {
         "Primary Substation": "primary",
         "Bulk Supply Point": "bsp",
@@ -110,7 +110,7 @@ def clean_data_map_NGED(data_map, category):
     )
 
     ss_type = type_map[ss_type_raw]
-    ss_dno = category
+    ss_dno = "NGED"
     ss_connection_status = connection_status_map[data_map["Connection Status"]]
     ss_tot_demand_num = data_map["Total Demand Number"]
     ss_tot_demand_capacity = data_map["Total Demand Capacity (MW)"]
@@ -151,7 +151,7 @@ def handle_row_NGED(row, writer, successes, failures, command):
         command.stderr.write(command.style.ERROR(str(e)))
         failures.append(ss_chain)
 
-def extract_identifier_from_row_NGED(row, dno_group_abbr):
+def extract_identifier_from_row_application_NGED(row):
     identifier_name = "substation chain"
     identifier = {
         "gsp": row["Grid Supply Point"],
