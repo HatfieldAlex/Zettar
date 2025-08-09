@@ -71,6 +71,10 @@ def process_row_application_NGED(row):
             if candidate_ss_voltages_list == ss_voltages:
                 substation_obj = candidate_ss
 
+    setattr(new_connection, "substation", substation_obj)
+
+    new_connection.save()
+
 def clear_existing_cleaned_application_data_NGED(dno_group_abbr, stdout):
     stdout.write(f"Clearing existing {dno_group_abbr} New Connection data...")
     dno_group = DNOGroup.objects.get(abbr=dno_group_abbr)

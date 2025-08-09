@@ -52,6 +52,10 @@ def get_nearby_application_data(request):
             connection_summary = get_substation_object_connection_data(
                 nearest_substation_obj
             )
+            print('-----------------')
+            print(f'connection_summary: {connection_summary}')
+            print('-------------------')
+
             return JsonResponse(connection_summary)
         except json.JSONDecodeError:
             return JsonResponse(
