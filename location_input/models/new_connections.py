@@ -97,3 +97,9 @@ class NewConnection(models.Model):
             raise ValidationError(
                 "Exactly one of primary, BSP, or GSP substation must be set."
             )
+            
+__all__ = [
+    "ConnectionStatus",
+    "ReportingPeriod",
+    "NewConnection",
+]

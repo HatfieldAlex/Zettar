@@ -7,3 +7,5 @@ class ConnectionVoltageLevel(models.Model):
         max_length=10,
         choices=VOLTAGE_CHOICES,
     )
+
+__all__ = ["ConnectionVoltageLevel"]

@@ -31,3 +31,8 @@ class Substation(models.Model):
         blank=True,
     )
     type = models.CharField(max_length=10, choices=SUBSTATION_TYPES)
+
+__all__ = [
+    "DNOGroup",
+    "Substation",
+]

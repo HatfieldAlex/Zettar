@@ -17,7 +17,6 @@ CLEAN_SUBSTATION_CSV_HEADERS = [
     "name", "type", "geolocation", "dno", "voltages"
     ]
 
-
 CLEAN_APPLICATION_CSV_HEADERS = [
         "name",
         "type",

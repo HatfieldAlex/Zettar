@@ -1,5 +1,6 @@
 from django.contrib.gis.geos import Point
-from location_input.utils.command_helpers.application_data.helpers_application_NGED import normalise_name_and_extract_voltage_info
+from ..helpers_cleaning_shared import normalise_name_and_extract_voltage_info
+from ..helpers_cleaning_shared import normalise_name_and_extract_voltage_info
 
 
 def clean_data_map_substation_NGED(row):
@@ -37,3 +38,7 @@ def extract_identifier_from_row_substation_NGED(row):
     identifier = row.get("Substation Number")
     return (identifier_name, identifier)
 
+__all__ = [
+    "clean_data_map_substation_NGED",
+    "extract_identifier_from_row_substation_NGED",
+]
