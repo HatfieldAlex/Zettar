@@ -11,8 +11,8 @@ import ast
 from django.contrib.gis.geos import GEOSGeometry
 from location_input.models.substations import DNOGroup, Substation
 from location_input.constants import VOLTAGE_CHOICES, CLEAN_SUBSTATION_CSV_HEADERS
-
-from location_input.utils.command_helpers.process.shared_helpers_process import process_row, handle_row_process
+from location_input.utils.command_helpers.process.shared_helpers_process import process_row, handle_row_process_substation
+from location_input.utils.command_helpers.process.shared_helpers_process import clear_existing_cleaned_data
 
 
 class Command(BaseCommand):
@@ -23,7 +23,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         dno_group_abbr = options['dno_group_abbr']
-
+        clear_existing_cleaned_data(self.stdout, 'substation', dno_group_abbr)
         clean_csv_path = get_data_csv_path("clean", "substation_locations", dno_group_abbr)
 
         with open_csv(clean_csv_path, "r") as file:
@@ -33,7 +33,7 @@ class Command(BaseCommand):
             failed_identifiers = []
 
             for row in reader:
-                handle_row_process(row, successful_identifiers, failed_identifiers, self, dno_group_abbr)
+                handle_row_process_substation(row, successful_identifiers, failed_identifiers, self, dno_group_abbr)
 
         report_results(self, successful_identifiers, failed_identifiers)
 
