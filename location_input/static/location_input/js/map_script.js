@@ -1,16 +1,7 @@
-// import { mapOptions, boundaryPath } from './map_config.js'; // keep boundaryPath as a fallback if you want
-import { mapOptions, boundaryPath } from './map_config.js';
+import { mapOptions, geojsonGeometryToGMapPaths } from './map_config.js';
 
 let map;
 let marker;
-
-// Convert GeoJSON geometry (Polygon | MultiPolygon) to Google Maps paths
-function geojsonGeometryToGMapPaths(geom) {
-  const rings = geom.type === 'Polygon'
-    ? geom.coordinates
-    : geom.coordinates.flat(); // flatten MultiPolygon parts into one list of rings
-  return rings.map(ring => ring.map(([lng, lat]) => ({ lat, lng })));
-}
 
 
 async function initMap() {
@@ -19,44 +10,43 @@ async function initMap() {
   try {
     const resp = await fetch('/static/location_input/data/dno_licence_areas.geojson'); // host locally or via your CDN
     const geojson = await resp.json();
-    const WestMidlands = geojson.features.find(f => f.properties?.region === "West Midlands");
+    const AvailableRegions = geojson.features.filter(f => f.properties?.dno === "NGED");
+    const allAvailablePaths = AvailableRegions.flatMap(r => geojsonGeometryToGMapPaths(r.geometry));
+
+    const UnavailableRegions = geojson.features.filter(f => f.properties?.dno !== "NGED");
+    const allUnavailablePaths = UnavailableRegions.flatMap(r => geojsonGeometryToGMapPaths(r.geometry));
 
 
-    const path = geojsonGeometryToGMapPaths(WestMidlands.geometry)
-
-    const poly = new google.maps.Polygon({
-    paths: path,
-    // paths: boundaryPath,
-    strokeColor: "#000000",
-    strokeOpacity: 0.4,
-    strokeWeight: 1,
-    fillOpacity: 0,
-    clickable: true,
+    AvailableRegions.forEach(r => {
+        const poly = new google.maps.Polygon({
+        paths: allAvailablePaths,
+        strokeOpacity: 0,         // no border
+        fillColor: "#5bc4a1ff",     // warm, eye-catching fill
+        fillOpacity: 0,        // see the map details underneath
+        clickable: true,
+        zIndex: 2
+        });
+        poly.setMap(map);
+        poly.addListener("click", onMapClick);
     });
 
-    poly.setMap(map);
-
-    poly.addListener("click", onMapClick);
-
+    UnavailableRegions.forEach(r => {
+        const poly = new google.maps.Polygon({
+        paths: allUnavailablePaths,
+        strokeOpacity: 0,         // no border
+        fillColor: "#e88b82ff",     // warm, eye-catching fill
+        fillOpacity: 0.10,        // see the map details underneath
+        clickable: true,
+        zIndex: 2
+        });
+        poly.setMap(map);
+        poly.addListener("click", onMapClick);
+    });
 
   } catch (e) {
-    console.error("Failed to load NGED GeoJSON, falling back to static boundaryPath", e);
-
-    // ---- OPTIONAL FALLBACK using your existing boundaryPath ----
-    // const outlinePoly = new google.maps.Polygon({
-    //   paths: boundaryPath,
-    //   strokeColor: "#000000",
-    //   strokeOpacity: 0.4,
-    //   strokeWeight: 1,
-    //   fillOpacity: 0,
-    //   clickable: true,
-    // });
-    // outlinePoly.setMap(map);
-    // outlinePoly.addListener("click", onMapClick);
-    // outlinePolys = [outlinePoly];
+    console.error("Error occured when finding map rendering", e);
   }
 
-  // Also allow clicks anywhere on the base map (if you still want that)
   map.addListener("click", onMapClick);
 }
 
@@ -67,6 +57,7 @@ function onMapClick(event) {
   console.log("Map clicked at:", lat, lng);
 
   if (marker) marker.setMap(null);
+  
   marker = new google.maps.Marker({
     position: { lat, lng },
     map: map,
@@ -80,3 +71,4 @@ function onMapClick(event) {
 
 
 window.initMap = initMap;
+
