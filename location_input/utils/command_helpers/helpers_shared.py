@@ -4,7 +4,6 @@ import os
 from django.core.management.base import CommandError
 from .cleaning import extract_identifier_from_row_application_NGED, extract_identifier_from_row_substation_NGED, clean_data_map_application_NGED, clean_data_map_substation_NGED
 
-
 def open_csv(path, mode):
     return open(path, mode, encoding="utf-8", newline="")
 

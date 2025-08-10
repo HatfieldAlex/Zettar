@@ -1,15 +1,6 @@
 import ast
 from django.contrib.gis.geos import GEOSGeometry
-
-from location_input.models.substations import DNOGroup, Substation
-from location_input.models.shared_fields import ConnectionVoltageLevel
-from location_input.models.new_connections import (
-    NewConnection,
-    ConnectionStatus,
-    ReportingPeriod,
-    ConnectionVoltageLevel,
-)
-
+from location_input.models import *
 import ast
 from datetime import date
 
@@ -28,6 +19,8 @@ def process_row_application_NGED(row):
     ss_total_generation_number = row["total_generation_number"]
     ss_total_generation_capacity = row["total_generation_capacity_mw"]
 
+    print(f'connection_voltage_level: {connection_voltage_level}')
+
     # finding object instances
     connection_status_obj = ConnectionStatus.objects.get(
         status=ss_connection_status
@@ -36,6 +29,8 @@ def process_row_application_NGED(row):
     proposed_voltage_level_obj = ConnectionVoltageLevel.objects.get(
         level_kv=connection_voltage_level
     )
+
+    print(f'proposed_voltage_level_obj: {proposed_voltage_level_obj}')
 
     reporting_period_obj = ReportingPeriod.objects.get(
         start_date=date(2025, 1, 1), end_date=date(2025, 5, 31)

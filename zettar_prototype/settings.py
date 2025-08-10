@@ -9,17 +9,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['*']
-
-if ENV == "local":
-    CSRF_COOKIE_SECURE = False
-    SESSION_COOKIE_SECURE = False
-    DEBUG = True
-    DB_NAME = config("LOCAL_DB_NAME")
-    DB_USER = config("LOCAL_DB_USER")
-    DB_PASSWORD = config("LOCAL_DB_PASSWORD")
-    DB_HOST = config("LOCAL_DB_HOST")
-    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
-elif ENV == "testing":
+if ENV == "testing":
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
     DEBUG = False
@@ -28,7 +18,16 @@ elif ENV == "testing":
     DB_PASSWORD = config("TESTING_DB_PASSWORD")
     DB_HOST = config("TESTING_DB_HOST")
     GDAL_LIBRARY_PATH = config("TESTING_GDAL_LIBRARY_PATH")
-else:
+elif ENV == "local":
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    DEBUG = True
+    DB_NAME = config("LOCAL_DB_NAME")
+    DB_USER = config("LOCAL_DB_USER")
+    DB_PASSWORD = config("LOCAL_DB_PASSWORD")
+    DB_HOST = config("LOCAL_DB_HOST")
+    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
+elif ENV == "production":
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     DEBUG = False

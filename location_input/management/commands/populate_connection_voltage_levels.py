@@ -1,17 +1,17 @@
 from django.core.management.base import BaseCommand
-from location_input.models import ProposedConnectionVoltageLevel
-
+from location_input.models import ConnectionVoltageLevel
+from location_input.constants import VOLTAGE_CHOICES
 
 class Command(BaseCommand):
     help = (
-        "Populates ProposedConnectionVoltageLevel with defined voltage choices"
+        "Populates ConnectionVoltageLevel with defined voltage choices"
     )
 
     def handle(self, *args, **options):
         created_count = 0
-        for level, label in ProposedConnectionVoltageLevel.VOLTAGE_CHOICES:
+        for level, label in VOLTAGE_CHOICES:
             obj, created = (
-                ProposedConnectionVoltageLevel.objects.get_or_create(
+                ConnectionVoltageLevel.objects.get_or_create(
                     level_kv=level
                 )
             )
