@@ -14,7 +14,7 @@
 
 ## 📷 Interface Preview  
 <div align="center">
-  <img src="location_input/static/location_input/images/zettar_full_page_screenshot.png" style="width:75%; height:auto;">
+  <img src="location_input/static/location_input/images/zettar_full_page_screenshot.png" style="width:100%; height:auto;">
 </div>
 
 
@@ -61,7 +61,7 @@ Zettar’s Django backend provides a set of custom management commands that can 
 There are 14 electricity distribution licence areas across Great Britain, operated by six groups: UK Power Networks, National Grid Electricity Distribution, SP Energy Networks, Northern Powergrid, Electricity North West, and Scottish and Southern Electricity Networks.
 
 <div align="center" style="margin-bottom: 10px;">
-  <img src="location_input/static/location_input/images/gb_electricity_distribution_map.jpg" style="width:60%; height:auto;">
+  <img src="location_input/static/location_input/images/gb_electricity_distribution_map.jpg" style="width:100%; height:auto;">
 </div>
 
 <p>
@@ -91,7 +91,7 @@ An illustrative case study with NGID revealed the inconsistent ways substations 
 ### Schema Diagram
 
 <div align="center" style="margin-bottom: 10px;">
-  <img src="location_input/static/location_input/images/db_schema_drawSQL.png" style="width:60%; height:auto;">
+  <img src="location_input/static/location_input/images/db_schema_drawSQL.png" style="width:100%; height:auto;">
 </div>
 
 ## 🔍 Retrospective
