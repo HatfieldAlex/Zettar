@@ -125,9 +125,15 @@ def get_substation_object_connection_data(substation_obj):
     connection_user_info["demand_capacity_mw"] = demand_capacity_total
     connection_user_info["generation_capacity_mw"] = generation_capacity_total
 
+    fe_ss_type_name_map = {
+        "primary": "primary",
+        "gsp": "GSP",
+        "bsp": "BSP"
+    }
+    
     connection_summary = {
         "nearest_substation_name": substation_obj.name,
-        "nearest_substation_type": substation_obj.type,
+        "nearest_substation_type": fe_ss_type_name_map.get(substation_obj.type),
         **dict(connection_user_info),
     }
 

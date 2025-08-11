@@ -45,17 +45,10 @@ def get_nearby_application_data(request):
             nearest_substation_obj = find_nearest_substation_obj(
                 geolocation, connection_type
             )
-            print('-----------------')
-            print(f'nearest_substation_obj: {nearest_substation_obj}')
-            print('-------------------')
 
             connection_summary = get_substation_object_connection_data(
                 nearest_substation_obj
             )
-            print('-----------------')
-            print(f'connection_summary: {connection_summary}')
-            print('-------------------')
-
             return JsonResponse(connection_summary)
         except json.JSONDecodeError:
             return JsonResponse(
