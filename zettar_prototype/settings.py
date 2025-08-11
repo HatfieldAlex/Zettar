@@ -5,10 +5,15 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 ENV = config("ENV", default="production")
 SECRET_KEY = config("SECRET_KEY")
-
-# SECURITY WARNING: don't run with debug turned on in production!
+GOOGLE_MAPS_API_KEY = config("GOOGLE_MAPS_API_KEY")
 
 ALLOWED_HOSTS = ['*']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.zettar.tech',      
+    'https://zettar-prototype-pjmq.onrender.com', 
+]
+
 if ENV == "testing":
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
@@ -44,8 +49,6 @@ elif ENV == "production":
     DB_USER = config("PROD_DB_USER")
     DB_PASSWORD = config("PROD_DB_PASSWORD")
     DB_HOST = config("PROD_DB_HOST")
-
-GOOGLE_MAPS_API_KEY = config("GOOGLE_MAPS_API_KEY")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
