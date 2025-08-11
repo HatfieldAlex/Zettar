@@ -27,6 +27,15 @@ elif ENV == "local":
     DB_PASSWORD = config("LOCAL_DB_PASSWORD")
     DB_HOST = config("LOCAL_DB_HOST")
     GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
+elif ENV == "UAT":
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    DEBUG = False
+    DB_NAME = config("UAT_DB_NAME")
+    DB_USER = config("UAT_DB_USER")
+    DB_PASSWORD = config("UAT_DB_PASSWORD")
+    DB_HOST = config("UAT_DB_HOST")
+    GDAL_LIBRARY_PATH = config("UAT_GDAL_LIBRARY_PATH")
 elif ENV == "production":
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
