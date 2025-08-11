@@ -9,7 +9,7 @@
 </div>
 
 <p style="text-align: center;">
-  Zettar helps developers find viable grid connection points by turning messy DNO data into clean insights using geospatial technology and up-to-date application data.
+  Zettar helps developers find viable grid connection points by turning messy DNO data into clean insights using geospatial technology and up-to-date application data. Available at <a href="https://www.zettar.tech" target="_blank">www.zettar.tech</a>.
 </p>
 
 ## 📷 Interface Preview  
@@ -88,7 +88,32 @@ The data is inconsistently provided in various formats, requiring separate clean
 
 An illustrative case study with NGID revealed the inconsistent ways substations were labeled in the dataset. Rather than using a dedicated column for substation type, the type was often embedded within the name itself, leading to inconsistent formatting - examples include "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn.". Similarly, voltage values were inconsistently presented as "kv", "kV", "Kv", or "KV". While many of these variations didn’t directly affect data accuracy, some entries were so unstructured that informed assumptions had to be made during cleaning and processing.
 
-## 🧭 Roadmap
+### Schema Diagram
+
+<div align="center" style="margin-bottom: 10px;">
+  <img src="location_input/static/location_input/images/db_schema_drawSQL.png" style="width:60%; height:auto;">
+</div>
+
+## 🔍 Retrospective
+
+### Data Cleaning and Processing 
+
+Although the dataset was relatively small, it required extensive wrangling due to inconsistent formats and numerous quirks in the source data. I initially tackled the problem using a purely functional approach, with dispatch functions directing the processing flow. This allowed me to move quickly, uncover the underlying patterns, and implement the core logic.
+
+The method worked well for the first datasets (NGED) but proved difficult to extend when I moved on to the UKPN datasets. Even so, starting functionally was the right call - it allowed Zettar to process at least one dataset within the time available fully. Had I started with creating a sophisticated data-wrangling pipeline, perhaps based on object-oriented design, I may not have been able to complete even a single DNO, and therefore would have no prototype to demonstrate. 
+
+In retrospect, the optimal approach would have been to begin functionally, then refactor into a unified data-wrangling system once the core logic was in place. Designing the system after gaining familiarity with the data’s quirks would have ensured it reflected its true complexity, rather than assumptions made too early. Perhaps the key lesson is to fully understand the complete family of datasets before committing to the computational processing.
+
+
+### Use of AI
+
+LLMs were leveraged to generate utility functions and accelerate early progress quickly. The result of this, though, was an inconsistent structure/format, which, if the project were expanded to a team, would ultimately be detrimental to maintainability. 
+
+In hindsight, setting clear conventions, core principles, and using automated linting from the start would have preserved speed while ensuring consistency, reducing later rework and strengthening the project’s foundation.
+
+
+
+## 🧭 Product Roadmap
 
 - **Full DNO Coverage**: Currently, Zettar only integrates data from the National Grid DNO. The goal is to expand coverage across all six DNO groups in Great Britain. Each dataset is published in a different format, so this expansion will require tailored data cleaning for each group
 - **Demand Side Integration**: At present, Zettar focuses on formal generation and demand applications at substations. However, incorporating informal demand indicators - such as developer interest tracked within Zettar - could enhance site selection insights. This would need to be implemented carefully to avoid creating a self-fulfilling feedback loop.
