@@ -32,7 +32,7 @@ export function onMapClick(event) {
 
 export const UnavailableRegionOptions = {
   strokeOpacity: 0,        
-  fillColor: "#e88b82ff",     
+  fillColor: "#d2c5c3ff",     
   fillOpacity: 0.10,        
   clickable: false,
   zIndex: 2

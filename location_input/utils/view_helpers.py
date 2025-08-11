@@ -102,6 +102,19 @@ def get_substation_object_connection_data(substation_obj):
                 f"generation_{connection_status}_status_sum"
             ] += generation_count
 
+    if "demand_budget_status_sum" not in connection_user_info:
+        connection_user_info["demand_budget_status_sum"] = 0 
+    if "generation_budget_status_sum" not in connection_user_info:
+        connection_user_info["generation_budget_status_sum"] = 0 
+    if "demand_accepted_status_sum" not in connection_user_info:
+        connection_user_info["demand_accepted_status_sum"] = 0
+    if "generation_accepted_status_sum" not in connection_user_info:
+        connection_user_info["generation_accepted_status_sum"] = 0
+    if "demand_pending_status_sum" not in connection_user_info:
+        connection_user_info["demand_pending_status_sum"] = 0
+    if "generation_pending_status_sum" not in connection_user_info:
+        connection_user_info["generation_pending_status_sum"] = 0
+
     demand_capacity_total = Decimal(
         connection_user_info["demand_capacity_mw"]
     ).quantize(Decimal("1"), rounding=ROUND_DOWN)

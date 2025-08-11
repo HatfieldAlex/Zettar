@@ -1,11 +1,11 @@
+{% load static %}
+
 <header class="w-full bg-white shadow p-4">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <a href="{% url 'home' %}" class="text-xl font-semibold">⚡ Zettar</a>
+    <a href="{% url 'home' %}">
+      <img src="{% static 'location_input/images/zettar_logo.svg' %}" alt="Zettar Logo" class="h-8">
+    </a>
     <nav class="space-x-6 text-gray-700 font-medium">
-      <!-- <a href="{% url 'home' %}" class="hover:text-blue-600">Home</a>
-      <a href="{% url 'about' %}" class="hover:text-blue-600">About</a>
-      <a href="{% url 'methodology' %}" class="hover:text-blue-600">Methodology</a>
-      <a href="{% url 'data' %}" class="hover:text-blue-600">Data</a> -->
     </nav>
   </div>
 </header>
