@@ -70,12 +70,12 @@ There are 14 electricity distribution licence areas across Great Britain, operat
 
 | Name | Description | Link |
 | :---: | :---: | :---: |
-| Primary Substation Locations (NGID) | Geographic locations of primary substations managed by National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/primary-substation-location-easting-northings) |
-| New Connections (NGID) | Dataset of new connection applications to National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/new-connections)  |
+| Primary Substation Locations (NGED) | Geographic locations of primary substations managed by National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/primary-substation-location-easting-northings) |
+| New Connections (NGED) | Dataset of new connection applications to National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/new-connections)  |
 
 ###  Dataset Quality Commentary
 
-The data is inconsistently provided in various formats, requiring separate cleaning for each dataset. Some are more accessible than others, but are easy to integrate without prior cleaning. Below is a summary of my thoughts on the accessibility of each dataset.
+The data is inconsistently provided in various formats, requiring separate cleaning for each dataset. While some datasets were more accessible than others, none could be integrated without significant preprocessing. Below is a summary of my thoughts on the accessibility of each dataset.
 
 | DNO | Substation Geolocation Data Quality | Substation Application Data Quality |
 | :---: | :---: | :---: |
@@ -86,7 +86,7 @@ The data is inconsistently provided in various formats, requiring separate clean
 | Electricity North West | High | Medium |
 | Scottish and Southern Electricity Networks | Low | Low |
 
-An illustrative case study with NGID revealed the inconsistent ways substations were labeled in the dataset. Rather than using a dedicated column for substation type, the type was often embedded within the name itself, leading to inconsistent formatting - examples include "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn.". Similarly, voltage values were inconsistently presented as "kv", "kV", "Kv", or "KV". While many of these variations didn’t directly affect data accuracy, some entries were so unstructured that informed assumptions had to be made during cleaning and processing.
+An illustrative case study with NGED revealed the inconsistent ways substations were labeled in the dataset. Rather than using a dedicated column for substation type, the type was often embedded within the name itself with inconsistent formatting - examples include "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn.". Similarly, voltage values were inconsistently presented as "kv", "kV", "Kv", or "KV". While many of these variations didn’t directly affect data accuracy, some entries were so unstructured that informed assumptions had to be made during cleaning and processing.
 
 ### Schema Diagram
 
@@ -105,13 +105,15 @@ The method worked well for the first datasets (NGED) but proved difficult to ext
 In retrospect, the optimal approach would have been to begin functionally, then refactor into a unified data-wrangling system once the core logic was in place. Designing the system after gaining familiarity with the data’s quirks would have ensured it reflected its true complexity, rather than assumptions made too early. Perhaps the key lesson is to fully understand the complete family of datasets before committing to the computational processing.
 
 
-### Use of AI
+### Code Style, Conventions, and Structure
 
-LLMs were leveraged to generate utility functions and accelerate early progress quickly. The result of this, though, was an inconsistent structure/format, which, if the project were expanded to a team, would ultimately be detrimental to maintainability. 
+While I applied coding conventions and maintained a readable structure within the Django setup, these were introduced on a case-by-case basis rather than through a unified process. This approach worked well for a medium-sized personal project and supported rapid delivery, but it also meant conventions were not entirely consistent across the repository, and some areas could benefit from restructuring.
 
-In hindsight, setting clear conventions, core principles, and using automated linting from the start would have preserved speed while ensuring consistency, reducing later rework and strengthening the project’s foundation.
+A lightweight, repeatable process for integrating style and quality checks, such as automated linting from the outset, could have preserved the project’s pace while ensuring a coherent feel throughout. For instance, I could have made greater use of Django’s app functionality to separate concerns more cleanly.
 
+### Testing
 
+Testing was applied to key functions and proved valuable in catching issues early. However, broader coverage - particularly for the supporting data-processing functions - would have strengthened the project. As with code styling, a regular, built-in testing rhythm could have ensured consistency without slowing development.
 
 ## 🧭 Product Roadmap
 
