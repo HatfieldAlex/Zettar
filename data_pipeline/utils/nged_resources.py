@@ -1,12 +1,39 @@
-from zettar_prototype.location_input.utils.command_helpers_refactor.helper_functions_oop import DNO, DataResource, ResourceCleaner
 from django.conf import settings
-from settings import NGED_API_KEY
 import pandas as pd 
 from shapely.geometry import Point
+from typing import Any, Union
+from zettar_prototype.data_pipeline.utils.cleaning_core import DNO, DataResource
 from .shared_helpers import normalise_name_and_extract_voltage_info
 
+nged_field_type_aliases_map = {
+        "Primary Substation": "primary",
+        "Bulk Supply Point": "bsp",
+        "Super Grid Substation": "gsp",
+    }
 
-nged_substation_cleaner = ResourceCleaner()
+nged_headers_rename_map = {
+        "Substation Number": "external_identifier",
+        "Substation Name": "name",
+        "Substation Type": "type",
+        "Latitude": "latitude",
+        "Longitude": "longitude",
+    }
+
+drop_types = {"132kv Switching Station", "Ehv Switching Station"}
+
+def nged_substation_clean(json_object: Union[dict[str, Any], list[dict[str, Any]]]) -> pd.DataFrame:
+    payload = json_object["result"]["records"]
+    df = pd.DataFrame.from_records(payload)
+    df = df.rename(columns=nged_headers_rename_map)
+    df = df[~df["type"].isin(drop_types)]
+    df["type"] = df["type"].map(nged_field_type_aliases_map)
+    df["geolocation"] = df.apply(lambda row: Point(row["longitude"], row["latitude"]), axis=1)
+    df.drop(columns=["longitude", "latitude"], inplace=True)
+    df[["name", "candidate_voltage_levels_kv"]] = df["name"].apply(
+        lambda n: pd.Series(normalise_name_and_extract_voltage_info(n)))
+    df["dno"] = "nged"
+
+    return df
 
 nged_substation_data_resource = DataResource(
     base_url="https://connecteddata.nationalgrid.co.uk/api/3/action",
@@ -16,52 +43,12 @@ nged_substation_data_resource = DataResource(
         "fields": "Substation Number,Substation Name,Substation Type,Latitude,Longitude",
         "limit": 3000,
         },
-    headers={"Authorization": f"{NGED_API_KEY}"},
-    resource_cleaner=nged_substation_cleaner,
+    headers={"Authorization": f"{settings.NGED_API_KEY}"},
+    clean_func=nged_substation_clean,
 )
 
 nged_substation_data_resource.fetch_data_resource()
 print(nged_substation_data_resource.raw_data)
-
-nged_field_aliases = {
-        "Primary Substation": "primary",
-        "Bulk Supply Point": "bsp",
-        "Super Grid Substation": "gsp",
-
-    }
-
-rename_map = {
-        "Substation Number": "raw_id",
-        "Substation Name": "name",
-        "Substation Type": "type",
-        "Latitude": "latitude",
-        "Longitude": "longitude",
-    }
-
-def nged_clean(json_object):
-
-    
-    
-
-    type_label_type
-    payload = json_object.result["records"]
-    df_raw = pd.DataFrame.from_records(payload)
-    df = df_raw
-    
-    df = df[~df["Substation Type"].isin(["132kv Switching Station", "Ehv Switching Station"])]
-    normalise_name_and_extract_voltage_info
-
-    df[["name", "voltages"]] = df_raw["name"].apply(
-        lambda n: pd.Series(normalise_name_and_extract_voltage_info(n))
-    )
-
-    df["geolocation"] = df.apply(lambda row: Point(row["longitude"], row["latitude"]), axis=1)
-
-    df["dno"] = "nged"
-
-
-    ss_name, voltage_levels_ss = normalise_name_and_extract_voltage_info(name )
-
 
 
 
