@@ -6,6 +6,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 ENV = config("ENV", default="production")
 SECRET_KEY = config("SECRET_KEY")
 GOOGLE_MAPS_API_KEY = config("GOOGLE_MAPS_API_KEY")
+NGED_API_KEY = config("NGED_API_KEY")
 
 ALLOWED_HOSTS = ['*']
 
