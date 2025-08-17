@@ -33,21 +33,22 @@ def nged_substation_clean(json_object: Union[dict[str, Any], list[dict[str, Any]
         lambda n: pd.Series(normalise_name_and_extract_voltage_info(n)))
     df["dno"] = "nged"
 
-    #validate df
-    #save dataframe to db
+    return df
 
 
 nged_substation_data_resource = DataResource(
     base_url="https://connecteddata.nationalgrid.co.uk/api/3/action",
+    dno_group="nged",
+    data_category="substation",
     path="datastore_search",
     query_params={
-        "resource_id": "e06413f8-0d86-4a13-b5c5-db14829940ed", 
-        "fields": "Substation Number,Substation Name,Substation Type,Latitude,Longitude",
-        "limit": 3000,
-        },
+        "sql": """
+            SELECT "Substation Number", "Substation Name", 
+                   "Substation Type", "Latitude", "Longitude"
+            FROM "e06413f8-0d86-4a13-b5c5-db14829940ed"
+        """
+    },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
 )
-
-
 
