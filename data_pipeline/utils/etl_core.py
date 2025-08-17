@@ -7,28 +7,24 @@ from shapely.geometry import Point
 import pandas as pd
 import requests
 from django.conf import settings
+from data_pipeline.models import RawDataRecord
 
-@dataclass(frozen=True, slots=True)
-class SubstationRecord:
-    name: str
-    type: Literal["primary", "bsp", "gsp"]
-    geolocation: Point
-    dno: Literal["nged"]
-    voltages: list[float]
+
 
 @dataclass(slots=True)
 class DataResource:
-    #endpoint
+    _registry: ClassVar[list["DataResource"]] = [] 
+
     base_url: str
+    dno: Literal["nged"]
+    data_category: Literal["substations", "connection_applications"]
     path: str = ""
     path_parameter: str = ""
     query_params: dict[str, Any] = field(default_factory=dict)
     headers: dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
-
-    raw_data: dict[str, Any] | list[Any] | None = None
-    cleaned_data: pd.DataFrame | None = None 
     clean_func: Callable[[dict[str, Any] | list[Any]], pd.DataFrame] | None = None
+    
 
     @property
     def url(self) -> str:
@@ -44,14 +40,19 @@ class DataResource:
             timeout=self.timeout,
         )
         response.raise_for_status()
-        self.raw_data = response.json() if "json" in (response.headers.get("content-type") or "").lower() else response.text
 
-    def clean_fetched_data(self) -> None:
-        if self.raw_data is None:
-            raise RuntimeError("No raw_data to clean. Call fetch_data_resource() first.")
-        if self.clean_func is None:
-            raise RuntimeError("No clean_func set on this DataResource instance.")
-        df = self.clean_func(self.raw_data)
+        raw_data = response.json() if "json" in (response.headers.get("content-type") or "").lower() else response.text
+
+        RawDataRecord.objects.create(
+            data_category=self.data_category,
+            dno_group=self.dno,
+            source_url=self.url,
+            raw_data=raw_data
+            )
+
+        
+    def clean(self) -> None:
+        pass
         # if df.validate:
         #     pass
         #     # self.cleaned_data = df
@@ -59,18 +60,19 @@ class DataResource:
         #     pass
         #     #some error
     
-    def save_data(self) -> None:
+    def process(self) -> None:
         pass
-        # #save to application database
-        # clenaed_dataframe = self.clenaed_dataframe
-        # cleaned_data_location.add(cleaned_dataframe)
+
+    def __post_init__(self):
+        self.__class__._registry.append(self)
+
+    @classmethod
+    def filter(cls, *, dno: str = None, data_category: str = None):
+        return [
+        r for r in cls._registry
+        if (dno is None or r.dno == dno) and
+           (data_category is None or r.data_category == data_category)
+    ]
 
 
-
-
-@dataclass(frozen=True, slots=True)
-class DNO:
-    name: str
-    substation_data_resources: tuple[DataResource, ...] = field(default_factory=tuple)
-    connection_application_data_resources: tuple[DataResource, ...] = field(default_factory=tuple)
 

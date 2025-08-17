@@ -33,7 +33,9 @@ def nged_substation_clean(json_object: Union[dict[str, Any], list[dict[str, Any]
         lambda n: pd.Series(normalise_name_and_extract_voltage_info(n)))
     df["dno"] = "nged"
 
-    return df
+    #validate df
+    #save dataframe to db
+
 
 nged_substation_data_resource = DataResource(
     base_url="https://connecteddata.nationalgrid.co.uk/api/3/action",
@@ -46,9 +48,6 @@ nged_substation_data_resource = DataResource(
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
 )
-
-nged_substation_data_resource.fetch_data_resource()
-print(nged_substation_data_resource.raw_data)
 
 
 

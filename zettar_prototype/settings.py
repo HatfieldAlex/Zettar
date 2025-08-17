@@ -60,6 +60,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "location_input",
     "pages",
+    "data_pipeline",
 ]
 
 MIDDLEWARE = [
