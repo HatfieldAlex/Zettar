@@ -27,7 +27,13 @@ class Command(BaseCommand):
         data_category = options["data_category"]
         dno_group_abbr = options['dno_group_abbr']
 
+        print(f"pipeline_operation: {pipeline_operation}, data_category: {data_category}, dno_group_abbr: {dno_group_abbr}")
+
+        if DataResource.filter(dno_group=dno_group_abbr, data_category=data_category) == []:
+            print("problem! empty filter set")
+
         for data_resource in DataResource.filter(dno_group=dno_group_abbr, data_category=data_category):
+            print("get here?")
             data_resource.ingest()
             data_resource.prepare()
             data_resource.load()

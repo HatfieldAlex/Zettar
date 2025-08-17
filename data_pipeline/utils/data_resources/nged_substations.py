@@ -2,8 +2,8 @@ from django.conf import settings
 import pandas as pd 
 from shapely.geometry import Point
 from typing import Any, Union
-from zettar_prototype.data_pipeline.utils.cleaning_core import DNO, DataResource
-from .shared_helpers import normalise_name_and_extract_voltage_info
+from ..core import DataResource
+from ..shared_helpers import normalise_name_and_extract_voltage_info
 
 nged_field_type_aliases_map = {
         "Primary Substation": "primary",
@@ -52,3 +52,4 @@ nged_substation_data_resource = DataResource(
     clean_func=nged_substation_clean,
 )
 
+__all__ = ["nged_substation_data_resource"]

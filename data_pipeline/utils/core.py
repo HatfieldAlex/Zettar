@@ -51,6 +51,7 @@ class DataResource:
             headers=self.headers,
             timeout=self.timeout,
         )
+        print(response)
         response.raise_for_status()
 
         raw_data_storage = RawFetchedDataStorage.objects.create(
