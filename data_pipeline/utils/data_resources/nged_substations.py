@@ -4,6 +4,7 @@ from shapely.geometry import Point
 from typing import Any, Union
 from ..core import DataResource
 from ..shared_helpers import normalise_name_and_extract_voltage_info
+from ...models import RawFetchedDataStorage
 
 nged_field_type_aliases_map = {
         "Primary Substation": "primary",
@@ -42,14 +43,16 @@ nged_substation_data_resource = DataResource(
     data_category="substation",
     path="datastore_search",
     query_params={
-        "sql": """
-            SELECT "Substation Number", "Substation Name", 
-                   "Substation Type", "Latitude", "Longitude"
-            FROM "e06413f8-0d86-4a13-b5c5-db14829940ed"
-        """
+        "resource_id": "e06413f8-0d86-4a13-b5c5-db14829940ed",
+        "limit": 2500,
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
+    raw_data_storage_id=RawFetchedDataStorage.objects.filter(
+        dno_group="nged", 
+        data_category="substation", 
+        source_url="https://connecteddata.nationalgrid.co.uk/api/3/action/datastore_search"
+        ).order_by("-fetched_at").first().id
 )
 
 __all__ = ["nged_substation_data_resource"]

@@ -1,4 +1,4 @@
-from django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand, CommandError
 from ...utils.core import DataResource
 
 class Command(BaseCommand):
@@ -6,7 +6,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            'pipeline_operation',
+            'operation',
             type=str,
             choices=["ingest", "clean", "process"],
         )
@@ -23,18 +23,28 @@ class Command(BaseCommand):
         )
     
     def handle(self, *args, **options):
-        pipeline_operation = options["pipeline_operation"]
+        operation = options["operation"]
         data_category = options["data_category"]
         dno_group_abbr = options['dno_group_abbr']
 
-        print(f"pipeline_operation: {pipeline_operation}, data_category: {data_category}, dno_group_abbr: {dno_group_abbr}")
+        self.stdout.write(
+            self.style.NOTICE(
+                "\n"
+                f"Running pipeline:\n"
+                f"  Operation      : {operation}\n"
+                f"  Data category  : {data_category}\n"
+                f"  DNO group abbr : {dno_group_abbr}\n"
+            )
+        )
 
         if DataResource.filter(dno_group=dno_group_abbr, data_category=data_category) == []:
-            print("problem! empty filter set")
+            raise CommandError(f"No DataResource instances found for DNO group {dno_group_abbr} and data category {data_category}")
+        else:
+            self.stdout.write(self.style.NOTICE(f"data resources found for DNO group {dno_group_abbr} and data category {data_category}\n"))
+
 
         for data_resource in DataResource.filter(dno_group=dno_group_abbr, data_category=data_category):
-            print("get here?")
-            data_resource.ingest()
+            data_resource.ingest(stdout=self.stdout, style=self.style)
             data_resource.prepare()
             data_resource.load()
 

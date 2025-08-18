@@ -36,6 +36,9 @@ class DataResource:
 
     clean_func: Callable[[dict[str, Any] | list[Any]], pd.DataFrame] | None = None
     raw_data_storage_id: int | None = None
+
+    _stdout: Any = None
+    _style: Any = None
     
     @property
     def url(self) -> str:
@@ -43,28 +46,78 @@ class DataResource:
         components = [self.base_url.rstrip("/"), self.path.strip("/"), self.path_parameter.strip("/")]
         return "/".join(c for c in components if c)
 
+    def log(self, msg: str, stdout=None, style=None, style_category="notice") -> None:
+        """
+        Logs a message to stdout with optional Django styling.
+        """
+        stdout = stdout or getattr(self, '_stdout', None)
+        style = style or getattr(self, '_style', None)
+        if stdout:
+            if style and style_category:
+                try:
+                    style_fn = getattr(style, style_category.upper(), None)
+                    styled_msg = style_fn(msg) if style_fn else msg
+                except Exception:
+                    styled_msg = msg
+            else:
+                styled_msg = msg
+            stdout.write(styled_msg + "\n")
+        else:
+            print(msg)
 
-    def ingest(self) -> None:
-        response = requests.get(
-            self.url, 
-            params=self.query_params or None, 
-            headers=self.headers,
-            timeout=self.timeout,
-        )
-        print(response)
-        response.raise_for_status()
+    def ingest(self, stdout=None, style=None) -> bool:
+        success_bool = False
+        self._stdout = stdout
+        self._style = style
+        BOLD = "\033[1m"
+        RESET = "\033[0m"
 
-        raw_data_storage = RawFetchedDataStorage.objects.create(
-            data_category=self.data_category,
-            dno_group=self.dno_group,
-            source_url=self.url,
-            raw_data=response
+        self.log("=" * 100, stdout, style, "notice")
+        self.log(f"{BOLD}[INGESTION STAGE STARTED]{RESET}")
+        self.log("-" * 100, stdout, style, "notice")
+        self.log(f"Fetching data from {self.url} ...")
+
+        try:
+            response = requests.get(
+                self.url, 
+                params=self.query_params or None, 
+                headers=self.headers,
+                timeout=self.timeout,
             )
+            response.raise_for_status()
+            self.log(f"Data successfully fetched", style_category="success")
 
-        if self.raw_data_storage_id is None:
-            raise ValueError("No raw data has been ingested yet.")
+            self.log(f"Storing fetched data in {RawFetchedDataStorage._meta.db_table} ...")
+            raw_data_storage = RawFetchedDataStorage.objects.create(
+                data_category=self.data_category,
+                dno_group=self.dno_group,
+                source_url=self.url,
+                raw_data=response
+                )
 
-        self.raw_data_storage_id = raw_data_storage.id
+            if raw_data_storage.id:
+                self.log(f"Data successfully stored (id: {raw_data_storage.id})", style_category="success")
+
+                if self.raw_data_storage_id:
+                    self.log(f"Deleting previously fetched data (id: {self.raw_data_storage_id}) ...")
+                    RawFetchedDataStorage.objects.filter(id=self.raw_data_storage_id).delete()
+                    self.log("Previously fetched data deleted")
+                    
+                self.raw_data_storage_id = raw_data_storage.id
+                self.log(f"\n{BOLD}[INGESTION STAGE COMPLETED SUCCESSFULLY]{RESET}", style_category="success")
+                success_bool = True    
+
+            else:
+                self.log(f"Failed to store data", style_category="error")
+        except requests.RequestException as e: 
+            self.log(f"Failed to fetch data: {e}", style_category="error")
+        
+        finally:
+            self.log("-" * 100)
+            self.log(f"{BOLD}[INGESTION STAGE FINISHED]{RESET}")
+            self.log("=" * 100)
+            return success_bool
+
 
     def prepare(self) -> None:
         fetched_data = RawFetchedDataStorage.objects.get(id=self.raw_data_storage_id)
