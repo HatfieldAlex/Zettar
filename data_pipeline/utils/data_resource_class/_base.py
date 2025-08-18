@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Callable, ClassVar, Literal
 import pandas as pd
+import requests
 
 @dataclass(slots=True)
 class _DataResourceBase:
@@ -17,6 +18,7 @@ class _DataResourceBase:
     timeout: float = 30.0
 
     clean_func: Callable[[dict[str, Any] | list[Any]], pd.DataFrame] | None = None
+    extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
     raw_data_storage_id: int | None = None
 
     _stdout: Any = None

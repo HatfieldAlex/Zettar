@@ -3,12 +3,16 @@ from data_pipeline.models import RawFetchedDataStorage
 from dataclasses import dataclass
 
 class _DataResourceIngest:
+
+
+
     def ingest(self, stdout=None, style=None) -> bool:
         success_bool = False
+        action = "ingest"
         self._stdout = stdout
         self._style = style
 
-        self.stage_status_banner("ingestion", "started")
+        self.stage_status_banner(action, "started")
         self.log(f"Fetching data from {self.url} ...")
 
         try:
@@ -21,12 +25,16 @@ class _DataResourceIngest:
             response.raise_for_status()
             self.log(f"Data successfully fetched", style_category="success")
 
+            self.log(f"Extracting payload ...")
+            self.extract_payload_func(response)
+            self.log(f"Payload successfully extracted")
+
             self.log(f"Storing fetched data in {RawFetchedDataStorage._meta.db_table} ...")
             raw_data_storage = RawFetchedDataStorage.objects.create(
                 data_category=self.data_category,
                 dno_group=self.dno_group,
                 source_url=self.url,
-                raw_data=response
+                raw_response_json=self.extract_payload_func(response)
                 )
 
             if raw_data_storage.id:
@@ -39,7 +47,7 @@ class _DataResourceIngest:
                     
                 self.raw_data_storage_id = raw_data_storage.id
                 self.mark_section("-")
-                self.stage_status_message("ingestion", "completed successfully", style_category="success")
+                self.stage_status_message(action, "completed successfully", style_category="success")
                 success_bool = True    
 
             else:
@@ -48,6 +56,6 @@ class _DataResourceIngest:
             self.log(f"Failed to fetch data: {e}", style_category="error")
         
         finally:
-            self.stage_status_banner("ingestion", "finished")
+            self.stage_status_banner(action, "finished")
             return success_bool
 

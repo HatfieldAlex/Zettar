@@ -5,6 +5,7 @@ from typing import Any, Union
 from ..data_resource_class import DataResource
 from .shared_helpers import normalise_name_and_extract_voltage_info
 from ...models import RawFetchedDataStorage
+import json
 
 nged_field_type_aliases_map = {
         "Primary Substation": "primary",
@@ -22,8 +23,14 @@ nged_headers_rename_map = {
 
 drop_types = {"132kv Switching Station", "Ehv Switching Station"}
 
-def nged_substation_clean(json_object: Union[dict[str, Any], list[dict[str, Any]]]) -> pd.DataFrame:
+def nged_substation_clean(raw_response: Union[dict[str, Any], list[dict[str, Any]]]) -> pd.DataFrame:
+    print(raw_response.keys())
+    json_object = raw_response.json()
     payload = json_object["result"]["records"]
+    
+    print(payload)
+
+
     df = pd.DataFrame.from_records(payload)
     df = df.rename(columns=nged_headers_rename_map)
     df = df[~df["type"].isin(drop_types)]
@@ -35,6 +42,17 @@ def nged_substation_clean(json_object: Union[dict[str, Any], list[dict[str, Any]
     df["dno"] = "nged"
 
     return df
+
+latest_raw_data = (
+    RawFetchedDataStorage.objects
+    .filter(
+        dno_group="nged",
+        data_category="substation",
+        source_url="https://connecteddata.nationalgrid.co.uk/api/3/action/datastore_search",
+    )
+    .order_by("-fetched_at")
+    .first()
+)
 
 
 nged_substation_data_resource = DataResource(
@@ -48,11 +66,7 @@ nged_substation_data_resource = DataResource(
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
-    raw_data_storage_id=RawFetchedDataStorage.objects.filter(
-        dno_group="nged", 
-        data_category="substation", 
-        source_url="https://connecteddata.nationalgrid.co.uk/api/3/action/datastore_search"
-        ).order_by("-fetched_at").first().id
+    raw_data_storage_id=latest_raw_data.id if latest_raw_data else None,
 )
 
 __all__ = ["nged_substation_data_resource"]

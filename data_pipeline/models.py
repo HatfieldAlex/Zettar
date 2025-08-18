@@ -20,7 +20,7 @@ DNO_GROUP_CHOICES = [
 class RawFetchedDataStorage(models.Model):
     data_category = models.CharField(max_length=255, choices=CONTENT_TYPE_CHOICES)
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
-    raw_data = models.TextField()
+    raw_response_json = models.JSONField()
     source_url = models.URLField(null=True, blank=True)
     fetched_at = models.DateTimeField(auto_now_add=True)
 
@@ -31,6 +31,12 @@ class SubstationCleanedDataStorage(models.Model):
     candidate_voltage_levels_kv = models.JSONField(default=list)
     geolocation = gis_models.PointField(geography=True)
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
+
+    raw_data_record = models.ForeignKey(
+        "RawFetchedDataStorage",            
+        on_delete=models.CASCADE,         
+        related_name="cleaned_substations", 
+    )
 
 class ConnectionApplicationCleanedDataStorage(models.Model):
     pass
