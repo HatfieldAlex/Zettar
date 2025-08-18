@@ -2,8 +2,8 @@ from django.conf import settings
 import pandas as pd 
 from shapely.geometry import Point
 from typing import Any, Union
-from ..core import DataResource
-from ..shared_helpers import normalise_name_and_extract_voltage_info
+from ..data_resource_class import DataResource
+from .shared_helpers import normalise_name_and_extract_voltage_info
 from ...models import RawFetchedDataStorage
 
 nged_field_type_aliases_map = {

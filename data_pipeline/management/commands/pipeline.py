@@ -1,6 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
-from ...utils.core import DataResource
-from ...utils import data_resources
+from ...utils.data_resource_class import DataResource
+from ...utils import data_resource_instances
 
 VALID_ACTIONS = ["orchestrate", "inspect"]
 DEFAULT_ACTION = "orchestrate"

@@ -1,0 +1,51 @@
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Any, Callable, ClassVar, Literal
+import pandas as pd
+
+@dataclass(slots=True)
+class _DataResourceBase:
+    _registry: ClassVar[list["DataResource"]] = [] 
+
+    base_url: str
+    dno_group: Literal["nged"]
+    data_category: Literal["substation", "connection_application"]
+    path: str = ""
+    path_parameter: str = ""
+    query_params: dict[str, Any] = field(default_factory=dict)
+    headers: dict[str, str] = field(default_factory=dict)
+    timeout: float = 30.0
+
+    clean_func: Callable[[dict[str, Any] | list[Any]], pd.DataFrame] | None = None
+    raw_data_storage_id: int | None = None
+
+    _stdout: Any = None
+    _style: Any = None
+    
+    @property
+    def url(self) -> str:
+        """constructs full URL"""
+        components = [self.base_url.rstrip("/"), self.path.strip("/"), self.path_parameter.strip("/")]
+        return "/".join(c for c in components if c)
+
+    def load(self) -> None:
+        data_category = self.data_category
+        if data_category == "substation":
+            for cleaned_record in SubstationCleanedDataStorage.objects.filter(dno_group=self.dno_group):
+                load_clean_substation_data(cleaned_record)
+
+        elif data_category == "connection_application":
+            for cleaned_record in ConnectionApplicationCleanedDataStorage.objects.filter(dno_group=self.dno_group):
+                load_clean_connection_application_data(cleaned_record)
+
+
+    def __post_init__(self):
+        self.__class__._registry.append(self)
+
+    @classmethod
+    def filter(cls, *, dno_group: str = None, data_category: str = None):
+        return [
+        r for r in cls._registry
+        if (dno_group is None or r.dno_group == dno_group) and
+           (data_category is None or r.data_category == data_category)
+    ]
