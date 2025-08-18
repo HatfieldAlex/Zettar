@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
 from django_pydantic_field import SchemaField
-from .utils.validators import CleanSubstationDataRequirements
 
 CONTENT_TYPE_CHOICES = [
     ("substations", "Substations"),
