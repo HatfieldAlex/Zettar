@@ -13,12 +13,20 @@ class _DataResourcePrepare:
         raw_fetched_data_storage_id, raw_payload_json = self._query_data()
         df = self._clean_data(raw_payload_json)
         valid_cleaned_data_rows = self._validate_cleaned_data(df)
-        self._store_validated_data(valid_cleaned_data_rows, raw_fetched_data_storage_id)
-        return
+        success_count = self._store_validated_data(valid_cleaned_data_rows, raw_fetched_data_storage_id)
+        self._delete_previous_cleaned_data()
+
+        if success_count == len(df):
+            self.mark_section("-")
+            self.stage_status_message(action, "completed successfully", style_category="success")
+
+        self.stage_status_banner(action, "finished")
+
+
 
     def _query_data(self):
         self.log(f"Querying data from {RawFetchedDataStorage._meta.db_table} ...")
-        fetched_data_obj = RawFetchedDataStorage.objects.get(id=self.raw_data_storage_id)
+        fetched_data_obj = RawFetchedDataStorage.objects.get(id=self.current_raw_data_storage_id)
         raw_fetched_data_storage_id = fetched_data_obj.id
         raw_payload_json = fetched_data_obj.raw_payload_json
         return (raw_fetched_data_storage_id, raw_payload_json)
@@ -37,7 +45,8 @@ class _DataResourcePrepare:
         total = len(cleaned_data_rows)
         update_freq_amount = max(1, total // 10) 
 
-        for idx, row in cleaned_data_rows:
+        for i, row in cleaned_data_rows:
+            j = i + 1
             record = row.to_dict()
             try:
                 validated = CleanSubstationDataRequirements(**record)
@@ -47,8 +56,8 @@ class _DataResourcePrepare:
                 invalid_cleaned_data_rows.append(ext_id)
                 self.log(f"Skipped invalid row (external_identifier={ext_id}): {e}", style_category="warning",)
 
-            if idx % update_freq_amount == 0:
-                self.log(f"Attempted validation of {idx}/{total} rows... (successful: {len(valid_cleaned_data_rows)}, failed: {len(invalid_cleaned_data_rows)})")
+            if j % update_freq_amount == 0 or j == total:
+                self.log(f"Attempted validation of {j}/{total} rows... (successful: {len(valid_cleaned_data_rows)}, failed: {len(invalid_cleaned_data_rows)})")
 
         if invalid_cleaned_data_rows:
             self.log(
@@ -104,6 +113,21 @@ class _DataResourcePrepare:
         else:
             self.log(f"All storage of {total} cleaned rows stored successfully.", style_category="success",)
 
-        self.stage_status_banner("storage", "finished")
-        return 
+        return stored_count
+
+    def _delete_previous_cleaned_data(self):
+        prior_raw_data_storage_id = self.prior_raw_data_storage_id
+        if not prior_raw_data_storage_id:
+            return
+
+        elif prior_raw_data_storage_id is not None and prior_raw_data_storage_id == self.current_raw_data_storage_id:
+            self.log(
+                f"Previous raw_data_storage_id ({prev_id}) equals current; skipping delete.",
+                style_category="error",
+            )
+            return
+
+        self.log(f"Deleting previously stored data...")
+        SubstationCleanedDataStorage.objects.filter(raw_data_record_id=prior_raw_data_storage_id).delete()
+
 

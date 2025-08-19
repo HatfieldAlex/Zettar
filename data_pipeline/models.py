@@ -34,8 +34,8 @@ class SubstationCleanedDataStorage(models.Model):
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
 
     raw_data_record = models.ForeignKey(
-        "RawFetchedDataStorage",            
-        on_delete=models.CASCADE,         
+        "RawFetchedDataStorage",   
+        on_delete=models.CASCADE,           
         related_name="cleaned_substations", 
     )
 

@@ -86,11 +86,11 @@ nged_substation_data_resource = DataResource(
     path="datastore_search",
     query_params={
         "resource_id": "e06413f8-0d86-4a13-b5c5-db14829940ed",
-        "limit": 2,#2500,
+        "limit": 2500,
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
-    raw_data_storage_id=latest_raw_data.id if latest_raw_data else None,
+    current_raw_data_storage_id=latest_raw_data.id if latest_raw_data else None,
     extract_payload_func=extract_payload_nged_substation,
 )
 
