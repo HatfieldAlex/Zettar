@@ -23,7 +23,7 @@ nged_headers_rename_map = {
 
 drop_types = {"132kv Switching Station", "Ehv Switching Station"}
 
-initial_drop_headers = ["Easting", "Northing", "x_temp", "y_temp", "lat_temp", "lon_temp"]
+initial_drop_headers = ["_id", "Easting", "Northing"]
 
 def extract_payload_nged_substation(raw_response):
     return raw_response.json()["result"]["records"]
@@ -59,6 +59,11 @@ def nged_substation_clean(
     
     log("Assigning DNO group identifier to each record...")
     df["dno_group"] = "nged"
+
+    log("Stringifying the external_identifier...")
+    df["external_identifier"] = df.apply(lambda r: str(r["external_identifier"]), axis=1)
+
+    print(df.columns)
 
     return df
 

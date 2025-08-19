@@ -20,6 +20,7 @@ class _DataResourceBase:
     clean_func: Callable[..., pd.DataFrame] | None = None
     extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
     raw_data_storage_id: int | None = None
+    
 
     _stdout: Any = None
     _style: Any = None
