@@ -1,7 +1,7 @@
 from django.conf import settings
 import pandas as pd 
-from shapely.geometry import Point
-from typing import Any, Union
+from django.contrib.gis.geos import Point as GEOSPoint
+from typing import Any, Union, Callable
 from ..data_resource_class import DataResource
 from .shared_helpers import normalise_name_and_extract_voltage_info
 from ...models import RawFetchedDataStorage
@@ -23,23 +23,42 @@ nged_headers_rename_map = {
 
 drop_types = {"132kv Switching Station", "Ehv Switching Station"}
 
-def nged_substation_clean(raw_response: Union[dict[str, Any], list[dict[str, Any]]]) -> pd.DataFrame:
-    print(raw_response.keys())
-    json_object = raw_response.json()
-    payload = json_object["result"]["records"]
-    
-    print(payload)
+initial_drop_headers = ["Easting", "Northing", "x_temp", "y_temp", "lat_temp", "lon_temp"]
+
+def extract_payload_nged_substation(raw_response):
+    return raw_response.json()["result"]["records"]
 
 
-    df = pd.DataFrame.from_records(payload)
+def nged_substation_clean(
+    raw_payload_json: Union[dict[str, Any], list[dict[str, Any]]],
+    log: Callable[[str, str], None] = print
+    ) -> pd.DataFrame:
+
+    log("Converting raw JSON payload into DataFrame...")
+    df = pd.DataFrame.from_records(raw_payload_json)
+
+    log("Dropping columns not required...")
+    df.drop(columns=initial_drop_headers, inplace=True)
+
+    log("Filtering out non-substation types (i.e., switching stations)...")
+    df = df[~df["Substation Type"].isin(drop_types)]  
+
+    log("Generating 'geolocation' column as GEOS Point objects using longitude and latitude, and dropping the original columns...")
+    df["geolocation"] = df.apply(lambda r: GEOSPoint(r["Longitude"], r["Latitude"], srid=4326),axis=1)
+    df.drop(columns=["Longitude", "Latitude"], inplace=True)
+
+    log("Renaming headers to align with validation schema")
     df = df.rename(columns=nged_headers_rename_map)
-    df = df[~df["type"].isin(drop_types)]
+
+    log("Standardising substation type labels for consistency...")
     df["type"] = df["type"].map(nged_field_type_aliases_map)
-    df["geolocation"] = df.apply(lambda row: Point(row["longitude"], row["latitude"]), axis=1)
-    df.drop(columns=["longitude", "latitude"], inplace=True)
+  
+    log("Normalising substation names and extracting voltage level candidates (in kV)...")
     df[["name", "candidate_voltage_levels_kv"]] = df["name"].apply(
         lambda n: pd.Series(normalise_name_and_extract_voltage_info(n)))
-    df["dno"] = "nged"
+    
+    log("Assigning DNO group identifier to each record...")
+    df["dno_group"] = "nged"
 
     return df
 
@@ -62,11 +81,13 @@ nged_substation_data_resource = DataResource(
     path="datastore_search",
     query_params={
         "resource_id": "e06413f8-0d86-4a13-b5c5-db14829940ed",
-        "limit": 2500,
+        "limit": 2,#2500,
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
     raw_data_storage_id=latest_raw_data.id if latest_raw_data else None,
+    extract_payload_func=extract_payload_nged_substation,
 )
+
 
 __all__ = ["nged_substation_data_resource"]
