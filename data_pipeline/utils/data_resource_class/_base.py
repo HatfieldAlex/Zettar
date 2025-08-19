@@ -2,6 +2,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Callable, ClassVar, Literal
 import pandas as pd
+import requests
 
 @dataclass(slots=True)
 class _DataResourceBase:
@@ -16,8 +17,12 @@ class _DataResourceBase:
     headers: dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
 
-    clean_func: Callable[[dict[str, Any] | list[Any]], pd.DataFrame] | None = None
-    raw_data_storage_id: int | None = None
+    clean_func: Callable[..., pd.DataFrame] | None = None
+    extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
+    prior_raw_data_storage_id: int | None = None
+    previous_raw_data_storage_id: int | None = None
+    current_raw_data_storage_id: int | None = None
+    
 
     _stdout: Any = None
     _style: Any = None

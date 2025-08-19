@@ -1,5 +1,5 @@
 from pydantic import BaseModel, field_validator
-from shapely.geometry import Point
+from django.contrib.gis.geos import Point as GEOSPoint
 from typing import List, Literal
 
 VOLTAGE_LEVELS = [
@@ -12,9 +12,11 @@ DNO_GROUP_CHOICES = ["nged"]
 class CleanSubstationDataRequirements(BaseModel):
     name: str
     type: Literal["primary", "bsp", "gsp"]
+    external_identifier: str
+    geolocation: GEOSPoint
     candidate_voltage_levels_kv: List[str]
-    geolocation: Point
     dno_group: Literal["nged"]
+    
 
     @field_validator("candidate_voltage_levels_kv")
     @classmethod
