@@ -13,8 +13,8 @@ class _DataResourceIngest:
         try:
             response = self._fetch_data()
             raw_payload_json = self._extract_payload(response)
-            current_raw_data_storage_id = self._store_payload(raw_payload_json)
-            self._delete_prior_payload(current_raw_data_storage_id)
+            raw_data_storage_id = self._store_payload(raw_payload_json)
+            self._delete_prior_payload(raw_data_storage_id)
 
             self.mark_section("-")
             self.stage_status_message(action, "completed successfully", style_category="success")
@@ -61,19 +61,18 @@ class _DataResourceIngest:
 
         raw_data_storage.full_clean()
         raw_data_storage.save()
-        current_raw_data_storage_id = raw_data_storage.id
-        self.log(f"Data successfully stored (id: {current_raw_data_storage_id})", style_category="success")
-        return 
+        raw_data_storage_id = raw_data_storage.id
+        self.log(f"Data successfully stored (id: {raw_data_storage_id})", style_category="success")
+        return raw_data_storage_id
 
 
     def _delete_prior_payload(self, current_raw_data_storage_id):
-        prior_raw_data_storage_id = self.prior_raw_data_storage_id
+        raw_data_storage_id = self.raw_data_storage_ref
 
-        if previous_current_raw_data_storage_id:
-            self.log(f"Deleting previously fetched data (id: {prior_raw_data_storage_id}) ...")
-            RawFetchedDataStorage.objects.filter(id=prior_raw_data_storage_id).delete()
+        if raw_data_storage_id:
+            self.log(f"Deleting previously fetched data (id: {raw_data_storage_id}) ...")
+            RawFetchedDataStorage.objects.filter(id=raw_data_storage_id).delete()
             self.log("Previously fetched data deleted")
+            self.raw_data_storage_ref = current_raw_data_storage_id
 
-            self.prior_raw_data_storage_id = self.previous_raw_data_storage_id
-            self.previous_raw_data_storage_id = self.current_raw_data_storage_id
-            self.current_raw_data_storage_id = current_raw_data_storage_id
+        self.raw_data_storage_ref = current_raw_data_storage_id

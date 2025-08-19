@@ -6,15 +6,18 @@ from .validators import CleanSubstationDataRequirements
 class _DataResourcePrepare:
     def prepare(self, stdout=None, style=None) -> None:
         action = "preparation"
+        previous_data_storage_ref = self.cleaned_data_storage_ref
+        new_cleaned_data_storage_ref = self.raw_data_storage_ref
         self._stdout = stdout
         self._style = style
         self.stage_status_banner(action, "started")
 
         raw_fetched_data_storage_id, raw_payload_json = self._query_data()
-        df = self._clean_data(raw_payload_json)
+        df = self._clean_data(raw_payload_json, new_cleaned_data_storage_ref)
         valid_cleaned_data_rows = self._validate_cleaned_data(df)
         success_count = self._store_validated_data(valid_cleaned_data_rows, raw_fetched_data_storage_id)
-        self._delete_previous_cleaned_data()
+        self._delete_previous_cleaned_data(previous_data_storage_ref, new_cleaned_data_storage_ref)
+
 
         if success_count == len(df):
             self.mark_section("-")
@@ -26,14 +29,15 @@ class _DataResourcePrepare:
 
     def _query_data(self):
         self.log(f"Querying data from {RawFetchedDataStorage._meta.db_table} ...")
-        fetched_data_obj = RawFetchedDataStorage.objects.get(id=self.current_raw_data_storage_id)
+        fetched_data_obj = RawFetchedDataStorage.objects.get(id=self.raw_data_storage_ref)
         raw_fetched_data_storage_id = fetched_data_obj.id
         raw_payload_json = fetched_data_obj.raw_payload_json
         return (raw_fetched_data_storage_id, raw_payload_json)
 
-    def _clean_data(self, raw_payload_json):
+    def _clean_data(self, raw_payload_json, new_cleaned_data_storage_ref):
         self.log(f"Commencing data clean...")
         df = self.clean_func(raw_payload_json, self.log)
+        df["reference"] = new_cleaned_data_storage_ref
         self.log(f"Data cleaning completed successfully.", style_category="success")
         return df
 
@@ -115,19 +119,14 @@ class _DataResourcePrepare:
 
         return stored_count
 
-    def _delete_previous_cleaned_data(self):
-        prior_raw_data_storage_id = self.prior_raw_data_storage_id
-        if not prior_raw_data_storage_id:
-            return
+    def _delete_previous_cleaned_data(self, previous_data_storage_ref, new_cleaned_data_storage_ref):
 
-        elif prior_raw_data_storage_id is not None and prior_raw_data_storage_id == self.current_raw_data_storage_id:
-            self.log(
-                f"Previous raw_data_storage_id ({prev_id}) equals current; skipping delete.",
-                style_category="error",
-            )
+        if not previous_data_storage_ref:
+            self.cleaned_data_storage_ref = new_cleaned_data_storage_ref
             return
 
         self.log(f"Deleting previously stored data...")
-        SubstationCleanedDataStorage.objects.filter(raw_data_record_id=prior_raw_data_storage_id).delete()
+        SubstationCleanedDataStorage.objects.filter(reference=previous_data_storage_ref).delete()
+        self.cleaned_data_storage_ref = new_cleaned_data_storage_ref
 
 

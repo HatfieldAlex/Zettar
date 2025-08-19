@@ -32,10 +32,13 @@ class SubstationCleanedDataStorage(models.Model):
     external_identifier = models.CharField(max_length=255, null=True, blank=True)
     geolocation = gis_models.PointField(geography=True)
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
+    reference = models.IntegerField(db_index=True, null=True, blank=True)
 
     raw_data_record = models.ForeignKey(
         "RawFetchedDataStorage",   
-        on_delete=models.CASCADE,           
+        on_delete=models.SET_NULL, 
+        null=True,          
+        blank=True,          
         related_name="cleaned_substations", 
     )
 

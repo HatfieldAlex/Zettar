@@ -88,7 +88,7 @@ nged_substation_data_resource = DataResource(
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
-    current_raw_data_storage_id=latest_raw_data.id if latest_raw_data else None,
+    raw_data_storage_ref=latest_raw_data.id if latest_raw_data else None,
     extract_payload_func=extract_payload_nged_substation,
 )
 

@@ -16,6 +16,7 @@ class CleanSubstationDataRequirements(BaseModel):
     geolocation: GEOSPoint
     candidate_voltage_levels_kv: List[str]
     dno_group: Literal["nged"]
+    reference: int
     
 
     @field_validator("candidate_voltage_levels_kv")
