@@ -32,18 +32,7 @@ class _DataResourceBase:
         """constructs full URL"""
         components = [self.base_url.rstrip("/"), self.path.strip("/"), self.path_parameter.strip("/")]
         return "/".join(c for c in components if c)
-
-    def load(self) -> None:
-        data_category = self.data_category
-        if data_category == "substation":
-            for cleaned_record in SubstationCleanedDataStorage.objects.filter(dno_group=self.dno_group):
-                load_clean_substation_data(cleaned_record)
-
-        elif data_category == "connection_application":
-            for cleaned_record in ConnectionApplicationCleanedDataStorage.objects.filter(dno_group=self.dno_group):
-                load_clean_connection_application_data(cleaned_record)
-
-
+        
     def __post_init__(self):
         self.__class__._registry.append(self)
 

@@ -63,8 +63,6 @@ def nged_substation_clean(
     log("Stringifying the external_identifier...")
     df["external_identifier"] = df.apply(lambda r: str(r["external_identifier"]), axis=1)
 
-    print(df.columns)
-
     return df
 
 latest_raw_data = (

@@ -4,7 +4,6 @@ from dataclasses import dataclass
 from django.core.exceptions import ValidationError
 
 class _DataResourceIngest:
-
     def ingest(self, stdout=None, style=None) -> bool:
         self._stdout = stdout
         self._style = style
