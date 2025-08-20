@@ -23,7 +23,7 @@ class RawFetchedDataStorage(models.Model):
     raw_payload_json = models.JSONField()
     source_url = models.URLField(null=True, blank=True)
     fetched_at = models.DateTimeField(auto_now_add=True)
-
+    reference = models.CharField(max_length=255)
 
 class SubstationCleanedDataStorage(models.Model):
     name = models.CharField(max_length=255)
@@ -32,15 +32,16 @@ class SubstationCleanedDataStorage(models.Model):
     external_identifier = models.CharField(max_length=255, null=True, blank=True)
     geolocation = gis_models.PointField(geography=True)
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
-    reference = models.IntegerField(db_index=True, null=True, blank=True)
+    prepared_at = models.DateTimeField()
+    reference = models.CharField(max_length=255, null=True, blank=True)
 
-    raw_data_record = models.ForeignKey(
-        "RawFetchedDataStorage",   
-        on_delete=models.SET_NULL, 
-        null=True,          
-        blank=True,          
-        related_name="cleaned_substations", 
-    )
+    # raw_data_record = models.ForeignKey(
+    #     "RawFetchedDataStorage",   
+    #     on_delete=models.SET_NULL, 
+    #     null=True,          
+    #     blank=True,          
+    #     related_name="cleaned_substations", 
+    # )
 
 class ConnectionApplicationCleanedDataStorage(models.Model):
     pass

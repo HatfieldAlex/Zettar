@@ -76,8 +76,8 @@ latest_raw_data = (
     .first()
 )
 
-
 nged_substation_data_resource = DataResource(
+    reference="nged_substation",
     base_url="https://connecteddata.nationalgrid.co.uk/api/3/action",
     dno_group="nged",
     data_category="substation",
@@ -88,7 +88,6 @@ nged_substation_data_resource = DataResource(
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     clean_func=nged_substation_clean,
-    raw_data_storage_ref=latest_raw_data.id if latest_raw_data else None,
     extract_payload_func=extract_payload_nged_substation,
 )
 

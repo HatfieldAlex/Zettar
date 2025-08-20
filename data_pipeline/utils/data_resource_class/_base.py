@@ -4,10 +4,13 @@ from typing import Any, Callable, ClassVar, Literal
 import pandas as pd
 import requests
 
+
 @dataclass(slots=True)
 class _DataResourceBase:
     _registry: ClassVar[list["DataResource"]] = [] 
 
+    reference: str
+    
     base_url: str
     dno_group: Literal["nged"]
     data_category: Literal["substation", "connection_application"]
@@ -17,10 +20,10 @@ class _DataResourceBase:
     headers: dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
 
+    
     clean_func: Callable[..., pd.DataFrame] | None = None
     extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
-    raw_data_storage_ref: int | None = None
-    cleaned_data_storage_ref: int | None = None
+
     
 
     _stdout: Any = None

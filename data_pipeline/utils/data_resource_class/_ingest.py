@@ -9,12 +9,16 @@ class _DataResourceIngest:
         self._style = style
         action = "ingest"
         self.stage_status_banner(action, "started")
+        prev_fetched_data_storage_obj = RawFetchedDataStorage.objects.filter(reference=self.reference).order_by("fetched_at").first()
+
+
         
         try:
             response = self._fetch_data()
             raw_payload_json = self._extract_payload(response)
-            raw_data_storage_id = self._store_payload(raw_payload_json)
-            self._delete_prior_payload(raw_data_storage_id)
+            self._store_payload(raw_payload_json)
+            self._delete_prior_payload(prev_fetched_data_storage_obj)
+            
 
             self.mark_section("-")
             self.stage_status_message(action, "completed successfully", style_category="success")
@@ -53,6 +57,7 @@ class _DataResourceIngest:
     def _store_payload(self, raw_payload_json):
         self.log(f"Storing fetched data in {RawFetchedDataStorage._meta.db_table} ...")
         raw_data_storage = RawFetchedDataStorage(
+            reference=self.reference,
             data_category=self.data_category,
             dno_group=self.dno_group,
             source_url=self.url,
@@ -61,18 +66,16 @@ class _DataResourceIngest:
 
         raw_data_storage.full_clean()
         raw_data_storage.save()
-        raw_data_storage_id = raw_data_storage.id
-        self.log(f"Data successfully stored (id: {raw_data_storage_id})", style_category="success")
-        return raw_data_storage_id
 
+        self.log(f"Data successfully stored (id: {raw_data_storage.id})", style_category="success")
+        return 
 
-    def _delete_prior_payload(self, current_raw_data_storage_id):
-        raw_data_storage_id = self.raw_data_storage_ref
+    def _delete_prior_payload(self, prev_fetched_data_storage_obj):
+        if not prev_fetched_data_storage_obj:
+            return
 
-        if raw_data_storage_id:
-            self.log(f"Deleting previously fetched data (id: {raw_data_storage_id}) ...")
-            RawFetchedDataStorage.objects.filter(id=raw_data_storage_id).delete()
-            self.log("Previously fetched data deleted")
-            self.raw_data_storage_ref = current_raw_data_storage_id
+        self.log(f"Deleting previously fetched data (id: {prev_fetched_data_storage_obj.id}) ...")
+        prev_fetched_data_storage_obj.delete()
+        self.log("Previously fetched data deleted")
 
-        self.raw_data_storage_ref = current_raw_data_storage_id
+    
