@@ -65,17 +65,6 @@ def nged_substation_clean(
 
     return df
 
-latest_raw_data = (
-    RawFetchedDataStorage.objects
-    .filter(
-        dno_group="nged",
-        data_category="substation",
-        source_url="https://connecteddata.nationalgrid.co.uk/api/3/action/datastore_search",
-    )
-    .order_by("-fetched_at")
-    .first()
-)
-
 nged_substation_data_resource = DataResource(
     reference="nged_substation",
     base_url="https://connecteddata.nationalgrid.co.uk/api/3/action",

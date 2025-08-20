@@ -11,8 +11,6 @@ class _DataResourceIngest:
         self.stage_status_banner(action, "started")
         prev_fetched_data_storage_obj = RawFetchedDataStorage.objects.filter(reference=self.reference).order_by("fetched_at").first()
 
-
-        
         try:
             response = self._fetch_data()
             raw_payload_json = self._extract_payload(response)
