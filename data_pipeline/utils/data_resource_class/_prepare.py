@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 import pandas as pd
 from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage, ConnectionApplicationCleanedDataStorage
-from .validators import CleanSubstationDataRequirements
+from .validators import CleanSubstationDataRequirement, CleanConnectionApplicationDataRequirement
 from django.utils.timezone import now
 
 @dataclass
@@ -62,11 +62,17 @@ class _DataResourcePrepare:
         total = self._prepare_summary.total_cleaned_data_rows
         update_freq_amount = self._prepare_summary.update_freq_amount(total)
 
+        model_map = {
+            "substation": CleanSubstationDataRequirement,
+            "connection_application": CleanConnectionApplicationDataRequirement,
+        }
+        pydantic_model = model_map[self.data_category]
+
         for i, row in cleaned_data_rows:
             j = i + 1
             record = row.to_dict()
             try:
-                validated = CleanSubstationDataRequirements(**record)
+                validated = pydantic_model(**record)
                 self._prepare_summary.valid_cleaned_data_rows.append(validated)
             except Exception as e:
                 ext_id = record.get("external_identifier") or record.get("_id")

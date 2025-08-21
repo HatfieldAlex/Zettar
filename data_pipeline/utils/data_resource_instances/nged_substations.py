@@ -47,7 +47,7 @@ def nged_substation_clean(
     df["geolocation"] = df.apply(lambda r: GEOSPoint(r["Longitude"], r["Latitude"], srid=4326),axis=1)
     df.drop(columns=["Longitude", "Latitude"], inplace=True)
 
-    log("Renaming headers to align with validation schema")
+    log("Renaming headers to align with validation schema...")
     df = df.rename(columns=nged_headers_rename_map)
 
     log("Standardising substation type labels for consistency...")
