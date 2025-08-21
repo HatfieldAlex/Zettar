@@ -28,13 +28,20 @@ class _DataResourcePrepare:
         self._stdout = stdout
         self._style = style
         self._prepare_summary = _PrepareSummary()
-        prev_cleaned_data_storage_objs = list(SubstationCleanedDataStorage.objects.filter(reference=self.reference))
+        
         timestamp = now()
+        model_map = {
+            "substation": (CleanSubstationDataRequirement, SubstationCleanedDataStorage),
+            "connection_application": (CleanConnectionApplicationDataRequirement, ConnectionApplicationCleanedDataStorage)
+        }
+        pydantic_model, django_model = model_map[self.data_category]
+        prev_cleaned_data_storage_objs = list(django_model.objects.filter(reference=self.reference))
 
         raw_payload_json = self._query_data()
         cleaned_df = self._clean_data(raw_payload_json)
-        valid_cleaned_data_rows = self._validate_cleaned_data(cleaned_df)
-        self._store_validated_data(valid_cleaned_data_rows, timestamp)
+        print(cleaned_df)
+        valid_cleaned_data_rows = self._validate_cleaned_data(cleaned_df, pydantic_model)
+        self._store_validated_data(valid_cleaned_data_rows, django_model, timestamp)
         self._delete_previous_cleaned_data(prev_cleaned_data_storage_objs)
 
         if self._prepare_summary.total_stored_valid_data_rows == self._prepare_summary.total_valid_data_rows:
@@ -55,18 +62,14 @@ class _DataResourcePrepare:
         self.log(f"Data cleaning completed successfully.", style_category="success")
         return df
 
-    def _validate_cleaned_data(self, df):
+    def _validate_cleaned_data(self, df, pydantic_model):
         self.log(f"Commencing data validation...")
         cleaned_data_rows = list(df.iterrows())
         self._prepare_summary.total_cleaned_data_rows = len(cleaned_data_rows)
         total = self._prepare_summary.total_cleaned_data_rows
         update_freq_amount = self._prepare_summary.update_freq_amount(total)
 
-        model_map = {
-            "substation": CleanSubstationDataRequirement,
-            "connection_application": CleanConnectionApplicationDataRequirement,
-        }
-        pydantic_model = model_map[self.data_category]
+        
 
         for i, row in cleaned_data_rows:
             j = i + 1
@@ -102,7 +105,7 @@ class _DataResourcePrepare:
         return self._prepare_summary.valid_cleaned_data_rows
 
 
-    def _store_validated_data(self, validated_data, timestamp):
+    def _store_validated_data(self, validated_data, django_model, timestamp):
         self.log("Storing validated cleaned data...")
         total = self._prepare_summary.total_valid_data_rows 
         
@@ -116,10 +119,9 @@ class _DataResourcePrepare:
         for idx, validated in enumerate(validated_data, start=1):
             ext_id = getattr(validated, "external_identifier", None)
             try:
-                SubstationCleanedDataStorage.objects.create(
+                django_model.objects.create(
                     **validated.model_dump(),
                     prepared_at=timestamp,
-                    reference=self.reference
                     )
                 self._prepare_summary.successful_storage_valid_cleaned_data_rows.append(ext_id)
             except Exception as e:

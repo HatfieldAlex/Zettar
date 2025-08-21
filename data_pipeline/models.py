@@ -47,7 +47,7 @@ CONNECTION_STATUS_CHOICES = [
 
 class ConnectionApplicationCleanedDataStorage(models.Model):
     name = models.CharField(max_length=255)
-    type = models.CharField(max_length=255, choices=SUBSTATION_TYPE_CHOICES)
+    substation_type = models.CharField(max_length=255, choices=SUBSTATION_TYPE_CHOICES)
     dno_group = models.CharField(max_length=255, choices=DNO_GROUP_CHOICES)
     candidate_voltage_levels_kv = models.JSONField(default=list)
     geolocation = gis_models.PointField(geography=True, null=True, blank=True)

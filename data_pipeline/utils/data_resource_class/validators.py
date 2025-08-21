@@ -18,6 +18,7 @@ class CleanSubstationDataRequirement(BaseModel):
     geolocation: GEOSPoint
     candidate_voltage_levels_kv: List[str]
     dno_group: Literal["nged"]
+    reference: str
     
 
     @field_validator("candidate_voltage_levels_kv")
@@ -35,7 +36,7 @@ class CleanSubstationDataRequirement(BaseModel):
 
 class CleanConnectionApplicationDataRequirement(BaseModel):
     name: str
-    type: Literal["primary", "bsp", "gsp"]
+    substation_type: Literal["primary_substation", "bsp", "gsp"]
     dno_group: Literal["nged"]
     candidate_voltage_levels_kv: List[str]
     geolocation: Optional[GEOSPoint] = None
@@ -43,9 +44,9 @@ class CleanConnectionApplicationDataRequirement(BaseModel):
     proposed_voltage: condecimal(max_digits=4, decimal_places=1) 
     connection_status: Literal["pending", "budget", "accepted"]
     total_demand_number: conint(ge=0)
-    total_demand_capacity_mw: condecimal(ge=Decimal("0"), max_digits=10, decimal_places=3)
+    total_demand_capacity_mw: condecimal(ge=Decimal("0"), max_digits=10, decimal_places=4)
     total_generation_number: conint(ge=0)
-    total_generation_capacity_mw: condecimal(ge=Decimal("0"), max_digits=10, decimal_places=3)
+    total_generation_capacity_mw: condecimal(ge=Decimal("0"), max_digits=10, decimal_places=4)
     
     external_identifier: str
     reference: str

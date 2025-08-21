@@ -10,8 +10,6 @@ import json
 def extract_payload__nged_connection_application(raw_response):
     return raw_response.json()["result"]["records"]
 
-
-
 headers_rename_map__nged_connection_application = {
     "Licence": "licence",
     "Proposed Connection Voltage (kV)": "proposed_voltage",
@@ -26,9 +24,9 @@ headers_rename_map__nged_connection_application = {
 }
 
 
-new_headers__nged_connection_application = {"name", "candidate_voltage_levels_kv", "substation_type", "dno_group", "external_identifier"}
+new_headers__nged_connection_application = {"name", "candidate_voltage_levels_kv", "substation_type", "dno_group", "external_identifier", "reference"}
 
-drop_headers__nged_connection_application = {"licence", "gsp", "bsp", "primary_substation"}
+drop_headers__nged_connection_application = {"licence", "gsp", "bsp", "primary_substation", "_id"}
 
 value_map__nged_connection_application = {
     "connection_status": {
@@ -51,9 +49,10 @@ def process_row__nged_connection_application(row):
            nged_substation_type = "gsp"
 
         row["substation_type"] = nged_substation_type
-        row["name"], row["candidate_voltage_levels_kv"] = normalise_name_and_extract_voltage_info(nged_substation_type)
+        row["name"], row["candidate_voltage_levels_kv"] = normalise_name_and_extract_voltage_info(row[nged_substation_type])
         row["dno_group"] = "nged"
         row["external_identifier"] = f"BSP: {row_bsp}, GSP: {row_gsp}, Primary Substation: {row_primary}"
+        row["reference"] = "nged_connection_application"
 
         return row
 

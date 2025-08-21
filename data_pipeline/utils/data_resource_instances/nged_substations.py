@@ -59,6 +59,7 @@ def nged_substation_clean(
     
     log("Assigning DNO group identifier to each record...")
     df["dno_group"] = "nged"
+    df["reference"] = "nged_substation"
 
     log("Stringifying the external_identifier...")
     df["external_identifier"] = df.apply(lambda r: str(r["external_identifier"]), axis=1)
