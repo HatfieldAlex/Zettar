@@ -25,10 +25,14 @@ async function initMap() {
   try {
     const resp = await fetch('/static/location_input/data/dno_licence_areas.geojson'); 
     const geojson = await resp.json();
-    const AvailableRegions = geojson.features.filter(f => f.properties?.dno === "NGED");
+    const AvailableRegions = geojson.features.filter(
+      f => f.properties?.dno === "NGED" || f.properties?.dno === "UKPN"
+    );
     const allAvailablePaths = AvailableRegions.flatMap(r => geojsonGeometryToGMapPaths(r.geometry));
 
-    const UnavailableRegions = geojson.features.filter(f => f.properties?.dno !== "NGED");
+    const UnavailableRegions = geojson.features.filter(
+      f => f.properties?.dno !== "NGED" && f.properties?.dno !== "UKPN"
+    );
     const allUnavailablePaths = UnavailableRegions.flatMap(r => geojsonGeometryToGMapPaths(r.geometry));
 
 

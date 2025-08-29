@@ -113,13 +113,4 @@ class _DataResourceLoad:
         substation.save()
         
     def _create_connection_application(self, connection_application_cleaned_data_storage_obj, dno_group_obj):
-        obj = connection_application_cleaned_data_storage_obj
-        new_connection = NewConnection.objects.create(
-            connection_status = obj.connection_status
-            connection_voltage_level = obj.connection_voltage_level 
-            dno_group = dno_group_obj
-            demand_count = obj.demand_count
-            total_demand_capacity_mw = obj.total_demand_capacity_mw
-            generation_count = obj.generation_count
-            total_generation_capacity_mw = obj.total_generation_capacity_mw
-        )
+        pass

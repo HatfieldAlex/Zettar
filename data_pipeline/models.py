@@ -16,6 +16,7 @@ SUBSTATION_TYPE_CHOICES = [
 
 DNO_GROUP_CHOICES = [
     ("nged", "NGED"),
+    ("ukpn", "UKPN"),
 ]
 
 

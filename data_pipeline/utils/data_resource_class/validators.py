@@ -9,25 +9,16 @@ VOLTAGE_LEVELS = [
 ]
 
 SUBSTATION_TYPE_CHOICES = ["primary", "bsp", "gsp"]
-DNO_GROUP_CHOICES = ["nged"]
+DNO_GROUP_CHOICES = ["nged", "ukpn"]
 
 class CleanSubstationDataRequirement(BaseModel):
     name: str
     type: Literal["primary", "bsp", "gsp"]
     external_identifier: str
     geolocation: GEOSPoint
-    candidate_voltage_levels_kv: List[str]
-    dno_group: Literal["nged"]
+    dno_group: Literal["nged", "ukpn"]
     reference: str
     
-
-    @field_validator("candidate_voltage_levels_kv")
-    @classmethod
-    def validate_voltage_levels(cls, values):
-        if not all(v in VOLTAGE_LEVELS for v in values):
-            raise ValueError(f"Each voltage must be one of: {', '.join(VOLTAGE_LEVELS)}")
-        return values
-
     model_config = {
         "arbitrary_types_allowed": True 
     }

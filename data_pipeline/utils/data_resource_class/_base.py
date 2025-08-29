@@ -12,7 +12,7 @@ class _DataResourceBase:
     reference: str
     
     base_url: str
-    dno_group: Literal["nged"]
+    dno_group: Literal["nged", "ukpn"]
     data_category: Literal["substation", "connection_application"]
     path: str = ""
     path_parameter: str = ""

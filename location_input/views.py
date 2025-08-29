@@ -6,7 +6,6 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import ensure_csrf_cookie
 
-
 from .models.new_connections import NewConnection
 from .models.substations import Substation
 from .utils.view_helpers import (
