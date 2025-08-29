@@ -2,6 +2,8 @@ import requests
 from data_pipeline.models import RawFetchedDataStorage
 from dataclasses import dataclass
 from django.core.exceptions import ValidationError
+from django.db import transaction
+
 
 class _DataResourceIngest:
     def ingest(self, stdout=None, style=None) -> bool:
@@ -14,10 +16,10 @@ class _DataResourceIngest:
         try:
             response = self._fetch_data()
             raw_payload_json = self._extract_payload(response)
-            self._store_payload(raw_payload_json)
-            self._delete_prior_payload(prev_fetched_data_storage_obj)
-            
-
+            with transaction.atomic():
+                self._store_payload(raw_payload_json)
+                self._delete_prior_payload(prev_fetched_data_storage_obj)
+        
             self.mark_section("-")
             self.stage_status_message(action, "completed successfully", style_category="success")
             return True   
@@ -68,6 +70,7 @@ class _DataResourceIngest:
         self.log(f"Data successfully stored (id: {raw_data_storage.id})", style_category="success")
         return 
 
+
     def _delete_prior_payload(self, prev_fetched_data_storage_obj):
         if not prev_fetched_data_storage_obj:
             return
@@ -76,4 +79,3 @@ class _DataResourceIngest:
         prev_fetched_data_storage_obj.delete()
         self.log("Previously fetched data deleted")
 
-    

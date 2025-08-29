@@ -14,38 +14,35 @@ class _LoadSummary:
 
 class _DataResourceLoad:
     def load(self, stdout=None, style=None) -> None:
-        if self.data_category != "substation":
-            return
-
         self._stdout = stdout
         self._style = style
         action = "load"
         self.stage_status_banner(action, "started")
+
         self._load_summary = _LoadSummary()
         data_category = self.data_category
         dno_group = self.dno_group
         dno_group_obj = DNOGroup.objects.get(abbr=dno_group)
-        prev_cleaned_data_storage_objs = list(Substation.objects.filter(dno_group=dno_group_obj))
+        cleaned_data_storage_model = self._load_map(data_category, "cleaned_data_storage_model")
+        persist = self._load_map(data_category, "persistence_fn")
+        cleaned_data_qs = cleaned_data_storage_model.objects.filter(reference=self.reference)
+        cleaned_data_objs = list(cleaned_data_qs)
+        count = len(cleaned_data_objs)
         
-        
-        self.log(f"Iterating over cleaned {self.dno_group.upper()} substation records and persisting into core database models...")
-        substation_cleaned_data_storage_objs = SubstationCleanedDataStorage.objects.filter(dno_group=dno_group)
-        count = substation_cleaned_data_storage_objs.count()
+        self.log(f"Iterating over cleaned {self.reference.replace("_", " ")} records and persisting into core database models...")
         if count == 0:
-            self.log("No cleaned substation records found to load.", style_category="warning")
+            self.log(f"No cleaned {self.reference.replace("_", " ")} records found to load.", style_category="warning")
             self.stage_status_banner(action, "finished")
             return
-
-
 
         tally=0
         update_freq_amount = max(1, count // 10) 
 
-        for substation_cleaned_data_storage_obj in substation_cleaned_data_storage_objs:
-            external_identifier = substation_cleaned_data_storage_obj.external_identifier
+        for cleaned_data_storage_instance in cleaned_data_qs:
+            external_identifier = cleaned_data_storage_instance.external_identifier
 
             try:
-                self._create_substation(substation_cleaned_data_storage_obj, dno_group_obj)
+                persist(cleaned_data_storage_instance, dno_group_obj)
                 self._load_summary.process_success_identifiers.append(external_identifier)
             except ObjectDoesNotExist as e:
                 self._load_summary.process_failure_identifiers.append(external_identifier)
@@ -73,9 +70,9 @@ class _DataResourceLoad:
             
 
 
-        if prev_cleaned_data_storage_objs:  
+        if cleaned_data_objs:  
             self.log("Deleting previously loaded data...")       
-            for obj in prev_cleaned_data_storage_objs:
+            for obj in cleaned_data_objs:
                 obj.delete()
             self.log("All previously loaded data deleted...")
 
@@ -83,7 +80,24 @@ class _DataResourceLoad:
             self.stage_status_message(action, "completed successfully", style_category="success")
 
         self.stage_status_banner(action, "finished")
-            
+
+    def _load_map(self, data_category, key):
+        handlers = {
+            "substation": {
+                "cleaned_data_storage_model": SubstationCleanedDataStorage,
+                "persistence_fn": self._create_substation
+            },
+            "connection_application": {
+                "cleaned_data_storage_model": ConnectionApplicationCleanedDataStorage,
+                "persistence_fn": self._create_connection_application
+            }
+        }
+
+        try:
+            return handlers[data_category][key]
+        except KeyError:
+            raise ValueError(f"Invalid data_category '{data_category}' or key '{key}' in handler map.")
+        
     def _create_substation(self, substation_cleaned_data_storage_obj, dno_group_obj):
         substation = Substation.objects.create(
             name=substation_cleaned_data_storage_obj.name,
@@ -98,3 +112,14 @@ class _DataResourceLoad:
 
         substation.save()
         
+    def _create_connection_application(self, connection_application_cleaned_data_storage_obj, dno_group_obj):
+        obj = connection_application_cleaned_data_storage_obj
+        new_connection = NewConnection.objects.create(
+            connection_status = obj.connection_status
+            connection_voltage_level = obj.connection_voltage_level 
+            dno_group = dno_group_obj
+            demand_count = obj.demand_count
+            total_demand_capacity_mw = obj.total_demand_capacity_mw
+            generation_count = obj.generation_count
+            total_generation_capacity_mw = obj.total_generation_capacity_mw
+        )

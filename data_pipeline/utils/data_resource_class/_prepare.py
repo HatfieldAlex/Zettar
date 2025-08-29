@@ -69,8 +69,6 @@ class _DataResourcePrepare:
         total = self._prepare_summary.total_cleaned_data_rows
         update_freq_amount = self._prepare_summary.update_freq_amount(total)
 
-        
-
         for i, row in cleaned_data_rows:
             j = i + 1
             record = row.to_dict()
