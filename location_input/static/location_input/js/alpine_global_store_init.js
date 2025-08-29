@@ -58,18 +58,8 @@ document.addEventListener('alpine:init', () => {
                 console.log('💰 Connection application data received:', data);
                 this.nearestSubstationName = data.nearest_substation_name;
                 this.nearestSubstationType = data.nearest_substation_type;
-                this.demandApplicationSum = data.demand_application_sum;
-                this.demandCapacityMW = data.demand_capacity_mw;
-                this.generationApplicationSum = data.generation_application_sum;
-                this.generationCapacityMW = data.generation_capacity_mw;
                 this.showInsights = true;
 
-                this.demandBudgetStatusSum = data.demand_budget_status_sum;
-                this.generationBudgetStatusSum = data.generation_budget_status_sum;
-                this.demandAcceptedStatusSum = data.demand_accepted_status_sum;
-                this.generationAcceptedStatusSum = data.generation_accepted_status_sum;
-                this.demandPendingStatusSum = data.demand_pending_status_sum;
-                this.generationPendingStatusSum = data.generation_pending_status_sum;
 
                 Alpine.nextTick(() => {
                     setTimeout(() => {
