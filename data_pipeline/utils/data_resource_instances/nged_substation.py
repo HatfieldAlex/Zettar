@@ -8,26 +8,18 @@ from ...models import RawFetchedDataStorage
 import json
 from ..data_resource_class._prepare import _CleaningHelpers
 
-drop_headers = {
-    "initial": {"Easting", "Northing"},
-    "subsequent": {"Longitude", "Latitude"},
-}
-
-
 def transform_row(row):
-    row["external_identifier"] = str(row.get("name", ""))
-    row["geolocation"] = GEOSPoint(row.get("Longitude", 0), row.get("Latitude", 0), srid=4326)
+    row["external_identifier"] = str(row["external_identifier"])
+    row["geolocation"] = GEOSPoint(row.get("Latitude", 0), row.get("Longitude", 0), srid=4326)
     row["name"] = normalise_name_and_extract_voltage_info(row.get("name", ""))[0]
     row["dno_group"] = "nged"
     row["reference"] = "nged_substation"
-    row["external_identifier"] = str(row.get("external_identifier", ""))
     return row
 
-
 nged_substation_cleaning_helpers = _CleaningHelpers(
-    drop_headers=drop_headers,
+    drop_headers={"initial": {"Easting", "Northing"}, "subsequent": {"Longitude", "Latitude"}},
     exclusions={"type": {"132kv Switching Station", "Ehv Switching Station"}},
-    additional_columns={"dno_group", "geolocation", "external_identifier"}
+    additional_columns={"dno_group", "geolocation"},
     transform_row=transform_row,
 
     name_alias="Substation Name",
@@ -39,11 +31,8 @@ nged_substation_cleaning_helpers = _CleaningHelpers(
     gsp_alias="Super Grid Substation",
 )
 
-
 def extract_payload_nged_substation(raw_response):
     return raw_response.json()["result"]["records"]
-
-
 
 nged_substation_data_resource = DataResource(
     reference="nged_substation",
@@ -59,6 +48,5 @@ nged_substation_data_resource = DataResource(
     cleaning_helpers=nged_substation_cleaning_helpers,
     extract_payload_func=extract_payload_nged_substation,
 )
-
 
 __all__ = ["nged_substation_data_resource"]

@@ -1,8 +1,6 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
 
-from .shared_fields import ConnectionVoltageLevel
-
 class DNOGroup(models.Model):
     abbr = models.CharField(
         max_length=10,
@@ -20,9 +18,7 @@ class Substation(models.Model):
 
     name = models.CharField(max_length=255)
     geolocation = gis_models.PointField(blank=True, null=True)
-    voltage_kv = models.ManyToManyField(
-        ConnectionVoltageLevel, related_name="substations", blank=True
-    )
+
     dno_group = models.ForeignKey(
         DNOGroup,
         on_delete=models.CASCADE,
@@ -31,6 +27,15 @@ class Substation(models.Model):
         blank=True,
     )
     type = models.CharField(max_length=10, choices=SUBSTATION_TYPES)
+    external_identifier = models.CharField(max_length=255, null=True, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["dno_group", "external_identifier"],
+                name="unique_dno_group_external_identifier"
+            )
+        ]
 
 __all__ = [
     "DNOGroup",

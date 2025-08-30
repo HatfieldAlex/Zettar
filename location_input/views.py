@@ -6,12 +6,8 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import ensure_csrf_cookie
 
-from .models.new_connections import NewConnection
-from .models.substations import Substation
-from .utils.view_helpers import (
-    find_nearest_substation_obj,
-    get_substation_object_connection_data,
-)
+from .models import Substation
+from .utils import find_nearest_substation_obj
 
 @ensure_csrf_cookie
 def get_nearby_application_data(request):
@@ -44,11 +40,11 @@ def get_nearby_application_data(request):
             nearest_substation_obj = find_nearest_substation_obj(
                 geolocation, connection_type
             )
-
-            connection_summary = get_substation_object_connection_data(
-                nearest_substation_obj
-            )
-            return JsonResponse(connection_summary)
+            substation_summary = {
+                "nearest_substation_name": nearest_substation_obj.name,
+                "nearest_substation_type": nearest_substation_obj.type,
+            }
+            return JsonResponse(substation_summary)
         except json.JSONDecodeError:
             return JsonResponse(
                 {"status": "error", "message": "Invalid JSON"}, status=400

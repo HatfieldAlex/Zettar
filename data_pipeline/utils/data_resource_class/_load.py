@@ -3,9 +3,11 @@ from data_pipeline.models import (
     SubstationCleanedDataStorage, 
     ConnectionApplicationCleanedDataStorage,
 )
-from location_input.models import DNOGroup, ConnectionVoltageLevel, Substation
+from location_input.models import DNOGroup, Substation
 from dataclasses import dataclass, field
 import pandas as pd 
+from django.db import transaction
+
 
 @dataclass
 class _LoadSummary:
@@ -24,9 +26,7 @@ class _DataResourceLoad:
         data_category = self.data_category
         dno_group = self.dno_group
         dno_group_obj = DNOGroup.objects.get(abbr=dno_group)
-        cleaned_data_storage_model = self._load_map(data_category, "cleaned_data_storage_model")
-        persist = self._load_map(data_category, "persistence_fn")
-        cleaned_data_qs = cleaned_data_storage_model.objects.filter(reference=self.reference)
+        cleaned_data_qs = SubstationCleanedDataStorage.objects.filter(reference=self.reference)
         cleaned_data_objs = list(cleaned_data_qs)
         count = len(cleaned_data_objs)
         
@@ -43,7 +43,9 @@ class _DataResourceLoad:
             external_identifier = cleaned_data_storage_instance.external_identifier
 
             try:
-                persist(cleaned_data_storage_instance, dno_group_obj)
+                with transaction.atomic():
+                    self._remove_existing_substation(cleaned_data_storage_instance)
+                    self._create_substation(cleaned_data_storage_instance, dno_group_obj)
                 self._load_summary.process_success_identifiers.append(external_identifier)
             except ObjectDoesNotExist as e:
                 self._load_summary.process_failure_identifiers.append(external_identifier)
@@ -57,10 +59,25 @@ class _DataResourceLoad:
                 self.log(
                     f"Attempted {tally} / {count} rows... (successful: {len(self._load_summary.process_success_identifiers)}, failed: {len(self._load_summary.process_failure_identifiers)})")
 
-
-
-
         load_summary_process_failure_identifiers = self._load_summary.process_failure_identifiers
+        self._log_load_outcomes(count, load_summary_process_failure_identifiers, action)
+        
+    def _create_substation(self, substation_cleaned_data_storage_obj, dno_group_obj):
+        substation = Substation.objects.create(
+            name=substation_cleaned_data_storage_obj.name,
+            geolocation=substation_cleaned_data_storage_obj.geolocation,
+            type=substation_cleaned_data_storage_obj.type,
+            dno_group=dno_group_obj,
+            external_identifier=substation_cleaned_data_storage_obj.external_identifier,
+            )
+        substation.save()
+        
+    def _remove_existing_substation(self, substation_cleaned_data_storage_obj):
+        Substation.objects.filter(
+            external_identifier=substation_cleaned_data_storage_obj.external_identifier
+            ).delete()
+      
+    def _log_load_outcomes(self, count, load_summary_process_failure_identifiers, action):
 
         if load_summary_process_failure_identifiers:
             self.log(f"{len(self._load_summary.process_success_identifiers)}/{count} rows processed succesfully")
@@ -69,50 +86,7 @@ class _DataResourceLoad:
         else:
             self.log(f"All cleaned rows successfully processed", style_category="success",)
             
-
-
-        if cleaned_data_objs:  
-            self.log("Deleting previously loaded data...")       
-            for obj in cleaned_data_objs:
-                obj.delete()
-            self.log("All previously loaded data deleted...")
-
         if not load_summary_process_failure_identifiers:
             self.stage_status_message(action, "completed successfully", style_category="success")
 
         self.stage_status_banner(action, "finished")
-
-    def _load_map(self, data_category, key):
-        handlers = {
-            "substation": {
-                "cleaned_data_storage_model": SubstationCleanedDataStorage,
-                "persistence_fn": self._create_substation
-            },
-            "connection_application": {
-                "cleaned_data_storage_model": ConnectionApplicationCleanedDataStorage,
-                "persistence_fn": self._create_connection_application
-            }
-        }
-
-        try:
-            return handlers[data_category][key]
-        except KeyError:
-            raise ValueError(f"Invalid data_category '{data_category}' or key '{key}' in handler map.")
-        
-    def _create_substation(self, substation_cleaned_data_storage_obj, dno_group_obj):
-        substation = Substation.objects.create(
-            name=substation_cleaned_data_storage_obj.name,
-            geolocation=substation_cleaned_data_storage_obj.geolocation,
-            type=substation_cleaned_data_storage_obj.type,
-            dno_group=dno_group_obj
-            )
-        connection_voltage_levels_objs = ConnectionVoltageLevel.objects.filter(
-            level_kv__in=substation_cleaned_data_storage_obj.candidate_voltage_levels_kv
-        )
-        substation.voltage_kv.set(connection_voltage_levels_objs)
-
-        substation.save()
-        
-    def _create_connection_application(self, connection_application_cleaned_data_storage_obj, dno_group_obj):
-        pass
-
