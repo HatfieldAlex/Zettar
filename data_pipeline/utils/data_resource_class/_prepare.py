@@ -1,17 +1,16 @@
 from dataclasses import dataclass, field
 import pandas as pd
+from django.contrib.gis.geos import Point as GEOSPoint
 from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage, ConnectionApplicationCleanedDataStorage
 from .validators import CleanSubstationDataRequirement, CleanConnectionApplicationDataRequirement
 from django.utils.timezone import now
 from typing import Dict, Union, Callable, Any
-
 
 @dataclass
 class _CleaningHelpers:
     drop_headers: Dict[str, set] = field(default_factory=dict)
     exclusions: Dict[str, set] = field(default_factory=dict)
     additional_columns: set[str] = field(default_factory=set) 
-    transform_row: Callable[[pd.Series], pd.Series] = field(default_factory=lambda: (lambda row: row))
 
     name_alias: str = "Substation Name"
     type_alias: str = "Substation Type"
@@ -21,6 +20,15 @@ class _CleaningHelpers:
     bsp_alias: str = "Bulk Supply Point"
     gsp_alias: str = "Grid Supply Point"
 
+    row_transformation_external_identifier: Callable[[pd.Series], str] = field(
+        default_factory=lambda: (lambda row: str(row.get("external_identifier", "")))
+    )
+    row_transformation_geolocation: Callable[[pd.Series], GEOSPoint] = field(
+        default_factory=lambda: (lambda row: GEOSPoint(0, 0, srid=4326))
+    )
+    row_transformation_name: Callable[[pd.Series], str] = field(
+        default_factory=lambda: (lambda row: str(row.get("name", "")))
+    )
 
     @property
     def raw_to_standard_headers(self) -> Dict[str, str]:
@@ -112,7 +120,11 @@ class _DataResourcePrepare:
         df["type"] = df["type"].replace(cleaning_helpers.raw_to_standard_type_values)
 
         self.log("Transforming rows...")
-        df = df.apply(cleaning_helpers.transform_row, axis=1)        
+        df["external_identifier"] = df.apply(cleaning_helpers.row_transformation_external_identifier, axis=1)
+        df["geolocation"] = df.apply(cleaning_helpers.row_transformation_geolocation, axis=1)
+        df["name"] = df.apply(cleaning_helpers.row_transformation_name, axis=1)
+        df["dno_group"] = self.dno_group
+        df["reference"] = self.reference
 
         self.log("Dropping columns only required for transformation...")
         df.drop(columns=cleaning_helpers.drop_headers["subsequent"], inplace=True)

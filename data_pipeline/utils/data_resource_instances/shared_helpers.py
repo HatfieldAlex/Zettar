@@ -51,6 +51,8 @@ def normalise_name_and_extract_voltage_info(ss_name):
 
     voltage_levels = VOLTAGE_LEVELS
 
+    ss_name = ss_name.title()
+
     #standardise malformed voltage spacing
     if "6 6" in ss_name:
         ss_name = ss_name.replace("6 6", "6.6")
