@@ -5,6 +5,7 @@ from data_pipeline.models import (
 )
 from location_input.models import DNOGroup, ConnectionVoltageLevel, Substation
 from dataclasses import dataclass, field
+import pandas as pd 
 
 @dataclass
 class _LoadSummary:
@@ -114,3 +115,4 @@ class _DataResourceLoad:
         
     def _create_connection_application(self, connection_application_cleaned_data_storage_obj, dno_group_obj):
         pass
+

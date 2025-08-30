@@ -3,6 +3,40 @@ import pandas as pd
 from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage, ConnectionApplicationCleanedDataStorage
 from .validators import CleanSubstationDataRequirement, CleanConnectionApplicationDataRequirement
 from django.utils.timezone import now
+from typing import Dict, Union, Callable, Any
+
+
+@dataclass
+class _CleaningHelpers:
+    drop_headers: Dict[str, set] = field(default_factory=dict)
+    exclusions: Dict[str, set] = field(default_factory=dict)
+    additional_columns: set[str] = field(default_factory=set) 
+    transform_row: Callable[[pd.Series], pd.Series] = field(default_factory=lambda: (lambda row: row))
+
+    name_alias: str = "Substation Name"
+    type_alias: str = "Substation Type"
+    external_identifier: str = "_id"
+
+    primary_alias: str = "Primary Substation"
+    bsp_alias: str = "Bulk Supply Point"
+    gsp_alias: str = "Grid Supply Point"
+
+
+    @property
+    def raw_to_standard_headers(self) -> Dict[str, str]:
+        return {
+            self.name_alias: "name",
+            self.type_alias: "type",
+            self.external_identifier: "external_identifier",
+        }
+
+    @property
+    def raw_to_standard_type_values(self) -> Dict[str, str]:
+        return {
+            self.primary_alias: "primary",
+            self.bsp_alias: "bsp",
+            self.gsp_alias: "gsp",
+        }
 
 @dataclass
 class _PrepareSummary:
@@ -19,8 +53,9 @@ class _PrepareSummary:
     def update_freq_amount(self, total):
         return max(1, total // 10) 
 
+@dataclass
+class _DataResourcePrepare:
 
-class _DataResourcePrepare:    
     def prepare(self, stdout=None, style=None) -> None:
         action = "preparation"
         self.stage_status_banner(action, "started")
@@ -38,8 +73,7 @@ class _DataResourcePrepare:
         prev_cleaned_data_storage_objs = list(django_model.objects.filter(reference=self.reference))
 
         raw_payload_json = self._query_data()
-        cleaned_df = self._clean_data(raw_payload_json)
-        print(cleaned_df)
+        cleaned_df = self._clean_data(raw_payload_json, self.cleaning_helpers)
         valid_cleaned_data_rows = self._validate_cleaned_data(cleaned_df, pydantic_model)
         self._store_validated_data(valid_cleaned_data_rows, django_model, timestamp)
         self._delete_previous_cleaned_data(prev_cleaned_data_storage_objs)
@@ -50,17 +84,47 @@ class _DataResourcePrepare:
 
         self.stage_status_banner(action, "finished")
 
+    def _clean_data(
+    self, 
+    raw_payload_json: Union[dict[str, Any], list[dict[str, Any]]],
+    cleaning_helpers: _CleaningHelpers,
+    ) -> pd.DataFrame:
+
+        self.log("Converting raw JSON payload into DataFrame...")
+        df = pd.DataFrame.from_records(raw_payload_json)
+
+        self.log("Dropping columns not required...")
+        df.drop(columns=cleaning_helpers.drop_headers["initial"], inplace=True)
+        
+        self.log("Creating new columns...")
+        for header in cleaning_helpers.additional_columns:
+            if header not in df.columns:
+                df[header] = None
+        
+        self.log("Standardising header names...")
+        df = df.rename(columns=cleaning_helpers.raw_to_standard_headers)
+
+        self.log("Dropping rows not required...")
+        for col, vals in cleaning_helpers.exclusions.items():
+            df = df[~df[col].isin(vals)]
+
+        self.log("Standardising substation values...")
+        df["type"] = df["type"].replace(cleaning_helpers.raw_to_standard_type_values)
+
+        self.log("Transforming rows...")
+        df = df.apply(cleaning_helpers.transform_row, axis=1)        
+
+        self.log("Dropping columns only required for transformation...")
+        df.drop(columns=cleaning_helpers.drop_headers["subsequent"], inplace=True)
+        
+        return df
+
+
     def _query_data(self):
         self.log(f"Querying data from {RawFetchedDataStorage._meta.db_table} ...")
         fetched_data_obj = RawFetchedDataStorage.objects.get(reference=self.reference)
         raw_payload_json = fetched_data_obj.raw_payload_json
         return raw_payload_json
-
-    def _clean_data(self, raw_payload_json):
-        self.log(f"Commencing data clean...")
-        df = self.clean_func(raw_payload_json, self.log)
-        self.log(f"Data cleaning completed successfully.", style_category="success")
-        return df
 
     def _validate_cleaned_data(self, df, pydantic_model):
         self.log(f"Commencing data validation...")

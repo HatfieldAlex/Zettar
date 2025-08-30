@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from typing import Any, Callable, ClassVar, Literal
 import pandas as pd
 import requests
+from ._prepare import _CleaningHelpers
 
 
 @dataclass(slots=True)
@@ -19,10 +20,9 @@ class _DataResourceBase:
     query_params: dict[str, Any] = field(default_factory=dict)
     headers: dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
-
-    
-    clean_func: Callable[..., pd.DataFrame] | None = None
     extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
+
+    cleaning_helpers: _CleaningHelpers = field(default_factory=_CleaningHelpers)
 
     
 

@@ -6,65 +6,44 @@ from ..data_resource_class import DataResource
 from .shared_helpers import normalise_name_and_extract_voltage_info
 from ...models import RawFetchedDataStorage
 import json
+from ..data_resource_class._prepare import _CleaningHelpers
 
-nged_field_type_aliases_map = {
-        "Primary Substation": "primary",
-        "Bulk Supply Point": "bsp",
-        "Super Grid Substation": "gsp",
-    }
+drop_headers = {
+    "initial": {"Easting", "Northing"},
+    "subsequent": {"Longitude", "Latitude"},
+}
 
-nged_headers_rename_map = {
-        "Substation Number": "external_identifier",
-        "Substation Name": "name",
-        "Substation Type": "type",
-        "Latitude": "latitude",
-        "Longitude": "longitude",
-    }
 
-drop_types = {"132kv Switching Station", "Ehv Switching Station"}
+def transform_row(row):
+    row["external_identifier"] = str(row.get("name", ""))
+    row["geolocation"] = GEOSPoint(row.get("Longitude", 0), row.get("Latitude", 0), srid=4326)
+    row["name"] = normalise_name_and_extract_voltage_info(row.get("name", ""))[0]
+    row["dno_group"] = "nged"
+    row["reference"] = "nged_substation"
+    row["external_identifier"] = str(row.get("external_identifier", ""))
+    return row
 
-initial_drop_headers = ["_id", "Easting", "Northing"]
+
+nged_substation_cleaning_helpers = _CleaningHelpers(
+    drop_headers=drop_headers,
+    exclusions={"type": {"132kv Switching Station", "Ehv Switching Station"}},
+    additional_columns={"dno_group", "geolocation", "external_identifier"}
+    transform_row=transform_row,
+
+    name_alias="Substation Name",
+    type_alias="Substation Type",
+    external_identifier="_id",
+
+    primary_alias="Primary Substation",
+    bsp_alias="Bulk Supply Point",
+    gsp_alias="Super Grid Substation",
+)
+
 
 def extract_payload_nged_substation(raw_response):
     return raw_response.json()["result"]["records"]
 
 
-def nged_substation_clean(
-    raw_payload_json: Union[dict[str, Any], list[dict[str, Any]]],
-    log: Callable[[str, str], None] = print
-    ) -> pd.DataFrame:
-
-    log("Converting raw JSON payload into DataFrame...")
-    df = pd.DataFrame.from_records(raw_payload_json)
-
-    log("Dropping columns not required...")
-    df.drop(columns=initial_drop_headers, inplace=True)
-
-    log("Filtering out non-substation types (i.e., switching stations)...")
-    df = df[~df["Substation Type"].isin(drop_types)]  
-
-    log("Generating 'geolocation' column as GEOS Point objects using longitude and latitude, and dropping the original columns...")
-    df["geolocation"] = df.apply(lambda r: GEOSPoint(r["Longitude"], r["Latitude"], srid=4326),axis=1)
-    df.drop(columns=["Longitude", "Latitude"], inplace=True)
-
-    log("Renaming headers to align with validation schema...")
-    df = df.rename(columns=nged_headers_rename_map)
-
-    log("Standardising substation type labels for consistency...")
-    df["type"] = df["type"].map(nged_field_type_aliases_map)
-  
-    log("Normalising substation names and extracting voltage level candidates (in kV)...")
-    df[["name", "candidate_voltage_levels_kv"]] = df["name"].apply(
-        lambda n: pd.Series(normalise_name_and_extract_voltage_info(n)))
-    
-    log("Assigning DNO group identifier to each record...")
-    df["dno_group"] = "nged"
-    df["reference"] = "nged_substation"
-
-    log("Stringifying the external_identifier...")
-    df["external_identifier"] = df.apply(lambda r: str(r["external_identifier"]), axis=1)
-
-    return df
 
 nged_substation_data_resource = DataResource(
     reference="nged_substation",
@@ -77,7 +56,7 @@ nged_substation_data_resource = DataResource(
         "limit": 2500,
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
-    clean_func=nged_substation_clean,
+    cleaning_helpers=nged_substation_cleaning_helpers,
     extract_payload_func=extract_payload_nged_substation,
 )
 

@@ -38,6 +38,7 @@ def ukpn_substation_clean(
     log: Callable[[str, str], None] = print
     ) -> pd.DataFrame:
 
+    #1. Extract payload1
     log("Converting raw JSON payload into DataFrame...")
     df = pd.DataFrame.from_records(raw_payload_json)
 
