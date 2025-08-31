@@ -29,6 +29,9 @@ class _CleaningHelpers:
     row_transformation_name: Callable[[pd.Series], str] = field(
         default_factory=lambda: (lambda row: str(row.get("name", "")))
     )
+    row_transformation_type: Callable[[pd.Series], str] = field(
+        default_factory=lambda: (lambda row: str(row.get("type", "")))
+    ) 
 
     @property
     def raw_to_standard_headers(self) -> Dict[str, str]:
@@ -125,6 +128,7 @@ class _DataResourcePrepare:
         df["name"] = df.apply(cleaning_helpers.row_transformation_name, axis=1)
         df["dno_group"] = self.dno_group
         df["reference"] = self.reference
+        df["type"] = df.apply(cleaning_helpers.row_transformation_type, axis=1)
 
         self.log("Dropping columns only required for transformation...")
         df.drop(columns=cleaning_helpers.drop_headers["subsequent"], inplace=True)

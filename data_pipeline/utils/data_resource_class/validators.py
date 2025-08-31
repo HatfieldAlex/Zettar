@@ -23,6 +23,12 @@ class CleanSubstationDataRequirement(BaseModel):
         "arbitrary_types_allowed": True 
     }
 
+    @field_validator("name")
+    def name_must_not_be_empty_string(cls, v):
+        if v == "":
+            raise ValueError("name must not be an empty string")
+        return v
+
 
 
 class CleanConnectionApplicationDataRequirement(BaseModel):
