@@ -20,7 +20,7 @@ class _DataResourceBase:
     query_params: dict[str, Any] = field(default_factory=dict)
     headers: dict[str, str] = field(default_factory=dict)
     timeout: float = 30.0
-    extract_payload_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
+    parse_raw_response_func: Callable[[requests.Response], Any] = lambda resp: resp.json()
 
     cleaning_helpers: _CleaningHelpers = field(default_factory=_CleaningHelpers)
 

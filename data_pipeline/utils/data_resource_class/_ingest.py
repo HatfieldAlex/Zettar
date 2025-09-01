@@ -15,9 +15,9 @@ class _DataResourceIngest:
 
         try:
             response = self._fetch_data()
-            raw_payload_json = self._extract_payload(response)
+            parsed_response_json = self._parse_response(response)
             with transaction.atomic():
-                self._store_payload(raw_payload_json)
+                self._store_payload(parsed_response_json)
                 self._delete_prior_payload(prev_fetched_data_storage_obj)
         
             self.mark_section("-")
@@ -36,11 +36,9 @@ class _DataResourceIngest:
         finally:
             self.stage_status_banner(action, "finished")
 
-    def _extract_payload(self, response):
-        self.log("Extracting payload ...")
-        payload = self.extract_payload_func(response)
-        self.log("Payload successfully extracted")
-        return payload
+    def _parse_response(self, response):
+        self.log("Transforming response into a structured format...")
+        return self.parse_raw_response_func(response)
 
     def _fetch_data(self):
         self.log(f"Fetching data from {self.url} ...")

@@ -8,6 +8,8 @@ from typing import Dict, Union, Callable, Any
 
 @dataclass
 class _CleaningHelpers:
+    extract_payload_func: Callable[[dict], Any]  = lambda parsed_resp: parsed_resp["result"]["records"]
+
     drop_headers: Dict[str, set] = field(default_factory=dict)
     exclusions: Dict[str, set] = field(default_factory=dict)
     additional_columns: set[str] = field(default_factory=set) 
@@ -20,6 +22,7 @@ class _CleaningHelpers:
     bsp_alias: str = "Bulk Supply Point"
     gsp_alias: str = "Grid Supply Point"
 
+    
     row_transformation_external_identifier: Callable[[pd.Series], str] = field(
         default_factory=lambda: (lambda row: str(row.get("external_identifier", "")))
     )
@@ -82,9 +85,11 @@ class _DataResourcePrepare:
         }
         pydantic_model, django_model = model_map[self.data_category]
         prev_cleaned_data_storage_objs = list(django_model.objects.filter(reference=self.reference))
+        cleaning_helpers = self.cleaning_helpers
 
-        raw_payload_json = self._query_data()
-        cleaned_df = self._clean_data(raw_payload_json, self.cleaning_helpers)
+        raw_parsed_response = self._query_data()
+        raw_payload_json = self._extract_payload(cleaning_helpers, raw_parsed_response)
+        cleaned_df = self._clean_data(raw_payload_json, cleaning_helpers)
         valid_cleaned_data_rows = self._validate_cleaned_data(cleaned_df, pydantic_model)
         self._store_validated_data(valid_cleaned_data_rows, django_model, timestamp)
         self._delete_previous_cleaned_data(prev_cleaned_data_storage_objs)
@@ -94,6 +99,19 @@ class _DataResourcePrepare:
             self.stage_status_message(action, "completed successfully", style_category="success")
 
         self.stage_status_banner(action, "finished")
+
+    def _query_data(self):
+        self.log(f"Querying data from {RawFetchedDataStorage._meta.db_table} ...")
+        fetched_data_obj = RawFetchedDataStorage.objects.get(reference=self.reference)
+        raw_payload_json = fetched_data_obj.raw_payload_json
+        return raw_payload_json
+
+    def _extract_payload(self, cleaning_helpers, raw_parsed_response):
+        self.log("Extracting payload ...")
+        payload = cleaning_helpers.extract_payload_func(raw_parsed_response)
+        return payload
+
+
 
     def _clean_data(
     self, 
@@ -136,11 +154,7 @@ class _DataResourcePrepare:
         return df
 
 
-    def _query_data(self):
-        self.log(f"Querying data from {RawFetchedDataStorage._meta.db_table} ...")
-        fetched_data_obj = RawFetchedDataStorage.objects.get(reference=self.reference)
-        raw_payload_json = fetched_data_obj.raw_payload_json
-        return raw_payload_json
+    
 
     def _validate_cleaned_data(self, df, pydantic_model):
         self.log(f"Commencing data validation...")

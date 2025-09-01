@@ -8,17 +8,9 @@ from ...models import RawFetchedDataStorage
 import json
 from ..data_resource_class._prepare import _CleaningHelpers
 
-
-def row_transformation_external_identifier_nged_substation(row):
-    return str(row["external_identifier"])
-
-def row_transformation_geolocation_nged_substation(row):
-    return GEOSPoint(row.get("Latitude", 0), row.get("Longitude", 0), srid=4326)
-
-def row_transformation_name_nged_substation(row):
-    return normalise_name_and_extract_voltage_info(row.get("name", ""))[0]
-
 nged_substation_cleaning_helpers = _CleaningHelpers(
+    extract_payload_func=lambda raw_parsed_response: raw_parsed_response["result"]["records"],
+
     drop_headers={"initial": {"Easting", "Northing"}, "subsequent": {"Longitude", "Latitude"}},
     exclusions={"type": {"132kv Switching Station", "Ehv Switching Station"}},
     additional_columns={"dno_group", "geolocation"},
@@ -31,13 +23,10 @@ nged_substation_cleaning_helpers = _CleaningHelpers(
     bsp_alias="Bulk Supply Point",
     gsp_alias="Super Grid Substation",
 
-    row_transformation_external_identifier=row_transformation_external_identifier_nged_substation,
-    row_transformation_geolocation=row_transformation_geolocation_nged_substation,
-    row_transformation_name=row_transformation_name_nged_substation,
+    row_transformation_external_identifier=lambda row: str(row["external_identifier"]),
+    row_transformation_geolocation=lambda row: GEOSPoint(row.get("Latitude", 0), row.get("Longitude", 0), srid=4326),
+    row_transformation_name=lambda row: normalise_name_and_extract_voltage_info(row.get("name", ""))[0],
 )
-
-def extract_payload_nged_substation(raw_response):
-    return raw_response.json()["result"]["records"]
 
 nged_substation_data_resource = DataResource(
     reference="nged_substation",
@@ -51,7 +40,6 @@ nged_substation_data_resource = DataResource(
     },
     headers={"Authorization": f"{settings.NGED_API_KEY}"},
     cleaning_helpers=nged_substation_cleaning_helpers,
-    extract_payload_func=extract_payload_nged_substation,
 )
 
 __all__ = ["nged_substation_data_resource"]
