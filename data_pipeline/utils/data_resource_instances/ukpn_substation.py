@@ -4,7 +4,7 @@ import requests
 from django.contrib.gis.geos import Point as GEOSPoint
 from typing import Any, Union, Callable
 from ..data_resource_class import DataResource
-from .shared_helpers import normalise_name_and_extract_voltage_info
+from .shared_helpers import normalise_name_and_extract_voltage_info, substation_type_map
 from ...models import RawFetchedDataStorage
 import json
 from ..data_resource_class._prepare import _CleaningHelpers
@@ -23,31 +23,21 @@ drop_headers_primary_bsp_substation = {
         "transratingsummer", "reversepower", "maxdemandsummer", "maxdemandwinter",	
         "local_authority", "local_authority_code"
     },
-    "subsequent": {}
+    "subsequent": {"sitename", "sitetype", "what3words", "spatial_coordinates"}
 }
 
 ukpn_primary_bsp_substation_cleaning_helpers = _CleaningHelpers(
     extract_payload_func=lambda raw_parsed_response: raw_parsed_response["results"],
-
     drop_headers=drop_headers_primary_bsp_substation,
-    exclusions={},
-    additional_columns={},
 
-    name_alias="sitename",
-    type_alias="sitetype",
-    external_identifier="what3words",
-
-    primary_alias="Primary Substation",
-    bsp_alias="Grid Substation",
-    gsp_alias="",
-
-    row_transformation_external_identifier=lambda row: f"{row['name']} | {row['external_identifier']}",
-    row_transformation_geolocation=lambda row: GEOSPoint(
+    construct_external_identifier=lambda row: f"{row['sitename']} | {row['what3words']}",
+    construct_geolocation=lambda row: GEOSPoint(
         row["spatial_coordinates"]["lon"], 
         row["spatial_coordinates"]["lat"], 
         srid=4326
         ),
-    row_transformation_name=lambda row: normalise_name_and_extract_voltage_info(row.get("name", ""))[0],
+    construct_name=lambda row: normalise_name_and_extract_voltage_info(row.get("sitename", ""))[0],
+    construct_type=lambda row: substation_type_map("Primary Substation", "Grid Substation").get(row["sitetype"], "unknown"), 
 )
 
 base_url_ukpn="https://ukpowernetworks.opendatasoft.com"
@@ -71,7 +61,7 @@ def create_data_resource(offset):
         parse_raw_response_func=lambda raw_resp: raw_resp.json()
     )
 
-count = get_count_open_data_soft(base_url_ukpn, path_ukpn_primary_bsp)
+count = get_count_open_data_soft(base_url_ukpn, path_ukpn_primary_bsp, "ukpn")
 
 for offset in range(0, count, call_limit_open_data_soft):
     data_resource_name = f"ukpn_primary_bsp_substation_data_resource_{offset}_{min(offset + call_limit_open_data_soft, count)}"
@@ -90,32 +80,23 @@ drop_headers_gsp_substation = {
         "import_capacity_utilisation", "technical_limits_available"
     },   
     "subsequent": {
-        "geo_point_2d"
+        "geo_point_2d", "gsp",
     },
 }
 
 ukpn_gsp_substation_cleaning_helpers = _CleaningHelpers(
     extract_payload_func=lambda raw_parsed_response: raw_parsed_response["results"],
-
     drop_headers=drop_headers_gsp_substation,
-    exclusions={"name": {"TILBURY SGTs 1&7" , "TILBURY SGTs 2&8", "HURST (SPN)"}},
-    additional_columns={"type", "external_identifier"},
+    exclusions={"gsp": {"TILBURY SGTs 1&7" , "TILBURY SGTs 2&8", "HURST (SPN)"}},
 
-    name_alias="gsp",
-    type_alias="sitetype",
-    external_identifier="name",
-
-    primary_alias="Primary Substation",
-    bsp_alias="Grid Substation",
-
-    row_transformation_external_identifier=lambda row: row["name"],
-    row_transformation_geolocation=lambda row: GEOSPoint(
+    construct_external_identifier=lambda row: row["gsp"],
+    construct_geolocation=lambda row: GEOSPoint(
         row["geo_point_2d"]["lon"], 
         row["geo_point_2d"]["lat"], 
         srid=4326,
     ),
-    row_transformation_name=lambda row: normalise_name_and_extract_voltage_info(row.get("name", ""))[0],
-    row_transformation_type=lambda row: "gsp",
+    construct_name=lambda row: normalise_name_and_extract_voltage_info(row.get("gsp", ""))[0],
+    construct_type=lambda row: "gsp",
 
 )
 
@@ -126,7 +107,7 @@ ukpn_gsp_substation_data_resource = DataResource(
     dno_group="ukpn",
     data_category="substation",
     path="/api/explore/v2.1/catalog/datasets/ukpn-grid-supply-points-overview/records",
-    query_params={"limit": -1},
+    query_params={"limit": call_limit_open_data_soft},
     headers={"Authorization": f"Apikey {settings.UKPN_API_KEY}"},
     cleaning_helpers=ukpn_gsp_substation_cleaning_helpers,
 )

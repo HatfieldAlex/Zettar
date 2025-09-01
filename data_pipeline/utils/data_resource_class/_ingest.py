@@ -61,7 +61,7 @@ class _DataResourceIngest:
             source_url=self.url,
             raw_payload_json=raw_payload_json
             )
-
+        
         raw_data_storage.full_clean()
         raw_data_storage.save()
 

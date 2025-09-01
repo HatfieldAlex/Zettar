@@ -4,6 +4,10 @@ from decimal import Decimal
 from location_input.constants import VOLTAGE_LEVELS
 
 
+def substation_type_map(*aliases):
+    keys = ["primary", "bsp", "gsp"]
+    return {alias: key for alias, key in zip(aliases, keys)}
+
 
 substrings_to_remove = [
         "kv",

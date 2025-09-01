@@ -9,14 +9,14 @@ VOLTAGE_LEVELS = [
 ]
 
 SUBSTATION_TYPE_CHOICES = ["primary", "bsp", "gsp"]
-DNO_GROUP_CHOICES = ["nged", "ukpn"]
+DNO_GROUP_CHOICES = ["nged", "ukpn", "np"]
 
 class CleanSubstationDataRequirement(BaseModel):
     name: str
     type: Literal["primary", "bsp", "gsp"]
     external_identifier: str
     geolocation: GEOSPoint
-    dno_group: Literal["nged", "ukpn"]
+    dno_group: Literal["nged", "ukpn", "np"]
     reference: str
     
     model_config = {

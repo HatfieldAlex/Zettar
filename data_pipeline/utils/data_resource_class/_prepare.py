@@ -9,48 +9,21 @@ from typing import Dict, Union, Callable, Any
 @dataclass
 class _CleaningHelpers:
     extract_payload_func: Callable[[dict], Any]  = lambda parsed_resp: parsed_resp["result"]["records"]
-
     drop_headers: Dict[str, set] = field(default_factory=dict)
     exclusions: Dict[str, set] = field(default_factory=dict)
-    additional_columns: set[str] = field(default_factory=set) 
 
-    name_alias: str = "Substation Name"
-    type_alias: str = "Substation Type"
-    external_identifier: str = "_id"
-
-    primary_alias: str = "Primary Substation"
-    bsp_alias: str = "Bulk Supply Point"
-    gsp_alias: str = "Grid Supply Point"
-
-    
-    row_transformation_external_identifier: Callable[[pd.Series], str] = field(
+    construct_external_identifier: Callable[[pd.Series], str] = field(
         default_factory=lambda: (lambda row: str(row.get("external_identifier", "")))
     )
-    row_transformation_geolocation: Callable[[pd.Series], GEOSPoint] = field(
+    construct_geolocation: Callable[[pd.Series], GEOSPoint] = field(
         default_factory=lambda: (lambda row: GEOSPoint(0, 0, srid=4326))
     )
-    row_transformation_name: Callable[[pd.Series], str] = field(
+    construct_name: Callable[[pd.Series], str] = field(
         default_factory=lambda: (lambda row: str(row.get("name", "")))
     )
-    row_transformation_type: Callable[[pd.Series], str] = field(
+    construct_type: Callable[[pd.Series], str] = field(
         default_factory=lambda: (lambda row: str(row.get("type", "")))
     ) 
-
-    @property
-    def raw_to_standard_headers(self) -> Dict[str, str]:
-        return {
-            self.name_alias: "name",
-            self.type_alias: "type",
-            self.external_identifier: "external_identifier",
-        }
-
-    @property
-    def raw_to_standard_type_values(self) -> Dict[str, str]:
-        return {
-            self.primary_alias: "primary",
-            self.bsp_alias: "bsp",
-            self.gsp_alias: "gsp",
-        }
 
 @dataclass
 class _PrepareSummary:
@@ -86,7 +59,6 @@ class _DataResourcePrepare:
         pydantic_model, django_model = model_map[self.data_category]
         prev_cleaned_data_storage_objs = list(django_model.objects.filter(reference=self.reference))
         cleaning_helpers = self.cleaning_helpers
-
         raw_parsed_response = self._query_data()
         raw_payload_json = self._extract_payload(cleaning_helpers, raw_parsed_response)
         cleaned_df = self._clean_data(raw_payload_json, cleaning_helpers)
@@ -124,29 +96,40 @@ class _DataResourcePrepare:
 
         self.log("Dropping columns not required...")
         df.drop(columns=cleaning_helpers.drop_headers["initial"], inplace=True)
-        
-        self.log("Creating new columns...")
-        for header in cleaning_helpers.additional_columns:
-            if header not in df.columns:
-                df[header] = None
-        
-        self.log("Standardising header names...")
-        df = df.rename(columns=cleaning_helpers.raw_to_standard_headers)
 
         self.log("Dropping rows not required...")
         for col, vals in cleaning_helpers.exclusions.items():
             df = df[~df[col].isin(vals)]
-
-        self.log("Standardising substation values...")
-        df["type"] = df["type"].replace(cleaning_helpers.raw_to_standard_type_values)
+        
+        self.log("Creating new columns...")
+        for col in {"name", "type", "geolocation", "dno_group", "external_identifier", "reference"}:
+            df[col] = None 
 
         self.log("Transforming rows...")
-        df["external_identifier"] = df.apply(cleaning_helpers.row_transformation_external_identifier, axis=1)
-        df["geolocation"] = df.apply(cleaning_helpers.row_transformation_geolocation, axis=1)
-        df["name"] = df.apply(cleaning_helpers.row_transformation_name, axis=1)
-        df["dno_group"] = self.dno_group
-        df["reference"] = self.reference
-        df["type"] = df.apply(cleaning_helpers.row_transformation_type, axis=1)
+        for row in df.itertuples(index=True):
+            try:
+                row_dict = row._asdict()
+                df.at[row.Index, "name"] = cleaning_helpers.construct_name(row_dict)
+                df.at[row.Index, "type"] = cleaning_helpers.construct_type(row_dict)
+                df.at[row.Index, "geolocation"] = cleaning_helpers.construct_geolocation(row_dict)
+                df.at[row.Index, "dno_group"] = self.dno_group
+                df.at[row.Index, "external_identifier"] = cleaning_helpers.construct_external_identifier(row_dict)
+                df.at[row.Index, "reference"] = self.reference
+            except Exception as e:
+                self.log(
+                    f"Error transforming row: {row_dict} -- {e}",
+                    style_category="error"
+                )
+                raise
+        # df["name"] = df.apply(cleaning_helpers.construct_name, axis=1)
+        # df["type"] = df.apply(cleaning_helpers.construct_type, axis=1)
+        # df["geolocation"] = df.apply(cleaning_helpers.construct_geolocation, axis=1)
+        # df["dno_group"] = self.dno_group
+        # df["external_identifier"] = df.apply(cleaning_helpers.construct_external_identifier, axis=1)
+        # df["reference"] = self.reference
+
+    
+            
 
         self.log("Dropping columns only required for transformation...")
         df.drop(columns=cleaning_helpers.drop_headers["subsequent"], inplace=True)

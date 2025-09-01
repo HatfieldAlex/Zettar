@@ -5,7 +5,7 @@ from ...utils import data_resource_instances
 VALID_ACTIONS = ["orchestrate", "inspect"]
 DEFAULT_ACTION = "orchestrate"
 
-VALID_DNO_GROUP_ABBRS = ["nged", "ukpn"]
+VALID_DNO_GROUP_ABBRS = ["nged", "ukpn", "np"]
 DEFAULT_DNO_GROUP_ABBR = "nged"
 
 VALID_CATEGORIES = ["substation", "connection_application"]
