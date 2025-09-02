@@ -1,8 +1,8 @@
 from dataclasses import dataclass, field
 import pandas as pd
 from django.contrib.gis.geos import Point as GEOSPoint
-from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage, ConnectionApplicationCleanedDataStorage
-from .validators import CleanSubstationDataRequirement, CleanConnectionApplicationDataRequirement
+from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage
+from .validators import CleanSubstationDataRequirement
 from django.utils.timezone import now
 from typing import Dict, Union, Callable, Any
 
@@ -54,7 +54,6 @@ class _DataResourcePrepare:
         timestamp = now()
         model_map = {
             "substation": (CleanSubstationDataRequirement, SubstationCleanedDataStorage),
-            "connection_application": (CleanConnectionApplicationDataRequirement, ConnectionApplicationCleanedDataStorage)
         }
         pydantic_model, django_model = model_map[self.data_category]
         prev_cleaned_data_storage_objs = list(django_model.objects.filter(reference=self.reference))

@@ -10,6 +10,19 @@ NGED_API_KEY = config("NGED_API_KEY")
 UKPN_API_KEY = config("UKPN_API_KEY")
 NP_API_KEY = config("NP_API_KEY")
 
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
+
+DEBUG = config(f"{ENV}_DEBUG_BOOL", cast=bool)
+DB_NAME = config(f"{ENV}_DB_NAME")
+DB_USER = config(f"{ENV}_DB_USER")
+DB_PASSWORD = config(f"{ENV}_DB_PASSWORD")
+DB_HOST = config(f"{ENV}_DB_HOST")
+if ENV == "LOCAL":
+    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
+
+
+
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
@@ -17,41 +30,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://zettar-prototype-pjmq.onrender.com', 
 ]
 
-if ENV == "testing":
-    CSRF_COOKIE_SECURE = False
-    SESSION_COOKIE_SECURE = False
-    DEBUG = False
-    DB_NAME = config("TESTING_DB_NAME")
-    DB_USER = config("TESTING_DB_USER")
-    DB_PASSWORD = config("TESTING_DB_PASSWORD")
-    DB_HOST = config("TESTING_DB_HOST")
-    GDAL_LIBRARY_PATH = config("TESTING_GDAL_LIBRARY_PATH")
-elif ENV == "local":
-    CSRF_COOKIE_SECURE = False
-    SESSION_COOKIE_SECURE = False
-    DEBUG = True
-    DB_NAME = config("LOCAL_DB_NAME")
-    DB_USER = config("LOCAL_DB_USER")
-    DB_PASSWORD = config("LOCAL_DB_PASSWORD")
-    DB_HOST = config("LOCAL_DB_HOST")
-    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
-elif ENV == "UAT":
-    CSRF_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-    DEBUG = False
-    DB_NAME = config("UAT_DB_NAME")
-    DB_USER = config("UAT_DB_USER")
-    DB_PASSWORD = config("UAT_DB_PASSWORD")
-    DB_HOST = config("UAT_DB_HOST")
-    GDAL_LIBRARY_PATH = config("UAT_GDAL_LIBRARY_PATH")
-elif ENV == "production":
-    CSRF_COOKIE_SECURE = True
-    SESSION_COOKIE_SECURE = True
-    DEBUG = False
-    DB_NAME = config("PROD_DB_NAME")
-    DB_USER = config("PROD_DB_USER")
-    DB_PASSWORD = config("PROD_DB_PASSWORD")
-    DB_HOST = config("PROD_DB_HOST")
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -76,7 +54,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "zettar_prototype.urls"
+ROOT_URLCONF = "zettar.urls"
 
 TEMPLATES = [
     {
@@ -93,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "zettar_prototype.wsgi.application"
+WSGI_APPLICATION = "zettar.wsgi.application"
 
 
 DATABASES = {
@@ -107,24 +85,10 @@ DATABASES = {
     }
 }
 
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
-    },
-]
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en-gb"
 TIME_ZONE = "UTC"
-USE_I18N = True
+USE_I18N = False
 USE_TZ = True
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"

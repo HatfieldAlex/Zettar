@@ -57,8 +57,7 @@ async function initMap() {
 
   } catch (e) {
     console.error(
-        `Failed to load or render map regions from /static/core/data/dno_licence_areas.geojson. 
-        Check that the file exists, is valid GeoJSON, and the server is serving it correctly.`, 
+        `Failed to load or render map regions from /static/core/data/dno_licence_areas.geojson.`, 
    e);
   }
 }

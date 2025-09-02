@@ -4,12 +4,11 @@ import requests
 from django.contrib.gis.geos import Point as GEOSPoint
 from typing import Any, Union, Callable
 from ..data_resource_class import DataResource
-from .shared_helpers import normalise_name_and_extract_voltage_info, substation_type_map
+from .utils import normalise_raw_name_entry, substation_type_map, get_count_open_data_soft, call_limit_open_data_soft
 from ...models import RawFetchedDataStorage
 import json
 from ..data_resource_class._prepare import _CleaningHelpers
 from urllib.parse import urljoin
-from .helpers_open_data_soft import get_count_open_data_soft, call_limit_open_data_soft
 
 __all__ = []
 
@@ -36,7 +35,7 @@ ukpn_primary_bsp_substation_cleaning_helpers = _CleaningHelpers(
         row["spatial_coordinates"]["lon"], 
         srid=4326
         ),
-    construct_name=lambda row: normalise_name_and_extract_voltage_info(row.get("sitename", ""))[0],
+    construct_name=lambda row: normalise_raw_name_entry(row.get("sitename", "")),
     construct_type=lambda row: substation_type_map("Primary Substation", "Grid Substation").get(row["sitetype"], "unknown"), 
 )
 
@@ -95,7 +94,7 @@ ukpn_gsp_substation_cleaning_helpers = _CleaningHelpers(
         row["geo_point_2d"]["lon"], 
         srid=4326,
     ),
-    construct_name=lambda row: normalise_name_and_extract_voltage_info(row.get("gsp", ""))[0],
+    construct_name=lambda row: normalise_raw_name_entry(row.get("gsp", "")),
     construct_type=lambda row: "gsp",
 
 )

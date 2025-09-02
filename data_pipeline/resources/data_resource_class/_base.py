@@ -14,7 +14,7 @@ class _DataResourceBase:
     
     base_url: str
     dno_group: Literal["nged", "ukpn"]
-    data_category: Literal["substation", "connection_application"]
+    data_category: Literal["substation"]
     path: str = ""
     path_parameter: str = ""
     query_params: dict[str, Any] = field(default_factory=dict)

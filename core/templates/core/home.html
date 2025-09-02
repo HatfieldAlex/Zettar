@@ -12,14 +12,11 @@
         };
     </script>
     <script type="module" src="{% static 'core/js/map_script.js' %}" defer></script>
-
     <meta charset="UTF-8">
     <title>Zettar</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>[x-cloak] { display: none !important; }</style>
-    
-    
     <script defer src="https://maps.googleapis.com/maps/api/js?key={{ GOOGLE_MAPS_API_KEY }}&callback=initMap&loading=async"></script>
 
 </head>
@@ -27,11 +24,12 @@
     <form style="display:none;">
         {% csrf_token %}
     </form>
-    {% include 'partials/header.html' %}
+    {% include 'pages/header.html' %}
 
     <main class="flex flex-col h-[calc(100vh-80px)] max-w-7xl mx-auto p-4 space-y-6">
 
         <div class="flex flex-1 gap-6">
+            
             <div class="w-2/3 h-full">
                 <div class="bg-white rounded-2xl shadow h-full">
                     <div id="map" class="w-full h-full rounded-2xl"></div>
@@ -39,10 +37,11 @@
             </div>
   
             <div class="w-1/3 h-full flex flex-col gap-6">
+
                 <div class="bg-white rounded-2xl shadow p-4">
                     <h2 class="text-xl font-semibold mb-2">Instant Grid Substation Insights</h2>
                     <p class="text-gray-700">
-                        With Zettar, simply choose your substation type, drop a pin on your site,  and instantly see the nearest matching substation.
+                        With Zettar, simply choose your substation type, select a location, and instantly find the nearest substation of your selected type.
                     </p>
                 </div>
 

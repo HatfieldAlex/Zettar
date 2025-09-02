@@ -3,7 +3,7 @@ import pandas as pd
 from django.contrib.gis.geos import Point as GEOSPoint
 from typing import Any, Union, Callable
 from ..data_resource_class import DataResource
-from .shared_helpers import normalise_name_and_extract_voltage_info, substation_type_map
+from .utils import normalise_raw_name_entry, substation_type_map
 from ...models import RawFetchedDataStorage
 import json
 from ..data_resource_class._prepare import _CleaningHelpers
@@ -18,7 +18,7 @@ nged_substation_cleaning_helpers = _CleaningHelpers(
     
     construct_external_identifier=lambda row: str(row["_id"]),
     construct_geolocation=lambda row: GEOSPoint(row.get("Latitude", 0), row.get("Longitude", 0), srid=4326),
-    construct_name=lambda row: normalise_name_and_extract_voltage_info(row.get("Substation Name", ""))[0],
+    construct_name=lambda row: normalise_raw_name_entry(row.get("Substation Name", "")),
     construct_type=lambda row: substation_type_map("Primary Substation", "Bulk Supply Point", "Super Grid Substation").get(row["Substation Type"], "unknown"), 
 )
 

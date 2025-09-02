@@ -1,5 +1,5 @@
 {
-  "name": "zettar_prototype",
+  "name": "zettar",
   "version": "1.0.0",
   "description": "This folder contains the source data used to populate the `substations` table in the database.",
   "main": "index.js",

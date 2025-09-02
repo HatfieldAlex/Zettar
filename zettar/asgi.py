@@ -1,5 +1,5 @@
 """
-ASGI config for zettar_prototype project.
+ASGI config for zettar project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "zettar_prototype.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "zettar.settings")
 
 application = get_asgi_application()

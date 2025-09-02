@@ -2,7 +2,7 @@
   <table style="margin: 0 auto; border: 1px solid #ccc;">
     <tr>
       <td align=center>
-        <img src="core/static/core/images/zettar_logo.svg" style="width:100%; height:auto;">
+        <img src="../pages/static/pages/images/zettar_logo.svg" style="width:100%; height:auto;">
       </td>
     </tr>
   </table>
@@ -14,7 +14,7 @@
 
 ## 📷 Interface Preview  
 <div align="center">
-  <img src="core/static/core/images/zettar_full_page_screenshot.png" style="width:100%; height:auto;">
+  <img src="images/zettar_full_page_screenshot.png" style="width:100%; height:auto;">
 </div>
 
 
@@ -61,7 +61,7 @@ Zettar’s Django backend provides a set of custom management commands that can 
 There are 14 electricity distribution licence areas across Great Britain, operated by six groups: UK Power Networks, National Grid Electricity Distribution, SP Energy Networks, Northern Powergrid, Electricity North West, and Scottish and Southern Electricity Networks.
 
 <div align="center" style="margin-bottom: 10px;">
-  <img src="core/static/core/images/gb_electricity_distribution_map.jpg" style="width:100%; height:auto;">
+  <img src="images/gb_electricity_distribution_map.jpg" style="width:100%; height:auto;">
 </div>
 
 <p>
@@ -91,7 +91,7 @@ An illustrative case study with NGED revealed the inconsistent ways substations 
 ### Schema Diagram
 
 <div align="center" style="margin-bottom: 10px;">
-  <img src="core/static/core/images/db_schema_drawSQL.png" style="width:100%; height:auto;">
+  <img src="images/db_schema_drawSQL.png" style="width:100%; height:auto;">
 </div>
 
 ## 🔍 Retrospective
