@@ -18,8 +18,7 @@ DB_NAME = config(f"{ENV}_DB_NAME")
 DB_USER = config(f"{ENV}_DB_USER")
 DB_PASSWORD = config(f"{ENV}_DB_PASSWORD")
 DB_HOST = config(f"{ENV}_DB_HOST")
-if ENV == "LOCAL":
-    GDAL_LIBRARY_PATH = config("LOCAL_GDAL_LIBRARY_PATH")
+GDAL_LIBRARY_PATH = config(f"{ENV}_GDAL_LIBRARY_PATH", default=None)
 
 
 

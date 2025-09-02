@@ -1,0 +1,18 @@
+# PostgreSQL Extensions in Django
+
+At present, the only required extension is:
+
+- postgis
+  (plpgsql is also installed by default with PostgreSQL)
+
+To enable PostGIS in your database, run:
+
+    CREATE EXTENSION postgis;
+
+This note serves as a lightweight internal reference.  
+As the project grows, a more structured way to ensure consistency
+across environments (local, UAT, PROD) will be required. In particular, 
+Django provides migration operations for extensions, such as CreateExtension:
+https://docs.djangoproject.com/en/5.2/ref/contrib/postgres/operations/
+
+

@@ -5,8 +5,8 @@ from ...resources import data_resource_instances
 VALID_ACTIONS = ["orchestrate"]
 DEFAULT_ACTION = "orchestrate"
 
-VALID_DNO_GROUP_ABBRS = ["nged", "ukpn", "np"]
-DEFAULT_DNO_GROUP_ABBR = "nged"
+VALID_DNO_GROUP_ABBRS = ["nged", "ukpn", "np", "all"]
+DEFAULT_DNO_GROUP_ABBR = "all"
 
 VALID_CATEGORIES = ["substation"]
 DEFAULT_CATEGORY = "substation"
@@ -44,7 +44,14 @@ class Command(BaseCommand):
             )
         )
 
-        data_resources = DataResource.filter(dno_group=dno_group_abbr_choice, data_category=category_choice)
+        if dno_group_abbr_choice != "all":
+            data_resources = DataResource.filter(dno_group=dno_group_abbr_choice, data_category=category_choice)
+        else:
+            data_resources = DataResource.filter(data_category=category_choice)
+
+
+
+
         if data_resources == []:
             raise CommandError(
                 f"No DataResource instances found for DNO group {dno_group_abbr_choice} and data category {category_choice}"
