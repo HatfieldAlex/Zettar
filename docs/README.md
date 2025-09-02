@@ -9,7 +9,7 @@
 </div>
 
 <p style="text-align: center;">
-  Zettar helps developers find viable grid connection points by turning messy DNO data into clean insights using geospatial technology and up-to-date application data. Available at <a href="https://www.zettar.tech" target="_blank">www.zettar.tech</a>.
+  Zettar helps individuals find their nearest electrical substation by turning messy DNO data into clean insights using geospatial technology. Available at <a href="https://www.zettar.tech" target="_blank">www.zettar.tech</a>.
 </p>
 
 ## 📷 Interface Preview  
@@ -19,15 +19,15 @@
 
 
 ## 📘 Product Overview
-Zettar is a platform that helps developers identify feasible Points of Connection (POCs) for new site projects - such as factories, renewable energy installations, or EV charging hubs - to the National Grid of Great Britain. It focuses specifically on analysing other applications at each connection point, cleaning and structuring raw, inconsistent DNO data into a standardised, easy‑to‑interpret format, making it instantly valuable for site selection.
+Zettar is a platform that helps users locate the nearest electrical substation by type. By entering a location and selecting a substation category (Primary, BSP, or GSP), users receive the closest matching substation.
 
-DNO application datasets are often released in messy, inconsistent formats, making it hard to understand current capacity or demand, or gauge how many projects are already in the queue. Zettar transforms this data into a clean, searchable, map‑based tool - giving developers a clear view of grid availability and enabling faster, smarter siting decisions.
+Substation location data from Distribution Network Operators (DNOs) is often messy and inconsistently formatted, making it difficult to identify nearby connection points. Zettar cleans and standardises this data into a searchable, map-based tool - offering a clear, reliable view of the grid’s infrastructure.
 
 ### Features
 
-- **Location & Connection Search:** Drop a pin and choose a connection type (Primary, BSP, or GSP) to find the nearest relevant substation.  
-- **Interactive Mapping:** Powered by the Google Maps API, the map-based UI makes it easy to explore potential sites visually.  
-- **Up-to-date DNO Data:** Displays generation and demand application data for substations including capacity, number of applicants, and application status.
+- **Location & Connection Search:** Drop a pin and choose a connection type (Primary, BSP, or GSP) to find the nearest relevant substation
+- **Interactive Mapping:** Powered by the Google Maps API, the map-based UI makes it easy to explore potential sites visually  
+- **Up-to-date DNO Data:** Retrieves the latest substation location data directly from DNO-provided sources, ensuring results reflect the most current network information
 
 
 
@@ -36,9 +36,8 @@ DNO application datasets are often released in messy, inconsistent formats, maki
 ###  Tech Stack
 - **Backend:** Python, Django  
 - **Frontend:** Alpine.js, Tailwind CSS  
-- **Database:** PostgreSQL with PostGIS extension  
-- **Data Sources:** National Grid DNO dataset (additional DNOs planned)  
-- **APIs:** Google Maps  
+- **Database:** PostgreSQL (PostGIS)  
+- **APIs:** Google Maps, OpenDataSoft (Northen Powergrid and UK Power Networks datasets), CKAN (National Grid datasets)    
 - **Deployment:** Dockerised environment hosted on Render.com
 
 ### Geospatial Intelligence
@@ -51,7 +50,7 @@ DNO application datasets are often released in messy, inconsistent formats, maki
 
 ### Wrangling & Processing
 
-Zettar’s Django backend provides a set of custom management commands that can be run to:
+Zettar’s Django backend includes a custom data pipeline, implemented through management commands that:
 1. Ingest raw, messy DNO datasets.  
 2. Standardise naming conventions, formats, and units.  
 3. Transform inconsistent source data into a clean, structured, user‑friendly format, and return to the user where required. 
@@ -65,58 +64,33 @@ There are 14 electricity distribution licence areas across Great Britain, operat
 </div>
 
 <p>
-  Each group publishes substation geolocation and application data independently. The links below reference the datasets currently used in this project. So far only National Grid data has been processed and integrated, with support for additional DNOs planned.
+  Each group publishes substation geolocation independently. The links below reference the datasets currently used in this project.
 </p>
 
-| Name | Description | Link |
-| :---: | :---: | :---: |
-| Primary Substation Locations (NGED) | Geographic locations of primary substations managed by National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/primary-substation-location-easting-northings) |
-| New Connections (NGED) | Dataset of new connection applications to National Grid DNOs | [View](https://connecteddata.nationalgrid.co.uk/dataset/new-connections)  |
+| DNO Group | Title | Substation Geolocation Data Extracted | Source Link |
+| :---: | :---: | :---: | :---: |
+| NGED | Primary Substation Location (Easting / Northings) | Primary, BSP, GSP | [View](https://connecteddata.nationalgrid.co.uk/dataset/primary-substation-location-easting-northings) |
+| NP | Substation Sites List | Primary, BSP| [View](https://northernpowergrid.opendatasoft.com/explore/dataset/substation_sites_list/table/?disjunctive.site_purpose&disjunctive.dno_area&sort=-site_purpose) |
+| NP | Northern Powergrid DFES GSP - Portal Format | GSP | [View](https://northernpowergrid.opendatasoft.com/explore/dataset/northern-powergrid-dfes-gsp-portalformat/information/?disjunctive.licence_area&disjunctive.scenario_name&disjunctive.voltage_level&disjunctive.substation&disjunctive.year&sort=substation) |
+UKPN | UK Power Networks Grid and Primary Sites | Primary, BSP | [View](https://ukpowernetworks.opendatasoft.com/explore/dataset/grid-and-primary-sites/information/?disjunctive.local_authority&disjunctive.powertransformercount) |
+UKPN | Grid Supply Points Overview | GSP | [View](https://ukpowernetworks.opendatasoft.com/explore/dataset/ukpn-grid-supply-points-overview/table/) |
+
+
 
 ###  Dataset Quality Commentary
 
-The data is inconsistently provided in various formats, requiring separate cleaning for each dataset. While some datasets were more accessible than others, none could be integrated without significant preprocessing. Below is a summary of my thoughts on the accessibility of each dataset.
+The data is published in a variety of inconsistent formats, requiring tailored cleaning for each dataset. While some sources were more accessible than others, none could be integrated without substantial preprocessing.
 
-| DNO | Substation Geolocation Data Quality | Substation Application Data Quality |
-| :---: | :---: | :---: |
-| UK Power Networks |  Medium | Medium |
-| National Grid Electricity Distribution | Medium | Medium |
-| SP Energy Networks | Low | Low |
-| Northern Powergrid | High | High |
-| Electricity North West | High | Medium |
-| Scottish and Southern Electricity Networks | Low | Low |
+A case study using NGED data highlighted the challenges: substation types were not stored in a dedicated column but embedded within the name field using inconsistent and informal labels—such as "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn."—making standardisation non-trivial.
 
-An illustrative case study with NGED revealed the inconsistent ways substations were labeled in the dataset. Rather than using a dedicated column for substation type, the type was often embedded within the name itself with inconsistent formatting - examples include "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn.". Similarly, voltage values were inconsistently presented as "kv", "kV", "Kv", or "KV". While many of these variations didn’t directly affect data accuracy, some entries were so unstructured that informed assumptions had to be made during cleaning and processing.
-
-### Schema Diagram
-
-<div align="center" style="margin-bottom: 10px;">
-  <img src="images/db_schema_drawSQL.png" style="width:100%; height:auto;">
-</div>
 
 ## 🔍 Retrospective
 
-### Data Cleaning and Processing 
+The main takeaway was just how inconsistent and poorly structured the source datasets were. The data tended to be messy, without standard formatting, and even requiring informed assumptions to be usable. Each DNO published their data differently, meaning a separate ingestion and cleaning pipeline was needed for each one.
 
-Although the dataset was relatively small, it required extensive wrangling due to inconsistent formats and numerous quirks in the source data. I initially tackled the problem using a purely functional approach, with dispatch functions directing the processing flow. This allowed me to move quickly, uncover the underlying patterns, and implement the core logic.
+Key takeaway: even modest datasets can lead to significant engineering effort when sourced from unstandardised, manually maintained public data.
 
-The method worked well for the first datasets (NGED) but proved difficult to extend when I moved on to the UKPN datasets. Even so, starting functionally was the right call - it allowed Zettar to process at least one dataset within the time available fully. Had I started with creating a sophisticated data-wrangling pipeline, perhaps based on object-oriented design, I may not have been able to complete even a single DNO, and therefore would have no prototype to demonstrate. 
-
-In retrospect, the optimal approach would have been to begin functionally, then refactor into a unified data-wrangling system once the core logic was in place. Designing the system after gaining familiarity with the data’s quirks would have ensured it reflected its true complexity, rather than assumptions made too early. Perhaps the key lesson is to fully understand the complete family of datasets before committing to the computational processing.
-
-
-### Code Style, Conventions, and Structure
-
-While I applied coding conventions and maintained a readable structure within the Django setup, these were introduced on a case-by-case basis rather than through a unified process. This approach worked well for a medium-sized personal project and supported rapid delivery, but it also meant conventions were not entirely consistent across the repository, and some areas could benefit from restructuring.
-
-A lightweight, repeatable process for integrating style and quality checks, such as automated linting from the outset, could have preserved the project’s pace while ensuring a coherent feel throughout. For instance, I could have made greater use of Django’s app functionality to separate concerns more cleanly.
-
-### Testing
-
-Testing was applied to key functions and proved valuable in catching issues early. However, broader coverage - particularly for the supporting data-processing functions - would have strengthened the project. As with code styling, a regular, built-in testing rhythm could have ensured consistency without slowing development.
 
 ## 🧭 Product Roadmap
 
-- **Full DNO Coverage**: Currently, Zettar only integrates data from the National Grid DNO. The goal is to expand coverage across all six DNO groups in Great Britain. Each dataset is published in a different format, so this expansion will require tailored data cleaning for each group
-- **Demand Side Integration**: At present, Zettar focuses on formal generation and demand applications at substations. However, incorporating informal demand indicators - such as developer interest tracked within Zettar - could enhance site selection insights. This would need to be implemented carefully to avoid creating a self-fulfilling feedback loop.
-- **Get more informative description of DNO data**: Beyond inconsistent formatting, raw DNO datasets often lack clear or useful descriptions. Key information is missing or ambiguous, leading to assumptions during processing. Incorporating clarification requests directly into Zettar could make the tool more self-sufficient - helping users understand the data without needing to contact DNOs themselves, which can be time-consuming.
+The next step is to expand Zettar’s coverage to include a broader range of energy-related datasets. While there is a wealth of valuable data available, much of it remains fragmented and inconsistently formatted across different DNOs. The goal is to gradually integrate these sources into a unified, structured platform - transforming what is currently a scattered and messy landscape into a coherent and accessible view of the UK’s energy data.
