@@ -1,6 +1,8 @@
-import requests
-from data_pipeline.models import RawFetchedDataStorage
 from dataclasses import dataclass
+
+import requests
+
+from data_pipeline.models import RawFetchedDataStorage
 from django.core.exceptions import ValidationError
 from django.db import transaction
 

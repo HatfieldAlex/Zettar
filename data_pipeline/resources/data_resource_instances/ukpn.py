@@ -1,14 +1,26 @@
-from django.conf import settings
+import json
+from urllib.parse import urljoin
+
 import pandas as pd 
 import requests
+
+from django.conf import settings
 from django.contrib.gis.geos import Point as GEOSPoint
 from typing import Any, Union, Callable
+
 from ..data_resource_class import DataResource
-from .utils import normalise_raw_name_entry, substation_type_map, get_count_open_data_soft, call_limit_open_data_soft
-from ...models import RawFetchedDataStorage
-import json
 from ..data_resource_class._prepare import _CleaningHelpers
-from urllib.parse import urljoin
+from ...models import RawFetchedDataStorage
+from .utils import (
+    call_limit_open_data_soft,
+    get_count_open_data_soft,
+    normalise_raw_name_entry,
+    substation_type_map,
+)
+
+
+
+
 
 __all__ = []
 

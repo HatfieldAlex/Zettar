@@ -1,14 +1,15 @@
-from django.conf import settings
-import pandas as pd 
-from django.contrib.gis.geos import Point as GEOSPoint
-from typing import Any, Union, Callable
-from ..data_resource_class import DataResource
-from .utils import normalise_raw_name_entry, substation_type_map
-from ...models import RawFetchedDataStorage
 import json
+
+import pandas as pd 
+
+from django.conf import settings
+from django.contrib.gis.geos import Point as GEOSPoint
+
+from ..data_resource_class import DataResource
 from ..data_resource_class._prepare import _CleaningHelpers
-
-
+from ...models import RawFetchedDataStorage
+from .utils import normalise_raw_name_entry, substation_type_map
+from typing import Any, Union, Callable
 
 nged_substation_cleaning_helpers = _CleaningHelpers(
     extract_payload_func=lambda raw_parsed_response: raw_parsed_response["result"]["records"],
