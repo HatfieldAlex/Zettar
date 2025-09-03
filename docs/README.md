@@ -87,7 +87,7 @@ UKPN | Grid Supply Points Overview | GSP | [View](https://ukpowernetworks.openda
 
 The data is published in a variety of inconsistent formats, requiring tailored cleaning for each dataset. While some sources were more accessible than others, none could be integrated without substantial preprocessing.
 
-A case study using NGED data highlighted the challenges: substation types were not stored in a dedicated column but embedded within the name field using inconsistent and informal labels—such as "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn."—making standardisation non-trivial.
+A case study using NGED data highlighted the challenges: substation types were not stored in a dedicated column but embedded within the name field using inconsistent and informal labels - such as "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn." - making standardisation non-trivial.
 
 ## 🔍 Retrospective
 
