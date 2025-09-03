@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.gis.db import models as gis_models
 
+
 class DNOGroup(models.Model):
     abbr = models.CharField(
         max_length=10,
@@ -9,13 +10,18 @@ class DNOGroup(models.Model):
         blank=True,
     )
 
-class Substation(models.Model):
-    SUBSTATION_TYPES = [
-        ("gsp", "Grid Supply Point"),
-        ("bsp", "Bulk Supply Point"),
-        ("primary", "Primary"),
-    ]
+    def __str__(self):
+        return self.abbr or "Unnamed DNOGroup"
 
+
+class SubstationType(models.Model):
+    code = models.CharField(max_length=20, unique=True)
+
+    def __str__(self):
+        return self.code
+
+
+class Substation(models.Model):
     name = models.CharField(max_length=255)
     geolocation = gis_models.PointField(blank=True, null=True)
 
@@ -26,7 +32,13 @@ class Substation(models.Model):
         null=True,
         blank=True,
     )
-    type = models.CharField(max_length=10, choices=SUBSTATION_TYPES)
+
+    type = models.ForeignKey(
+        SubstationType,
+        on_delete=models.PROTECT,
+        related_name="substations"
+    )
+
     external_identifier = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
@@ -37,7 +49,12 @@ class Substation(models.Model):
             )
         ]
 
+    def __str__(self):
+        return self.name
+
+
 __all__ = [
     "DNOGroup",
     "Substation",
+    "SubstationType",
 ]

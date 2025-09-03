@@ -8,9 +8,10 @@ from django.http import JsonResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import ensure_csrf_cookie
 
-from .models import Substation
+from .models import Substation, SubstationType
 
-def find_nearest_substation_obj(geolocation, substation_type):
+
+def find_nearest_substation_obj(geolocation, substation_type_code):
     """
     Returns the nearest substation of a specified type.
 
@@ -34,14 +35,17 @@ def find_nearest_substation_obj(geolocation, substation_type):
     if not isinstance(geolocation, Point):
         raise TypeError("geolocation must be a Point object.")
 
-    if substation_type not in {"primary", "bsp", "gsp"}:
-        raise ValueError(f"Invalid substation_type: {substation_type}")
-
+    if substation_type_code not in {"primary", "bsp", "gsp"}:
+        raise ValueError(f"Invalid substation_type: {substation_type_code}")
+    try:
+        substation_type_obj = SubstationType.objects.get(code=substation_type_code)
+    except SubstationType.DoesNotExist:
+        logging.warning(f"No SubstationType found for code '{substation_type_code}'")
+        return None
 
     nearest_substation_obj = (
-        Substation
-        .objects
-        .filter(type=substation_type)
+        Substation.objects
+        .filter(type=substation_type_obj)
         .annotate(distance=Distance("geolocation", geolocation))
         .order_by("distance")
         .first()
@@ -49,7 +53,7 @@ def find_nearest_substation_obj(geolocation, substation_type):
 
     if nearest_substation_obj is None:
         logging.warning(
-            f"Unexpected error - no substation found for type '{substation_type}' near geolocation {geolocation}"
+            f"Unexpected error - no substation found for type '{substation_type_code}' near geolocation {geolocation}"
         )
         return None
 
@@ -80,22 +84,34 @@ def get_nearby_substation_data(request):
     if request.method == "POST":
         try:
             data = json.loads(request.body)
-            substation_type = data["substation_type"]
+            substation_type_code = data["substation_type"]
+
             geolocation = Point(
                 data["location"]["lat"], data["location"]["lng"], srid=4326
             )
+
             nearest_substation_obj = find_nearest_substation_obj(
-                geolocation, substation_type
+                geolocation, substation_type_code
             )
+
+            if nearest_substation_obj is None:
+                return JsonResponse(
+                    {"status": "error", "message": "No nearby substation found"},
+                    status=404
+                )
+
             substation_summary = {
                 "nearest_substation_name": nearest_substation_obj.name,
-                "nearest_substation_type": nearest_substation_obj.type,
+                "nearest_substation_type": nearest_substation_obj.type.code,  # 🔄
             }
+
             return JsonResponse(substation_summary)
+
         except json.JSONDecodeError:
             return JsonResponse(
                 {"status": "error", "message": "Invalid JSON"}, status=400
             )
+
     else:
         return JsonResponse(
             {"status": "error", "message": "Only POST method allowed"},

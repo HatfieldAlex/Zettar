@@ -75,6 +75,12 @@ There are 14 electricity distribution licence areas across Great Britain, operat
 UKPN | UK Power Networks Grid and Primary Sites | Primary, BSP | [View](https://ukpowernetworks.opendatasoft.com/explore/dataset/grid-and-primary-sites/information/?disjunctive.local_authority&disjunctive.powertransformercount) |
 UKPN | Grid Supply Points Overview | GSP | [View](https://ukpowernetworks.opendatasoft.com/explore/dataset/ukpn-grid-supply-points-overview/table/) |
 
+###  Schema Diagram
+
+<div align="center" style="margin-bottom: 10px;">
+  <img src="images/models_schema_diagram.png" style="width:100%; height:auto;">
+</div>
+
 
 
 ###  Dataset Quality Commentary
@@ -82,7 +88,6 @@ UKPN | Grid Supply Points Overview | GSP | [View](https://ukpowernetworks.openda
 The data is published in a variety of inconsistent formats, requiring tailored cleaning for each dataset. While some sources were more accessible than others, none could be integrated without substantial preprocessing.
 
 A case study using NGED data highlighted the challenges: substation types were not stored in a dedicated column but embedded within the name field using inconsistent and informal labels—such as "Primary Substation", "S/S", "S/Stn", "Power Station", "Primary", and "S Stn."—making standardisation non-trivial.
-
 
 ## 🔍 Retrospective
 
