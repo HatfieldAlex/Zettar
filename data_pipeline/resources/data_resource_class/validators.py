@@ -1,7 +1,9 @@
-from django.contrib.gis.geos import Point as GEOSPoint
-from typing import List, Literal, Optional
 from decimal import Decimal
+from typing import List, Literal, Optional
+
+from django.contrib.gis.geos import Point as GEOSPoint
 from pydantic import BaseModel, field_validator, condecimal, conint
+
 
 class CleanSubstationDataRequirement(BaseModel):
     name: str

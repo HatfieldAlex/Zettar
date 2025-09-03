@@ -41,7 +41,7 @@ def normalise_raw_name_entry(name_entry):
     """Normalises a raw substation name string.
 
     This function applies several cleaning and formatting steps to produce
-    a standardized substation name:
+    a standardised substation name:
         - Converts text to title case.
         - Fixes malformed voltage spacing (e.g., "6 6" → "6.6").
         - Detects numeric voltage values in the name and removes them if they
@@ -60,11 +60,9 @@ def normalise_raw_name_entry(name_entry):
 
     name_entry = name_entry.title()
 
-    #standardise malformed voltage spacing
     if "6 6" in name_entry:
         name_entry = name_entry.replace("6 6", "6.6")
 
-    #extract numerical values from str name
     for number_str in set(re.findall(r"\d+(?:\.\d+)?", name_entry)):
         number_decimal = Decimal(number_str).quantize(Decimal("0.1"))
         number_str_standardised = str(number_decimal)
@@ -72,16 +70,13 @@ def normalise_raw_name_entry(name_entry):
         if number_str_standardised in VOLTAGE_LEVELS:
             substrings_to_remove.append(number_str)
 
-    # Remove unwanted substrings
     for sub_str in substrings_to_remove:
         name_entry = name_entry.replace(sub_str, "")
 
-    # Normalise common abbreviations
     name_entry = re.sub(r"\bst\.?\b", "Street", name_entry, flags=re.IGNORECASE)
     name_entry = re.sub(r"\brd\.?\b", "Road", name_entry, flags=re.IGNORECASE)
     name_entry = re.sub(r"\bln\.?\b", "Lane", name_entry, flags=re.IGNORECASE)
     
-    #normalise spacing and remove trailing symbols
     name_entry = re.sub(r"\s+", " ", name_entry).strip().rstrip("./& ")
 
     return name_entry

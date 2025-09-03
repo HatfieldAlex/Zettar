@@ -1,10 +1,15 @@
 from dataclasses import dataclass, field
+from typing import Dict, Union, Callable, Any
+
 import pandas as pd
+
 from django.contrib.gis.geos import Point as GEOSPoint
+from django.utils.timezone import now
+
 from data_pipeline.models import RawFetchedDataStorage, SubstationCleanedDataStorage
 from .validators import CleanSubstationDataRequirement
-from django.utils.timezone import now
-from typing import Dict, Union, Callable, Any
+
+
 
 @dataclass
 class _CleaningHelpers:
